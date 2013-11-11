@@ -1,0 +1,480 @@
+<html>
+  <head>
+    <title>MimeKit.ParserOptions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MimeKit.ParserOptions">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.ParserOptions:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.ParserOptions:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.ParserOptions:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MimeKit.ParserOptions">ParserOptions  Class</h1>
+    <p class="Summary" id="T:MimeKit.ParserOptions:Summary">
+            Parser options as used by <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> as well as various Parse and TryParse methods in MimeKit.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MimeKit.ParserOptions:Signature">public sealed class  <b>ParserOptions</b></div>
+    </div>
+    <div class="Remarks" id="T:MimeKit.ParserOptions:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MimeKit.ParserOptions:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MimeKit.ParserOptions:Docs:Version Information">
+        <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.ParserOptions()">ParserOptions</a>
+                    </b>()</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a> class.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Fields</h2>
+        <div class="SectionBox" id="Public Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static readonly </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#F:MimeKit.ParserOptions.Default">Default</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ParserOptions.html">ParserOptions</a>
+                  </i>. 
+            The default parser options.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ParserOptions.CharsetEncoding">CharsetEncoding</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>
+                  </i>. 
+            Gets or sets the charset encoding to use as a fallback for 8bit headers.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ParserOptions.EnableRfc2047Workarounds">EnableRfc2047Workarounds</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets or sets a value indicating whether rfc2047 workarounds should be used.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ParserOptions.RespectContentLength">RespectContentLength</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets or sets a value indicating whether the Content-Length value should be
+            respected when parsing mbox streams.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ParserOptions.Clone()">Clone</a>
+                  </b>()<nobr> : <a href="../MimeKit/ParserOptions.html">ParserOptions</a></nobr><blockquote>
+            Clones an instance of <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MimeKit.ParserOptions:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MimeKit.ParserOptions()">ParserOptions Constructor</h3>
+        <blockquote id="C:MimeKit.ParserOptions():member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>ParserOptions</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.ParserOptions():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.ParserOptions():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ParserOptions.CharsetEncoding">CharsetEncoding Property</h3>
+        <blockquote id="P:MimeKit.ParserOptions.CharsetEncoding:member">
+          <p class="Summary">
+            Gets or sets the charset encoding to use as a fallback for 8bit headers.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> <b>CharsetEncoding</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ParserOptions.CharsetEncoding:Value">The charset encoding.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ParserOptions.CharsetEncoding:Remarks">
+            <a href="../MimeKit.Utils/Rfc2047.html#M:MimeKit.Utils.Rfc2047.DecodeText(MimeKit.ParserOptions,System.Byte[])">MimeKit.Utils.Rfc2047.DecodeText(ParserOptions, Byte[])</a> and
+            <a href="../MimeKit.Utils/Rfc2047.html#M:MimeKit.Utils.Rfc2047.DecodePhrase(MimeKit.ParserOptions,System.Byte[])">MimeKit.Utils.Rfc2047.DecodePhrase(ParserOptions, Byte[])</a>
+            use this charset encoding as a fallback when decoding 8bit text into unicode. The first
+            charset encoding attempted is UTF-8, followed by this charset encoding, before finally
+            falling back to iso-8859-1.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ParserOptions.CharsetEncoding:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ParserOptions.Clone()">Clone Method</h3>
+        <blockquote id="M:MimeKit.ParserOptions.Clone():member">
+          <p class="Summary">
+            Clones an instance of <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/ParserOptions.html">ParserOptions</a> <b>Clone</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ParserOptions.Clone():Returns">An identical copy of the current instance.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ParserOptions.Clone():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ParserOptions.Clone():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="F:MimeKit.ParserOptions.Default">Default Field</h3>
+        <blockquote id="F:MimeKit.ParserOptions.Default:member">
+          <p class="Summary">
+            The default parser options.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static readonly <a href="../MimeKit/ParserOptions.html">ParserOptions</a> <b>Default</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="F:MimeKit.ParserOptions.Default:Remarks">
+            If a <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a> is not supplied to <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> or other Parse and TryParse
+            methods throughout MimeKit, <a href="../MimeKit/ParserOptions.html#F:MimeKit.ParserOptions.Default">ParserOptions.Default</a> will be used.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="F:MimeKit.ParserOptions.Default:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ParserOptions.EnableRfc2047Workarounds">EnableRfc2047Workarounds Property</h3>
+        <blockquote id="P:MimeKit.ParserOptions.EnableRfc2047Workarounds:member">
+          <p class="Summary">
+            Gets or sets a value indicating whether rfc2047 workarounds should be used.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>EnableRfc2047Workarounds</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ParserOptions.EnableRfc2047Workarounds:Value">
+            <tt>true</tt> if rfc2047 workarounds are enabled; otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ParserOptions.EnableRfc2047Workarounds:Remarks">
+            In general, you'll probably want this value to be <tt>true</tt> (the default) as it
+            allows maximum interoperability with existing (broken) mail clients and other mail
+            software such as sloppily written perl scripts (aka spambots).
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ParserOptions.EnableRfc2047Workarounds:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ParserOptions.RespectContentLength">RespectContentLength Property</h3>
+        <blockquote id="P:MimeKit.ParserOptions.RespectContentLength:member">
+          <p class="Summary">
+            Gets or sets a value indicating whether the Content-Length value should be
+            respected when parsing mbox streams.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>RespectContentLength</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ParserOptions.RespectContentLength:Value">
+            <tt>true</tt> if the Content-Length value should be respected;
+            otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ParserOptions.RespectContentLength:Remarks">
+            For more details about why this may be useful, you can find more information
+            at http://www.jwz.org/doc/content-length.html
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ParserOptions.RespectContentLength:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

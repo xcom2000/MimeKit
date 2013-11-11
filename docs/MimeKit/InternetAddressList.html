@@ -1,0 +1,2388 @@
+<html>
+  <head>
+    <title>MimeKit.InternetAddressList</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MimeKit.InternetAddressList">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.InternetAddressList:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.InternetAddressList:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.InternetAddressList:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MimeKit.InternetAddressList">InternetAddressList  Class</h1>
+    <p class="Summary" id="T:MimeKit.InternetAddressList:Summary">
+            A list of <a href="../MimeKit/InternetAddress.html">MimeKit.InternetAddress</a>es.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MimeKit.InternetAddressList:Signature">public sealed class  <b>InternetAddressList</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;InternetAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;InternetAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;InternetAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IEquatable`1">IEquatable&lt;InternetAddressList&gt;</a></div>
+    </div>
+    <div class="Remarks" id="T:MimeKit.InternetAddressList:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MimeKit.InternetAddressList:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MimeKit.InternetAddressList:Docs:Version Information">
+        <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.InternetAddressList()">InternetAddressList</a>
+                    </b>()</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.InternetAddressList(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress})">InternetAddressList</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;InternetAddress&gt;</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> class.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.InternetAddressList.Count">Count</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. 
+            Gets the number of addresses in the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.InternetAddressList.IsReadOnly">IsReadOnly</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets a value indicating whether this instance is read only.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                    <i>default property</i>
+                  </div>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.InternetAddressList.Item(System.Int32)">Item</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/InternetAddress.html">InternetAddress</a>
+                  </i>. 
+            Gets or sets the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> at the specified index.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.InternetAddressList.Mailboxes">Mailboxes</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MailboxAddress&gt;</a>
+                  </i>. 
+            Recursively gets all of the mailboxes contained within the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Add(MimeKit.InternetAddress)">Add</a>
+                  </b>(<a href="../MimeKit/InternetAddress.html">InternetAddress</a>)<blockquote>
+            Adds the specified address.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.AddRange(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress})">AddRange</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;InternetAddress&gt;</a>)<blockquote>
+            Adds a collection of addresses.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Clear()">Clear</a>
+                  </b>()<blockquote>
+            Clears the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Contains(MimeKit.InternetAddress)">Contains</a>
+                  </b>(<a href="../MimeKit/InternetAddress.html">InternetAddress</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Checks if the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> contains the specified address.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.CopyTo(MimeKit.InternetAddress[],System.Int32)">CopyTo</a>
+                  </b>(<a href="../MimeKit/InternetAddress.html">InternetAddress</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Copies all of the addresses in the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to the specified array.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Equals(MimeKit.InternetAddressList)">Equals</a>
+                  </b>(<a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Determines whether the specified <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> is equal to the current <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.GetEnumerator()">GetEnumerator</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerator`1">IEnumerator&lt;InternetAddress&gt;</a></nobr><blockquote>
+            Gets an enumerator for the list of addresses.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.IndexOf(MimeKit.InternetAddress)">IndexOf</a>
+                  </b>(<a href="../MimeKit/InternetAddress.html">InternetAddress</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Gets the index of the specified address.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Insert(System.Int32,MimeKit.InternetAddress)">Insert</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MimeKit/InternetAddress.html">InternetAddress</a>)<blockquote>
+            Inserts the address at the specified index.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Parse(System.Byte[])">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<nobr> : <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a></nobr><blockquote>
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Parse(System.String)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a></nobr><blockquote>
+            Parses the given text into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[])">Parse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<nobr> : <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a></nobr><blockquote>
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.String)">Parse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a></nobr><blockquote>
+            Parses the given text into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a></nobr><blockquote>
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32)">Parse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a></nobr><blockquote>
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32,System.Int32)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a></nobr><blockquote>
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32)">Parse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a></nobr><blockquote>
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.Remove(MimeKit.InternetAddress)">Remove</a>
+                  </b>(<a href="../MimeKit/InternetAddress.html">InternetAddress</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Removes the specified address.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.RemoveAt(System.Int32)">RemoveAt</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Removes the address at the specified index.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Serializes the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to a string suitable for display.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.ToString(System.Boolean)">ToString</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Serializes the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to a string, optionally encoding it for transport.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.ToString(MimeKit.FormatOptions,System.Boolean)">ToString</a>
+                  </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Serializes the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to a string, optionally encoding it for transport.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.TryParse(System.Byte[],MimeKit.InternetAddressList@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.TryParse(System.String,MimeKit.InternetAddressList@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given text into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.InternetAddressList@)">TryParse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.String,MimeKit.InternetAddressList@)">TryParse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given text into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,MimeKit.InternetAddressList@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.InternetAddressList@)">TryParse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@)">TryParse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Explicitly Implemented Interface Members</h2>
+        <div class="SectionBox" id="Explicitly Implemented Interface Members">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:MimeKit.InternetAddressList.System#Collections#IEnumerable#GetEnumerator()">
+                    <b>IEnumerable.GetEnumerator</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MimeKit.InternetAddressList:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MimeKit.InternetAddressList()">InternetAddressList Constructor</h3>
+        <blockquote id="C:MimeKit.InternetAddressList():member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>InternetAddressList</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.InternetAddressList():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.InternetAddressList():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.InternetAddressList(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress})">InternetAddressList Constructor</h3>
+        <blockquote id="C:MimeKit.InternetAddressList(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>InternetAddressList</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;InternetAddress&gt;</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.InternetAddressList(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):Parameters">
+            <dl>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>An initial list of addresses.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.InternetAddressList(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.InternetAddressList(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Add(MimeKit.InternetAddress)">Add Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Add(MimeKit.InternetAddress):member">
+          <p class="Summary">
+            Adds the specified address.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Add</b> (<a href="../MimeKit/InternetAddress.html">InternetAddress</a> address)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Add(MimeKit.InternetAddress):Parameters">
+            <dl>
+              <dt>
+                <i>address</i>
+              </dt>
+              <dd>The address.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Add(MimeKit.InternetAddress):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>address</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Add(MimeKit.InternetAddress):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Add(MimeKit.InternetAddress):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.AddRange(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress})">AddRange Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.AddRange(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):member">
+          <p class="Summary">
+            Adds a collection of addresses.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddRange</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;InternetAddress&gt;</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.AddRange(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):Parameters">
+            <dl>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>A colelction of addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.AddRange(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>addresses</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.AddRange(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.AddRange(System.Collections.Generic.IEnumerable{MimeKit.InternetAddress}):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Clear()">Clear Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Clear():member">
+          <p class="Summary">
+            Clears the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Clear():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Clear():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Contains(MimeKit.InternetAddress)">Contains Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Contains(MimeKit.InternetAddress):member">
+          <p class="Summary">
+            Checks if the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> contains the specified address.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Contains</b> (<a href="../MimeKit/InternetAddress.html">InternetAddress</a> address)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Contains(MimeKit.InternetAddress):Parameters">
+            <dl>
+              <dt>
+                <i>address</i>
+              </dt>
+              <dd>The address.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Contains(MimeKit.InternetAddress):Returns">true if the requested address exists;
+            otherwise false.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Contains(MimeKit.InternetAddress):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>address</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Contains(MimeKit.InternetAddress):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Contains(MimeKit.InternetAddress):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.CopyTo(MimeKit.InternetAddress[],System.Int32)">CopyTo Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.CopyTo(MimeKit.InternetAddress[],System.Int32):member">
+          <p class="Summary">
+            Copies all of the addresses in the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to the specified array.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>CopyTo</b> (<a href="../MimeKit/InternetAddress.html">InternetAddress</a>[] array, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> arrayIndex)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.CopyTo(MimeKit.InternetAddress[],System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>array</i>
+              </dt>
+              <dd>The array to copy the addresses to.</dd>
+              <dt>
+                <i>arrayIndex</i>
+              </dt>
+              <dd>The index into the array.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.CopyTo(MimeKit.InternetAddress[],System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>array</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>arrayIndex</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.CopyTo(MimeKit.InternetAddress[],System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.CopyTo(MimeKit.InternetAddress[],System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.InternetAddressList.Count">Count Property</h3>
+        <blockquote id="P:MimeKit.InternetAddressList.Count:member">
+          <p class="Summary">
+            Gets the number of addresses in the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Count</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.InternetAddressList.Count:Value">The number of addresses.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.InternetAddressList.Count:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.InternetAddressList.Count:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Equals(MimeKit.InternetAddressList)">Equals Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Equals(MimeKit.InternetAddressList):member">
+          <p class="Summary">
+            Determines whether the specified <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> is equal to the current <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Equals</b> (<a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> other)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Equals(MimeKit.InternetAddressList):Parameters">
+            <dl>
+              <dt>
+                <i>other</i>
+              </dt>
+              <dd>The <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to compare with the current <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Equals(MimeKit.InternetAddressList):Returns">
+            <tt>true</tt> if the specified <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> is equal to the current
+            <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>; otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Equals(MimeKit.InternetAddressList):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Equals(MimeKit.InternetAddressList):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.GetEnumerator()">GetEnumerator Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.GetEnumerator():member">
+          <p class="Summary">
+            Gets an enumerator for the list of addresses.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerator`1">IEnumerator&lt;InternetAddress&gt;</a> <b>GetEnumerator</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.GetEnumerator():Returns">The enumerator.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.GetEnumerator():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.GetEnumerator():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.IndexOf(MimeKit.InternetAddress)">IndexOf Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.IndexOf(MimeKit.InternetAddress):member">
+          <p class="Summary">
+            Gets the index of the specified address.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>IndexOf</b> (<a href="../MimeKit/InternetAddress.html">InternetAddress</a> address)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.IndexOf(MimeKit.InternetAddress):Parameters">
+            <dl>
+              <dt>
+                <i>address</i>
+              </dt>
+              <dd>The address to get the index of.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.IndexOf(MimeKit.InternetAddress):Returns">The index of the specified address if found; otherwise <tt>-1</tt>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.IndexOf(MimeKit.InternetAddress):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>address</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.IndexOf(MimeKit.InternetAddress):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.IndexOf(MimeKit.InternetAddress):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Insert(System.Int32,MimeKit.InternetAddress)">Insert Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Insert(System.Int32,MimeKit.InternetAddress):member">
+          <p class="Summary">
+            Inserts the address at the specified index.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Insert</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index, <a href="../MimeKit/InternetAddress.html">InternetAddress</a> address)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Insert(System.Int32,MimeKit.InternetAddress):Parameters">
+            <dl>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>The index to insert the address.</dd>
+              <dt>
+                <i>address</i>
+              </dt>
+              <dd>The address.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Insert(System.Int32,MimeKit.InternetAddress):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>address</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>index</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Insert(System.Int32,MimeKit.InternetAddress):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Insert(System.Int32,MimeKit.InternetAddress):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.InternetAddressList.IsReadOnly">IsReadOnly Property</h3>
+        <blockquote id="P:MimeKit.InternetAddressList.IsReadOnly:member">
+          <p class="Summary">
+            Gets a value indicating whether this instance is read only.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsReadOnly</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.InternetAddressList.IsReadOnly:Value">
+            <tt>true</tt> if this instance is read only; otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.InternetAddressList.IsReadOnly:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.InternetAddressList.IsReadOnly:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.InternetAddressList.Item(System.Int32)">Item Property</h3>
+        <blockquote id="P:MimeKit.InternetAddressList.Item(System.Int32):member">
+          <p class="Summary">
+            Gets or sets the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> at the specified index.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <p>
+              <i>This is the default property for this class.</i>
+            </p>public <a href="../MimeKit/InternetAddress.html">InternetAddress</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index] { get; set; }</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.InternetAddressList.Item(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>The idnex of the addres to get or set.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.InternetAddressList.Item(System.Int32):Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.InternetAddressList.Item(System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>value</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>index</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.InternetAddressList.Item(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.InternetAddressList.Item(System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.InternetAddressList.Mailboxes">Mailboxes Property</h3>
+        <blockquote id="P:MimeKit.InternetAddressList.Mailboxes:member">
+          <p class="Summary">
+            Recursively gets all of the mailboxes contained within the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MailboxAddress&gt;</a> <b>Mailboxes</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.InternetAddressList.Mailboxes:Value">The mailboxes.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.InternetAddressList.Mailboxes:Remarks">
+            This API is useful for collecting a flattened list of <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>
+            recipients for use with sending via SMTP or for encrypting via S/MIME or PGP/MIME.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.InternetAddressList.Mailboxes:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Parse(System.Byte[])">Parse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Parse(System.Byte[]):member">
+          <p class="Summary">
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[]):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[]):Returns">The parsed <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[]):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+                  <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[]):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Parse(System.String)">Parse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Parse(System.String):member">
+          <p class="Summary">
+            Parses the given text into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>text</i>
+              </dt>
+              <dd>The text.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.String):Returns">The parsed <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>text</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+                  <i>text</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[])">Parse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[]):member">
+          <p class="Summary">
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Parse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[]):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options to use.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[]):Returns">The parsed <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[]):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+                  <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[]):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.String)">Parse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.String):member">
+          <p class="Summary">
+            Parses the given text into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Parse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options to use.</dd>
+              <dt>
+                <i>text</i>
+              </dt>
+              <dd>The text.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.String):Returns">The parsed <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>text</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+                  <i>text</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32)">Parse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32):member">
+          <p class="Summary">
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32):Returns">The parsed <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> is out of range.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+                  <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32)">Parse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):member">
+          <p class="Summary">
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Parse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options to use.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Returns">The parsed <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i>is out of range.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+                  <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32,System.Int32)">Parse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32,System.Int32):member">
+          <p class="Summary">
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>length</i>
+              </dt>
+              <dd>The number of bytes in the input buffer to parse.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32,System.Int32):Returns">The parsed <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32,System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+                  <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(System.Byte[],System.Int32,System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32)">Parse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):member">
+          <p class="Summary">
+            Parses the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Parse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options to use.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>length</i>
+              </dt>
+              <dd>The number of bytes in the input buffer to parse.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Returns">The parsed <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+                  <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.Remove(MimeKit.InternetAddress)">Remove Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.Remove(MimeKit.InternetAddress):member">
+          <p class="Summary">
+            Removes the specified address.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Remove</b> (<a href="../MimeKit/InternetAddress.html">InternetAddress</a> address)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Remove(MimeKit.InternetAddress):Parameters">
+            <dl>
+              <dt>
+                <i>address</i>
+              </dt>
+              <dd>The address.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Remove(MimeKit.InternetAddress):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.Remove(MimeKit.InternetAddress):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>address</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Remove(MimeKit.InternetAddress):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.Remove(MimeKit.InternetAddress):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.RemoveAt(System.Int32)">RemoveAt Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.RemoveAt(System.Int32):member">
+          <p class="Summary">
+            Removes the address at the specified index.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveAt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.RemoveAt(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>The index of the address to remove.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.RemoveAt(System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>index</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.RemoveAt(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.RemoveAt(System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.System#Collections#IEnumerable#GetEnumerator()">System.Collections.IEnumerable.GetEnumerator Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.System#Collections#IEnumerable#GetEnumerator():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a> <b>System.Collections.IEnumerable.GetEnumerator</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.System#Collections#IEnumerable#GetEnumerator():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.System#Collections#IEnumerable#GetEnumerator():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.System#Collections#IEnumerable#GetEnumerator():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.ToString()">ToString Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.ToString():member">
+          <p class="Summary">
+            Serializes the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to a string suitable for display.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.ToString():Returns">A string representing the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.ToString():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.ToString():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.ToString(System.Boolean)">ToString Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.ToString(System.Boolean):member">
+          <p class="Summary">
+            Serializes the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to a string, optionally encoding it for transport.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> encode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.ToString(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>encode</i>
+              </dt>
+              <dd>If set to <tt>true</tt>, the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> will be encoded.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.ToString(System.Boolean):Returns">A string representing the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.ToString(System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.ToString(System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.ToString(MimeKit.FormatOptions,System.Boolean)">ToString Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.ToString(MimeKit.FormatOptions,System.Boolean):member">
+          <p class="Summary">
+            Serializes the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> to a string, optionally encoding it for transport.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> encode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.ToString(MimeKit.FormatOptions,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The formatting options.</dd>
+              <dt>
+                <i>encode</i>
+              </dt>
+              <dd>If set to <tt>true</tt>, the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> will be encoded.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.ToString(MimeKit.FormatOptions,System.Boolean):Returns">A string representing the <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.ToString(MimeKit.FormatOptions,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.ToString(MimeKit.FormatOptions,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],MimeKit.InternetAddressList@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],MimeKit.InternetAddressList@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],MimeKit.InternetAddressList@):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>The parsed addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],MimeKit.InternetAddressList@):Returns">
+            <tt>true</tt>, if the address list was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],MimeKit.InternetAddressList@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],MimeKit.InternetAddressList@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],MimeKit.InternetAddressList@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.TryParse(System.String,MimeKit.InternetAddressList@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.TryParse(System.String,MimeKit.InternetAddressList@):member">
+          <p class="Summary">
+            Tries to parse the given text into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.String,MimeKit.InternetAddressList@):Parameters">
+            <dl>
+              <dt>
+                <i>text</i>
+              </dt>
+              <dd>The text.</dd>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>The parsed addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.String,MimeKit.InternetAddressList@):Returns">
+            <tt>true</tt>, if the address list was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.String,MimeKit.InternetAddressList@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>text</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.String,MimeKit.InternetAddressList@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.String,MimeKit.InternetAddressList@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.InternetAddressList@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.InternetAddressList@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.InternetAddressList@):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options to use.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>The parsed addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.InternetAddressList@):Returns">
+            <tt>true</tt>, if the address list was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.InternetAddressList@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.InternetAddressList@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.InternetAddressList@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.String,MimeKit.InternetAddressList@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.String,MimeKit.InternetAddressList@):member">
+          <p class="Summary">
+            Tries to parse the given text into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.String,MimeKit.InternetAddressList@):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options to use.</dd>
+              <dt>
+                <i>text</i>
+              </dt>
+              <dd>The text.</dd>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>The parsed addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.String,MimeKit.InternetAddressList@):Returns">
+            <tt>true</tt>, if the address list was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.String,MimeKit.InternetAddressList@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>text</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.String,MimeKit.InternetAddressList@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.String,MimeKit.InternetAddressList@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,MimeKit.InternetAddressList@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,MimeKit.InternetAddressList@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,MimeKit.InternetAddressList@):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>The parsed addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,MimeKit.InternetAddressList@):Returns">
+            <tt>true</tt>, if the address list was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,MimeKit.InternetAddressList@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,MimeKit.InternetAddressList@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,MimeKit.InternetAddressList@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.InternetAddressList@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.InternetAddressList@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.InternetAddressList@):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options to use.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>The parsed addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.InternetAddressList@):Returns">
+            <tt>true</tt>, if the address list was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.InternetAddressList@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.InternetAddressList@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.InternetAddressList@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>length</i>
+              </dt>
+              <dd>The number of bytes in the input buffer to parse.</dd>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>The parsed addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Returns">
+            <tt>true</tt>, if the address list was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/InternetAddressList.html">MimeKit.InternetAddressList</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> addresses)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options to use.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>length</i>
+              </dt>
+              <dd>The number of bytes in the input buffer to parse.</dd>
+              <dt>
+                <i>addresses</i>
+              </dt>
+              <dd>The parsed addresses.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Returns">
+            <tt>true</tt>, if the address list was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.InternetAddressList.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.InternetAddressList@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1785 @@
+<html>
+  <head>
+    <title>MimeKit.ContentType</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MimeKit.ContentType">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.ContentType:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.ContentType:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.ContentType:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MimeKit.ContentType">ContentType  Class</h1>
+    <p class="Summary" id="T:MimeKit.ContentType:Summary">
+            A class representing a Content-Type header value.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MimeKit.ContentType:Signature">public sealed class  <b>ContentType</b></div>
+    </div>
+    <div class="Remarks" id="T:MimeKit.ContentType:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MimeKit.ContentType:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MimeKit.ContentType:Docs:Version Information">
+        <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.ContentType(System.String,System.String)">ContentType</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ContentType.Boundary">Boundary</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the boundary parameter.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ContentType.Charset">Charset</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the charset parameter.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ContentType.MediaSubtype">MediaSubtype</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the media subtype.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ContentType.MediaType">MediaType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the type of the media.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ContentType.Name">Name</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the name parameter.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.ContentType.Parameters">Parameters</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ParameterList.html">ParameterList</a>
+                  </i>. 
+            Gets the parameters.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.Matches(System.String,System.String)">Matches</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Checks if the this instance of <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> matches
+            the specified mediaType and mediaSubtype.
+            Note: If the specified mediaType or mediaSubtype are "*", they match anything.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.Parse(System.Byte[])">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<nobr> : <a href="../MimeKit/ContentType.html">ContentType</a></nobr><blockquote>
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.Parse(System.String)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit/ContentType.html">ContentType</a></nobr><blockquote>
+            Parse the specified text into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[])">Parse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<nobr> : <a href="../MimeKit/ContentType.html">ContentType</a></nobr><blockquote>
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.Parse(System.Byte[],System.Int32)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MimeKit/ContentType.html">ContentType</a></nobr><blockquote>
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32)">Parse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MimeKit/ContentType.html">ContentType</a></nobr><blockquote>
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.Parse(System.Byte[],System.Int32,System.Int32)">Parse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MimeKit/ContentType.html">ContentType</a></nobr><blockquote>
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32)">Parse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MimeKit/ContentType.html">ContentType</a></nobr><blockquote>
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Returns a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current
+            <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean)">ToString</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Serializes the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> to a string,
+            optionally encoding the parameters.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.TryParse(System.Byte[],MimeKit.ContentType@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.TryParse(System.String,MimeKit.ContentType@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given text into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.ContentType@)">TryParse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,MimeKit.ContentType@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.ContentType@)">TryParse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@)">TryParse</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@)">TryParse</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MimeKit.ContentType:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MimeKit.ContentType(System.String,System.String)">ContentType Constructor</h3>
+        <blockquote id="C:MimeKit.ContentType(System.String,System.String):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>ContentType</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mediaType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mediaSubtype)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.ContentType(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>mediaType</i>
+              </dt>
+              <dd>Media type.</dd>
+              <dt>
+                <i>mediaSubtype</i>
+              </dt>
+              <dd>Media subtype.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.ContentType(System.String,System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>mediaType</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>mediaSubtype</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>mediaType</i> is empty or contains invalid characters.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>mediaSubtype</i> is empty or contains invalid characters.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.ContentType(System.String,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.ContentType(System.String,System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ContentType.Boundary">Boundary Property</h3>
+        <blockquote id="P:MimeKit.ContentType.Boundary:member">
+          <p class="Summary">
+            Gets or sets the boundary parameter.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Boundary</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.Boundary:Value">The boundary.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.Boundary:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.Boundary:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ContentType.Charset">Charset Property</h3>
+        <blockquote id="P:MimeKit.ContentType.Charset:member">
+          <p class="Summary">
+            Gets or sets the charset parameter.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Charset</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.Charset:Value">The charset.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.Charset:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.Charset:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.Matches(System.String,System.String)">Matches Method</h3>
+        <blockquote id="M:MimeKit.ContentType.Matches(System.String,System.String):member">
+          <p class="Summary">
+            Checks if the this instance of <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> matches
+            the specified mediaType and mediaSubtype.
+            Note: If the specified mediaType or mediaSubtype are "*", they match anything.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Matches</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mediaType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mediaSubtype)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Matches(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>mediaType</i>
+              </dt>
+              <dd>The media type.</dd>
+              <dt>
+                <i>mediaSubtype</i>
+              </dt>
+              <dd>The media subtype.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Matches(System.String,System.String):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Matches(System.String,System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>mediaType</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>mediaSubtype</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Matches(System.String,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Matches(System.String,System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ContentType.MediaSubtype">MediaSubtype Property</h3>
+        <blockquote id="P:MimeKit.ContentType.MediaSubtype:member">
+          <p class="Summary">
+            Gets or sets the media subtype.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MediaSubtype</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.MediaSubtype:Value">The media subtype.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.MediaSubtype:Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>value</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+                  <i>value</i> is empty or contains invalid characters.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.MediaSubtype:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.MediaSubtype:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ContentType.MediaType">MediaType Property</h3>
+        <blockquote id="P:MimeKit.ContentType.MediaType:member">
+          <p class="Summary">
+            Gets or sets the type of the media.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MediaType</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.MediaType:Value">The type of the media.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.MediaType:Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>value</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+                  <i>value</i> is empty or contains invalid characters.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.MediaType:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.MediaType:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ContentType.Name">Name Property</h3>
+        <blockquote id="P:MimeKit.ContentType.Name:member">
+          <p class="Summary">
+            Gets or sets the name parameter.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.Name:Value">The name.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.Name:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.Name:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.ContentType.Parameters">Parameters Property</h3>
+        <blockquote id="P:MimeKit.ContentType.Parameters:member">
+          <p class="Summary">
+            Gets the parameters.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/ParameterList.html">ParameterList</a> <b>Parameters</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.Parameters:Value">The parameters.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.Parameters:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.ContentType.Parameters:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.Parse(System.Byte[])">Parse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.Parse(System.Byte[]):member">
+          <p class="Summary">
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/ContentType.html">ContentType</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[]):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[]):Returns">The parsed <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[]):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+            The <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[]):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.Parse(System.String)">Parse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.Parse(System.String):member">
+          <p class="Summary">
+            Parse the specified text into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/ContentType.html">ContentType</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>text</i>
+              </dt>
+              <dd>The text.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.String):Returns">The parsed <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>text</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+            The <i>text</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[])">Parse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[]):member">
+          <p class="Summary">
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/ContentType.html">ContentType</a> <b>Parse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[]):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[]):Returns">The parsed <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[]):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+            The <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[]):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32)">Parse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32):member">
+          <p class="Summary">
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/ContentType.html">ContentType</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The start index of the buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32):Returns">The parsed <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> is out of range.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+            The <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32)">Parse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):member">
+          <p class="Summary">
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/ContentType.html">ContentType</a> <b>Parse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The start index of the buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Returns">The parsed <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> is out of range.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+            The <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32,System.Int32)">Parse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32,System.Int32):member">
+          <p class="Summary">
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/ContentType.html">ContentType</a> <b>Parse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The start index of the buffer.</dd>
+              <dt>
+                <i>length</i>
+              </dt>
+              <dd>The length of the buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32,System.Int32):Returns">The parsed <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32,System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+            The <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(System.Byte[],System.Int32,System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32)">Parse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):member">
+          <p class="Summary">
+            Parse the specified input buffer into a new instance of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/ContentType.html">ContentType</a> <b>Parse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The start index of the buffer.</dd>
+              <dt>
+                <i>length</i>
+              </dt>
+              <dd>The length of the buffer.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Returns">The parsed <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a>
+                </td>
+                <td>
+            The <i>buffer</i> could not be parsed.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.Parse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.ToString()">ToString Method</h3>
+        <blockquote id="M:MimeKit.ContentType.ToString():member">
+          <p class="Summary">
+            Returns a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current
+            <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.ToString():Returns">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current
+            <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.ToString():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.ToString():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean)">ToString Method</h3>
+        <blockquote id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean):member">
+          <p class="Summary">
+            Serializes the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> to a string,
+            optionally encoding the parameters.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> charset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> encode)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>charset</i>
+              </dt>
+              <dd>The charset to be used when encoding the parameter values.</dd>
+              <dt>
+                <i>encode</i>
+              </dt>
+              <dd>If set to <tt>true</tt>, the parameter values will be encoded.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean):Returns">The serialized string.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>charset</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.TryParse(System.Byte[],MimeKit.ContentType@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.TryParse(System.Byte[],MimeKit.ContentType@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],MimeKit.ContentType@):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The parsed content type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],MimeKit.ContentType@):Returns">
+            <tt>true</tt>, if the content type was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],MimeKit.ContentType@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],MimeKit.ContentType@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],MimeKit.ContentType@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.TryParse(System.String,MimeKit.ContentType@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.TryParse(System.String,MimeKit.ContentType@):member">
+          <p class="Summary">
+            Tries to parse the given text into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.String,MimeKit.ContentType@):Parameters">
+            <dl>
+              <dt>
+                <i>text</i>
+              </dt>
+              <dd>The text to parse.</dd>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The parsed content type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.String,MimeKit.ContentType@):Returns">
+            <tt>true</tt>, if the content type was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.String,MimeKit.ContentType@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>text</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(System.String,MimeKit.ContentType@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(System.String,MimeKit.ContentType@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.ContentType@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.ContentType@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.ContentType@):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The parsed content type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.ContentType@):Returns">
+            <tt>true</tt>, if the content type was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.ContentType@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.ContentType@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.ContentType@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,MimeKit.ContentType@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,MimeKit.ContentType@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,MimeKit.ContentType@):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The parsed content type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,MimeKit.ContentType@):Returns">
+            <tt>true</tt>, if the content type was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,MimeKit.ContentType@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,MimeKit.ContentType@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,MimeKit.ContentType@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.ContentType@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.ContentType@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.ContentType@):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The parsed content type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.ContentType@):Returns">
+            <tt>true</tt>, if the content type was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.ContentType@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.ContentType@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.ContentType@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Parameters">
+            <dl>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>length</i>
+              </dt>
+              <dd>The number of bytes in the input buffer to parse.</dd>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The parsed content type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Returns">
+            <tt>true</tt>, if the content type was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>buffer</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@)">TryParse Method</h3>
+        <blockquote id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):member">
+          <p class="Summary">
+            Tries to parse the given input buffer into a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> instance.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="../MimeKit/ContentType.html">ContentType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>buffer</i>
+              </dt>
+              <dd>The input buffer.</dd>
+              <dt>
+                <i>startIndex</i>
+              </dt>
+              <dd>The starting index of the input buffer.</dd>
+              <dt>
+                <i>length</i>
+              </dt>
+              <dd>The number of bytes in the input buffer to parse.</dd>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The parsed content type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Returns">
+            <tt>true</tt>, if the content type was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>buffer</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.ContentType.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.ContentType@):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

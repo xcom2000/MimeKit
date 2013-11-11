@@ -1,0 +1,1095 @@
+<html>
+  <head>
+    <title>MimeKit.MimeEntity</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MimeKit.MimeEntity">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.MimeEntity:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.MimeEntity:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.MimeEntity:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MimeKit.MimeEntity">MimeEntity  Class</h1>
+    <p class="Summary" id="T:MimeKit.MimeEntity:Summary">
+            An abstract MIME entity.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MimeKit.MimeEntity:Signature">public abstract class  <b>MimeEntity</b></div>
+    </div>
+    <div class="Remarks" id="T:MimeKit.MimeEntity:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MimeKit.MimeEntity:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MimeKit.MimeEntity:Docs:Version Information">
+        <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeEntity(MimeKit.MimeEntityConstructorInfo)">MimeEntity</a>
+                    </b>(<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeEntityConstructorInfo</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> class
+            based on the <a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeEntity(System.String,System.String)">MimeEntity</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> class.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ContentDisposition.html">ContentDisposition</a>
+                  </i>. 
+            Gets or sets the content disposition.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeEntity.ContentId">ContentId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the content identifier.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeEntity.ContentType">ContentType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ContentType.html">ContentType</a>
+                  </i>. 
+            Gets the type of the content.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeEntity.Headers">Headers</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/HeaderList.html">HeaderList</a>
+                  </i>. 
+            Gets the list of headers.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Properties</h2>
+        <div class="SectionBox" id="Protected Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeEntity.IsInitializing">IsInitializing</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets a value indicating whether this instance is initializing.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.Load(System.IO.Stream)">Load</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeEntity</a></nobr><blockquote>
+            Load a <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> from the specified stream.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream)">Load</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeEntity</a></nobr><blockquote>
+            Load a <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> from the specified stream.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.Register(System.String,System.Type)">Register</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>)<blockquote>
+            Registers the custom MIME entity. Once registered, all <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            instances will instantiate your custom <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> when the specified
+            mime-type is encountered.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.WriteTo(System.IO.Stream)">WriteTo</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Writes the entity instance to the specified stream.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
+                  </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Writes the entity instance to the specified stream.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.OnChanged()">OnChanged</a>
+                  </b>()<blockquote>
+            Raises the changed event.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged</a>
+                  </b>(<a href="../MimeKit/HeaderListChangedAction.html">HeaderListChangedAction</a>, <a href="../MimeKit/Header.html">Header</a>)<blockquote>
+            Called when the headers change in some way.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.RemoveHeader(System.String)">RemoveHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Removes the header.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[])">SetHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<blockquote>
+            Sets the header using the raw value.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.SetHeader(System.String,System.String)">SetHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Sets the header.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeEntity.TryInit(System.Object)">TryInit</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Try to use given object to initialize itself.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MimeKit.MimeEntity:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MimeKit.MimeEntity(MimeKit.MimeEntityConstructorInfo)">MimeEntity Constructor</h3>
+        <blockquote id="C:MimeKit.MimeEntity(MimeKit.MimeEntityConstructorInfo):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> class
+            based on the <a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected  <b>MimeEntity</b> (<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeEntityConstructorInfo</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeEntity(MimeKit.MimeEntityConstructorInfo):Parameters">
+            <dl>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>Information used by the constructor.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeEntity(MimeKit.MimeEntityConstructorInfo):Remarks">
+            Custom <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> subclasses MUST implement this constructor
+            in order to register it using <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.Register(System.String,System.Type)">MimeEntity.Register(string, Type)</a>.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeEntity(MimeKit.MimeEntityConstructorInfo):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.MimeEntity(System.String,System.String)">MimeEntity Constructor</h3>
+        <blockquote id="C:MimeKit.MimeEntity(System.String,System.String):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected  <b>MimeEntity</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mediaType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mediaSubtype)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeEntity(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>mediaType</i>
+              </dt>
+              <dd>The media type.</dd>
+              <dt>
+                <i>mediaSubtype</i>
+              </dt>
+              <dd>The media subtype.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeEntity(System.String,System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>mediaType</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>mediaSubtype</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeEntity(System.String,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeEntity(System.String,System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition Property</h3>
+        <blockquote id="P:MimeKit.MimeEntity.ContentDisposition:member">
+          <p class="Summary">
+            Gets or sets the content disposition.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/ContentDisposition.html">ContentDisposition</a> <b>ContentDisposition</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentDisposition:Value">The content disposition.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentDisposition:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentDisposition:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeEntity.ContentId">ContentId Property</h3>
+        <blockquote id="P:MimeKit.MimeEntity.ContentId:member">
+          <p class="Summary">
+            Gets or sets the content identifier.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ContentId</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentId:Value">The content identifier.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentId:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentId:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeEntity.ContentType">ContentType Property</h3>
+        <blockquote id="P:MimeKit.MimeEntity.ContentType:member">
+          <p class="Summary">
+            Gets the type of the content.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/ContentType.html">ContentType</a> <b>ContentType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentType:Value">The type of the content.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentType:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentType:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeEntity.Headers">Headers Property</h3>
+        <blockquote id="P:MimeKit.MimeEntity.Headers:member">
+          <p class="Summary">
+            Gets the list of headers.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/HeaderList.html">HeaderList</a> <b>Headers</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.Headers:Value">The list of headers.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.Headers:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.Headers:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeEntity.IsInitializing">IsInitializing Property</h3>
+        <blockquote id="P:MimeKit.MimeEntity.IsInitializing:member">
+          <p class="Summary">
+            Gets a value indicating whether this instance is initializing.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsInitializing</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.IsInitializing:Value">
+            <tt>true</tt> if this instance is initializing; otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.IsInitializing:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeEntity.IsInitializing:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.Load(System.IO.Stream)">Load Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.Load(System.IO.Stream):member">
+          <p class="Summary">
+            Load a <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> from the specified stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/MimeEntity.html">MimeEntity</a> <b>Load</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.Load(System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.Load(System.IO.Stream):Returns">The parsed MIME entity.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.Load(System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream)">Load Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream):member">
+          <p class="Summary">
+            Load a <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> from the specified stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit/MimeEntity.html">MimeEntity</a> <b>Load</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream):Returns">The parsed MIME entity.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.OnChanged()">OnChanged Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.OnChanged():member">
+          <p class="Summary">
+            Raises the changed event.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnChanged</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.OnChanged():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.OnChanged():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):member">
+          <p class="Summary">
+            Called when the headers change in some way.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnHeadersChanged</b> (<a href="../MimeKit/HeaderListChangedAction.html">HeaderListChangedAction</a> action, <a href="../MimeKit/Header.html">Header</a> header)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):Parameters">
+            <dl>
+              <dt>
+                <i>action</i>
+              </dt>
+              <dd>The type of change.</dd>
+              <dt>
+                <i>header</i>
+              </dt>
+              <dd>The header being added, changed or removed.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.Register(System.String,System.Type)">Register Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.Register(System.String,System.Type):member">
+          <p class="Summary">
+            Registers the custom MIME entity. Once registered, all <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            instances will instantiate your custom <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> when the specified
+            mime-type is encountered.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Register</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mimeType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.Register(System.String,System.Type):Parameters">
+            <dl>
+              <dt>
+                <i>mimeType</i>
+              </dt>
+              <dd>The MIME type.</dd>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>A custom subclass of <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.Register(System.String,System.Type):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>mimeType</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>type</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>type</i> is not a subclass of <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a>,
+            <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>, or <a href="../MimeKit/MessagePart.html">MimeKit.MessagePart</a>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>type</i> does not have a constructor that takes
+            only a <a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a> argument.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.Register(System.String,System.Type):Remarks">
+            Your custom <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> class should not subclass
+            <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> directly, but rather it should subclass
+            <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a>, <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>,
+            <a href="../MimeKit/MessagePart.html">MimeKit.MessagePart</a>, or one of their derivatives.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.Register(System.String,System.Type):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.RemoveHeader(System.String)">RemoveHeader Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.RemoveHeader(System.String):member">
+          <p class="Summary">
+            Removes the header.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveHeader</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.RemoveHeader(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>The name of the header.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.RemoveHeader(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.RemoveHeader(System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[])">SetHeader Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[]):member">
+          <p class="Summary">
+            Sets the header using the raw value.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetHeader</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] rawValue)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[]):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>The name of the header.</dd>
+              <dt>
+                <i>rawValue</i>
+              </dt>
+              <dd>The raw value of the header.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[]):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.SetHeader(System.String,System.String)">SetHeader Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.SetHeader(System.String,System.String):member">
+          <p class="Summary">
+            Sets the header.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetHeader</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>name</i>
+              </dt>
+              <dd>The name of the header.</dd>
+              <dt>
+                <i>value</i>
+              </dt>
+              <dd>The value of the header.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.TryInit(System.Object)">TryInit Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.TryInit(System.Object):member">
+          <p class="Summary">
+            Try to use given object to initialize itself.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryInit</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> obj)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.TryInit(System.Object):Parameters">
+            <dl>
+              <dt>
+                <i>obj</i>
+              </dt>
+              <dd>The object.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.TryInit(System.Object):Returns">
+            <tt>true</tt> if the object was recognized and used; <tt>false</tt> otherwise.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.TryInit(System.Object):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.TryInit(System.Object):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream)">WriteTo Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):member">
+          <p class="Summary">
+            Writes the entity instance to the specified stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo Method</h3>
+        <blockquote id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):member">
+          <p class="Summary">
+            Writes the entity instance to the specified stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The formatting options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

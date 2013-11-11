@@ -1,0 +1,1484 @@
+<html>
+  <head>
+    <title>MimeKit.Multipart</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MimeKit.Multipart">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Multipart:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Multipart:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Multipart:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MimeKit.Multipart">Multipart  Class</h1>
+    <p class="Summary" id="T:MimeKit.Multipart:Summary">
+            A Multipart MIME part which may contain a collection of MIME parts.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MimeKit.Multipart:Signature">public class  <b>Multipart</b> : <a href="../MimeKit/MimeEntity.html">MimeEntity</a>,	<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.ICollection`1">ICollection&lt;MimeEntity&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeEntity&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MimeEntity&gt;</a></div>
+    </div>
+    <div class="Remarks" id="T:MimeKit.Multipart:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MimeKit.Multipart:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MimeKit.Multipart:Docs:Version Information">
+        <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../MimeKit/MimeEntity.html">MimeEntity</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.Multipart()">Multipart</a>
+                    </b>()</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class
+            with a default Content-Type of multipart/mixed.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.Multipart(MimeKit.MimeEntityConstructorInfo)">Multipart</a>
+                    </b>(<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeEntityConstructorInfo</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.Multipart(System.String)">Multipart</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.Multipart(System.String,System.Object[])">Multipart</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Multipart.Boundary">Boundary</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the boundary.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ContentDisposition.html">ContentDisposition</a>
+                  </i>. 
+            Gets or sets the content disposition.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentId">ContentId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the content identifier.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentType">ContentType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ContentType.html">ContentType</a>
+                  </i>. 
+            Gets the type of the content.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Multipart.Count">Count</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. 
+            Gets the number of child parts.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Multipart.Epilogue">Epilogue</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the epilogue.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.Headers">Headers</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/HeaderList.html">HeaderList</a>
+                  </i>. 
+            Gets the list of headers.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Multipart.IsReadOnly">IsReadOnly</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets a value indicating whether this instance is read only.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                    <i>default property</i>
+                  </div>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Multipart.Item(System.Int32)">Item</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/MimeEntity.html">MimeEntity</a>
+                  </i>. 
+            Gets or sets the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> at the specified index.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Multipart.Preamble">Preamble</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the preamble.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Properties</h2>
+        <div class="SectionBox" id="Protected Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.IsInitializing">IsInitializing</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets a value indicating whether this instance is initializing.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.Add(MimeKit.MimeEntity)">Add</a>
+                  </b>(<a href="../MimeKit/MimeEntity.html">MimeEntity</a>)<blockquote>
+            Adds the specified part.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.Clear()">Clear</a>
+                  </b>()<blockquote>
+            Removes all of the children.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.Contains(MimeKit.MimeEntity)">Contains</a>
+                  </b>(<a href="../MimeKit/MimeEntity.html">MimeEntity</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Checks if the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> contains the specified part.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.CopyTo(MimeKit.MimeEntity[],System.Int32)">CopyTo</a>
+                  </b>(<a href="../MimeKit/MimeEntity.html">MimeEntity</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Copies all of the entities in the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> to the specified array.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.GetEnumerator()">GetEnumerator</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerator`1">IEnumerator&lt;MimeEntity&gt;</a></nobr><blockquote>
+            Gets the enumerator for the children of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.IndexOf(MimeKit.MimeEntity)">IndexOf</a>
+                  </b>(<a href="../MimeKit/MimeEntity.html">MimeEntity</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Gets the index of the specified part.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.Insert(System.Int32,MimeKit.MimeEntity)">Insert</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MimeKit/MimeEntity.html">MimeEntity</a>)<blockquote>
+            Insert the part atthe specified index.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.Remove(MimeKit.MimeEntity)">Remove</a>
+                  </b>(<a href="../MimeKit/MimeEntity.html">MimeEntity</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Remove the specified part.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.RemoveAt(System.Int32)">RemoveAt</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
+            Removes the part at the specified index.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(System.IO.Stream)">WriteTo</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Writes the entity instance to the specified stream.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
+                  </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Writes the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> to the specified stream.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
+                  </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Writes the entity instance to the specified stream.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnChanged()">OnChanged</a>
+                  </b>()<blockquote>
+            Raises the changed event.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged</a>
+                  </b>(<a href="../MimeKit/HeaderListChangedAction.html">HeaderListChangedAction</a>, <a href="../MimeKit/Header.html">Header</a>)<blockquote>
+            Called when the headers change in some way.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.RemoveHeader(System.String)">RemoveHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Removes the header.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[])">SetHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<blockquote>
+            Sets the header using the raw value.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.SetHeader(System.String,System.String)">SetHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Sets the header.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.TryInit(System.Object)">TryInit</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Try to use given object to initialize itself.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Explicitly Implemented Interface Members</h2>
+        <div class="SectionBox" id="Explicitly Implemented Interface Members">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:MimeKit.Multipart.System#Collections#IEnumerable#GetEnumerator()">
+                    <b>IEnumerable.GetEnumerator</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MimeKit.Multipart:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MimeKit.Multipart()">Multipart Constructor</h3>
+        <blockquote id="C:MimeKit.Multipart():member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class
+            with a default Content-Type of multipart/mixed.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Multipart</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.Multipart():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.Multipart():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.Multipart(MimeKit.MimeEntityConstructorInfo)">Multipart Constructor</h3>
+        <blockquote id="C:MimeKit.Multipart(MimeKit.MimeEntityConstructorInfo):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Multipart</b> (<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeEntityConstructorInfo</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.Multipart(MimeKit.MimeEntityConstructorInfo):Parameters">
+            <dl>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>Information used by the constructor.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.Multipart(MimeKit.MimeEntityConstructorInfo):Remarks">This constructor is used by <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.Multipart(MimeKit.MimeEntityConstructorInfo):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.Multipart(System.String)">Multipart Constructor</h3>
+        <blockquote id="C:MimeKit.Multipart(System.String):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Multipart</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> subtype)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.Multipart(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>subtype</i>
+              </dt>
+              <dd>The multipart media sub-type.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.Multipart(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>subtype</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.Multipart(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.Multipart(System.String):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.Multipart(System.String,System.Object[])">Multipart Constructor</h3>
+        <blockquote id="C:MimeKit.Multipart(System.String,System.Object[]):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Multipart</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> subtype, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] args)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.Multipart(System.String,System.Object[]):Parameters">
+            <dl>
+              <dt>
+                <i>subtype</i>
+              </dt>
+              <dd>The multipart media sub-type.</dd>
+              <dt>
+                <i>args</i>
+              </dt>
+              <dd>An array of initialization parameters: headers and MIME entities.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.Multipart(System.String,System.Object[]):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>subtype</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>args</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+                  <i>args</i> contains one or more arguments of an unknown type.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.Multipart(System.String,System.Object[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.Multipart(System.String,System.Object[]):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.Add(MimeKit.MimeEntity)">Add Method</h3>
+        <blockquote id="M:MimeKit.Multipart.Add(MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Adds the specified part.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Add</b> (<a href="../MimeKit/MimeEntity.html">MimeEntity</a> part)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Add(MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>part</i>
+              </dt>
+              <dd>The part to add.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Add(MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>part</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Add(MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Add(MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Multipart.Boundary">Boundary Property</h3>
+        <blockquote id="P:MimeKit.Multipart.Boundary:member">
+          <p class="Summary">
+            Gets or sets the boundary.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Boundary</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.Boundary:Value">The boundary.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.Boundary:Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>value</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Boundary:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Boundary:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.Clear()">Clear Method</h3>
+        <blockquote id="M:MimeKit.Multipart.Clear():member">
+          <p class="Summary">
+            Removes all of the children.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Clear():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Clear():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.Contains(MimeKit.MimeEntity)">Contains Method</h3>
+        <blockquote id="M:MimeKit.Multipart.Contains(MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Checks if the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> contains the specified part.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Contains</b> (<a href="../MimeKit/MimeEntity.html">MimeEntity</a> part)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Contains(MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>part</i>
+              </dt>
+              <dd>The part to check for.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Contains(MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Contains(MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>part</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Contains(MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Contains(MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.CopyTo(MimeKit.MimeEntity[],System.Int32)">CopyTo Method</h3>
+        <blockquote id="M:MimeKit.Multipart.CopyTo(MimeKit.MimeEntity[],System.Int32):member">
+          <p class="Summary">
+            Copies all of the entities in the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> to the specified array.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>CopyTo</b> (<a href="../MimeKit/MimeEntity.html">MimeEntity</a>[] array, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> arrayIndex)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.CopyTo(MimeKit.MimeEntity[],System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>array</i>
+              </dt>
+              <dd>The array to copy the headers to.</dd>
+              <dt>
+                <i>arrayIndex</i>
+              </dt>
+              <dd>The index into the array.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.CopyTo(MimeKit.MimeEntity[],System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>array</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>arrayIndex</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.CopyTo(MimeKit.MimeEntity[],System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.CopyTo(MimeKit.MimeEntity[],System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Multipart.Count">Count Property</h3>
+        <blockquote id="P:MimeKit.Multipart.Count:member">
+          <p class="Summary">
+            Gets the number of child parts.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Count</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.Count:Value">The number of child parts.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Count:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Count:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Multipart.Epilogue">Epilogue Property</h3>
+        <blockquote id="P:MimeKit.Multipart.Epilogue:member">
+          <p class="Summary">
+            Gets or sets the epilogue.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Epilogue</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.Epilogue:Value">The epilogue.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Epilogue:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Epilogue:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.GetEnumerator()">GetEnumerator Method</h3>
+        <blockquote id="M:MimeKit.Multipart.GetEnumerator():member">
+          <p class="Summary">
+            Gets the enumerator for the children of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerator`1">IEnumerator&lt;MimeEntity&gt;</a> <b>GetEnumerator</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.GetEnumerator():Returns">The enumerator.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.GetEnumerator():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.GetEnumerator():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.IndexOf(MimeKit.MimeEntity)">IndexOf Method</h3>
+        <blockquote id="M:MimeKit.Multipart.IndexOf(MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Gets the index of the specified part.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>IndexOf</b> (<a href="../MimeKit/MimeEntity.html">MimeEntity</a> part)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.IndexOf(MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>part</i>
+              </dt>
+              <dd>The part.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.IndexOf(MimeKit.MimeEntity):Returns">The index of the specified part if found; otherwise <tt>-1</tt>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.IndexOf(MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>part</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.IndexOf(MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.IndexOf(MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.Insert(System.Int32,MimeKit.MimeEntity)">Insert Method</h3>
+        <blockquote id="M:MimeKit.Multipart.Insert(System.Int32,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Insert the part atthe specified index.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Insert</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index, <a href="../MimeKit/MimeEntity.html">MimeEntity</a> part)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Insert(System.Int32,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>The index.</dd>
+              <dt>
+                <i>part</i>
+              </dt>
+              <dd>The part.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Insert(System.Int32,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>part</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>index</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Insert(System.Int32,MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Insert(System.Int32,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Multipart.IsReadOnly">IsReadOnly Property</h3>
+        <blockquote id="P:MimeKit.Multipart.IsReadOnly:member">
+          <p class="Summary">
+            Gets a value indicating whether this instance is read only.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsReadOnly</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.IsReadOnly:Value">
+            <tt>true</tt> if this instance is read only; otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.IsReadOnly:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.IsReadOnly:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Multipart.Item(System.Int32)">Item Property</h3>
+        <blockquote id="P:MimeKit.Multipart.Item(System.Int32):member">
+          <p class="Summary">
+            Gets or sets the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> at the specified index.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <p>
+              <i>This is the default property for this class.</i>
+            </p>public <a href="../MimeKit/MimeEntity.html">MimeEntity</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index] { get; set; }</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.Item(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>The index.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.Item(System.Int32):Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.Item(System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>value</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>index</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Item(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Item(System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Multipart.Preamble">Preamble Property</h3>
+        <blockquote id="P:MimeKit.Multipart.Preamble:member">
+          <p class="Summary">
+            Gets or sets the preamble.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Preamble</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Multipart.Preamble:Value">The preamble.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Preamble:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Multipart.Preamble:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.Remove(MimeKit.MimeEntity)">Remove Method</h3>
+        <blockquote id="M:MimeKit.Multipart.Remove(MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Remove the specified part.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Remove</b> (<a href="../MimeKit/MimeEntity.html">MimeEntity</a> part)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Remove(MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>part</i>
+              </dt>
+              <dd>The part to remove.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Remove(MimeKit.MimeEntity):Returns">
+            <tt>true</tt> if the part was removed; otherwise <tt>false</tt>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.Remove(MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>part</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Remove(MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.Remove(MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.RemoveAt(System.Int32)">RemoveAt Method</h3>
+        <blockquote id="M:MimeKit.Multipart.RemoveAt(System.Int32):member">
+          <p class="Summary">
+            Removes the part at the specified index.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveAt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.RemoveAt(System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>index</i>
+              </dt>
+              <dd>The index.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.RemoveAt(System.Int32):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>index</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.RemoveAt(System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.RemoveAt(System.Int32):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.System#Collections#IEnumerable#GetEnumerator()">System.Collections.IEnumerable.GetEnumerator Method</h3>
+        <blockquote id="M:MimeKit.Multipart.System#Collections#IEnumerable#GetEnumerator():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a> <b>System.Collections.IEnumerable.GetEnumerator</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.System#Collections#IEnumerable#GetEnumerator():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.System#Collections#IEnumerable#GetEnumerator():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.System#Collections#IEnumerable#GetEnumerator():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo Method</h3>
+        <blockquote id="M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream):member">
+          <p class="Summary">
+            Writes the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> to the specified stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The formatting options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

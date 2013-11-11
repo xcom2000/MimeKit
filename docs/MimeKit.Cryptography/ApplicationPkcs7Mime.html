@@ -1,0 +1,2459 @@
+<html>
+  <head>
+    <title>MimeKit.Cryptography.ApplicationPkcs7Mime</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MimeKit.Cryptography.ApplicationPkcs7Mime">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Cryptography.ApplicationPkcs7Mime:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Cryptography.ApplicationPkcs7Mime:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Cryptography.ApplicationPkcs7Mime:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime">ApplicationPkcs7Mime  Class</h1>
+    <p class="Summary" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Summary">
+            An S/MIME part with a Content-Type of application/pkcs7-mime.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Signature">public sealed class  <b>ApplicationPkcs7Mime</b> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></div>
+    </div>
+    <div class="Remarks" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Docs:Version Information">
+        <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.MimeEntityConstructorInfo)">ApplicationPkcs7Mime</a>
+                    </b>(<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">MimeKit.Cryptography.ApplicationPkcs7Mime</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.Cryptography.SecureMimeType,System.IO.Stream)">ApplicationPkcs7Mime</a>
+                    </b>(<a href="../MimeKit.Cryptography/SecureMimeType.html">SecureMimeType</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">MimeKit.Cryptography.ApplicationPkcs7Mime</a> class.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ContentDisposition.html">MimeKit.ContentDisposition</a>
+                  </i>. 
+            Gets or sets the content disposition.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentDuration">ContentDuration</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;int&gt;</a>
+                  </i>. 
+            Gets or sets the duration of the content if available.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentId">ContentId</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the content identifier.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentMd5">ContentMd5</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the md5sum of the content.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentObject">ContentObject</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/IContentObject.html">MimeKit.IContentObject</a>
+                  </i>. 
+            Gets or sets the content of the mime part.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentTransferEncoding">ContentTransferEncoding</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a>
+                  </i>. 
+            Gets or sets the content transfer encoding.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentType">ContentType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>
+                  </i>. 
+            Gets the type of the content.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.FileName">FileName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets or sets the name of the file.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.Headers">Headers</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a>
+                  </i>. 
+            Gets the list of headers.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.IsAttachment">IsAttachment</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets a value indicating whether this <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> is an attachment.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType">SecureMimeType</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../MimeKit.Cryptography/SecureMimeType.html">SecureMimeType</a>
+                  </i>. 
+            Gets the value of the "smime-type" parameter.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Properties</h2>
+        <div class="SectionBox" id="Protected Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.IsInitializing">IsInitializing</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets a value indicating whether this instance is initializing.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity)">Compress</a>
+                  </b>(<a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Compress the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity)">Compress</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Compress the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.ComputeContentMd5()">ComputeContentMd5</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Computes the md5sum of the content.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress()">Decompress</a>
+                  </b>()<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decompress using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext)">Decompress</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decompress using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt()">Decrypt</a>
+                  </b>()<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decrypt the content.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext)">Decrypt</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decrypt using the specified <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decrypt using the specified <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">Encrypt</a>
+                  </b>(<a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Encrypt the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">Encrypt</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Encrypt the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">Encrypt</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Encrypt the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">Encrypt</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Encrypt the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext)">Import</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>)<blockquote>
+            Import the certificates contained in the content.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Sign</a>
+                  </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Sign the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Sign</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Sign the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Sign</a>
+                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Sign the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Sign</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Sign the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">SignAndEncrypt</a>
+                  </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Sign and Encrypt the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">SignAndEncrypt</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Sign and Encrypt the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">SignAndEncrypt</a>
+                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Sign and Encrypt the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">SignAndEncrypt</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
+            Sign and Encrypt the specified entity.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify</a>
+                  </b>(<i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify</a>
+                  </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.VerifyContentMd5()">VerifyContentMd5</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Verifies the Content-Md5 value against an independently computed md5sum.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(System.IO.Stream)">WriteTo</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Writes the entity instance to the specified stream.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
+                  </b>(<a href="../MimeKit/FormatOptions.html">MimeKit.FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> to the specified stream.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
+                  </b>(<a href="../MimeKit/FormatOptions.html">MimeKit.FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Writes the entity instance to the specified stream.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnChanged()">OnChanged</a>
+                  </b>()<blockquote>
+            Raises the changed event.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged</a>
+                  </b>(<a href="../MimeKit/HeaderListChangedAction.html">MimeKit.HeaderListChangedAction</a>, <a href="../MimeKit/Header.html">MimeKit.Header</a>)<blockquote>
+            Called when the headers change in some way.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged</a>
+                  </b>(<a href="../MimeKit/HeaderListChangedAction.html">MimeKit.HeaderListChangedAction</a>, <a href="../MimeKit/Header.html">MimeKit.Header</a>)<blockquote>
+            Called when the headers change in some way.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.RemoveHeader(System.String)">RemoveHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Removes the header.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[])">SetHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<blockquote>
+            Sets the header using the raw value.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.SetHeader(System.String,System.String)">SetHeader</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Sets the header.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.TryInit(System.Object)">TryInit</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Try to use given object to initialize itself.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.MimeEntityConstructorInfo)">ApplicationPkcs7Mime Constructor</h3>
+        <blockquote id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.MimeEntityConstructorInfo):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">MimeKit.Cryptography.ApplicationPkcs7Mime</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>ApplicationPkcs7Mime</b> (<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.MimeEntityConstructorInfo):Parameters">
+            <dl>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>Information used by the constructor.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.MimeEntityConstructorInfo):Remarks">This constructor is used by <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.MimeEntityConstructorInfo):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.Cryptography.SecureMimeType,System.IO.Stream)">ApplicationPkcs7Mime Constructor</h3>
+        <blockquote id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.Cryptography.SecureMimeType,System.IO.Stream):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">MimeKit.Cryptography.ApplicationPkcs7Mime</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>ApplicationPkcs7Mime</b> (<a href="../MimeKit.Cryptography/SecureMimeType.html">SecureMimeType</a> type, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.Cryptography.SecureMimeType,System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>The S/MIME type.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The content stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.Cryptography.SecureMimeType,System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>type</i> is not a valid value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>stream</i> does not support reading.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> does not support seeking.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.Cryptography.SecureMimeType,System.IO.Stream):Remarks">
+            <p>Creates a new MIME part with a Content-Type of application/pkcs7-mime
+            and the <i>stream</i> as its content.</p>
+            <p>Unless you are writing your own pkcs7 implementation, you'll probably
+            want to use the <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity)">ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity)</a>,
+            <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">ApplicationPkcs7Mime.Encrypt(CmsRecipientCollection, MimeKit.MimeEntity)</a>, and/or
+            <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">ApplicationPkcs7Mime.Sign(CmsSigner, MimeKit.MimeEntity)</a> method to create new instances
+            of this class.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.Cryptography.ApplicationPkcs7Mime(MimeKit.Cryptography.SecureMimeType,System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity)">Compress Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Compress the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Compress</b> (<a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>entity</i> is<tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Remarks">
+            It should be noted that this feature is not supported by most mail clients,
+            even among those that support S/MIME.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity)">Compress Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Compress the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Compress</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for compressing.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>ctx</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Remarks">
+            It should be noted that this feature is not supported by most mail clients,
+            even among those that support S/MIME.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress()">Decompress Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress():member">
+          <p class="Summary">
+            Decompress using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decompress</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress():Returns">The decompressed <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress():Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                </td>
+                <td>
+            The "smime-type" parameter on the Content-Type header is not "compressed-data".
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress():Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext)">Decompress Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):member">
+          <p class="Summary">
+            Decompress using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decompress</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for decompressing.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):Returns">The decompressed <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>ctx</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                </td>
+                <td>
+            The "smime-type" parameter on the Content-Type header is not "compressed-data".
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt()">Decrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt():member">
+          <p class="Summary">
+            Decrypt the content.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt():Returns">The decrypted <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt():Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                </td>
+                <td>
+            The "smime-type" parameter on the Content-Type header is not "certs-only".
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt():Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext)">Decrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):member">
+          <p class="Summary">
+            Decrypt using the specified <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for decrypting.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):Returns">The decrypted <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>ctx</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                </td>
+                <td>
+            The "smime-type" parameter on the Content-Type header is not "enveloped-data".
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+          <p class="Summary">
+            Decrypt using the specified <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for decrypting.</dd>
+              <dt>
+                <i>signatures</i>
+              </dt>
+              <dd>The list of digital signatures for this application/pkcs7-mime part.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The decrypted <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>ctx</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                </td>
+                <td>
+            The "smime-type" parameter on the Content-Type header is not "enveloped-data".
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">Encrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Encrypt the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>recipients</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">Encrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Encrypt the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>recipients</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+            Valid certificates could not be found for one or more of the <i>recipients</i>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+            A certificate could not be found for one or more of the <i>recipients</i>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">Encrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Encrypt the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for encrypting.</dd>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>ctx</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>recipients</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">Encrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Encrypt the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for encrypting.</dd>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>ctx</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>recipients</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+            Valid certificates could not be found for one or more of the <i>recipients</i>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+            A certificate could not be found for one or more of the <i>recipients</i>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext)">Import Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext):member">
+          <p class="Summary">
+            Import the certificates contained in the content.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Import</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to import certificates into.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                </td>
+                <td>
+            The "smime-type" parameter on the Content-Type header is not "certs-only".
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType">SecureMimeType Property</h3>
+        <blockquote id="P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType:member">
+          <p class="Summary">
+            Gets the value of the "smime-type" parameter.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit.Cryptography/SecureMimeType.html">SecureMimeType</a> <b>SecureMimeType</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType:Value">The value of the "smime-type" parameter.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType:Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Sign Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Sign the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>signer</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Remarks">
+            For better interoperability with other mail clients, you should use
+            <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">MultipartSigned.Create(SecureMimeContext, CmsSigner, MimeKit.MimeEntity)</a>
+            instead as the multipart/signed format is supported among a much larger
+            subset of mail client software.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Sign Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Sign the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for signing.</dd>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>ctx</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>signer</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Remarks">
+            For better interoperability with other mail clients, you should use
+            <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">MultipartSigned.Create(SecureMimeContext, CmsSigner, MimeKit.MimeEntity)</a>
+            instead as the multipart/signed format is supported among a much larger
+            subset of mail client software.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Sign Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Sign the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Sign</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>digestAlgo</i>
+              </dt>
+              <dd>The digest algorithm to use for signing.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>signer</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+            A signing certificate could not be found for <i>signer</i>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Remarks">
+            For better interoperability with other mail clients, you should use
+            <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">MultipartSigned.Create(CryptographyContext, MimeKit.MailboxAddress, DigestAlgorithm, MimeKit.MimeEntity)</a>
+            instead as the multipart/signed format is supported among a much larger
+            subset of mail client software.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Sign Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Sign the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for signing.</dd>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>digestAlgo</i>
+              </dt>
+              <dd>The digest algorithm to use for signing.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>ctx</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>signer</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+            A signing certificate could not be found for <i>signer</i>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Remarks">
+            For better interoperability with other mail clients, you should use
+            <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">MultipartSigned.Create(CryptographyContext, MimeKit.MailboxAddress, DigestAlgorithm, MimeKit.MimeEntity)</a>
+            instead as the multipart/signed format is supported among a much larger
+            subset of mail client software.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">SignAndEncrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Sign and Encrypt the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>SignAndEncrypt</b> (<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>signer</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>recipients</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">SignAndEncrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Sign and Encrypt the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>SignAndEncrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for signing and encrypting.</dd>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>ctx</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>signer</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>recipients</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">SignAndEncrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Sign and Encrypt the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>SignAndEncrypt</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>digestAlgo</i>
+              </dt>
+              <dd>The digest algorithm to use for signing.</dd>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>signer</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>recipients</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+                  <p>A signing certificate could not be found for <i>signer</i>.</p>
+                  <p>-or-</p>
+                  <p>A certificate could not be found for one or more of the <i>recipients</i>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">SignAndEncrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):member">
+          <p class="Summary">
+            Sign and Encrypt the specified entity.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>SignAndEncrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for signing and encrypting.</dd>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>digestAlgo</i>
+              </dt>
+              <dd>The digest algorithm to use for signing.</dd>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>entity</i>
+              </dt>
+              <dd>The entity.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>ctx</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>signer</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>recipients</i> is<tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>entity</i> is<tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+                  <p>A signing certificate could not be found for <i>signer</i>.</p>
+                  <p>-or-</p>
+                  <p>A certificate could not be found for one or more of the <i>recipients</i>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+          <p class="Summary">
+            Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Verify</b> (<i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+            <dl>
+              <dt>
+                <i>signatures</i>
+              </dt>
+              <dd>The digital signatures.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                </td>
+                <td>
+            The "smime-type" parameter on the Content-Type header is not "signed-data".
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+          <p class="Summary">
+            Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Verify</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+            <dl>
+              <dt>
+                <i>ctx</i>
+              </dt>
+              <dd>The S/MIME context to use for verifying the signature.</dd>
+              <dt>
+                <i>signatures</i>
+              </dt>
+              <dd>The digital signatures.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                </td>
+                <td>
+            The "smime-type" parameter on the Content-Type header is not "signed-data".
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
+                </td>
+                <td>
+            An error occurred in the cryptographic message syntax subsystem.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1525 @@
+<html>
+  <head>
+    <title>MimeKit.MimeParser</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MimeKit.MimeParser">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.MimeParser:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.MimeParser:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.MimeParser:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MimeKit.MimeParser">MimeParser  Class</h1>
+    <p class="Summary" id="T:MimeKit.MimeParser:Summary">
+            A MIME parser which can be used to parse <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a>s and
+            <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>s from arbitrary streams.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MimeKit.MimeParser:Signature">public sealed class  <b>MimeParser</b></div>
+    </div>
+    <div class="Remarks" id="T:MimeKit.MimeParser:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MimeKit.MimeParser:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MimeKit.MimeParser:Docs:Version Information">
+        <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeParser(System.IO.Stream)">MimeParser</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream)">MimeParser</a>
+                    </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat)">MimeParser</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeParser(System.IO.Stream,System.Boolean)">MimeParser</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat)">MimeParser</a>
+                    </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,System.Boolean)">MimeParser</a>
+                    </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat,System.Boolean)">MimeParser</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean)">MimeParser</a>
+                    </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                </td>
+                <td>
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeParser.CurrentStreamOffset">CurrentStreamOffset</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i>. 
+            Gets the current stream offset that the parser is at.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeParser.IsEndOfStream">IsEndOfStream</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets a value indicating whether the parser has reached the end of the input stream.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeParser.MboxMarker">MboxMarker</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets the most recent mbox marker.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.MimeParser.MboxMarkerOffset">MboxMarkerOffset</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                  </i>. 
+            Gets the most recent mbox marker offset.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.ParseEntity()">ParseEntity</a>
+                  </b>()<nobr> : <a href="../MimeKit/MimeEntity.html">MimeEntity</a></nobr><blockquote>
+            Parses an entity from the stream.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.ParseMessage()">ParseMessage</a>
+                  </b>()<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
+            Parses a message from the stream.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.SetStream(System.IO.Stream)">SetStream</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Sets the stream to parse.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream)">SetStream</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Sets the stream to parse.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat)">SetStream</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>)<blockquote>
+            Sets the stream to parse.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.SetStream(System.IO.Stream,System.Boolean)">SetStream</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Sets the stream to parse.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat)">SetStream</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>)<blockquote>
+            Sets the stream to parse.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,System.Boolean)">SetStream</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Sets the stream to parse.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat,System.Boolean)">SetStream</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Sets the stream to parse.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean)">SetStream</a>
+                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Sets the stream to parse.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MimeKit.MimeParser:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MimeKit.MimeParser(System.IO.Stream)">MimeParser Constructor</h3>
+        <blockquote id="C:MimeKit.MimeParser(System.IO.Stream):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>MimeParser</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream)">MimeParser Constructor</h3>
+        <blockquote id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>MimeParser</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat)">MimeParser Constructor</h3>
+        <blockquote id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>MimeParser</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../MimeKit/MimeFormat.html">MimeFormat</a> format)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format of the stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.MimeParser(System.IO.Stream,System.Boolean)">MimeParser Constructor</h3>
+        <blockquote id="C:MimeKit.MimeParser(System.IO.Stream,System.Boolean):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>MimeParser</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>
+                <tt>true</tt> if the stream is persistent; otherwise <tt>false</tt>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,System.Boolean):Remarks">
+            <p>If <i>persistent</i> is <tt>true</tt> and <i>stream</i> is seekable, then
+            the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> will not copy the content of <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>s into memory. Instead,
+            it will use a <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> to reference a substream of <i>stream</i>.
+            This has the potential to not only save mmeory usage, but also improve <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            performance.</p>
+            <p>It should be noted, however, that disposing <i>stream</i> will make it impossible
+            for <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> to read the content.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat)">MimeParser Constructor</h3>
+        <blockquote id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>MimeParser</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../MimeKit/MimeFormat.html">MimeFormat</a> format)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format of the stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,System.Boolean)">MimeParser Constructor</h3>
+        <blockquote id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>MimeParser</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>
+                <tt>true</tt> if the stream is persistent; otherwise <tt>false</tt>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):Remarks">
+            <p>If <i>persistent</i> is <tt>true</tt> and <i>stream</i> is seekable, then
+            the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> will not copy the content of <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>s into memory. Instead,
+            it will use a <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> to reference a substream of <i>stream</i>.
+            This has the potential to not only save mmeory usage, but also improve <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            performance.</p>
+            <p>It should be noted, however, that disposing <i>stream</i> will make it impossible
+            for <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> to read the content.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat,System.Boolean)">MimeParser Constructor</h3>
+        <blockquote id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>MimeParser</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../MimeKit/MimeFormat.html">MimeFormat</a> format, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format of the stream.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>
+                <tt>true</tt> if the stream is persistent; otherwise <tt>false</tt>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Remarks">
+            <p>If <i>persistent</i> is <tt>true</tt> and <i>stream</i> is seekable, then
+            the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> will not copy the content of <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>s into memory. Instead,
+            it will use a <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> to reference a substream of <i>stream</i>.
+            This has the potential to not only save mmeory usage, but also improve <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            performance.</p>
+            <p>It should be noted, however, that disposing <i>stream</i> will make it impossible
+            for <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> to read the content.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean)">MimeParser Constructor</h3>
+        <blockquote id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):member">
+          <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> class.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>MimeParser</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../MimeKit/MimeFormat.html">MimeFormat</a> format, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format of the stream.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>
+                <tt>true</tt> if the stream is persistent; otherwise <tt>false</tt>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Remarks">
+            <p>If <i>persistent</i> is <tt>true</tt> and <i>stream</i> is seekable, then
+            the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> will not copy the content of <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>s into memory. Instead,
+            it will use a <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> to reference a substream of <i>stream</i>.
+            This has the potential to not only save mmeory usage, but also improve <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            performance.</p>
+            <p>It should be noted, however, that disposing <i>stream</i> will make it impossible
+            for <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> to read the content.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.MimeParser(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeParser.CurrentStreamOffset">CurrentStreamOffset Property</h3>
+        <blockquote id="P:MimeKit.MimeParser.CurrentStreamOffset:member">
+          <p class="Summary">
+            Gets the current stream offset that the parser is at.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>CurrentStreamOffset</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeParser.CurrentStreamOffset:Value">The stream offset.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeParser.CurrentStreamOffset:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeParser.CurrentStreamOffset:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeParser.IsEndOfStream">IsEndOfStream Property</h3>
+        <blockquote id="P:MimeKit.MimeParser.IsEndOfStream:member">
+          <p class="Summary">
+            Gets a value indicating whether the parser has reached the end of the input stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsEndOfStream</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeParser.IsEndOfStream:Value">
+            <tt>true</tt> if this parser has reached the end of the input stream;
+            otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeParser.IsEndOfStream:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeParser.IsEndOfStream:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeParser.MboxMarker">MboxMarker Property</h3>
+        <blockquote id="P:MimeKit.MimeParser.MboxMarker:member">
+          <p class="Summary">
+            Gets the most recent mbox marker.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MboxMarker</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeParser.MboxMarker:Value">The mbox marker.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeParser.MboxMarker:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeParser.MboxMarker:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.MimeParser.MboxMarkerOffset">MboxMarkerOffset Property</h3>
+        <blockquote id="P:MimeKit.MimeParser.MboxMarkerOffset:member">
+          <p class="Summary">
+            Gets the most recent mbox marker offset.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>MboxMarkerOffset</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.MimeParser.MboxMarkerOffset:Value">The mbox marker offset.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeParser.MboxMarkerOffset:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.MimeParser.MboxMarkerOffset:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.ParseEntity()">ParseEntity Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.ParseEntity():member">
+          <p class="Summary">
+            Parses an entity from the stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeEntity</a> <b>ParseEntity</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseEntity():Returns">The parsed entity.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.ParseEntity():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.ParseEntity():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.ParseMessage()">ParseMessage Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.ParseMessage():member">
+          <p class="Summary">
+            Parses a message from the stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>ParseMessage</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseMessage():Returns">The parsed message.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.ParseMessage():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.ParseMessage():Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.SetStream(System.IO.Stream)">SetStream Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.SetStream(System.IO.Stream):member">
+          <p class="Summary">
+            Sets the stream to parse.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream)">SetStream Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream):member">
+          <p class="Summary">
+            Sets the stream to parse.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetStream</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat)">SetStream Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat):member">
+          <p class="Summary">
+            Sets the stream to parse.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../MimeKit/MimeFormat.html">MimeFormat</a> format)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format of the stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,System.Boolean)">SetStream Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,System.Boolean):member">
+          <p class="Summary">
+            Sets the stream to parse.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>
+                <tt>true</tt> if the stream is persistent; otherwise <tt>false</tt>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,System.Boolean):Remarks">
+            <p>If <i>persistent</i> is <tt>true</tt> and <i>stream</i> is seekable, then
+            the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> will not copy the content of <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>s into memory. Instead,
+            it will use a <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> to reference a substream of <i>stream</i>.
+            This has the potential to not only save mmeory usage, but also improve <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            performance.</p>
+            <p>It should be noted, however, that disposing <i>stream</i> will make it impossible
+            for <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> to read the content.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat)">SetStream Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):member">
+          <p class="Summary">
+            Sets the stream to parse.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetStream</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../MimeKit/MimeFormat.html">MimeFormat</a> format)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format of the stream.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,System.Boolean)">SetStream Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):member">
+          <p class="Summary">
+            Sets the stream to parse.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetStream</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>
+                <tt>true</tt> if the stream is persistent; otherwise <tt>false</tt>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):Remarks">
+            <p>If <i>persistent</i> is <tt>true</tt> and <i>stream</i> is seekable, then
+            the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> will not copy the content of <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>s into memory. Instead,
+            it will use a <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> to reference a substream of <i>stream</i>.
+            This has the potential to not only save mmeory usage, but also improve <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            performance.</p>
+            <p>It should be noted, however, that disposing <i>stream</i> will make it impossible
+            for <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> to read the content.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat,System.Boolean)">SetStream Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):member">
+          <p class="Summary">
+            Sets the stream to parse.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../MimeKit/MimeFormat.html">MimeFormat</a> format, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format of the stream.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>
+                <tt>true</tt> if the stream is persistent; otherwise <tt>false</tt>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Remarks">
+            <p>If <i>persistent</i> is <tt>true</tt> and <i>stream</i> is seekable, then
+            the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> will not copy the content of <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>s into memory. Instead,
+            it will use a <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> to reference a substream of <i>stream</i>.
+            This has the potential to not only save mmeory usage, but also improve <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            performance.</p>
+            <p>It should be noted, however, that disposing <i>stream</i> will make it impossible
+            for <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> to read the content.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean)">SetStream Method</h3>
+        <blockquote id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):member">
+          <p class="Summary">
+            Sets the stream to parse.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetStream</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../MimeKit/MimeFormat.html">MimeFormat</a> format, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> persistent)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>options</i>
+              </dt>
+              <dd>The parser options.</dd>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The stream to parse.</dd>
+              <dt>
+                <i>format</i>
+              </dt>
+              <dd>The format of the stream.</dd>
+              <dt>
+                <i>persistent</i>
+              </dt>
+              <dd>
+                <tt>true</tt> if the stream is persistent; otherwise <tt>false</tt>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>options</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>stream</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Remarks">
+            <p>If <i>persistent</i> is <tt>true</tt> and <i>stream</i> is seekable, then
+            the <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> will not copy the content of <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>s into memory. Instead,
+            it will use a <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> to reference a substream of <i>stream</i>.
+            This has the potential to not only save mmeory usage, but also improve <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>
+            performance.</p>
+            <p>It should be noted, however, that disposing <i>stream</i> will make it impossible
+            for <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> to read the content.</p>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

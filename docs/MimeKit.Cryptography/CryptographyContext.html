@@ -1,0 +1,1356 @@
+<html>
+  <head>
+    <title>MimeKit.Cryptography.CryptographyContext</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MimeKit.Cryptography.CryptographyContext">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Cryptography.CryptographyContext:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Cryptography.CryptographyContext:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MimeKit.Cryptography.CryptographyContext:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MimeKit.Cryptography.CryptographyContext">CryptographyContext  Class</h1>
+    <p class="Summary" id="T:MimeKit.Cryptography.CryptographyContext:Summary">
+            An abstract cryptography context.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MimeKit.Cryptography.CryptographyContext:Signature">public abstract class  <b>CryptographyContext</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+    </div>
+    <div class="Remarks" id="T:MimeKit.Cryptography.CryptographyContext:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MimeKit.Cryptography.CryptographyContext:Docs:Remarks">
+            Generally speaking, applications should not use a <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>
+            directly, but rather via higher level APIs such as <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>,
+            <a href="../MimeKit.Cryptography/MultipartEncrypted.html">MimeKit.Cryptography.MultipartEncrypted</a> and <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">MimeKit.Cryptography.ApplicationPkcs7Mime</a>.
+            </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MimeKit.Cryptography.CryptographyContext:Docs:Version Information">
+        <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Protected Constructors</h2>
+        <div class="SectionBox" id="Protected Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MimeKit.Cryptography.CryptographyContext()">CryptographyContext</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval">AllowOnlineCertificateRetrieval</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. 
+            Gets or sets a value indicating whether this <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> allows online
+            certificate retrieval.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol">EncryptionProtocol</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets the encryption protocol.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Cryptography.CryptographyContext.KeyExchangeProtocol">KeyExchangeProtocol</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets the key exchange protocol.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout">OnlineCertificateRetrievalTimeout</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>
+                  </i>. 
+            Gets or sets the online certificate retrieval timeout.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div>abstract </div></td>
+                <td>
+                  <b>
+                    <a href="#P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol">SignatureProtocol</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            Gets the signature protocol.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Create(System.String)">Create</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a></nobr><blockquote>
+            Creates a new <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> for the specified protocol.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decrypt the specified encryptedData.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Dispose()">Dispose</a>
+                  </b>()<blockquote>
+            Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">Encrypt</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Encrypts the specified content for the specified recipients.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">Export</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Exports the keys for the specified mailboxes.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String)">GetDigestAlgorithm</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a></nobr><blockquote>
+            Gets the digest algorithm from the micalg parameter value in a multipart/signed part.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName</a>
+                  </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream)">Import</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Imports the public certificates or keys from the specified stream.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Register(System.Type)">Register</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>)<blockquote>
+            Registers a default <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a> or <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
+                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Sign the content using the specified signer.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt</a>
+                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Signs and encrypts the specified content for the specified recipients.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Supports(System.String)">Supports</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+            Verify the specified content and signatureData.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MimeKit.Cryptography.CryptographyContext.Dispose(System.Boolean)">Dispose</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MimeKit.Cryptography.CryptographyContext:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MimeKit.Cryptography.CryptographyContext()">CryptographyContext Constructor</h3>
+        <blockquote id="C:MimeKit.Cryptography.CryptographyContext():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected  <b>CryptographyContext</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MimeKit.Cryptography.CryptographyContext():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MimeKit.Cryptography.CryptographyContext():Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval">AllowOnlineCertificateRetrieval Property</h3>
+        <blockquote id="P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval:member">
+          <p class="Summary">
+            Gets or sets a value indicating whether this <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> allows online
+            certificate retrieval.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>AllowOnlineCertificateRetrieval</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval:Value">
+            <tt>true</tt> if online certificate retrieval should be allowed; otherwise, <tt>false</tt>.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval:Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Create(System.String)">Create Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Create(System.String):member">
+          <p class="Summary">
+            Creates a new <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> for the specified protocol.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a> <b>Create</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> protocol)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Create(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>protocol</i>
+              </dt>
+              <dd>The protocol.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Create(System.String):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Create(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>protocol</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                </td>
+                <td>
+            There are no supported <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>s that support
+            the specified <i>protocol</i>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Create(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Create(System.String):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+          <p class="Summary">
+            Decrypt the specified encryptedData.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+            <dl>
+              <dt>
+                <i>encryptedData</i>
+              </dt>
+              <dd>The encrypted data.</dd>
+              <dt>
+                <i>signatures</i>
+              </dt>
+              <dd>A list of digital signatures if the data was both signed and encrypted.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The decrypted <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>encryptedData</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Dispose()">Dispose Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Dispose():member">
+          <p class="Summary">
+            Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Dispose():Remarks">Call <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose">CryptographyContext.Dispose</a> when you are finished using the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>. The
+            <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose">CryptographyContext.Dispose</a> method leaves the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> in an unusable state. After
+            calling <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose">CryptographyContext.Dispose</a>, you must release all references to the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> so
+            the garbage collector can reclaim the memory that the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> was occupying.</div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Dispose():Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Dispose(System.Boolean)">Dispose Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Dispose(System.Boolean):member">
+          <p class="Summary">
+            Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Dispose(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>disposing</i>
+              </dt>
+              <dd>If <tt>true</tt>, this method is being called by
+            <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose">CryptographyContext.Dispose</a>; otherwise it is being called by the finalizer.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Dispose(System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Dispose(System.Boolean):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">Encrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):member">
+          <p class="Summary">
+            Encrypts the specified content for the specified recipients.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>Encrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>content</i>
+              </dt>
+              <dd>The content.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Returns">A new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> instance
+            containing the encrypted data.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>recipients</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>content</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+            A certificate could not be found for one or more of the <i>recipients</i>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol">EncryptionProtocol Property</h3>
+        <blockquote id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol:member">
+          <p class="Summary">
+            Gets the encryption protocol.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>EncryptionProtocol</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol:Value">The encryption protocol.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol:Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">Export Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):member">
+          <p class="Summary">
+            Exports the keys for the specified mailboxes.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>Export</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> mailboxes)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Parameters">
+            <dl>
+              <dt>
+                <i>mailboxes</i>
+              </dt>
+              <dd>The mailboxes.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Returns">A new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> instance containing the exported keys.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>mailboxes</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+                  <i>mailboxes</i> was empty.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                </td>
+                <td>
+            Exporting keys is not supported by this cryptography context.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String)">GetDigestAlgorithm Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String):member">
+          <p class="Summary">
+            Gets the digest algorithm from the micalg parameter value in a multipart/signed part.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> <b>GetDigestAlgorithm</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> micalg)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>micalg</i>
+              </dt>
+              <dd>The micalg parameter value.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String):Returns">The digest algorithm.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>micalg</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):member">
+          <p class="Summary">
+            Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetMicAlgorithmName</b> (<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> micalg)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Parameters">
+            <dl>
+              <dt>
+                <i>micalg</i>
+              </dt>
+              <dd>The digest algorithm.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Returns">The micalg value.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>micalg</i> is out of range.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream)">Import Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream):member">
+          <p class="Summary">
+            Imports the public certificates or keys from the specified stream.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Import</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>stream</i>
+              </dt>
+              <dd>The raw certificate or key data.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>stream</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                </td>
+                <td>
+            Importing keys is not supported by this cryptography context.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Cryptography.CryptographyContext.KeyExchangeProtocol">KeyExchangeProtocol Property</h3>
+        <blockquote id="P:MimeKit.Cryptography.CryptographyContext.KeyExchangeProtocol:member">
+          <p class="Summary">
+            Gets the key exchange protocol.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyExchangeProtocol</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CryptographyContext.KeyExchangeProtocol:Value">The key exchange protocol.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.KeyExchangeProtocol:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.KeyExchangeProtocol:Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout">OnlineCertificateRetrievalTimeout Property</h3>
+        <blockquote id="P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout:member">
+          <p class="Summary">
+            Gets or sets the online certificate retrieval timeout.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a> <b>OnlineCertificateRetrievalTimeout</b>  { get; set; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout:Value">The online certificate retrieval timeout.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout:Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Register(System.Type)">Register Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Register(System.Type):member">
+          <p class="Summary">
+            Registers a default <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a> or <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Register</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Register(System.Type):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>A custom subclass of <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a> or
+            <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a>.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Register(System.Type):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>type</i> is <tt>null</tt>.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>type</i> is not a subclass of
+            <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a> or <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>type</i> does not have a parameterless constructor.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Register(System.Type):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Register(System.Type):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):member">
+          <p class="Summary">
+            Sign the content using the specified signer.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>Sign</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>digestAlgo</i>
+              </dt>
+              <dd>The digest algorithm to use for signing.</dd>
+              <dt>
+                <i>content</i>
+              </dt>
+              <dd>The content.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Returns">A new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> instance
+            containing the detached signature data.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>signer</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>content</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>digestAlgo</i> is out of range.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                </td>
+                <td>
+            The specified <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> is not supported by this context.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+            A signing certificate could not be found for <i>signer</i>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):member">
+          <p class="Summary">
+            Signs and encrypts the specified content for the specified recipients.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>SignAndEncrypt</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>signer</i>
+              </dt>
+              <dd>The signer.</dd>
+              <dt>
+                <i>digestAlgo</i>
+              </dt>
+              <dd>The digest algorithm to use for signing.</dd>
+              <dt>
+                <i>recipients</i>
+              </dt>
+              <dd>The recipients.</dd>
+              <dt>
+                <i>content</i>
+              </dt>
+              <dd>The content.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Returns">A new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> instance
+            containing the encrypted data.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>signer</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>recipients</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>content</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                </td>
+                <td>
+                  <i>digestAlgo</i> is out of range.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                </td>
+                <td>
+            The specified <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> is not supported by this context.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                </td>
+                <td>
+                  <p>A signing certificate could not be found for <i>signer</i>.</p>
+                  <p>-or-</p>
+                  <p>A certificate could not be found for one or more of the <i>recipients</i>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol">SignatureProtocol Property</h3>
+        <blockquote id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol:member">
+          <p class="Summary">
+            Gets the signature protocol.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SignatureProtocol</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol:Value">The signature protocol.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol:Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String)">Supports Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String):member">
+          <p class="Summary">
+            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Supports</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> protocol)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String):Parameters">
+            <dl>
+              <dt>
+                <i>protocol</i>
+              </dt>
+              <dd>The protocol.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String):Returns">
+            <tt>true</tt> if the protocol is supported; otherwise <tt>false</tt></blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <i>protocol</i> is <tt>null</tt>.
+            </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream)">Verify Method</h3>
+        <blockquote id="M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream):member">
+          <p class="Summary">
+            Verify the specified content and signatureData.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signatureData)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream):Parameters">
+            <dl>
+              <dt>
+                <i>content</i>
+              </dt>
+              <dd>The content.</dd>
+              <dt>
+                <i>signatureData</i>
+              </dt>
+              <dd>The signature data.</dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream):Returns">A list of digital signatures.</blockquote>
+          <h4 class="Subsection">Exceptions</h4>
+          <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream):Exceptions">
+            <table class="TypeDocumentation">
+              <tr>
+                <th>Type</th>
+                <th>Reason</th>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                </td>
+                <td>
+                  <p>
+                    <i>content</i> is <tt>null</tt>.</p>
+                  <p>-or-</p>
+                  <p>
+                    <i>signatureData</i> is <tt>null</tt>.</p>
+                </td>
+              </tr>
+            </table>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream):Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
