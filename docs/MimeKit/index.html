@@ -2,6 +2,8 @@
   <head>
     <title>MimeKit: MimeKit</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
     <style>
       a { text-decoration: none }
 
@@ -58,6 +60,7 @@
         padding: .25em;
         background-color: #f2f2f2;
         border: solid gray 1px;
+        color: black
       }
 
       div.Footer {
@@ -186,277 +189,296 @@
     </script>
   </head>
   <body>
-    <div class="CollectionTitle">
-      <a href="../index.html">MimeKit</a>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
-    <h1 class="PageTitle">MimeKit Namespace</h1>
-    <p class="Summary">
-    </p>
-    <div>
-    </div>
-    <div class="Remarks">
-      <h2 class="Section"> Namespace</h2>
-      <p>This is the top-level MimeKit namespace, where you'll find most of the types that you'll routinely be using.</p>
-      <table class="TypesListing" style="margin-top: 1em">
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ContentDisposition.html">ContentDisposition</a>
-          </td>
-          <td>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a>
+        </div>
+        <h1 class="PageTitle">MimeKit Namespace</h1>
+        <p class="Summary">
+        </p>
+        <div>
+        </div>
+        <div class="Remarks">
+          <h2 class="Section"> Namespace</h2>
+          <p>This is the top-level MimeKit namespace, where you'll find most of the types that you'll routinely be using.</p>
+          <table class="TypesListing" style="margin-top: 1em">
+            <tr>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ContentDisposition.html">ContentDisposition</a>
+              </td>
+              <td>
             A class representing a Content-Type header value.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ContentEncoding.html">ContentEncoding</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ContentEncoding.html">ContentEncoding</a>
+              </td>
+              <td>
             An enumeration of all supported content transfer encodings.
             .
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ContentObject.html">ContentObject</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ContentObject.html">ContentObject</a>
+              </td>
+              <td>
             Encapsulates a content stream used by <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ContentType.html">ContentType</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ContentType.html">ContentType</a>
+              </td>
+              <td>
             A class representing a Content-Type header value.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./DomainList.html">DomainList</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./DomainList.html">DomainList</a>
+              </td>
+              <td>
             A domain list.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./FormatOptions.html">FormatOptions</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./FormatOptions.html">FormatOptions</a>
+              </td>
+              <td>
             Format options for serializing various MimeKit objects.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./GroupAddress.html">GroupAddress</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./GroupAddress.html">GroupAddress</a>
+              </td>
+              <td>
             An address group, as specified by rfc0822.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Header.html">Header</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./Header.html">Header</a>
+              </td>
+              <td>
             A class representing a Message or MIME header.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./HeaderId.html">HeaderId</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./HeaderId.html">HeaderId</a>
+              </td>
+              <td>
             An enumeration of common header fields.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./HeaderList.html">HeaderList</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./HeaderList.html">HeaderList</a>
+              </td>
+              <td>
             A list of <a href="../MimeKit/Header.html">MimeKit.Header</a>s.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./HeaderListChangedAction.html">HeaderListChangedAction</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./HeaderListChangedAction.html">HeaderListChangedAction</a>
+              </td>
+              <td>
             Header list changed action.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IContentObject.html">IContentObject</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./IContentObject.html">IContentObject</a>
+              </td>
+              <td>
             An interface for content stream encapsulation as used by <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./InternetAddress.html">InternetAddress</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./InternetAddress.html">InternetAddress</a>
+              </td>
+              <td>
             An internet address, as specified by rfc0822.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./InternetAddressList.html">InternetAddressList</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./InternetAddressList.html">InternetAddressList</a>
+              </td>
+              <td>
             A list of <a href="../MimeKit/InternetAddress.html">MimeKit.InternetAddress</a>es.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MailboxAddress.html">MailboxAddress</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MailboxAddress.html">MailboxAddress</a>
+              </td>
+              <td>
             A mailbox address, as specified by rfc0822.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MessageIdList.html">MessageIdList</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MessageIdList.html">MessageIdList</a>
+              </td>
+              <td>
             A list of Message-Ids, as found in the References header.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MessagePart.html">MessagePart</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MessagePart.html">MessagePart</a>
+              </td>
+              <td>
             A MIME part containing a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> as its content.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MessagePartial.html">MessagePartial</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MessagePartial.html">MessagePartial</a>
+              </td>
+              <td>
             A MIME part containing a partial message as its content.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MimeEntity.html">MimeEntity</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MimeEntity.html">MimeEntity</a>
+              </td>
+              <td>
             An abstract MIME entity.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MimeEntityConstructorInfo.html">MimeEntityConstructorInfo</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MimeEntityConstructorInfo.html">MimeEntityConstructorInfo</a>
+              </td>
+              <td>
             MIME entity constructor info.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MimeFormat.html">MimeFormat</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MimeFormat.html">MimeFormat</a>
+              </td>
+              <td>
             The format of the MIME stream.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MimeMessage.html">MimeMessage</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MimeMessage.html">MimeMessage</a>
+              </td>
+              <td>
             A MIME message.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MimeParser.html">MimeParser</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MimeParser.html">MimeParser</a>
+              </td>
+              <td>
             A MIME parser which can be used to parse <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a>s and
             <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>s from arbitrary streams.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MimePart.html">MimePart</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MimePart.html">MimePart</a>
+              </td>
+              <td>
             A basic leaf-node MIME part that contains content such as the message body or an attachment.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Multipart.html">Multipart</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./Multipart.html">Multipart</a>
+              </td>
+              <td>
             A Multipart MIME part which may contain a collection of MIME parts.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./NewLineFormat.html">NewLineFormat</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./NewLineFormat.html">NewLineFormat</a>
+              </td>
+              <td>
             A New-Line format.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Parameter.html">Parameter</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./Parameter.html">Parameter</a>
+              </td>
+              <td>
             A header parameter as found in the Content-Type and Content-Disposition headers.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ParameterList.html">ParameterList</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ParameterList.html">ParameterList</a>
+              </td>
+              <td>
             A list of parameters, as found in the Content-Type and Content-Disposition headers.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ParseException.html">ParseException</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ParseException.html">ParseException</a>
+              </td>
+              <td>
             A Parse exception as thrown by the various Parse methods in MimeKit.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ParserOptions.html">ParserOptions</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ParserOptions.html">ParserOptions</a>
+              </td>
+              <td>
             Parser options as used by <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> as well as various Parse and TryParse methods in MimeKit.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./TextPart.html">TextPart</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./TextPart.html">TextPart</a>
+              </td>
+              <td>
             A Textual MIME part.
             </td>
-        </tr>
-      </table>
+            </tr>
+          </table>
+        </div>
+        <div class="Members">
+        </div>
+      </section>
     </div>
-    <div class="Members">
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
-    <hr size="1" />
-    <div class="Copyright">Copyright (c) 2013 Jeffrey Stedfast</div>
   </body>
 </html>

@@ -2,6 +2,8 @@
   <head>
     <title>MimeKit.MimeMessage</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
     <style>
       a { text-decoration: none }
 
@@ -58,6 +60,7 @@
         padding: .25em;
         background-color: #f2f2f2;
         border: solid gray 1px;
+        color: black
       }
 
       div.Footer {
@@ -186,955 +189,956 @@
     </script>
   </head>
   <body>
-    <div class="CollectionTitle">
-      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
-    <div class="SideBar">
-      <p>
-        <a href="#T:MimeKit.MimeMessage">Overview</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.MimeMessage:Signature">Signature</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.MimeMessage:Docs">Remarks</a>
-      </p>
-      <p>
-        <a href="#Members">Members</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.MimeMessage:Members">Member Details</a>
-      </p>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
-    <h1 class="PageTitle" id="T:MimeKit.MimeMessage">MimeMessage  Class</h1>
-    <p class="Summary" id="T:MimeKit.MimeMessage:Summary">
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.MimeMessage">MimeMessage  Class</h1>
+        <p class="Summary" id="T:MimeKit.MimeMessage:Summary">
             A MIME message.
             </p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:MimeKit.MimeMessage:Signature">public sealed class  <b>MimeMessage</b></div>
-    </div>
-    <div class="Remarks" id="T:MimeKit.MimeMessage:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:MimeKit.MimeMessage:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:MimeKit.MimeMessage:Docs:Version Information">
-        <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.MimeMessage:Signature">public sealed class  <b>MimeMessage</b></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.MimeMessage:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.MimeMessage:Docs:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.MimeMessage:Docs:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+          <h2 class="Section" id="Members">Members</h2>
+          <div class="SectionBox" id="_Members">
+            <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:MimeKit.MimeMessage()">MimeMessage</a>
-                    </b>()</div>
-                </td>
-                <td>
+            <h2 class="Section">Public Constructors</h2>
+            <div class="SectionBox" id="Public Constructors">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.MimeMessage()">MimeMessage</a>
+                        </b>()</div>
+                    </td>
+                    <td>
             Initializes a new instance of the <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> class.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:MimeKit.MimeMessage(System.Object[])">MimeMessage</a>
-                    </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])</div>
-                </td>
-                <td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.MimeMessage(System.Object[])">MimeMessage</a>
+                        </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])</div>
+                    </td>
+                    <td>
             Initializes a new instance of the <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> class.
             An array of initialization parameters: headers and message parts.</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.Bcc">Bcc</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
-                  </i>. 
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Properties</h2>
+            <div class="SectionBox" id="Public Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.Bcc">Bcc</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
             Gets the list of addresses in the Bcc header.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.Body">Body</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/MimeEntity.html">MimeEntity</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.Body">Body</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/MimeEntity.html">MimeEntity</a>
+                      </i>. 
             Gets or sets the body of the message.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.Cc">Cc</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.Cc">Cc</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
             Gets the list of addresses in the Cc header.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.Date">Date</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTimeOffset">DateTimeOffset</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.Date">Date</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTimeOffset">DateTimeOffset</a>
+                      </i>. 
             Gets or sets the date of the message.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.From">From</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.From">From</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
             Gets the list of addresses in the From header.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.Headers">Headers</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/HeaderList.html">HeaderList</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.Headers">Headers</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/HeaderList.html">HeaderList</a>
+                      </i>. 
             Gets the list of headers.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.InReplyTo">InReplyTo</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.InReplyTo">InReplyTo</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
             Gets or sets the message-id that this message is in reply to.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.MessageId">MessageId</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.MessageId">MessageId</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
             Gets or sets the message identifier.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.MimeVersion">MimeVersion</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.MimeVersion">MimeVersion</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a>
+                      </i>. 
             Gets or sets the MIME-Version.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.References">References</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/MessageIdList.html">MessageIdList</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.References">References</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/MessageIdList.html">MessageIdList</a>
+                      </i>. 
             Gets or sets the list of references to other messages.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.ReplyTo">ReplyTo</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.ReplyTo">ReplyTo</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
             Gets the list of addresses in the Reply-To header.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.Sender">Sender</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.Sender">Sender</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
             Gets the list of addresses in the Sender header.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.Subject">Subject</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.Subject">Subject</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
             Gets or sets the subject of the message.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:MimeKit.MimeMessage.To">To</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
-                  </i>. 
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.To">To</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
             Gets the list of addresses in the To header.
             </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MimeKit.MimeMessage.Load(System.IO.Stream)">Load</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Methods</h2>
+            <div class="SectionBox" id="Public Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Load(System.IO.Stream)">Load</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
             Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified stream.
             </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream)">Load</a>
-                  </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream)">Load</a>
+                      </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
             Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified stream.
             </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MimeKit.MimeMessage.WriteTo(System.IO.Stream)">WriteTo</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.WriteTo(System.IO.Stream)">WriteTo</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
             Writes the message to the specified stream.
             </blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
-                  </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
+                      </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
             Writes the message to the specified stream.
             </blockquote></td>
-              </tr>
-            </table>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="Members" id="T:MimeKit.MimeMessage:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:MimeKit.MimeMessage()">MimeMessage Constructor</h3>
-        <blockquote id="C:MimeKit.MimeMessage():member">
-          <p class="Summary">
+        <div class="Members" id="T:MimeKit.MimeMessage:Members">
+          <h2 class="Section" id="MemberDetails">Member Details</h2>
+          <div class="SectionBox" id="_MemberDetails">
+            <h3 id="C:MimeKit.MimeMessage()">MimeMessage Constructor</h3>
+            <blockquote id="C:MimeKit.MimeMessage():member">
+              <p class="Summary">
             Initializes a new instance of the <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> class.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>MimeMessage</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:MimeKit.MimeMessage():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:MimeKit.MimeMessage():Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="C:MimeKit.MimeMessage(System.Object[])">MimeMessage Constructor</h3>
-        <blockquote id="C:MimeKit.MimeMessage(System.Object[]):member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>MimeMessage</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.MimeMessage():Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.MimeMessage():Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MimeKit.MimeMessage(System.Object[])">MimeMessage Constructor</h3>
+            <blockquote id="C:MimeKit.MimeMessage(System.Object[]):member">
+              <p class="Summary">
             Initializes a new instance of the <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> class.
             An array of initialization parameters: headers and message parts.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>MimeMessage</b> (<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] args)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Parameters">
-            <dl>
-              <dt>
-                <i>args</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-            </dl>
-          </blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                </td>
-                <td>
-                  <i>args</i> is <tt>null</tt>.
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>MimeMessage</b> (<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] args)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Parameters">
+                <dl>
+                  <dt>
+                    <i>args</i>
+                  </dt>
+                  <dd>
+                    <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                  </dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>args</i> is <tt>null</tt>.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
-                </td>
-                <td>
-                  <p>
-                    <i>args</i> contains more than one <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</p>
-                  <p>-or-</p>
-                  <p>
-                    <i>args</i> contains one or more arguments of an unknown type.</p>
-                </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.Bcc">Bcc Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.Bcc:member">
-          <p class="Summary">
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>args</i> contains more than one <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>args</i> contains one or more arguments of an unknown type.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.Bcc">Bcc Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.Bcc:member">
+              <p class="Summary">
             Gets the list of addresses in the Bcc header.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Bcc</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Bcc:Value">The list of addresses in the Bcc header.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Bcc:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Bcc:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.Body">Body Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.Body:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Bcc</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Bcc:Value">The list of addresses in the Bcc header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Bcc:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Bcc:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.Body">Body Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.Body:member">
+              <p class="Summary">
             Gets or sets the body of the message.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeEntity</a> <b>Body</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Body:Value">The body of the message.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Body:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Body:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.Cc">Cc Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.Cc:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeEntity</a> <b>Body</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Body:Value">The body of the message.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Body:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Body:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.Cc">Cc Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.Cc:member">
+              <p class="Summary">
             Gets the list of addresses in the Cc header.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Cc</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Cc:Value">The list of addresses in the Cc header.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Cc:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Cc:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.Date">Date Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.Date:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Cc</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Cc:Value">The list of addresses in the Cc header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Cc:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Cc:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.Date">Date Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.Date:member">
+              <p class="Summary">
             Gets or sets the date of the message.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTimeOffset">DateTimeOffset</a> <b>Date</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Date:Value">The date of the message.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Date:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Date:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.From">From Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.From:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTimeOffset">DateTimeOffset</a> <b>Date</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Date:Value">The date of the message.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Date:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Date:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.From">From Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.From:member">
+              <p class="Summary">
             Gets the list of addresses in the From header.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>From</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.From:Value">The list of addresses in the From header.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.From:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.From:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.Headers">Headers Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.Headers:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>From</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.From:Value">The list of addresses in the From header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.From:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.From:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.Headers">Headers Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.Headers:member">
+              <p class="Summary">
             Gets the list of headers.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/HeaderList.html">HeaderList</a> <b>Headers</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Headers:Value">The list of headers.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Headers:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Headers:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.InReplyTo">InReplyTo Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.InReplyTo:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/HeaderList.html">HeaderList</a> <b>Headers</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Headers:Value">The list of headers.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Headers:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Headers:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.InReplyTo">InReplyTo Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.InReplyTo:member">
+              <p class="Summary">
             Gets or sets the message-id that this message is in reply to.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>InReplyTo</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Value">The message id that this message is in reply to.</blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
-                </td>
-                <td>
-                  <i>value</i> is improperly formatted.
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>InReplyTo</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Value">The message id that this message is in reply to.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <i>value</i> is improperly formatted.
             </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MimeKit.MimeMessage.Load(System.IO.Stream)">Load Method</h3>
-        <blockquote id="M:MimeKit.MimeMessage.Load(System.IO.Stream):member">
-          <p class="Summary">
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Load(System.IO.Stream)">Load Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Load(System.IO.Stream):member">
+              <p class="Summary">
             Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified stream.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Load</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Parameters">
-            <dl>
-              <dt>
-                <i>stream</i>
-              </dt>
-              <dd>The stream.</dd>
-            </dl>
-          </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Returns">The parsed message.</blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                </td>
-                <td>
-                  <i>stream</i> is <tt>null</tt>.
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Load</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Parameters">
+                <dl>
+                  <dt>
+                    <i>stream</i>
+                  </dt>
+                  <dd>The stream.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Returns">The parsed message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>stream</i> is <tt>null</tt>.
             </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream)">Load Method</h3>
-        <blockquote id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):member">
-          <p class="Summary">
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream)">Load Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):member">
+              <p class="Summary">
             Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified stream.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Load</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Parameters">
-            <dl>
-              <dt>
-                <i>options</i>
-              </dt>
-              <dd>The parser options.</dd>
-              <dt>
-                <i>stream</i>
-              </dt>
-              <dd>The stream.</dd>
-            </dl>
-          </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Returns">The parsed message.</blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                </td>
-                <td>
-                  <p>
-                    <i>options</i> is <tt>null</tt>.</p>
-                  <p>-or-</p>
-                  <p>
-                    <i>stream</i> is <tt>null</tt>.</p>
-                </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.MessageId">MessageId Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.MessageId:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Load</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Parameters">
+                <dl>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The parser options.</dd>
+                  <dt>
+                    <i>stream</i>
+                  </dt>
+                  <dd>The stream.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Returns">The parsed message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>options</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>stream</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.MessageId">MessageId Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.MessageId:member">
+              <p class="Summary">
             Gets or sets the message identifier.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MessageId</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.MessageId:Value">The message identifier.</blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.MessageId:Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                </td>
-                <td>
-                  <i>value</i> is <tt>null</tt>.
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>MessageId</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.MessageId:Value">The message identifier.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.MessageId:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>value</i> is <tt>null</tt>.
             </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
-                </td>
-                <td>
-                  <i>value</i> is improperly formatted.
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <i>value</i> is improperly formatted.
             </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.MessageId:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.MessageId:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.MimeVersion">MimeVersion Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.MimeVersion:member">
-          <p class="Summary">
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.MessageId:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.MessageId:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.MimeVersion">MimeVersion Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.MimeVersion:member">
+              <p class="Summary">
             Gets or sets the MIME-Version.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a> <b>MimeVersion</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Value">The MIME version.</blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                </td>
-                <td>
-                  <i>value</i> is <tt>null</tt>.
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a> <b>MimeVersion</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Value">The MIME version.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>value</i> is <tt>null</tt>.
             </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.References">References Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.References:member">
-          <p class="Summary">
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.References">References Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.References:member">
+              <p class="Summary">
             Gets or sets the list of references to other messages.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/MessageIdList.html">MessageIdList</a> <b>References</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.References:Value">The references.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.References:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.References:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.ReplyTo">ReplyTo Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.ReplyTo:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/MessageIdList.html">MessageIdList</a> <b>References</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.References:Value">The references.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.References:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.References:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ReplyTo">ReplyTo Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ReplyTo:member">
+              <p class="Summary">
             Gets the list of addresses in the Reply-To header.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>ReplyTo</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Value">The list of addresses in the Reply-To header.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.Sender">Sender Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.Sender:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>ReplyTo</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Value">The list of addresses in the Reply-To header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.Sender">Sender Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.Sender:member">
+              <p class="Summary">
             Gets the list of addresses in the Sender header.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Sender</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Sender:Value">The list of addresses in the Sender header.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Sender:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Sender:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.Subject">Subject Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.Subject:member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Sender</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Sender:Value">The list of addresses in the Sender header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Sender:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Sender:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.Subject">Subject Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.Subject:member">
+              <p class="Summary">
             Gets or sets the subject of the message.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Subject</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Subject:Value">The subject of the message.</blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Subject:Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                </td>
-                <td>
-                  <i>value</i> is <tt>null</tt>.
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Subject</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Subject:Value">The subject of the message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Subject:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>value</i> is <tt>null</tt>.
             </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Subject:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.Subject:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:MimeKit.MimeMessage.To">To Property</h3>
-        <blockquote id="P:MimeKit.MimeMessage.To:member">
-          <p class="Summary">
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Subject:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.Subject:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.To">To Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.To:member">
+              <p class="Summary">
             Gets the list of addresses in the To header.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>To</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.To:Value">The list of addresses in the To header.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.To:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:MimeKit.MimeMessage.To:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream)">WriteTo Method</h3>
-        <blockquote id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):member">
-          <p class="Summary">
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>To</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.To:Value">The list of addresses in the To header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.To:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.To:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream)">WriteTo Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):member">
+              <p class="Summary">
             Writes the message to the specified stream.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Parameters">
-            <dl>
-              <dt>
-                <i>stream</i>
-              </dt>
-              <dd>The stream.</dd>
-            </dl>
-          </blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                </td>
-                <td>
-                  <i>stream</i> is <tt>null</tt>.
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Parameters">
+                <dl>
+                  <dt>
+                    <i>stream</i>
+                  </dt>
+                  <dd>The stream.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>stream</i> is <tt>null</tt>.
             </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo Method</h3>
-        <blockquote id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):member">
-          <p class="Summary">
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):member">
+              <p class="Summary">
             Writes the message to the specified stream.
             </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Parameters">
-            <dl>
-              <dt>
-                <i>options</i>
-              </dt>
-              <dd>The formatting options.</dd>
-              <dt>
-                <i>stream</i>
-              </dt>
-              <dd>The stream.</dd>
-            </dl>
-          </blockquote>
-          <h4 class="Subsection">Exceptions</h4>
-          <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Exceptions">
-            <table class="TypeDocumentation">
-              <tr>
-                <th>Type</th>
-                <th>Reason</th>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                </td>
-                <td>
-                  <p>
-                    <i>options</i> is <tt>null</tt>.</p>
-                  <p>-or-</p>
-                  <p>
-                    <i>stream</i> is <tt>null</tt>.</p>
-                </td>
-              </tr>
-            </table>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Parameters">
+                <dl>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The formatting options.</dd>
+                  <dt>
+                    <i>stream</i>
+                  </dt>
+                  <dd>The stream.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>options</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>stream</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
           </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-      </div>
+        </div>
+      </section>
     </div>
-    <hr size="1" />
-    <div class="Copyright">
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
   </body>
 </html>

@@ -2,6 +2,8 @@
   <head>
     <title>MimeKit.MimeFormat</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
     <style>
       a { text-decoration: none }
 
@@ -58,6 +60,7 @@
         padding: .25em;
         background-color: #f2f2f2;
         border: solid gray 1px;
+        color: black
       }
 
       div.Footer {
@@ -186,80 +189,81 @@
     </script>
   </head>
   <body>
-    <div class="CollectionTitle">
-      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
-    <div class="SideBar">
-      <p>
-        <a href="#T:MimeKit.MimeFormat">Overview</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.MimeFormat:Signature">Signature</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.MimeFormat:Docs">Remarks</a>
-      </p>
-      <p>
-        <a href="#Members">Members</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.MimeFormat:Members">Member Details</a>
-      </p>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
-    <h1 class="PageTitle" id="T:MimeKit.MimeFormat">MimeFormat  Enum</h1>
-    <p class="Summary" id="T:MimeKit.MimeFormat:Summary">
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.MimeFormat">MimeFormat  Enum</h1>
+        <p class="Summary" id="T:MimeKit.MimeFormat:Summary">
             The format of the MIME stream.
             </p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:MimeKit.MimeFormat:Signature">public enum <b>MimeFormat</b></div>
-    </div>
-    <div class="Remarks" id="T:MimeKit.MimeFormat:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
-      <h2 class="Section">Members</h2>
-      <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Members">
-        <table class="Enumeration">
-          <tr>
-            <th>Member Name</th>
-            <th>Description</th>
-          </tr>
-          <tr valign="top">
-            <td id="F:MimeKit.MimeFormat.Default">
-              <b>Default</b>
-            </td>
-            <td>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.MimeFormat:Signature">public enum <b>MimeFormat</b></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.MimeFormat:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Members</h2>
+          <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Members">
+            <table class="Enumeration">
+              <tr>
+                <th>Member Name</th>
+                <th>Description</th>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.MimeFormat.Default">
+                  <b>Default</b>
+                </td>
+                <td>
             The default stream format.
             </td>
-          </tr>
-          <tr valign="top">
-            <td id="F:MimeKit.MimeFormat.Entity">
-              <b>Entity</b>
-            </td>
-            <td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.MimeFormat.Entity">
+                  <b>Entity</b>
+                </td>
+                <td>
             The stream contains a single MIME entity or message.
             </td>
-          </tr>
-          <tr valign="top">
-            <td id="F:MimeKit.MimeFormat.Mbox">
-              <b>Mbox</b>
-            </td>
-            <td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.MimeFormat.Mbox">
+                  <b>Mbox</b>
+                </td>
+                <td>
             The stream is in the Unix mbox format and may contain
             more than a single message.
             </td>
-          </tr>
-        </table>
-      </div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Version Information">
-        <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+        </div>
+        <div class="Members" id="T:MimeKit.MimeFormat:Members">
+        </div>
+      </section>
     </div>
-    <div class="Members" id="T:MimeKit.MimeFormat:Members">
-    </div>
-    <hr size="1" />
-    <div class="Copyright">
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
   </body>
 </html>

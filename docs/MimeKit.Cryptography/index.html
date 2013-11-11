@@ -2,6 +2,8 @@
   <head>
     <title>MimeKit: MimeKit.Cryptography</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
     <style>
       a { text-decoration: none }
 
@@ -58,6 +60,7 @@
         padding: .25em;
         background-color: #f2f2f2;
         border: solid gray 1px;
+        color: black
       }
 
       div.Footer {
@@ -186,259 +189,278 @@
     </script>
   </head>
   <body>
-    <div class="CollectionTitle">
-      <a href="../index.html">MimeKit</a>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
-    <h1 class="PageTitle">MimeKit.Cryptography Namespace</h1>
-    <p class="Summary">
-    </p>
-    <div>
-    </div>
-    <div class="Remarks">
-      <h2 class="Section"> Namespace</h2>
-      <p>Cryptography classes necessary for dealing with S/MIME and PGP/MIME.</p>
-      <table class="TypesListing" style="margin-top: 1em">
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ApplicationPgpEncrypted.html">ApplicationPgpEncrypted</a>
-          </td>
-          <td>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a>
+        </div>
+        <h1 class="PageTitle">MimeKit.Cryptography Namespace</h1>
+        <p class="Summary">
+        </p>
+        <div>
+        </div>
+        <div class="Remarks">
+          <h2 class="Section"> Namespace</h2>
+          <p>Cryptography classes necessary for dealing with S/MIME and PGP/MIME.</p>
+          <table class="TypesListing" style="margin-top: 1em">
+            <tr>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ApplicationPgpEncrypted.html">ApplicationPgpEncrypted</a>
+              </td>
+              <td>
             A MIME part with a Content-Type of application/pgp-encrypted.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ApplicationPgpSignature.html">ApplicationPgpSignature</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ApplicationPgpSignature.html">ApplicationPgpSignature</a>
+              </td>
+              <td>
             A MIME part with a Content-Type of application/pgp-signature.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a>
+              </td>
+              <td>
             An S/MIME part with a Content-Type of application/pkcs7-mime.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ApplicationPkcs7Signature.html">ApplicationPkcs7Signature</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./ApplicationPkcs7Signature.html">ApplicationPkcs7Signature</a>
+              </td>
+              <td>
             An S/MIME part with a Content-Type of application/pkcs7-signature.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./CertificateNotFoundException.html">CertificateNotFoundException</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./CertificateNotFoundException.html">CertificateNotFoundException</a>
+              </td>
+              <td>
             An exception that is thrown when a certificate could not be found for a specified mailbox.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./CmsRecipient.html">CmsRecipient</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./CmsRecipient.html">CmsRecipient</a>
+              </td>
+              <td>
             An S/MIME recipient.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./CmsRecipientCollection.html">CmsRecipientCollection</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./CmsRecipientCollection.html">CmsRecipientCollection</a>
+              </td>
+              <td>
             A collection of <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a>s.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./CmsSigner.html">CmsSigner</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./CmsSigner.html">CmsSigner</a>
+              </td>
+              <td>
             An S/MIME signer.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./CryptographyContext.html">CryptographyContext</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./CryptographyContext.html">CryptographyContext</a>
+              </td>
+              <td>
             An abstract cryptography context.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./DefaultSecureMimeContext.html">DefaultSecureMimeContext</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./DefaultSecureMimeContext.html">DefaultSecureMimeContext</a>
+              </td>
+              <td>
             A default <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a> implementation that uses a pkcs12 file as a certificate and private key store.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./DigestAlgorithm.html">DigestAlgorithm</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./DigestAlgorithm.html">DigestAlgorithm</a>
+              </td>
+              <td>
             A digest algorithm.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./DigitalSignatureVerifyException.html">DigitalSignatureVerifyException</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./DigitalSignatureVerifyException.html">DigitalSignatureVerifyException</a>
+              </td>
+              <td>
             An exception that is thrown when an error occurrs in <a href="../MimeKit.Cryptography/IDigitalSignature.html#M:MimeKit.Cryptography.IDigitalSignature.Verify">MimeKit.Cryptography.IDigitalSignature.Verify</a>.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./GnuPGContext.html">GnuPGContext</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./GnuPGContext.html">GnuPGContext</a>
+              </td>
+              <td>
             A <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a> that uses the GnuPG keyrings.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IDigitalCertificate.html">IDigitalCertificate</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./IDigitalCertificate.html">IDigitalCertificate</a>
+              </td>
+              <td>
             An interface for a digital certificate.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IDigitalSignature.html">IDigitalSignature</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./IDigitalSignature.html">IDigitalSignature</a>
+              </td>
+              <td>
             An interface for a digital signature.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MultipartEncrypted.html">MultipartEncrypted</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MultipartEncrypted.html">MultipartEncrypted</a>
+              </td>
+              <td>
             A multipart MIME part with a ContentType of multipart/encrypted containing an encrypted MIME part.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./MultipartSigned.html">MultipartSigned</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./MultipartSigned.html">MultipartSigned</a>
+              </td>
+              <td>
             A signed multipart, as sued by both S/MIME and PGP/MIME protocols.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./OpenPgpContext.html">OpenPgpContext</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./OpenPgpContext.html">OpenPgpContext</a>
+              </td>
+              <td>
             An abstract OpenPGP cryptography context which can be used for PGP/MIME.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./OpenPgpDigitalCertificate.html">OpenPgpDigitalCertificate</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./OpenPgpDigitalCertificate.html">OpenPgpDigitalCertificate</a>
+              </td>
+              <td>
             An OpenPGP digital certificate.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./OpenPgpDigitalSignature.html">OpenPgpDigitalSignature</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./OpenPgpDigitalSignature.html">OpenPgpDigitalSignature</a>
+              </td>
+              <td>
             An OpenPGP digital signature.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./PublicKeyAlgorithm.html">PublicKeyAlgorithm</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./PublicKeyAlgorithm.html">PublicKeyAlgorithm</a>
+              </td>
+              <td>
             Public key algorithms.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SecureMimeContext.html">SecureMimeContext</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./SecureMimeContext.html">SecureMimeContext</a>
+              </td>
+              <td>
             A Secure MIME (S/MIME) cryptography context.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SecureMimeDigitalCertificate.html">SecureMimeDigitalCertificate</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./SecureMimeDigitalCertificate.html">SecureMimeDigitalCertificate</a>
+              </td>
+              <td>
             An S/MIME digital certificate.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SecureMimeDigitalSignature.html">SecureMimeDigitalSignature</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./SecureMimeDigitalSignature.html">SecureMimeDigitalSignature</a>
+              </td>
+              <td>
             An S/MIME digital signature.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SecureMimeType.html">SecureMimeType</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./SecureMimeType.html">SecureMimeType</a>
+              </td>
+              <td>
             The type of S/MIME data that an application/pkcs7-mime part contains.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SubjectIdentifierType.html">SubjectIdentifierType</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./SubjectIdentifierType.html">SubjectIdentifierType</a>
+              </td>
+              <td>
             The method to use for identifying a certificate.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./WindowsSecureMimeContext.html">WindowsSecureMimeContext</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./WindowsSecureMimeContext.html">WindowsSecureMimeContext</a>
+              </td>
+              <td>
             An S/MIME cryptography context that uses Windows' <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.X509Certificates.X509Store">System.Security.Cryptography.X509Certificates.X509Store</a>.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./X509CertificateExtensions.html">X509CertificateExtensions</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./X509CertificateExtensions.html">X509CertificateExtensions</a>
+              </td>
+              <td>
             X509Certificate extension methods.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./X509CertificateStore.html">X509CertificateStore</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./X509CertificateStore.html">X509CertificateStore</a>
+              </td>
+              <td>
             A store for X.509 certificates and keys.
             </td>
-        </tr>
-      </table>
+            </tr>
+          </table>
+        </div>
+        <div class="Members">
+        </div>
+      </section>
     </div>
-    <div class="Members">
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
-    <hr size="1" />
-    <div class="Copyright">Copyright (c) 2013 Jeffrey Stedfast</div>
   </body>
 </html>

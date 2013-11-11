@@ -2,6 +2,8 @@
   <head>
     <title>MimeKit.Cryptography.SecureMimeType</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
     <style>
       a { text-decoration: none }
 
@@ -58,6 +60,7 @@
         padding: .25em;
         background-color: #f2f2f2;
         border: solid gray 1px;
+        color: black
       }
 
       div.Footer {
@@ -186,95 +189,96 @@
     </script>
   </head>
   <body>
-    <div class="CollectionTitle">
-      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-    <div class="SideBar">
-      <p>
-        <a href="#T:MimeKit.Cryptography.SecureMimeType">Overview</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.Cryptography.SecureMimeType:Signature">Signature</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.Cryptography.SecureMimeType:Docs">Remarks</a>
-      </p>
-      <p>
-        <a href="#Members">Members</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.Cryptography.SecureMimeType:Members">Member Details</a>
-      </p>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
-    <h1 class="PageTitle" id="T:MimeKit.Cryptography.SecureMimeType">SecureMimeType  Enum</h1>
-    <p class="Summary" id="T:MimeKit.Cryptography.SecureMimeType:Summary">
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.SecureMimeType">SecureMimeType  Enum</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.SecureMimeType:Summary">
             The type of S/MIME data that an application/pkcs7-mime part contains.
             </p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:MimeKit.Cryptography.SecureMimeType:Signature">public enum <b>SecureMimeType</b></div>
-    </div>
-    <div class="Remarks" id="T:MimeKit.Cryptography.SecureMimeType:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
-      <h2 class="Section">Members</h2>
-      <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Members">
-        <table class="Enumeration">
-          <tr>
-            <th>Member Name</th>
-            <th>Description</th>
-          </tr>
-          <tr valign="top">
-            <td id="F:MimeKit.Cryptography.SecureMimeType.CertsOnly">
-              <b>CertsOnly</b>
-            </td>
-            <td>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.Cryptography.SecureMimeType:Signature">public enum <b>SecureMimeType</b></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.Cryptography.SecureMimeType:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Members</h2>
+          <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Members">
+            <table class="Enumeration">
+              <tr>
+                <th>Member Name</th>
+                <th>Description</th>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.SecureMimeType.CertsOnly">
+                  <b>CertsOnly</b>
+                </td>
+                <td>
             S/MIME certificate data.
             </td>
-          </tr>
-          <tr valign="top">
-            <td id="F:MimeKit.Cryptography.SecureMimeType.CompressedData">
-              <b>CompressedData</b>
-            </td>
-            <td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.SecureMimeType.CompressedData">
+                  <b>CompressedData</b>
+                </td>
+                <td>
             S/MIME compressed data.
             </td>
-          </tr>
-          <tr valign="top">
-            <td id="F:MimeKit.Cryptography.SecureMimeType.EnvelopedData">
-              <b>EnvelopedData</b>
-            </td>
-            <td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.SecureMimeType.EnvelopedData">
+                  <b>EnvelopedData</b>
+                </td>
+                <td>
             S/MIME enveloped data.
             </td>
-          </tr>
-          <tr valign="top">
-            <td id="F:MimeKit.Cryptography.SecureMimeType.SignedData">
-              <b>SignedData</b>
-            </td>
-            <td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.SecureMimeType.SignedData">
+                  <b>SignedData</b>
+                </td>
+                <td>
             S/MIME signed data.
             </td>
-          </tr>
-          <tr valign="top">
-            <td id="F:MimeKit.Cryptography.SecureMimeType.Unknown">
-              <b>Unknown</b>
-            </td>
-            <td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.SecureMimeType.Unknown">
+                  <b>Unknown</b>
+                </td>
+                <td>
             The S/MIME data type is unknown.
             </td>
-          </tr>
-        </table>
-      </div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Version Information">
-        <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+        </div>
+        <div class="Members" id="T:MimeKit.Cryptography.SecureMimeType:Members">
+        </div>
+      </section>
     </div>
-    <div class="Members" id="T:MimeKit.Cryptography.SecureMimeType:Members">
-    </div>
-    <hr size="1" />
-    <div class="Copyright">
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
   </body>
 </html>

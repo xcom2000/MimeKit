@@ -2,6 +2,8 @@
   <head>
     <title>MimeKit: MimeKit.Encodings</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
     <style>
       a { text-decoration: none }
 
@@ -58,6 +60,7 @@
         padding: .25em;
         background-color: #f2f2f2;
         border: solid gray 1px;
+        color: black
       }
 
       div.Footer {
@@ -186,140 +189,159 @@
     </script>
   </head>
   <body>
-    <div class="CollectionTitle">
-      <a href="../index.html">MimeKit</a>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
-    <h1 class="PageTitle">MimeKit.Encodings Namespace</h1>
-    <p class="Summary">
-    </p>
-    <div>
-    </div>
-    <div class="Remarks">
-      <h2 class="Section"> Namespace</h2>
-      <p>Encoders and decoders used by MIME.</p>
-      <table class="TypesListing" style="margin-top: 1em">
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Base64Decoder.html">Base64Decoder</a>
-          </td>
-          <td>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a>
+        </div>
+        <h1 class="PageTitle">MimeKit.Encodings Namespace</h1>
+        <p class="Summary">
+        </p>
+        <div>
+        </div>
+        <div class="Remarks">
+          <h2 class="Section"> Namespace</h2>
+          <p>Encoders and decoders used by MIME.</p>
+          <table class="TypesListing" style="margin-top: 1em">
+            <tr>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./Base64Decoder.html">Base64Decoder</a>
+              </td>
+              <td>
             Incrementally decodes content encoded with the base64 encoding.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Base64Encoder.html">Base64Encoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./Base64Encoder.html">Base64Encoder</a>
+              </td>
+              <td>
             Incrementally encodes content using the base64 encoding.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./HexDecoder.html">HexDecoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./HexDecoder.html">HexDecoder</a>
+              </td>
+              <td>
             Incrementally decodes content encoded with a Uri hex encoding.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./HexEncoder.html">HexEncoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./HexEncoder.html">HexEncoder</a>
+              </td>
+              <td>
             Incrementally encodes content using a Uri hex encoding.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IMimeDecoder.html">IMimeDecoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./IMimeDecoder.html">IMimeDecoder</a>
+              </td>
+              <td>
             An interface for incrementally decoding content.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IMimeEncoder.html">IMimeEncoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./IMimeEncoder.html">IMimeEncoder</a>
+              </td>
+              <td>
             An interface for incrementally encoding content.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./PassThroughDecoder.html">PassThroughDecoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./PassThroughDecoder.html">PassThroughDecoder</a>
+              </td>
+              <td>
             A pass-through decoder implementing the <a href="../MimeKit.Encodings/IMimeDecoder.html">MimeKit.Encodings.IMimeDecoder</a> interface.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./PassThroughEncoder.html">PassThroughEncoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./PassThroughEncoder.html">PassThroughEncoder</a>
+              </td>
+              <td>
             A pass-through encoder implementing the <a href="../MimeKit.Encodings/IMimeDecoder.html">MimeKit.Encodings.IMimeDecoder</a> interface.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./QEncodeMode.html">QEncodeMode</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./QEncodeMode.html">QEncodeMode</a>
+              </td>
+              <td>
             Q-Encoding mode.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./QEncoder.html">QEncoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./QEncoder.html">QEncoder</a>
+              </td>
+              <td>
             Incrementally encodes content using a variation of the quoted-printable encoding
             that is specifically meant to be used for rfc2047 encoded-word tokens.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./QuotedPrintableDecoder.html">QuotedPrintableDecoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./QuotedPrintableDecoder.html">QuotedPrintableDecoder</a>
+              </td>
+              <td>
             Incrementally decodes content encoded with the quoted-printable encoding.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./QuotedPrintableEncoder.html">QuotedPrintableEncoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./QuotedPrintableEncoder.html">QuotedPrintableEncoder</a>
+              </td>
+              <td>
             Incrementally encodes content using the quoted-printable encoding.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./UUDecoder.html">UUDecoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./UUDecoder.html">UUDecoder</a>
+              </td>
+              <td>
             Incrementally decodes content encoded with the Unix-to-Unix encoding.
             </td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./UUEncoder.html">UUEncoder</a>
-          </td>
-          <td>
+            </tr>
+            <tr valign="top">
+              <td>
+                <a href="./UUEncoder.html">UUEncoder</a>
+              </td>
+              <td>
             Incrementally encodes content using the Unix-to-Unix encoding.
             </td>
-        </tr>
-      </table>
+            </tr>
+          </table>
+        </div>
+        <div class="Members">
+        </div>
+      </section>
     </div>
-    <div class="Members">
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
-    <hr size="1" />
-    <div class="Copyright">Copyright (c) 2013 Jeffrey Stedfast</div>
   </body>
 </html>

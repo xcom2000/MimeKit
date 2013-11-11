@@ -2,6 +2,8 @@
   <head>
     <title>MimeKit.Cryptography.GnuPGContext</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
     <style>
       a { text-decoration: none }
 
@@ -58,6 +60,7 @@
         padding: .25em;
         background-color: #f2f2f2;
         border: solid gray 1px;
+        color: black
       }
 
       div.Footer {
@@ -186,714 +189,715 @@
     </script>
   </head>
   <body>
-    <div class="CollectionTitle">
-      <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-    <div class="SideBar">
-      <p>
-        <a href="#T:MimeKit.Cryptography.GnuPGContext">Overview</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.Cryptography.GnuPGContext:Signature">Signature</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.Cryptography.GnuPGContext:Docs">Remarks</a>
-      </p>
-      <p>
-        <a href="#Members">Members</a>
-      </p>
-      <p>
-        <a href="#T:MimeKit.Cryptography.GnuPGContext:Members">Member Details</a>
-      </p>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
     </div>
-    <h1 class="PageTitle" id="T:MimeKit.Cryptography.GnuPGContext">GnuPGContext  Class</h1>
-    <p class="Summary" id="T:MimeKit.Cryptography.GnuPGContext:Summary">
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.GnuPGContext">GnuPGContext  Class</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.GnuPGContext:Summary">
             A <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a> that uses the GnuPG keyrings.
             </p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:MimeKit.Cryptography.GnuPGContext:Signature">public abstract class  <b>GnuPGContext</b> : <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a></div>
-    </div>
-    <div class="Remarks" id="T:MimeKit.Cryptography.GnuPGContext:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:MimeKit.Cryptography.GnuPGContext:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:MimeKit.Cryptography.GnuPGContext:Docs:Version Information">
-        <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
-								See Also: Inherited members from
-								<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.
-							</p>
-        <h2 class="Section">Protected Constructors</h2>
-        <div class="SectionBox" id="Protected Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:MimeKit.Cryptography.GnuPGContext()">GnuPGContext</a>
-                    </b>()</div>
-                </td>
-                <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/GnuPGContext.html">MimeKit.Cryptography.GnuPGContext</a> class.
-            </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval">AllowOnlineCertificateRetrieval</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. 
-            Gets or sets a value indicating whether this <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> allows online
-            certificate retrieval.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>override </div></td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.EncryptionProtocol">EncryptionProtocol</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-            Gets the encryption protocol.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>abstract </div></td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol">EncryptionProtocol</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-            Gets the encryption protocol.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>override </div></td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.KeyExchangeProtocol">KeyExchangeProtocol</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-            Gets the key exchange protocol.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>abstract </div></td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.KeyExchangeProtocol">KeyExchangeProtocol</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-            Gets the key exchange protocol.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout">OnlineCertificateRetrievalTimeout</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>
-                  </i>. 
-            Gets or sets the online certificate retrieval timeout.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingBundle">PublicKeyRingBundle</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle</a>
-                  </i>. 
-            Gets the public keyring bundle.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingBundle">SecretKeyRingBundle</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKeyRingBundle</a>
-                  </i>. 
-            Gets the secret keyring bundle.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>override </div></td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SignatureProtocol">SignatureProtocol</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-            Gets the signature protocol.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>abstract </div></td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol">SignatureProtocol</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-            Gets the signature protocol.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Protected Properties</h2>
-        <div class="SectionBox" id="Protected Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath">PublicKeyRingPath</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-            Gets the public key ring path.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath">SecretKeyRingPath</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. 
-            Gets the secret key ring path.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt an encrypted stream.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt the specified encryptedData.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose()">Dispose</a>
-                  </b>()<blockquote>
-            Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">Encrypt</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Encrypts the specified content for the specified recipients.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">Encrypt</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Encrypts the specified content for the specified recipients.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">Encrypt</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Encrypts the specified content for the specified recipients.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Export(Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle)">Export</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Exports the specified public keys.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">Export</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Exports the public keys for the specified mailboxes.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">Export</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Exports the keys for the specified mailboxes.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey})">Export</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Exports the specified public keys.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(System.String)">GetDigestAlgorithm</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a></nobr><blockquote>
-            Gets the digest algorithm from the micalg parameter value in a multipart/signed part.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String)">GetDigestAlgorithm</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a></nobr><blockquote>
-            Gets the digest algorithm from the micalg parameter value in a multipart/signed part.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName</a>
-                  </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName</a>
-                  </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Import(System.IO.Stream)">Import</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
-            Imports public pgp keys from the specified stream.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream)">Import</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
-            Imports the public certificates or keys from the specified stream.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.ImportSecretKeys(System.IO.Stream)">ImportSecretKeys</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
-            Imports secret pgp keys from the specified stream.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
-                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Sign the content using the specified signer.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
-                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Sign the content using the specified signer.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,Org.BouncyCastle.Bcpg.HashAlgorithmTag,System.IO.Stream)">Sign</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPgpSignature.html">ApplicationPgpSignature</a></nobr><blockquote>
-            Sign the content using the specified signer.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt</a>
-                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Signs and encrypts the specified content for the specified recipients.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt</a>
-                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Signs and encrypts the specified content for the specified recipients.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,Org.BouncyCastle.Bcpg.HashAlgorithmTag,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">SignAndEncrypt</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Signs and encrypts the specified content for the specified recipients.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String)">Supports</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
-            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Supports(System.String)">Supports</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
-            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
-            Verify the specified content and signatureData.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
-            Verify the specified content and signatureData.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Protected Methods</h2>
-        <div class="SectionBox" id="Protected Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose(System.Boolean)">Dispose</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
-            Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetEncryptionKey(MimeKit.MailboxAddress)">GetEncryptionKey</a>
-                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey</a></nobr><blockquote>
-            Gets the encryption key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetEncryptionKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">GetEncryptionKeys</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a></nobr><blockquote>
-            Gets the encryption keys for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>es.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetPasswordForKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey)">GetPasswordForKey</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Gets the password for key.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey)">GetPrivateKey</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPrivateKey</a></nobr><blockquote>
-            Gets the private key from the specified secret key.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(System.Int64)">GetPrivateKey</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPrivateKey</a></nobr><blockquote>
-            Gets the private key.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress)">GetSigningKey</a>
-                  </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a></nobr><blockquote>
-            Gets the signing key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SavePublicKeyRingBundle()">SavePublicKeyRingBundle</a>
-                  </b>()<blockquote>
-            Saves the public key-ring bundle.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SaveSecretKeyRingBundle()">SaveSecretKeyRingBundle</a>
-                  </b>()<blockquote>
-            Saves the secret key-ring bundle.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="Members" id="T:MimeKit.Cryptography.GnuPGContext:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:MimeKit.Cryptography.GnuPGContext()">GnuPGContext Constructor</h3>
-        <blockquote id="C:MimeKit.Cryptography.GnuPGContext():member">
-          <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/GnuPGContext.html">MimeKit.Cryptography.GnuPGContext</a> class.
-            </p>
+        <div>
           <h2>Syntax</h2>
-          <div class="Signature">protected  <b>GnuPGContext</b> ()</div>
+          <div class="Signature" id="T:MimeKit.Cryptography.GnuPGContext:Signature">public abstract class  <b>GnuPGContext</b> : <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.Cryptography.GnuPGContext:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:MimeKit.Cryptography.GnuPGContext():Remarks">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.GnuPGContext:Docs:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:MimeKit.Cryptography.GnuPGContext():Version Information">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.GnuPGContext:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-          <hr size="1" />
-        </blockquote>
-      </div>
+          <h2 class="Section" id="Members">Members</h2>
+          <div class="SectionBox" id="_Members">
+            <p>
+								See Also: Inherited members from
+								<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.
+							</p>
+            <h2 class="Section">Protected Constructors</h2>
+            <div class="SectionBox" id="Protected Constructors">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.Cryptography.GnuPGContext()">GnuPGContext</a>
+                        </b>()</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/GnuPGContext.html">MimeKit.Cryptography.GnuPGContext</a> class.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Properties</h2>
+            <div class="SectionBox" id="Public Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval">AllowOnlineCertificateRetrieval</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets or sets a value indicating whether this <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> allows online
+            certificate retrieval.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>override </div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.EncryptionProtocol">EncryptionProtocol</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the encryption protocol.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>abstract </div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol">EncryptionProtocol</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the encryption protocol.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>override </div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.KeyExchangeProtocol">KeyExchangeProtocol</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the key exchange protocol.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>abstract </div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.KeyExchangeProtocol">KeyExchangeProtocol</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the key exchange protocol.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout">OnlineCertificateRetrievalTimeout</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>
+                      </i>. 
+            Gets or sets the online certificate retrieval timeout.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingBundle">PublicKeyRingBundle</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle</a>
+                      </i>. 
+            Gets the public keyring bundle.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingBundle">SecretKeyRingBundle</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKeyRingBundle</a>
+                      </i>. 
+            Gets the secret keyring bundle.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>override </div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SignatureProtocol">SignatureProtocol</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the signature protocol.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>abstract </div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol">SignatureProtocol</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the signature protocol.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Protected Properties</h2>
+            <div class="SectionBox" id="Protected Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath">PublicKeyRingPath</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the public key ring path.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath">SecretKeyRingPath</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the secret key ring path.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Methods</h2>
+            <div class="SectionBox" id="Public Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decrypt an encrypted stream.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decrypt the specified encryptedData.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose()">Dispose</a>
+                      </b>()<blockquote>
+            Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">Encrypt</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Encrypts the specified content for the specified recipients.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">Encrypt</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Encrypts the specified content for the specified recipients.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">Encrypt</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Encrypts the specified content for the specified recipients.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Export(Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle)">Export</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Exports the specified public keys.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">Export</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Exports the public keys for the specified mailboxes.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">Export</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Exports the keys for the specified mailboxes.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey})">Export</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Exports the specified public keys.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(System.String)">GetDigestAlgorithm</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a></nobr><blockquote>
+            Gets the digest algorithm from the micalg parameter value in a multipart/signed part.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String)">GetDigestAlgorithm</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a></nobr><blockquote>
+            Gets the digest algorithm from the micalg parameter value in a multipart/signed part.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName</a>
+                      </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName</a>
+                      </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Import(System.IO.Stream)">Import</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Imports public pgp keys from the specified stream.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Import(System.IO.Stream)">Import</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Imports the public certificates or keys from the specified stream.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.ImportSecretKeys(System.IO.Stream)">ImportSecretKeys</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
+            Imports secret pgp keys from the specified stream.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
+                      </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Sign the content using the specified signer.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
+                      </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Sign the content using the specified signer.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,Org.BouncyCastle.Bcpg.HashAlgorithmTag,System.IO.Stream)">Sign</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPgpSignature.html">ApplicationPgpSignature</a></nobr><blockquote>
+            Sign the content using the specified signer.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt</a>
+                      </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Signs and encrypts the specified content for the specified recipients.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt</a>
+                      </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Signs and encrypts the specified content for the specified recipients.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,Org.BouncyCastle.Bcpg.HashAlgorithmTag,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">SignAndEncrypt</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
+            Signs and encrypts the specified content for the specified recipients.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String)">Supports</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Supports(System.String)">Supports</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+            Verify the specified content and signatureData.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+            Verify the specified content and signatureData.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Protected Methods</h2>
+            <div class="SectionBox" id="Protected Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose(System.Boolean)">Dispose</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetEncryptionKey(MimeKit.MailboxAddress)">GetEncryptionKey</a>
+                      </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey</a></nobr><blockquote>
+            Gets the encryption key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetEncryptionKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">GetEncryptionKeys</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a></nobr><blockquote>
+            Gets the encryption keys for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>es.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetPasswordForKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey)">GetPasswordForKey</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Gets the password for key.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey)">GetPrivateKey</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPrivateKey</a></nobr><blockquote>
+            Gets the private key from the specified secret key.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(System.Int64)">GetPrivateKey</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPrivateKey</a></nobr><blockquote>
+            Gets the private key.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress)">GetSigningKey</a>
+                      </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a></nobr><blockquote>
+            Gets the signing key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SavePublicKeyRingBundle()">SavePublicKeyRingBundle</a>
+                      </b>()<blockquote>
+            Saves the public key-ring bundle.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SaveSecretKeyRingBundle()">SaveSecretKeyRingBundle</a>
+                      </b>()<blockquote>
+            Saves the secret key-ring bundle.
+             (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Members" id="T:MimeKit.Cryptography.GnuPGContext:Members">
+          <h2 class="Section" id="MemberDetails">Member Details</h2>
+          <div class="SectionBox" id="_MemberDetails">
+            <h3 id="C:MimeKit.Cryptography.GnuPGContext()">GnuPGContext Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.GnuPGContext():member">
+              <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/GnuPGContext.html">MimeKit.Cryptography.GnuPGContext</a> class.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected  <b>GnuPGContext</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.GnuPGContext():Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.GnuPGContext():Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+          </div>
+        </div>
+      </section>
     </div>
-    <hr size="1" />
-    <div class="Copyright">
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
   </body>
 </html>
