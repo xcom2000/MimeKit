@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>MimeKit</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+
+          <h1 id="project_title">MimeKit</h1>
+          <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="mimekit" class="anchor" href="#mimekit"><span class="octicon octicon-link"></span></a>MimeKit</h1>
+
+<h2>
+<a name="what-is-mimekit" class="anchor" href="#what-is-mimekit"><span class="octicon octicon-link"></span></a>What is MimeKit?</h2>
+
+<p>MimeKit is a C# library which may be used for the creation and parsing of messages using the Multipurpose Internet Mail Extension (MIME), as defined by the following RFCs:</p>
+
+<ul>
+<li>
+<a href="http://www.ietf.org/rfc/rfc0822.txt">0822</a>: Standard for the Format of Arpa Internet Text Messages</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1341.txt">1341</a>: MIME (Multipurpose Internet Mail Extensions): Mechanisms for Specifying and Describing the Format of Internet Message Bodies</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1342.txt">1342</a>: Representation of Non-ASCII Text in Internet Message Headers</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1521.txt">1521</a>: MIME (Multipurpose Internet Mail Extensions) Part One: Mechanisms for Specifying and Describing the Format of Internet Message Bodies (Obsoletes rfc1341)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1522.txt">1522</a>: MIME (Multipurpose Internet Mail Extensions) Part Two: Message Header Extensions for Non-ASCII Text (Obsoletes rfc1342)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1544.txt">1544</a>: The Content-MD5 Header Field</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1847.txt">1847</a>: Security Multiparts for MIME: Multipart/Signed and Multipart/Encrypted</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1864.txt">1864</a>: The Content-MD5 Header Field (Obsoletes rfc1544)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2015.txt">2015</a>: MIME Security with Pretty Good Privacy (PGP)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2045.txt">2045</a>: Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2046.txt">2046</a>: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2047.txt">2047</a>: Multipurpose Internet Mail Extensions (MIME) Part Three: Message Header Extensions for Non-ASCII Text</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2048.txt">2048</a>: Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2049.txt">2049</a>: Multipurpose Internet Mail Extensions (MIME) Part Five: Conformance Criteria and Examples</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2183.txt">2183</a>: Communicating Presentation Information in Internet Messages: The Content-Disposition Header Field</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2184.txt">2184</a>: MIME Parameter Value and Encoded Word Extensions: Character Sets, Languages, and Continuations</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2231.txt">2231</a>: MIME Parameter Value and Encoded Word Extensions: Character Sets, Languages, and Continuations (Obsoletes rfc2184)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2311.txt">2311</a>: S/MIME Version 2 Message Specification</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2312.txt">2312</a>: S/MIME Version 2 Certificate Handling</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2315.txt">2315</a>: PKCS #7: Cryptographic Message Syntax</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2424.txt">2424</a>: Content Duration MIME Header Definition</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2630.txt">2630</a>: Cryptographic Message Syntax</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2632.txt">2632</a>: S/MIME Version 3 Certificate Handling</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2633.txt">2633</a>: S/MIME Version 3 Message Specification</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2634.txt">2634</a>: Enhanced Security Services for S/MIME</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2822.txt">2822</a>: Internet Message Format (Obsoletes rfc0822)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc3156.txt">3156</a>: MIME Security with OpenPGP (Updates rfc2015)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc3850.txt">3850</a>: S/MIME Version 3.1 Certificate Handling (Obsoletes rfc2632)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc3851.txt">3851</a>: S/MIME Version 3.1 Message Specification (Obsoletes rfc2633)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc5322.txt">5322</a>: Internet Message Format (Obsoletes rfc2822) </li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc5750.txt">5750</a>: S/MIME Version 3.2 Certificate Handling (Obsoletes rfc3850)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc5751.txt">5751</a>: S/MIME Version 3.2 Message Specification (Obsoletes rfc3851)</li>
+</ul><h4>
+<a name="other-rfcs-of-interest" class="anchor" href="#other-rfcs-of-interest"><span class="octicon octicon-link"></span></a>Other RFCs of interest:</h4>
+
+<ul>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1523.txt">1523</a>: The text/enriched MIME Content-type</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1872.txt">1872</a>: The MIME Multipart/Related Content-type</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc1927.txt">1927</a>: Suggested Additional MIME Types for Associating Documents</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2110.txt">2110</a>: MIME E-mail Encapsulation of Aggregate Documents, such as HTML (MHTML)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2111.txt">2111</a>: Content-ID and Message-ID Uniform Resource Locators</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2112.txt">2112</a>: The MIME Multipart/Related Content-type (Obsoletes rfc1872)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2387.txt">2387</a>: The MIME Multipart/Related Content-type (Obsoletes rfc2112)</li>
+</ul><h2>
+<a name="license-information" class="anchor" href="#license-information"><span class="octicon octicon-link"></span></a>License Information</h2>
+
+<p>MimeKit is Copyright (C) 2012, 2013 Jeffrey Stedfast and is licensed under the MIT/X11 license:</p>
+
+<pre><code>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</code></pre>
+
+<h2>
+<a name="history" class="anchor" href="#history"><span class="octicon octicon-link"></span></a>History</h2>
+
+<p>As a developer and user of Electronic Mail clients, I had come to realize that the vast majority of E-Mail client
+(and server) software had less-than-satisfactory MIME implementations. More often than not these E-Mail clients
+created broken MIME messages and/or would incorrectly try to parse a MIME message thus subtracting from the full
+benefits that MIME was meant to provide. MimeKit is meant to address this issue by following the MIME specification
+as closely as possible while also providing programmers with an extremely easy to use high-level API.</p>
+
+<p>This led me, at first, to implement another MIME parser library called <a href="http://spruce.sourceforge.net/gmime">GMime</a>
+which is implemented in C and later added a C# binding called GMime-Sharp.</p>
+
+<p>Now that I typically find myself working in C# rather than lower level languages like C, I decided to
+begin writing a new parser in C# which would not depend on GMime. This would also allow me to have more
+flexibility in that I'd be able use Generics and create a more .NET-compliant API.</p>
+
+<h2>
+<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h2>
+
+<p>First, you'll need to clone MimeKit and Bouncy Castle from my GitHub repository:</p>
+
+<pre><code>git clone https://github.com/jstedfast/MimeKit.git
+git clone https://github.com/jstedfast/bc-csharp.git
+</code></pre>
+
+<p>Currently, MimeKit depends on the visual-studio-2010 branch of bc-csharp for the Visual Studio 2010 project
+files that I've added (to replace the Visual Studio 2003 project files). To switch to that branch,</p>
+
+<pre><code>cd bc-csharp
+git checkout -b visual-studio-2010 origin/visual-studio-2010
+</code></pre>
+
+<p>In the top-level MimeKit source directory, there are two solution files: MimeKitDesktopOnly.sln and MimeKit.sln.</p>
+
+<p>MimeKitDesktopOnly.sln just includes the .NET Framework 4.0 C# project (MimeKit/MimeKit.csproj) and the UnitTests
+project (UnitTests/UnitTests.csproj).</p>
+
+<p>MimeKit.sln includes everything that is in the MimeKitDesktopOnly solution as well as the projects for Xamarin.Android,
+Xamarin.iOS, and Xamarin.Mac.</p>
+
+<p>If you don't have the Xamarin products, you'll probably want to open the MimeKitDesktopOnly.sln instead of MimeKit.sln.</p>
+
+<p>Once you've opened the appropriate MimeKit solution file in either Xamarin Studio or Visual Studio 2010+ (either will work),
+you can simply choose the Debug or Release build configuration and then build.</p>
+
+<p>Note: The Release build will generate the xml API documentation, but the Debug build will not.</p>
+
+<h2>
+<a name="using-mimekit" class="anchor" href="#using-mimekit"><span class="octicon octicon-link"></span></a>Using MimeKit</h2>
+
+<h3>
+<a name="parsing-messages" class="anchor" href="#parsing-messages"><span class="octicon octicon-link"></span></a>Parsing Messages</h3>
+
+<p>One of the more common operations that MimeKit is meant for is parsing email messages from arbitrary streams.
+There are two ways of accomplishing this task.</p>
+
+<p>The first way is to use one of the Load() methods on MimeKit.MimeMessage:</p>
+
+<pre><code>// Load a MimeMessage from a stream
+var message = MimeMessage.Load (stream);
+</code></pre>
+
+<p>The second way is to use the MimeParser class. For the most part, using the MimeParser directly is not necessary
+unless you wish to parse a Unix mbox file stream. However, this is how you would do it:</p>
+
+<pre><code>// Load a MimeMessage from a stream
+var parser = new MimeParser (stream, MimeFormat.Entity);
+var message = parser.ParseMessage ();
+</code></pre>
+
+<p>For Unix mbox file streams, you would use the parser like this:</p>
+
+<pre><code>// Load every message from a Unix mbox
+var parser = new MimeParser (stream, MimeFormat.Mbox);
+while (!parser.IsEndOfStream) {
+    var message = parser.ParseMessage ();
+
+    // do something with the message
+}
+</code></pre>
+
+<h3>
+<a name="traversing-a-mimemessage" class="anchor" href="#traversing-a-mimemessage"><span class="octicon octicon-link"></span></a>Traversing a MimeMessage</h3>
+
+<p>Once you have parsed a MimeMessage, you'll most likely want to traverse the tree of MIME entities.</p>
+
+<p>The MimeMessage.Body is the top-level MIME entity of the message. Generally, it will either be a
+TextPart or a Multipart.</p>
+
+<p>As an example, if you wanted to render the MimeMessage to some sort of UI control, you might
+use code similar to this:</p>
+
+<pre><code>void RenderMessage (MimeMessage message)
+{
+    RenderMimeEntity (message.Body);
+}
+
+void RenderMimeEntity (MimeEntity entity)
+{
+    if (entity is MessagePart) {
+        // This entity is an attached message/rfc822 mime part.
+        var messagePart = (MessagePart) entity;
+
+        // If you'd like to render this inline instead of treating
+        // it as an attachment, you would just continue to recurse:
+        RenderMessage (messagePart.Message);
+    } else if (entity is Multipart) {
+        // This entity is a multipart container.
+        var multipart = (Multipart) entity;
+
+        foreach (var subpart in multipart)
+            RenderMimeEntity (subpart);
+    } else {
+        // Everything that isn't either a MessagePart or a Multipart is a MimePart
+        var part = (MimePart) entity;
+
+        // Don't render anything that is explicitly marked as an attachment.
+        if (part.IsAttachment)
+            return;
+
+        if (part is TextPart) {
+            // This is a mime part with textual content.
+            var text = (TextPart) part;
+
+            if (text.ContentType.Matches ("text", "html"))
+                RenderHtml (text.Text);
+            else
+                RenderText (text.Text);
+        } else if (entity.ContentType.Matches ("image", "*")) {
+            using (var content = new MemoryStream ()) {
+                // If the content is base64 encoded (which it probably is), decode it.
+                part.ContentObject.DecodeTo (memory);
+
+                RenderImage (memory);
+            }
+        }
+    }
+}
+</code></pre>
+
+<h3>
+<a name="verifying-smime-and-pgpmime-digital-signatures" class="anchor" href="#verifying-smime-and-pgpmime-digital-signatures"><span class="octicon octicon-link"></span></a>Verifying S/MIME and PGP/MIME Digital Signatures</h3>
+
+<p>Both S/MIME and PGP/MIME use a multipart/signed to contain the signed content and the detached signature data.</p>
+
+<p>A multipart/signed contains exactly 2 parts: the first MimeEntity is the signed content while the second
+MimeEntity is the detached signature and, by default, will either be an ApplicationPgpSignature part or
+an ApplicationPkcs7Signature part.</p>
+
+<p>Because the multipart/signed part may have been signed by multiple signers, it is important to
+verify each of the digital signatures (one for each signer) that are returned by the
+MultipartSigned.Verify() method:</p>
+
+<pre><code>if (entity is MultipartSigned) {
+    var signed = (MultipartSigned) entity;
+
+    foreach (var signature in signed.Verify ()) {
+        try {
+            bool valid = signature.Verify ();
+
+            // If valid is true, then it signifies that the signed content has not been
+            // modified since this particular signer signed the content.
+            //
+            // However, if it is false, then it indicates that the signed content has been
+            // modified.
+        } catch (DigitalSignatureVerifyException) {
+            // There was an error verifying the signature.
+        }
+    }
+}
+</code></pre>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>The first thing you'll need to do is fork MimeKit to your own GitHub repository. Once you do that,</p>
+
+<pre><code>git clone git@github.com/&lt;your-account&gt;/MimeKit.git
+</code></pre>
+
+<p>If you use <a href="http://xamarin.com/studio">Xamarin Studio</a> or <a href="http://monodevelop.org">MonoDevelop</a>, both MimeKit.sln
+and MimeKitDesktopOnly.sln are configured with the coding style used by MimeKit. If you use Visual Studio or some
+other editor, please try to maintain the existing coding style as best as you can.</p>
+
+<p>Once you've got some changes that you'd like to submit upstream to the official MimeKit repository,
+simply send me a Pull Request and I will try to review your changes in a timely manner.</p>
+
+<h2>
+<a name="reporting-bugs" class="anchor" href="#reporting-bugs"><span class="octicon octicon-link"></span></a>Reporting Bugs</h2>
+
+<p>Have a bug or a feature request? <a href="https://github.com/jstedfast/MimeKit/issues">Please open a new issue</a>.</p>
+
+<p>Before opening a new issue, please search for existing issues to avoid submitting duplicates.</p>
+
+<h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>API documentation can be found in the docs/ directory.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
