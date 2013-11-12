@@ -261,8 +261,8 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String)">DefaultSecureMimeContext</a>
-                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                          <a href="#C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String)">DefaultSecureMimeContext</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
                     <td>
             Initializes a new instance of the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> class.
@@ -281,6 +281,22 @@
                     </td>
                     <td>
                       <b>
+                        <a href="#F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultAddressBookCertificatesPath">DefaultAddressBookCertificatesPath</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            The default store path for certificates belonging to people in the user's addressbook.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static readonly </div>
+                    </td>
+                    <td>
+                      <b>
                         <a href="#F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultRootCertificatesPath">DefaultRootCertificatesPath</a>
                       </b>
                     </td>
@@ -288,7 +304,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            The default root certificate store path.
+            The default store path for root (CA) certificates.
             </td>
                   </tr>
                   <tr valign="top">
@@ -304,7 +320,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            The default user certificate store path.
+            The default store path for user certificates and keys.
             </td>
                   </tr>
                 </table>
@@ -1013,7 +1029,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
                     </td>
                     <td>
-            An error occurred while reading the backing pkcs12 file.
+            An error occurred while reading one of the certificate stores.
             </td>
                   </tr>
                 </table>
@@ -1027,16 +1043,20 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String)">DefaultSecureMimeContext Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String):member">
+            <h3 id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String)">DefaultSecureMimeContext Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):member">
               <p class="Summary">
             Initializes a new instance of the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected  <b>DefaultSecureMimeContext</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> rootCertificatesPath, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userCertificatesPath, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+              <div class="Signature">protected  <b>DefaultSecureMimeContext</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> addressbookCertificatesPath, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> rootCertificatesPath, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userCertificatesPath, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Parameters">
                 <dl>
+                  <dt>
+                    <i>addressbookCertificatesPath</i>
+                  </dt>
+                  <dd>The path to the addressbook certificates.</dd>
                   <dt>
                     <i>rootCertificatesPath</i>
                   </dt>
@@ -1052,7 +1072,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String):Exceptions">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1084,18 +1104,35 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String):Remarks">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String):Version Information">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultAddressBookCertificatesPath">DefaultAddressBookCertificatesPath Field</h3>
+            <blockquote id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultAddressBookCertificatesPath:member">
+              <p class="Summary">
+            The default store path for certificates belonging to people in the user's addressbook.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultAddressBookCertificatesPath</b> </div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultAddressBookCertificatesPath:Remarks">
+                <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\addressbook-certs.crt</tt>.</p>
+                <p>On Unix systems such as Linux and Mac OS X, this path will be <tt>~/.mimekit/addressbook-certs.crt</tt>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultAddressBookCertificatesPath:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultRootCertificatesPath">DefaultRootCertificatesPath Field</h3>
             <blockquote id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultRootCertificatesPath:member">
               <p class="Summary">
-            The default root certificate store path.
+            The default store path for root (CA) certificates.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultRootCertificatesPath</b> </div>
@@ -1112,7 +1149,7 @@
             <h3 id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultUserCertificatesPath">DefaultUserCertificatesPath Field</h3>
             <blockquote id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultUserCertificatesPath:member">
               <p class="Summary">
-            The default user certificate store path.
+            The default store path for user certificates and keys.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultUserCertificatesPath</b> </div>
