@@ -558,18 +558,6 @@
                   </tr>
                   <tr valign="top">
                     <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
-                      </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt using the specified <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
-            </blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
                       <div>static </div>
                     </td>
                     <td colspan="2">
@@ -1297,70 +1285,6 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
-              <p class="Summary">
-            Decrypt using the specified <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
-                <dl>
-                  <dt>
-                    <i>ctx</i>
-                  </dt>
-                  <dd>The S/MIME context to use for decrypting.</dd>
-                  <dt>
-                    <i>signatures</i>
-                  </dt>
-                  <dd>The list of digital signatures for this application/pkcs7-mime part.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The decrypted <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                    </td>
-                    <td>
-                      <i>ctx</i> is <tt>null</tt>.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
-                    </td>
-                    <td>
-            The "smime-type" parameter on the Content-Type header is not "enveloped-data".
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
-                    </td>
-                    <td>
-            An error occurred in the cryptographic message syntax subsystem.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
               <hr size="1" />
             </blockquote>
