@@ -1049,20 +1049,20 @@
             Initializes a new instance of the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected  <b>DefaultSecureMimeContext</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> addressbookCertificatesPath, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> rootCertificatesPath, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userCertificatesPath, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+              <div class="Signature">protected  <b>DefaultSecureMimeContext</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> addressbookFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> rootFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Parameters">
                 <dl>
                   <dt>
-                    <i>addressbookCertificatesPath</i>
+                    <i>addressbookFileName</i>
                   </dt>
                   <dd>The path to the addressbook certificates.</dd>
                   <dt>
-                    <i>rootCertificatesPath</i>
+                    <i>rootFileName</i>
                   </dt>
                   <dd>The path to the root certificates.</dd>
                   <dt>
-                    <i>userCertificatesPath</i>
+                    <i>userFileName</i>
                   </dt>
                   <dd>The path to the pkcs12-formatted user certificates.</dd>
                   <dt>
@@ -1084,10 +1084,13 @@
                     </td>
                     <td>
                       <p>
-                        <i>rootCertificatesPath</i> is <tt>null</tt>.</p>
+                        <i>addressbookFileName</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
-                        <i>userCertificatesPath</i> is <tt>null</tt>.</p>
+                        <i>rootFileName</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>userFileName</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
                         <i>password</i> is <tt>null</tt>.</p>
@@ -1121,8 +1124,8 @@
               <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultAddressBookCertificatesPath</b> </div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultAddressBookCertificatesPath:Remarks">
-                <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\addressbook-certs.crt</tt>.</p>
-                <p>On Unix systems such as Linux and Mac OS X, this path will be <tt>~/.mimekit/addressbook-certs.crt</tt>.</p>
+                <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\addressbook.crt</tt>.</p>
+                <p>On Unix systems such as Linux and Mac OS X, this path will be <tt>~/.mimekit/addressbook.crt</tt>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultAddressBookCertificatesPath:Version Information">
@@ -1138,8 +1141,8 @@
               <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultRootCertificatesPath</b> </div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultRootCertificatesPath:Remarks">
-                <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\root-certs.crt</tt>.</p>
-                <p>On Unix systems such as Linux and Mac OS X, this path will be <tt>~/.mimekit/root-certs.crt</tt>.</p>
+                <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\root.crt</tt>.</p>
+                <p>On Unix systems such as Linux and Mac OS X, this path will be <tt>~/.mimekit/root.crt</tt>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultRootCertificatesPath:Version Information">
@@ -1155,8 +1158,8 @@
               <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultUserCertificatesPath</b> </div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultUserCertificatesPath:Remarks">
-                <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\user-certs.p12</tt>.</p>
-                <p>On Unix systems such as Linux and Mac OS X, this path will be <tt>~/.mimekit/user-certs.p12</tt>.</p>
+                <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\user.p12</tt>.</p>
+                <p>On Unix systems such as Linux and Mac OS X, this path will be <tt>~/.mimekit/user.p12</tt>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultUserCertificatesPath:Version Information">
