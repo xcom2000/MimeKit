@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.CertificateNotFoundException</title>
+    <title>MimeKit.Cryptography.PrivateKeyNotFoundException</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -205,21 +205,21 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.CertificateNotFoundException">CertificateNotFoundException  Class</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.CertificateNotFoundException:Summary">
-            An exception that is thrown when a certificate could not be found for a specified mailbox.
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.PrivateKeyNotFoundException">PrivateKeyNotFoundException  Class</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.PrivateKeyNotFoundException:Summary">
+            An exception that is thrown when a private key could not be found for a specified mailbox or key id.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.CertificateNotFoundException:Signature">public class  <b>CertificateNotFoundException</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Exception">Exception</a></div>
+          <div class="Signature" id="T:MimeKit.Cryptography.PrivateKeyNotFoundException:Signature">public class  <b>PrivateKeyNotFoundException</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Exception">Exception</a></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.CertificateNotFoundException:Docs">
+        <div class="Remarks" id="T:MimeKit.Cryptography.PrivateKeyNotFoundException:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.CertificateNotFoundException:Docs:Remarks">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.PrivateKeyNotFoundException:Docs:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.CertificateNotFoundException:Docs:Version Information">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.PrivateKeyNotFoundException:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
@@ -239,8 +239,23 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.CertificateNotFoundException(MimeKit.MailboxAddress,System.String)">CertificateNotFoundException</a>
+                          <a href="#C:MimeKit.Cryptography.PrivateKeyNotFoundException(MimeKit.MailboxAddress,System.String)">PrivateKeyNotFoundException</a>
                         </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a> class.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.Cryptography.PrivateKeyNotFoundException(System.String,System.String)">PrivateKeyNotFoundException</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
                     <td>
             Initializes a new instance of the <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a> class.
@@ -257,14 +272,14 @@
                     <td>[read-only]<div></div></td>
                     <td>
                       <b>
-                        <a href="#P:MimeKit.Cryptography.CertificateNotFoundException.Mailbox">Mailbox</a>
+                        <a href="#P:MimeKit.Cryptography.PrivateKeyNotFoundException.KeyId">KeyId</a>
                       </b>
                     </td>
                     <td>
                       <i>
-                        <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            Gets the mailbox address that could not be resolved to a certificate.
+            Gets the key id that could not be found.
             </td>
                   </tr>
                 </table>
@@ -272,23 +287,23 @@
             </div>
           </div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.CertificateNotFoundException:Members">
+        <div class="Members" id="T:MimeKit.Cryptography.PrivateKeyNotFoundException:Members">
           <h2 class="Section" id="MemberDetails">Member Details</h2>
           <div class="SectionBox" id="_MemberDetails">
-            <h3 id="C:MimeKit.Cryptography.CertificateNotFoundException(MimeKit.MailboxAddress,System.String)">CertificateNotFoundException Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.CertificateNotFoundException(MimeKit.MailboxAddress,System.String):member">
+            <h3 id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(MimeKit.MailboxAddress,System.String)">PrivateKeyNotFoundException Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(MimeKit.MailboxAddress,System.String):member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>CertificateNotFoundException</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> mailbox, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
+              <div class="Signature">public  <b>PrivateKeyNotFoundException</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> mailbox, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.CertificateNotFoundException(MimeKit.MailboxAddress,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(MimeKit.MailboxAddress,System.String):Parameters">
                 <dl>
                   <dt>
                     <i>mailbox</i>
                   </dt>
-                  <dd>The mailbox that could not be resolved to a valid certificate.</dd>
+                  <dd>The mailbox that could not be resolved to a valid private key.</dd>
                   <dt>
                     <i>message</i>
                   </dt>
@@ -296,29 +311,58 @@
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.CertificateNotFoundException(MimeKit.MailboxAddress,System.String):Remarks">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(MimeKit.MailboxAddress,System.String):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.CertificateNotFoundException(MimeKit.MailboxAddress,System.String):Version Information">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(MimeKit.MailboxAddress,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="P:MimeKit.Cryptography.CertificateNotFoundException.Mailbox">Mailbox Property</h3>
-            <blockquote id="P:MimeKit.Cryptography.CertificateNotFoundException.Mailbox:member">
+            <h3 id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(System.String,System.String)">PrivateKeyNotFoundException Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(System.String,System.String):member">
               <p class="Summary">
-            Gets the mailbox address that could not be resolved to a certificate.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> <b>Mailbox</b>  { get; }</div>
-              <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CertificateNotFoundException.Mailbox:Value">The mailbox address.</blockquote>
+              <div class="Signature">public  <b>PrivateKeyNotFoundException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> keyid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(System.String,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>keyid</i>
+                  </dt>
+                  <dd>The key id that could not be resolved to a valid certificate.</dd>
+                  <dt>
+                    <i>message</i>
+                  </dt>
+                  <dd>A message explaining the error.</dd>
+                </dl>
+              </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.CertificateNotFoundException.Mailbox:Remarks">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(System.String,System.String):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.CertificateNotFoundException.Mailbox:Version Information">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.PrivateKeyNotFoundException(System.String,System.String):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Cryptography.PrivateKeyNotFoundException.KeyId">KeyId Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.PrivateKeyNotFoundException.KeyId:member">
+              <p class="Summary">
+            Gets the key id that could not be found.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>KeyId</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.PrivateKeyNotFoundException.KeyId:Value">The key id.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.PrivateKeyNotFoundException.KeyId:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.PrivateKeyNotFoundException.KeyId:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.12.0.0</div>
               <hr size="1" />
             </blockquote>
