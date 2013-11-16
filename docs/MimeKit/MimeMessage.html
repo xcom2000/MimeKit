@@ -560,6 +560,26 @@
                 </table>
               </div>
             </div>
+            <h2 class="Section">Public Operators</h2>
+            <div class="SectionBox" id="Public Operators">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage">Conversion to System.Net.Mail.MailMessage</a>
+                      </b>(Explicit)</td>
+                    <td>
+            Explicit cast to convert a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> to a
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailMessage">System.Net.Mail.MailMessage</a>.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
         <div class="Members" id="T:MimeKit.MimeMessage:Members">
@@ -1111,6 +1131,54 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage">Conversion Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage:member">
+              <p class="Summary">
+            Explicit cast to convert a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> to a
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailMessage">System.Net.Mail.MailMessage</a>.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public static explicit operator <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailMessage">System.Net.Mail.MailMessage</a> (<a href="../MimeKit/MimeMessage.html">MimeMessage</a> message)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage:Parameters">
+                <dl>
+                  <dt>
+                    <i>message</i>
+                  </dt>
+                  <dd>The message.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage:Returns">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+            The <i>message</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage:Remarks">
+            Casting a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> to a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailMessage">System.Net.Mail.MailMessage</a>
+            makes it possible to use MimeKit with <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.SmtpClient">System.Net.Mail.SmtpClient</a>.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
