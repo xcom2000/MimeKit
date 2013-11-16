@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
 
           <h1 id="project_title">MimeKit</h1>
-          <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+          <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
@@ -178,15 +178,15 @@ files that I've added (to replace the Visual Studio 2003 project files). To swit
 git checkout -b visual-studio-2010 origin/visual-studio-2010
 </code></pre>
 
-<p>In the top-level MimeKit source directory, there are two solution files: MimeKitDesktopOnly.sln and MimeKit.sln.</p>
+<p>In the top-level MimeKit source directory, there are three solution files: MimeKit.sln, MimeKit.Net40.sln and MimeKit.Mobile.sln.</p>
 
-<p>MimeKitDesktopOnly.sln just includes the .NET Framework 4.0 C# project (MimeKit/MimeKit.csproj) and the UnitTests
-project (UnitTests/UnitTests.csproj).</p>
-
-<p>MimeKit.sln includes everything that is in the MimeKitDesktopOnly solution as well as the projects for Xamarin.Android,
-Xamarin.iOS, and Xamarin.Mac.</p>
-
-<p>If you don't have the Xamarin products, you'll probably want to open the MimeKitDesktopOnly.sln instead of MimeKit.sln.</p>
+<ul>
+<li>MimeKit.Mobile.sln just includes the Xamarin.iOS and Xamarin.Android projects.</li>
+<li>MimeKit.Net40.sln just includes the .NET Framework 4.0 C# project (MimeKit/MimeKit.csproj) and the UnitTests
+project (UnitTests/UnitTests.csproj).</li>
+<li>MimeKit.sln includes everything that is in the MimeKit.Net40.sln solution as well as the projects for Xamarin.Android,
+Xamarin.iOS, and Xamarin.Mac.</li>
+</ul><p>If you don't have the Xamarin products, you'll probably want to open the MimeKitDesktopOnly.sln instead of MimeKit.sln.</p>
 
 <p>Once you've opened the appropriate MimeKit solution file in either Xamarin Studio or Visual Studio 2010+ (either will work),
 you can simply choose the Debug or Release build configuration and then build.</p>
@@ -204,28 +204,28 @@ There are two ways of accomplishing this task.</p>
 
 <p>The first way is to use one of the Load() methods on MimeKit.MimeMessage:</p>
 
-<pre><code>// Load a MimeMessage from a stream
-var message = MimeMessage.Load (stream);
-</code></pre>
+<div class="highlight highlight-csharp"><pre><span class="c1">// Load a MimeMessage from a stream</span>
+<span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="n">MimeMessage</span><span class="p">.</span><span class="n">Load</span> <span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+</pre></div>
 
 <p>The second way is to use the MimeParser class. For the most part, using the MimeParser directly is not necessary
 unless you wish to parse a Unix mbox file stream. However, this is how you would do it:</p>
 
-<pre><code>// Load a MimeMessage from a stream
-var parser = new MimeParser (stream, MimeFormat.Entity);
-var message = parser.ParseMessage ();
-</code></pre>
+<div class="highlight highlight-csharp"><pre><span class="c1">// Load a MimeMessage from a stream</span>
+<span class="kt">var</span> <span class="n">parser</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeParser</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">MimeFormat</span><span class="p">.</span><span class="n">Entity</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">ParseMessage</span> <span class="p">();</span>
+</pre></div>
 
 <p>For Unix mbox file streams, you would use the parser like this:</p>
 
-<pre><code>// Load every message from a Unix mbox
-var parser = new MimeParser (stream, MimeFormat.Mbox);
-while (!parser.IsEndOfStream) {
-    var message = parser.ParseMessage ();
+<div class="highlight highlight-csharp"><pre><span class="c1">// Load every message from a Unix mbox</span>
+<span class="kt">var</span> <span class="n">parser</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeParser</span> <span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">MimeFormat</span><span class="p">.</span><span class="n">Mbox</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(!</span><span class="n">parser</span><span class="p">.</span><span class="n">IsEndOfStream</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">ParseMessage</span> <span class="p">();</span>
 
-    // do something with the message
-}
-</code></pre>
+    <span class="c1">// do something with the message</span>
+<span class="p">}</span>
+</pre></div>
 
 <h3>
 <a name="traversing-a-mimemessage" class="anchor" href="#traversing-a-mimemessage"><span class="octicon octicon-link"></span></a>Traversing a MimeMessage</h3>
@@ -238,85 +238,330 @@ TextPart or a Multipart.</p>
 <p>As an example, if you wanted to render the MimeMessage to some sort of UI control, you might
 use code similar to this:</p>
 
-<pre><code>void RenderMessage (MimeMessage message)
-{
-    RenderMimeEntity (message.Body);
-}
+<div class="highlight highlight-csharp"><pre><span class="k">void</span> <span class="nf">RenderMessage</span> <span class="p">(</span><span class="n">MimeMessage</span> <span class="n">message</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">RenderMimeEntity</span> <span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">Body</span><span class="p">);</span>
+<span class="p">}</span>
 
-void RenderMimeEntity (MimeEntity entity)
-{
-    if (entity is MessagePart) {
-        // This entity is an attached message/rfc822 mime part.
-        var messagePart = (MessagePart) entity;
+<span class="k">void</span> <span class="nf">RenderMimeEntity</span> <span class="p">(</span><span class="n">MimeEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">MessagePart</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// This entity is an attached message/rfc822 mime part.</span>
+        <span class="kt">var</span> <span class="n">messagePart</span> <span class="p">=</span> <span class="p">(</span><span class="n">MessagePart</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
 
-        // If you'd like to render this inline instead of treating
-        // it as an attachment, you would just continue to recurse:
-        RenderMessage (messagePart.Message);
-    } else if (entity is Multipart) {
-        // This entity is a multipart container.
-        var multipart = (Multipart) entity;
+        <span class="c1">// If you'd like to render this inline instead of treating</span>
+        <span class="c1">// it as an attachment, you would just continue to recurse:</span>
+        <span class="n">RenderMessage</span> <span class="p">(</span><span class="n">messagePart</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">Multipart</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// This entity is a multipart container.</span>
+        <span class="kt">var</span> <span class="n">multipart</span> <span class="p">=</span> <span class="p">(</span><span class="n">Multipart</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
 
-        foreach (var subpart in multipart)
-            RenderMimeEntity (subpart);
-    } else {
-        // Everything that isn't either a MessagePart or a Multipart is a MimePart
-        var part = (MimePart) entity;
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">subpart</span> <span class="k">in</span> <span class="n">multipart</span><span class="p">)</span>
+            <span class="n">RenderMimeEntity</span> <span class="p">(</span><span class="n">subpart</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Everything that isn't either a MessagePart or a Multipart is a MimePart</span>
+        <span class="kt">var</span> <span class="n">part</span> <span class="p">=</span> <span class="p">(</span><span class="n">MimePart</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
 
-        // Don't render anything that is explicitly marked as an attachment.
-        if (part.IsAttachment)
-            return;
+        <span class="c1">// Don't render anything that is explicitly marked as an attachment.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">part</span><span class="p">.</span><span class="n">IsAttachment</span><span class="p">)</span>
+            <span class="k">return</span><span class="p">;</span>
 
-        if (part is TextPart) {
-            // This is a mime part with textual content.
-            var text = (TextPart) part;
+        <span class="k">if</span> <span class="p">(</span><span class="n">part</span> <span class="k">is</span> <span class="n">TextPart</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// This is a mime part with textual content.</span>
+            <span class="kt">var</span> <span class="n">text</span> <span class="p">=</span> <span class="p">(</span><span class="n">TextPart</span><span class="p">)</span> <span class="n">part</span><span class="p">;</span>
 
-            if (text.ContentType.Matches ("text", "html"))
-                RenderHtml (text.Text);
-            else
-                RenderText (text.Text);
-        } else if (entity.ContentType.Matches ("image", "*")) {
-            using (var content = new MemoryStream ()) {
-                // If the content is base64 encoded (which it probably is), decode it.
-                part.ContentObject.DecodeTo (memory);
+            <span class="k">if</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">ContentType</span><span class="p">.</span><span class="n">Matches</span> <span class="p">(</span><span class="s">"text"</span><span class="p">,</span> <span class="s">"html"</span><span class="p">))</span>
+                <span class="n">RenderHtml</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+            <span class="k">else</span>
+                <span class="nf">RenderText</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">entity</span><span class="p">.</span><span class="n">ContentType</span><span class="p">.</span><span class="n">Matches</span> <span class="p">(</span><span class="s">"image"</span><span class="p">,</span> <span class="s">"*"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MemoryStream</span> <span class="p">())</span> <span class="p">{</span>
+                <span class="c1">// If the content is base64 encoded (which it probably is), decode it.</span>
+                <span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">DecodeTo</span> <span class="p">(</span><span class="n">memory</span><span class="p">);</span>
 
-                RenderImage (memory);
-            }
-        }
-    }
-}
-</code></pre>
+                <span class="n">RenderImage</span> <span class="p">(</span><span class="n">memory</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="getting-the-decoded-content-of-a-mime-part" class="anchor" href="#getting-the-decoded-content-of-a-mime-part"><span class="octicon octicon-link"></span></a>Getting the Decoded Content of a MIME Part</h3>
+
+<p>At some point, you're going to want to extract the decoded content of a MimePart (such as an image) and
+save it to disk or feed it to a UI control to display it.</p>
+
+<p>Once you've found the MimePart object that you'd like to extract the content of, here's how you can
+save the decoded content to a file:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="c1">// This will get the name of the file as specified by the sending mail client.</span>
+<span class="c1">// Note: this value *may* be null, so you'll want to handle that case in your code.</span>
+<span class="kt">var</span> <span class="n">fileName</span> <span class="p">=</span> <span class="n">part</span><span class="p">.</span><span class="n">FileName</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">stream</span> <span class="p">=</span> <span class="n">File</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">fileName</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">DecodeTo</span> <span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>You can also get access to the original encoded content and its encoding by poking at the Stream and
+Encoding properties of the ContentObject. This might be useful if you want to pass the content off
+to a UI control that can do its own loading from a stream.</p>
+
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">filtered</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FilteredStream</span> <span class="p">(</span><span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">Stream</span><span class="p">);</span>
+
+<span class="c1">// Note: if the MimePart was parsed by a MimeParser (or loaded using MimeMessage.Load</span>
+<span class="c1">// or MimeEntity.Load), the ContentObject.Encoding will match the part.Encoding.</span>
+
+<span class="c1">// Create an IMimeFilter that can decode the ContentEncoding.</span>
+<span class="kt">var</span> <span class="n">decoder</span> <span class="p">=</span> <span class="n">DecoderFilter</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">Encoding</span><span class="p">);</span>
+
+<span class="c1">// Add the filter to our filtered stream.</span>
+<span class="n">filtered</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">decoder</span><span class="p">);</span>
+
+<span class="c1">// At this point, you can now read from the 'filtered' stream as if it were the</span>
+<span class="c1">// original, raw content. Assuming you have an image UI control that could load</span>
+<span class="c1">// from a stream, you could do something like this:</span>
+<span class="n">imageControl</span><span class="p">.</span><span class="n">Load</span> <span class="p">(</span><span class="n">filtered</span><span class="p">);</span>
+</pre></div>
+
+<p>There are a number of useful filters that can be applied to a FilteredStream, so if you find this type of
+interface appealing, I suggest taking a look at the available filters in the MimeKit.IO.Filters namespace
+or even write your own! The possibilities are limited only by your imagination.</p>
+
+<h3>
+<a name="creating-a-simple-message" class="anchor" href="#creating-a-simple-message"><span class="octicon octicon-link"></span></a>Creating a Simple Message</h3>
+
+<p>Creating MIME messages using MimeKit is really trivial.</p>
+
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeMessage</span> <span class="p">();</span>
+<span class="n">message</span><span class="p">.</span><span class="n">From</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Joey"</span><span class="p">,</span> <span class="s">"joey@friends.com"</span><span class="p">));</span>
+<span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"alice@wonderland.com"</span><span class="p">));</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Subject</span> <span class="p">=</span> <span class="s">"How you doin?"</span><span class="p">;</span>
+
+<span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TextPart</span> <span class="p">(</span><span class="s">"plain"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Text</span> <span class="p">=</span> <span class="s">@"Hey Alice,</span>
+
+<span class="s">What are you up to this weekend? Monica is throwing one of her parties on</span>
+<span class="s">Saturday and I was hoping you could make it.</span>
+
+<span class="s">Will you be my +1?</span>
+
+<span class="s">-- Joey</span>
+<span class="s">"</span>
+<span class="p">};</span>
+</pre></div>
+
+<p>A TextPart is a leaf-node MIME part with a text media-type. The first argument to the TextPart constructor
+specifies the media-subtype, in this case, "plain". Another media subtype you are probably familiar with
+is the "html" subtype. Some other examples include "enriched" and "csv".</p>
+
+<p>The Text property is the easiest way to both get and set the string content of the MIME part.</p>
+
+<h3>
+<a name="creating-a-message-with-attachments" class="anchor" href="#creating-a-message-with-attachments"><span class="octicon octicon-link"></span></a>Creating a Message with Attachments</h3>
+
+<p>Attachments are just like any other MimePart, the only difference is that they typically have
+a Content-Disposition header with a value of "attachment" instead of "inline" or no
+Content-Disposition header at all.</p>
+
+<p>Typically, when a mail client adds attachments to a message, it will create a multipart/mixed
+part and add the text body part and all of the file attachments to the multipart/mixed.</p>
+
+<p>Here's how you can do that with MimeKit:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeMessage</span> <span class="p">();</span>
+<span class="n">message</span><span class="p">.</span><span class="n">From</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Joey"</span><span class="p">,</span> <span class="s">"joey@friends.com"</span><span class="p">));</span>
+<span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"alice@wonderland.com"</span><span class="p">));</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Subject</span> <span class="p">=</span> <span class="s">"How you doin?"</span><span class="p">;</span>
+
+<span class="c1">// create our message text, just like before (except don't set it as the message.Body)</span>
+<span class="kt">var</span> <span class="n">body</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TextPart</span> <span class="p">(</span><span class="s">"plain"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Text</span> <span class="p">=</span> <span class="s">@"Hey Alice,</span>
+
+<span class="s">What are you up to this weekend? Monica is throwing one of her parties on</span>
+<span class="s">Saturday and I was hoping you could make it.</span>
+
+<span class="s">Will you be my +1?</span>
+
+<span class="s">-- Joey</span>
+<span class="s">"</span>
+<span class="p">};</span>
+
+<span class="c1">// create an image attachment for the file located at path</span>
+<span class="kt">var</span> <span class="n">attachment</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimePart</span> <span class="p">(</span><span class="s">"image"</span><span class="p">,</span> <span class="s">"gif"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ContentObject</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ContentObject</span> <span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">OpenRead</span> <span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">ContentEncoding</span><span class="p">.</span><span class="n">Default</span><span class="p">),</span>
+    <span class="n">ContentDisposition</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ContentDisposition</span> <span class="p">(</span><span class="n">ContentDisposition</span><span class="p">.</span><span class="n">Attachment</span><span class="p">),</span>
+    <span class="n">FileName</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">GetFileName</span> <span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="c1">// now create the multipart/mixed container to hold the message text and the</span>
+<span class="c1">// image attachment</span>
+<span class="kt">var</span> <span class="n">multipart</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Multipart</span> <span class="p">(</span><span class="s">"mixed"</span><span class="p">);</span>
+<span class="n">multipart</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">body</span><span class="p">);</span>
+<span class="n">multipart</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">attachment</span><span class="p">);</span>
+
+<span class="c1">// now set the multipart/mixed as the message body</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">multipart</span><span class="p">;</span>
+</pre></div>
+
+<p>Of course, that is just a simple example. A lot of modern mail clients such as Outlook or Thunderbird will 
+send out both a text/html and a text/plain version of the message text. To do this, you'd create a TextPart
+for the text/plain part and a TextPart for the text/html part and then add them to a multipart/alternative
+like so:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">attachment</span> <span class="p">=</span> <span class="n">CreateAttachment</span> <span class="p">();</span>
+<span class="kt">var</span> <span class="n">plain</span> <span class="p">=</span> <span class="n">CreateTextPlainPart</span> <span class="p">();</span>
+<span class="kt">var</span> <span class="n">html</span> <span class="p">=</span> <span class="n">CreateTextHtmlPart</span> <span class="p">();</span>
+
+<span class="c1">// Note: it is important that the text/html part is added second, because it is the</span>
+<span class="c1">// most expressive version and (probably) the most faithful to the sender's WYSIWYG </span>
+<span class="c1">// editor.</span>
+<span class="kt">var</span> <span class="n">alternative</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Multipart</span> <span class="p">(</span><span class="s">"alternative"</span><span class="p">);</span>
+<span class="n">alternative</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">plain</span><span class="p">);</span>
+<span class="n">alternative</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">html</span><span class="p">);</span>
+
+<span class="c1">// now create the multipart/mixed container to hold the multipart/alternative</span>
+<span class="c1">// and the image attachment</span>
+<span class="kt">var</span> <span class="n">multipart</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Multipart</span> <span class="p">(</span><span class="s">"mixed"</span><span class="p">);</span>
+<span class="n">multipart</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">alternative</span><span class="p">);</span>
+<span class="n">multipart</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">attachment</span><span class="p">);</span>
+
+<span class="c1">// now set the multipart/mixed as the message body</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">multipart</span><span class="p">;</span>
+</pre></div>
+
+<h3>
+<a name="digitally-signing-messages-with-smime-or-pgpmime" class="anchor" href="#digitally-signing-messages-with-smime-or-pgpmime"><span class="octicon octicon-link"></span></a>Digitally Signing Messages with S/MIME or PGP/MIME</h3>
+
+<p>Both S/MIME and PGP/MIME use a multipart/signed to contain the signed content and the detached signature data.</p>
+
+<p>To create a multipart/signed MIME part, let's pretend we're going to digitally sign our multipart/mixed example
+from the previous sample using S/MIME.</p>
+
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">joey</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Joey"</span><span class="p">,</span> <span class="s">"joey@friends.com"</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">alice</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"alice@wonderland.com"</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeMessage</span> <span class="p">();</span>
+<span class="n">message</span><span class="p">.</span><span class="n">From</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">joey</span><span class="p">);</span>
+<span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">alice</span><span class="p">);</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Subject</span> <span class="p">=</span> <span class="s">"How you doin?"</span><span class="p">;</span>
+
+<span class="c1">// create our message body (perhaps a multipart/mixed with the message text and some</span>
+<span class="c1">// image attachments, for example)</span>
+<span class="kt">var</span> <span class="n">body</span> <span class="p">=</span> <span class="n">CreateMessageBody</span> <span class="p">();</span>
+
+<span class="c1">// now to digitally sign our message body using the default S/MIME cryptography context</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DefaultSecureMimeContext</span> <span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// Note: this assumes that "Joey" has an S/MIME signing certificate and private key</span>
+    <span class="c1">// with an X.509 Subject Email identifier that matches Joey's email address.</span>
+    <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">MultipartSigned</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">joey</span><span class="p">,</span> <span class="n">DigestAlgorithm</span><span class="p">.</span><span class="n">Sha1</span><span class="p">,</span> <span class="n">body</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>For S/MIME, if you have a way for the user to configure which S/MIME certificate to use
+as their signing certificate, you could also do something more like this:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="c1">// now to digitally sign our message body using the default S/MIME cryptography context</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DefaultSecureMimeContext</span> <span class="p">())</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">certificate</span> <span class="p">=</span> <span class="n">GetJoeysX509Certificate</span> <span class="p">();</span>
+    <span class="kt">var</span> <span class="n">signer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CmsSigner</span> <span class="p">(</span><span class="n">certificate</span><span class="p">);</span>
+    <span class="n">signer</span><span class="p">.</span><span class="n">DigestAlgorithm</span> <span class="p">=</span> <span class="n">DigestAlgorithm</span><span class="p">.</span><span class="n">Sha1</span><span class="p">;</span>
+
+    <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">MultipartSigned</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">signer</span><span class="p">,</span> <span class="n">body</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>If you'd prefer to use PGP instead of S/MIME, things work almost exactly the same except that you
+would use an OpenPGP cryptography context. For example, you might use a subclass of the
+GnuPGContext that comes with MimeKit if you want to re-use the user's GnuPG keyrings (you can't
+use GnuPGContext directly because it has no way of prompting the user for their passphrase).</p>
+
+<p>For the sake of this example, let's pretend that you've written a minimal subclass of
+MimeKit.Cryptography.GnuPGContext that simply overrides the GetPassword() method and
+that this subclass is called MyGnuPGContext.</p>
+
+<div class="highlight highlight-csharp"><pre><span class="c1">// now to digitally sign our message body using our custom OpenPGP cryptography context</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyGnuPGContext</span> <span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// Note: this assumes that "Joey" has a PGP key that matches his email address.</span>
+    <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">MultipartSigned</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">joey</span><span class="p">,</span> <span class="n">DigestAlgorithm</span><span class="p">.</span><span class="n">Sha1</span><span class="p">,</span> <span class="n">body</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Just like S/MIME, however, you can also do your own PGP key lookups instead of
+relying on email addresses to match up with the user's private key.</p>
+
+<div class="highlight highlight-csharp"><pre><span class="c1">// now to digitally sign our message body using our custom OpenPGP cryptography context</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyGnuPGContext</span> <span class="p">())</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">key</span> <span class="p">=</span> <span class="n">GetJoeysPrivatePgpKey</span> <span class="p">();</span>
+    <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">MultipartSigned</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">DigestAlgorithm</span><span class="p">.</span><span class="n">Sha1</span><span class="p">,</span> <span class="n">body</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
 
 <h3>
 <a name="verifying-smime-and-pgpmime-digital-signatures" class="anchor" href="#verifying-smime-and-pgpmime-digital-signatures"><span class="octicon octicon-link"></span></a>Verifying S/MIME and PGP/MIME Digital Signatures</h3>
 
-<p>Both S/MIME and PGP/MIME use a multipart/signed to contain the signed content and the detached signature data.</p>
+<p>As mentioned earlier, both S/MIME and PGP/MIME typically use a multipart/signed part to contain the
+signed content and the detached signature data.</p>
 
 <p>A multipart/signed contains exactly 2 parts: the first MimeEntity is the signed content while the second
 MimeEntity is the detached signature and, by default, will either be an ApplicationPgpSignature part or
-an ApplicationPkcs7Signature part.</p>
+an ApplicationPkcs7Signature part (depending on whether the sending client signed using OpenPGP or S/MIME).</p>
 
 <p>Because the multipart/signed part may have been signed by multiple signers, it is important to
 verify each of the digital signatures (one for each signer) that are returned by the
 MultipartSigned.Verify() method:</p>
 
-<pre><code>if (entity is MultipartSigned) {
-    var signed = (MultipartSigned) entity;
+<div class="highlight highlight-csharp"><pre><span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">MultipartSigned</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">signed</span> <span class="p">=</span> <span class="p">(</span><span class="n">MultipartSigned</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
 
-    foreach (var signature in signed.Verify ()) {
-        try {
-            bool valid = signature.Verify ();
+    <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">signature</span> <span class="k">in</span> <span class="n">signed</span><span class="p">.</span><span class="n">Verify</span> <span class="p">())</span> <span class="p">{</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="kt">bool</span> <span class="n">valid</span> <span class="p">=</span> <span class="n">signature</span><span class="p">.</span><span class="n">Verify</span> <span class="p">();</span>
 
-            // If valid is true, then it signifies that the signed content has not been
-            // modified since this particular signer signed the content.
-            //
-            // However, if it is false, then it indicates that the signed content has been
-            // modified.
-        } catch (DigitalSignatureVerifyException) {
-            // There was an error verifying the signature.
-        }
-    }
-}
-</code></pre>
+            <span class="c1">// If valid is true, then it signifies that the signed content has not been</span>
+            <span class="c1">// modified since this particular signer signed the content.</span>
+            <span class="c1">//</span>
+            <span class="c1">// However, if it is false, then it indicates that the signed content has</span>
+            <span class="c1">// been modified.</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">DigitalSignatureVerifyException</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// There was an error verifying the signature.</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>It should be noted, however, that while most S/MIME clients will use the preferred multipart/signed
+approach, it is possible that you may encounter an "application/pkcs7-mime" part with an
+"smime-type" parameter set to "signed-data". Luckily, MimeKit can handle this format as well:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">ApplicationPkcs7Mime</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">pkcs7</span> <span class="p">=</span> <span class="p">(</span><span class="n">ApplicationPkcs7Mime</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">pkcs7</span><span class="p">.</span><span class="n">SecureMimeType</span> <span class="p">==</span> <span class="n">SecureMimeType</span><span class="p">.</span><span class="n">SignedData</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// extract the original content and get a list of signatures</span>
+        <span class="n">IList</span><span class="p">&lt;</span><span class="n">IDigitalSignature</span><span class="p">&gt;</span> <span class="n">signatures</span><span class="p">;</span>
+
+        <span class="c1">// Note: if you are rendering the message, you'll want to render</span>
+        <span class="c1">// the extracted mime part rather than the application/pkcs7-mime part.</span>
+        <span class="n">MimeEntity</span> <span class="n">extracted</span> <span class="p">=</span> <span class="n">pkcs7</span><span class="p">.</span><span class="n">Verify</span> <span class="p">(</span><span class="k">out</span> <span class="n">signatures</span><span class="p">);</span>
+
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">signature</span> <span class="k">in</span> <span class="n">signatures</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="kt">bool</span> <span class="n">valid</span> <span class="p">=</span> <span class="n">signature</span><span class="p">.</span><span class="n">Verify</span> <span class="p">();</span>
+
+                <span class="c1">// If valid is true, then it signifies that the signed content has not</span>
+                <span class="c1">// been modified since this particular signer signed the content.</span>
+                <span class="c1">//</span>
+                <span class="c1">// However, if it is false, then it indicates that the signed content</span>
+                <span class="c1">// has been modified.</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">DigitalSignatureVerifyException</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// There was an error verifying the signature.</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
 
 <h2>
 <a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
@@ -343,7 +588,7 @@ simply send me a Pull Request and I will try to review your changes in a timely 
 <h2>
 <a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
-<p>API documentation can be found at <a href="http://jstedfast.github.com/MimeKit/docs">http://jstedfast.github.com/MimeKit/docs</a>.</p>
+<p>API documentation can be found at <a href="http://jstedfast.github.io/MimeKit/docs">http://jstedfast.github.io/MimeKit/docs</a>.</p>
       </section>
     </div>
 
