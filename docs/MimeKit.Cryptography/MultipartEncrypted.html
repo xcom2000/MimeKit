@@ -611,6 +611,18 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt</a>
+                      </b>(<i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+            Decrypt this instance.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext)">Decrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
             Decrypt this instance.
@@ -623,20 +635,8 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
-                      </b>(<i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt this instance.
-            </blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
-                      </b>(<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+                        <a href="#M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt</a>
+                      </b>(<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
             Decrypt this instance.
             </blockquote></td>
                   </tr>
@@ -1659,6 +1659,85 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.DigitalSignatureCollection@):member">
+              <p class="Summary">
+            Decrypt this instance.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> signatures)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.DigitalSignatureCollection@):Parameters">
+                <dl>
+                  <dt>
+                    <i>signatures</i>
+                  </dt>
+                  <dd>A list of digital signatures if the data was both signed and encrypted.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.DigitalSignatureCollection@):Returns">The decrypted entity.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.DigitalSignatureCollection@):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.FormatException">FormatException</a>
+                    </td>
+                    <td>
+                      <p>The <tt>protocol</tt> parameter was not specified.</p>
+                      <p>-or-</p>
+                      <p>The multipart is malformed in some way.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            A suitable <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> for
+            decrypting could not be found.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The private key could not be found to decrypt the encrypted data.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The user chose to cancel the password prompt.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            3 bad attempts were made to unlock the secret key.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.DigitalSignatureCollection@):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.DigitalSignatureCollection@):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext)">Decrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext):member">
               <p class="Summary">
@@ -1745,94 +1824,15 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+            <h3 id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,MimeKit.Cryptography.DigitalSignatureCollection@):member">
               <p class="Summary">
             Decrypt this instance.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a> ctx, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> signatures)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
-                <dl>
-                  <dt>
-                    <i>signatures</i>
-                  </dt>
-                  <dd>A list of digital signatures if the data was both signed and encrypted.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The decrypted entity.</blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.FormatException">FormatException</a>
-                    </td>
-                    <td>
-                      <p>The <tt>protocol</tt> parameter was not specified.</p>
-                      <p>-or-</p>
-                      <p>The multipart is malformed in some way.</p>
-                    </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
-                    </td>
-                    <td>
-            A suitable <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> for
-            decrypting could not be found.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
-                    </td>
-                    <td>
-            The user chose to cancel the password prompt.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
-                    </td>
-                    <td>
-            3 bad attempts were made to unlock the secret key.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
-                    </td>
-                    <td>
-            The private key could not be found to decrypt the encrypted data.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
-              <p class="Summary">
-            Decrypt this instance.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a> ctx, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,MimeKit.Cryptography.DigitalSignatureCollection@):Parameters">
                 <dl>
                   <dt>
                     <i>ctx</i>
@@ -1845,9 +1845,9 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The decrypted entity.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,MimeKit.Cryptography.DigitalSignatureCollection@):Returns">The decrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,MimeKit.Cryptography.DigitalSignatureCollection@):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1881,6 +1881,14 @@
                   </tr>
                   <tr valign="top">
                     <td>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The private key could not be found to decrypt the encrypted data.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
                     </td>
                     <td>
@@ -1895,22 +1903,14 @@
             3 bad attempts were made to unlock the secret key.
             </td>
                   </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
-                    </td>
-                    <td>
-            The private key could not be found to decrypt the encrypted data.
-            </td>
-                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,MimeKit.Cryptography.DigitalSignatureCollection@):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartEncrypted.Decrypt(MimeKit.Cryptography.OpenPgpContext,MimeKit.Cryptography.DigitalSignatureCollection@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>

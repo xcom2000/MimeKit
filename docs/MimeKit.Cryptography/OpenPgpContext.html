@@ -479,8 +479,8 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+                        <a href="#M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
             Decrypt an encrypted stream.
             </blockquote></td>
                   </tr>
@@ -777,7 +777,7 @@
                     <td colspan="2">
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the specified content and signatureData.
             </blockquote></td>
                   </tr>
@@ -788,7 +788,7 @@
                     <td colspan="2">
                       <b>
                         <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the specified content and signatureData.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
                   </tr>
@@ -1056,15 +1056,15 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Decrypt Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+            <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):member">
               <p class="Summary">
             Decrypt an encrypted stream.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> signatures)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Parameters">
                 <dl>
                   <dt>
                     <i>encryptedData</i>
@@ -1077,9 +1077,9 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The decrypted <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Returns">The decrypted <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1095,10 +1095,10 @@
                   </tr>
                   <tr valign="top">
                     <td>
-                      <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
                     </td>
                     <td>
-            The secret key could not be found to decrypt the stream.
+            The private key could not be found to decrypt the stream.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1117,22 +1117,14 @@
             3 bad attempts were made to unlock the secret key.
             </td>
                   </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
-                    </td>
-                    <td>
-            The private key could not be found to decrypt the stream.
-            </td>
-                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2744,7 +2736,7 @@
             Verify the specified content and signatureData.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signatureData)</div>
+              <div class="Signature">public override <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signatureData)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream):Parameters">
                 <dl>

@@ -682,8 +682,8 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+                        <a href="#M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@)">Verify</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the digital signatures of the specified signedData and extract the original content.
             </blockquote></td>
                   </tr>
@@ -694,7 +694,7 @@
                     <td colspan="2">
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the digital signatures of the specified content using the detached signatureData.
             </blockquote></td>
                   </tr>
@@ -705,7 +705,7 @@
                     <td colspan="2">
                       <b>
                         <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the specified content and signatureData.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
                   </tr>
@@ -2192,30 +2192,30 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+            <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@)">Verify Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):member">
               <p class="Summary">
             Verify the digital signatures of the specified signedData and extract the original content.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signedData, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+              <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signedData, <i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):Parameters">
                 <dl>
                   <dt>
                     <i>signedData</i>
                   </dt>
                   <dd>The signed data.</dd>
                   <dt>
-                    <i>signatures</i>
+                    <i>entity</i>
                   </dt>
-                  <dd>The digital signatures.</dd>
+                  <dd>The unencapsulated entity.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):Returns">The list of digital signatures.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -2240,11 +2240,11 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2254,7 +2254,7 @@
             Verify the digital signatures of the specified content using the detached signatureData.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signatureData)</div>
+              <div class="Signature">public override <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signatureData)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.IO.Stream):Parameters">
                 <dl>

@@ -707,8 +707,8 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify</a>
-                      </b>(<i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+                        <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@)">Verify</a>
+                      </b>(<i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
             </blockquote></td>
                   </tr>
@@ -719,8 +719,8 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify</a>
-                      </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
+                        <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@)">Verify</a>
+                      </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
             </blockquote></td>
                   </tr>
@@ -2266,26 +2266,26 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+            <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@)">Verify Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):member">
               <p class="Summary">
             Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Verify</b> (<i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+              <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):Parameters">
                 <dl>
                   <dt>
-                    <i>signatures</i>
+                    <i>entity</i>
                   </dt>
-                  <dd>The digital signatures.</dd>
+                  <dd>The unencapsulated entity.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):Returns">The list of digital signatures.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -2310,38 +2310,38 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@)">Verify Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):member">
+            <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@)">Verify Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):member">
               <p class="Summary">
             Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Verify</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
+              <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):Parameters">
                 <dl>
                   <dt>
                     <i>ctx</i>
                   </dt>
                   <dd>The S/MIME context to use for verifying the signature.</dd>
                   <dt>
-                    <i>signatures</i>
+                    <i>entity</i>
                   </dt>
-                  <dd>The digital signatures.</dd>
+                  <dd>The unencapsulated entity.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Returns">The unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):Returns">The list of digital signatures.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -2366,11 +2366,11 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}@):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.13.0.0</div>
               <hr size="1" />
             </blockquote>

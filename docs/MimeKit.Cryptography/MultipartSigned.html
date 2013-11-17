@@ -627,7 +627,7 @@
                     <td colspan="2">
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Verify()">Verify</a>
-                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+                      </b>()<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the multipart/signed content.
             </blockquote></td>
                   </tr>
@@ -639,7 +639,7 @@
                     <td colspan="2">
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Verify(MimeKit.Cryptography.CryptographyContext)">Verify</a>
-                      </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a></nobr><blockquote>
+                      </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
             Verify the multipart/signed content.
             </blockquote></td>
                   </tr>
@@ -1269,7 +1269,7 @@
             Verify the multipart/signed content.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> <b>Verify</b> ()</div>
+              <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> ()</div>
               <h4 class="Subsection">Returns</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Verify():Returns">A signer info collection.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
@@ -1299,14 +1299,6 @@
                   </tr>
                   <tr valign="top">
                     <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.CryptographicException">System.Security.Cryptography.CryptographicException</a>
-                    </td>
-                    <td>
-            An error occurred while verifying.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
                       <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Cms.CmsException</a>
                     </td>
                     <td>
@@ -1330,7 +1322,7 @@
             Verify the multipart/signed content.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> <b>Verify</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a> ctx)</div>
+              <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a> ctx)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Verify(MimeKit.Cryptography.CryptographyContext):Parameters">
                 <dl>
@@ -1371,14 +1363,6 @@
                     </td>
                     <td>
                       <i>ctx</i> does not support verifying the signature part.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.CryptographicException">System.Security.Cryptography.CryptographicException</a>
-                    </td>
-                    <td>
-            An error occurred while verifying.
             </td>
                   </tr>
                   <tr valign="top">

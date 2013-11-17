@@ -540,13 +540,11 @@ approach, it is possible that you may encounter an "application/pkcs7-mime" part
 
     <span class="k">if</span> <span class="p">(</span><span class="n">pkcs7</span><span class="p">.</span><span class="n">SecureMimeType</span> <span class="p">==</span> <span class="n">SecureMimeType</span><span class="p">.</span><span class="n">SignedData</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// extract the original content and get a list of signatures</span>
-        <span class="n">IList</span><span class="p">&lt;</span><span class="n">IDigitalSignature</span><span class="p">&gt;</span> <span class="n">signatures</span><span class="p">;</span>
+        <span class="n">MimeEntity</span> <span class="n">extracted</span><span class="p">;</span>
 
         <span class="c1">// Note: if you are rendering the message, you'll want to render</span>
         <span class="c1">// the extracted mime part rather than the application/pkcs7-mime part.</span>
-        <span class="n">MimeEntity</span> <span class="n">extracted</span> <span class="p">=</span> <span class="n">pkcs7</span><span class="p">.</span><span class="n">Verify</span> <span class="p">(</span><span class="k">out</span> <span class="n">signatures</span><span class="p">);</span>
-
-        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">signature</span> <span class="k">in</span> <span class="n">signatures</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">signature</span> <span class="k">in</span> <span class="n">pkcs7</span><span class="p">.</span><span class="n">Verify</span> <span class="p">(</span><span class="k">out</span> <span class="n">extracted</span><span class="p">))</span> <span class="p">{</span>
             <span class="k">try</span> <span class="p">{</span>
                 <span class="kt">bool</span> <span class="n">valid</span> <span class="p">=</span> <span class="n">signature</span><span class="p">.</span><span class="n">Verify</span> <span class="p">();</span>
 
