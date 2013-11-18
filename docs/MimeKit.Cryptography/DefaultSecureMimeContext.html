@@ -2,7 +2,7 @@
   <head>
     <title>MimeKit.Cryptography.DefaultSecureMimeContext</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
     <style>
       a { text-decoration: none }
@@ -261,8 +261,8 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String)">DefaultSecureMimeContext</a>
-                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                          <a href="#C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String,System.String)">DefaultSecureMimeContext</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
                     <td>
             Initializes a new instance of the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> class.
@@ -289,6 +289,22 @@
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
             The default store path for certificates belonging to people in the user's addressbook.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static readonly </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultCertificateRevocationListsPath">DefaultCertificateRevocationListsPath</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            The default path for the Certificate Revocation Lists (CRLs).
             </td>
                   </tr>
                   <tr valign="top">
@@ -1043,16 +1059,20 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String)">DefaultSecureMimeContext Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):member">
+            <h3 id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String,System.String)">DefaultSecureMimeContext Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String,System.String):member">
               <p class="Summary">
             Initializes a new instance of the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected  <b>DefaultSecureMimeContext</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> addressbookFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> rootFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+              <div class="Signature">protected  <b>DefaultSecureMimeContext</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> revokedFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> addressbookFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> rootFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> userFileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String,System.String):Parameters">
                 <dl>
+                  <dt>
+                    <i>revokedFileName</i>
+                  </dt>
+                  <dd>The path to the revoked certificate lists.</dd>
                   <dt>
                     <i>addressbookFileName</i>
                   </dt>
@@ -1072,7 +1092,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Exceptions">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String,System.String):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1107,11 +1127,11 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Remarks">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String,System.String):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String):Version Information">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String,System.String,System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1129,6 +1149,23 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultAddressBookCertificatesPath:Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultCertificateRevocationListsPath">DefaultCertificateRevocationListsPath Field</h3>
+            <blockquote id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultCertificateRevocationListsPath:member">
+              <p class="Summary">
+            The default path for the Certificate Revocation Lists (CRLs).
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultCertificateRevocationListsPath</b> </div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultCertificateRevocationListsPath:Remarks">
+                <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\revoked.crl</tt>.</p>
+                <p>On Unix systems such as Linux and Mac OS X, this path will be <tt>~/.mimekit/revoked.crl</tt>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultCertificateRevocationListsPath:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
