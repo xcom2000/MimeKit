@@ -377,6 +377,26 @@
                 </table>
               </div>
             </div>
+            <h2 class="Section">Protected Properties</h2>
+            <div class="SectionBox" id="Protected Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking">PreferredEncryptionAlgorithmRanking</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit.Cryptography/SecureMimeCapability.html">SecureMimeCapability</a>[]</i>. 
+            Gets the preferred rank order for the encryption algorithms; from the strongest to the weakest.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
             <h2 class="Section">Public Methods</h2>
             <div class="SectionBox" id="Public Methods">
               <div class="SubsectionBox">
@@ -826,6 +846,17 @@
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.GetTrustedAnchors()">GetTrustedAnchors</a>
                       </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Utilities.Collections.HashSet</a></nobr><blockquote>
             Gets the trusted anchors.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime)">UpdateSecureMimeCapabilities</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a>, <a href="../MimeKit.Cryptography/SecureMimeCapability.html">SecureMimeCapability</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>)<blockquote>
+            Updates the known S/MIME capabilities of the client used by the recipient that owns the specified certificate.
             </blockquote></td>
                   </tr>
                 </table>
@@ -1979,6 +2010,24 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking">PreferredEncryptionAlgorithmRanking Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking:member">
+              <p class="Summary">
+            Gets the preferred rank order for the encryption algorithms; from the strongest to the weakest.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected virtual <a href="../MimeKit.Cryptography/SecureMimeCapability.html">SecureMimeCapability</a>[] <b>PreferredEncryptionAlgorithmRanking</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking:Value">The preferred encryption algorithm ranking.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking:Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.Cryptography.CmsSigner,System.IO.Stream)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.Cryptography.CmsSigner,System.IO.Stream):member">
               <p class="Summary">
@@ -2189,6 +2238,39 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Supports(System.String):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime)">UpdateSecureMimeCapabilities Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime):member">
+              <p class="Summary">
+            Updates the known S/MIME capabilities of the client used by the recipient that owns the specified certificate.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UpdateSecureMimeCapabilities</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> certificate, <a href="../MimeKit.Cryptography/SecureMimeCapability.html">SecureMimeCapability</a> capabilities, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> timestamp)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime):Parameters">
+                <dl>
+                  <dt>
+                    <i>certificate</i>
+                  </dt>
+                  <dd>The certificate.</dd>
+                  <dt>
+                    <i>capabilities</i>
+                  </dt>
+                  <dd>The S/MIME capabilities.</dd>
+                  <dt>
+                    <i>timestamp</i>
+                  </dt>
+                  <dd>The timestamp.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
