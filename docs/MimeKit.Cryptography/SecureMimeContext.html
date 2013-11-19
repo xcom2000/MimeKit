@@ -245,8 +245,8 @@
                         </b>()</div>
                     </td>
                     <td>
-                      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                    </td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a> class.
+            </td>
                   </tr>
                 </table>
               </div>
@@ -385,12 +385,12 @@
                     <td>[read-only]<div></div></td>
                     <td>
                       <b>
-                        <a href="#P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking">PreferredEncryptionAlgorithmRanking</a>
+                        <a href="#P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank">EncryptionAlgorithmRank</a>
                       </b>
                     </td>
                     <td>
                       <i>
-                        <a href="../MimeKit.Cryptography/SecureMimeCapability.html">SecureMimeCapability</a>[]</i>. 
+                        <a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>[]</i>. 
             Gets the preferred rank order for the encryption algorithms; from the strongest to the weakest.
             </td>
                   </tr>
@@ -454,10 +454,34 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.Cryptography.SecureMimeContext.Disable(MimeKit.Cryptography.EncryptionAlgorithm)">Disable</a>
+                      </b>(<a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>)<blockquote>
+            Disables the encryption algorithm.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose()">Dispose</a>
                       </b>()<blockquote>
             Releases all resources used by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> object.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Cryptography.SecureMimeContext.Enable(MimeKit.Cryptography.EncryptionAlgorithm)">Enable</a>
+                      </b>(<a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>)<blockquote>
+            Enables the encryption algorithm.
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -637,6 +661,18 @@
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Import(System.IO.Stream,System.String)">Import</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
             Imports certificates and keys from a pkcs12-encoded stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm)">IsEnabled</a>
+                      </b>(<a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Determines whether the specified encryption algorithm is enabled.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -854,8 +890,8 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime)">UpdateSecureMimeCapabilities</a>
-                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a>, <a href="../MimeKit.Cryptography/SecureMimeCapability.html">SecureMimeCapability</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>)<blockquote>
+                        <a href="#M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime)">UpdateSecureMimeCapabilities</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a>, <a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>)<blockquote>
             Updates the known S/MIME capabilities of the client used by the recipient that owns the specified certificate.
             </blockquote></td>
                   </tr>
@@ -870,8 +906,8 @@
             <h3 id="C:MimeKit.Cryptography.SecureMimeContext()">SecureMimeContext Constructor</h3>
             <blockquote id="C:MimeKit.Cryptography.SecureMimeContext():member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a> class.
+            </p>
               <h2>Syntax</h2>
               <div class="Signature">protected  <b>SecureMimeContext</b> ()</div>
               <h2 class="Section">Remarks</h2>
@@ -1037,6 +1073,56 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Decrypt(System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Disable(MimeKit.Cryptography.EncryptionAlgorithm)">Disable Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Disable(MimeKit.Cryptography.EncryptionAlgorithm):member">
+              <p class="Summary">
+            Disables the encryption algorithm.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Disable</b> (<a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a> algorithm)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Disable(MimeKit.Cryptography.EncryptionAlgorithm):Parameters">
+                <dl>
+                  <dt>
+                    <i>algorithm</i>
+                  </dt>
+                  <dd>The encryption algorithm.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Disable(MimeKit.Cryptography.EncryptionAlgorithm):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Disable(MimeKit.Cryptography.EncryptionAlgorithm):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Enable(MimeKit.Cryptography.EncryptionAlgorithm)">Enable Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Enable(MimeKit.Cryptography.EncryptionAlgorithm):member">
+              <p class="Summary">
+            Enables the encryption algorithm.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Enable</b> (<a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a> algorithm)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Enable(MimeKit.Cryptography.EncryptionAlgorithm):Parameters">
+                <dl>
+                  <dt>
+                    <i>algorithm</i>
+                  </dt>
+                  <dd>The encryption algorithm.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Enable(MimeKit.Cryptography.EncryptionAlgorithm):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Enable(MimeKit.Cryptography.EncryptionAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1325,6 +1411,24 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank">EncryptionAlgorithmRank Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank:member">
+              <p class="Summary">
+            Gets the preferred rank order for the encryption algorithms; from the strongest to the weakest.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected virtual <a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>[] <b>EncryptionAlgorithmRank</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank:Value">The preferred encryption algorithm ranking.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1992,6 +2096,34 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm)">IsEnabled Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm):member">
+              <p class="Summary">
+            Determines whether the specified encryption algorithm is enabled.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsEnabled</b> (<a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a> algorithm)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm):Parameters">
+                <dl>
+                  <dt>
+                    <i>algorithm</i>
+                  </dt>
+                  <dd>Algorithm.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm):Returns">
+                <tt>true</tt> if the specified encryption algorithm is enabled; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="P:MimeKit.Cryptography.SecureMimeContext.KeyExchangeProtocol">KeyExchangeProtocol Property</h3>
             <blockquote id="P:MimeKit.Cryptography.SecureMimeContext.KeyExchangeProtocol:member">
               <p class="Summary">
@@ -2007,24 +2139,6 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.KeyExchangeProtocol:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking">PreferredEncryptionAlgorithmRanking Property</h3>
-            <blockquote id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking:member">
-              <p class="Summary">
-            Gets the preferred rank order for the encryption algorithms; from the strongest to the weakest.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">protected virtual <a href="../MimeKit.Cryptography/SecureMimeCapability.html">SecureMimeCapability</a>[] <b>PreferredEncryptionAlgorithmRanking</b>  { get; }</div>
-              <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking:Value">The preferred encryption algorithm ranking.</blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.PreferredEncryptionAlgorithmRanking:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2241,24 +2355,24 @@
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime)">UpdateSecureMimeCapabilities Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime):member">
+            <h3 id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime)">UpdateSecureMimeCapabilities Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):member">
               <p class="Summary">
             Updates the known S/MIME capabilities of the client used by the recipient that owns the specified certificate.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UpdateSecureMimeCapabilities</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> certificate, <a href="../MimeKit.Cryptography/SecureMimeCapability.html">SecureMimeCapability</a> capabilities, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> timestamp)</div>
+              <div class="Signature">protected abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UpdateSecureMimeCapabilities</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> certificate, <a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>[] algorithms, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> timestamp)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Parameters">
                 <dl>
                   <dt>
                     <i>certificate</i>
                   </dt>
                   <dd>The certificate.</dd>
                   <dt>
-                    <i>capabilities</i>
+                    <i>algorithms</i>
                   </dt>
-                  <dd>The S/MIME capabilities.</dd>
+                  <dd>The encryption algorithm capabilities of the client (in preferred order).</dd>
                   <dt>
                     <i>timestamp</i>
                   </dt>
@@ -2266,11 +2380,11 @@
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SecureMimeCapability,System.DateTime):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.14.0.0</div>
               <hr size="1" />
             </blockquote>
