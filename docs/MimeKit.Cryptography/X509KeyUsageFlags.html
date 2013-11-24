@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.SecureMimeType</title>
+    <title>MimeKit.Cryptography.X509KeyUsageFlags</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -205,73 +205,115 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.SecureMimeType">SecureMimeType  Enum</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.SecureMimeType:Summary">
-            The type of S/MIME data that an application/pkcs7-mime part contains.
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.X509KeyUsageFlags">X509KeyUsageFlags  Enum</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.X509KeyUsageFlags:Summary">
+            X.509 key usage flags.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.SecureMimeType:Signature">public enum <b>SecureMimeType</b></div>
+          <div class="Signature" id="T:MimeKit.Cryptography.X509KeyUsageFlags:Signature">[System.Flags]<br />public enum <b>X509KeyUsageFlags</b></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.SecureMimeType:Docs">
+        <div class="Remarks" id="T:MimeKit.Cryptography.X509KeyUsageFlags:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Remarks">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.X509KeyUsageFlags:Docs:Remarks">
             <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Members</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Members">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.X509KeyUsageFlags:Docs:Members">
             <table class="Enumeration">
               <tr>
                 <th>Member Name</th>
                 <th>Description</th>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.SecureMimeType.CertsOnly">
-                  <b>CertsOnly</b>
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.CrlSign">
+                  <b>CrlSign</b>
                 </td>
                 <td>
-            S/MIME certificate data.
+            The key may be used for verifying signatures on
+            certificate revocation lists (CRLs).
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.SecureMimeType.CompressedData">
-                  <b>CompressedData</b>
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.DataEncipherment">
+                  <b>DataEncipherment</b>
                 </td>
                 <td>
-            S/MIME compressed data.
+            The key may be used for data encipherment.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.SecureMimeType.EnvelopedData">
-                  <b>EnvelopedData</b>
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.DecipherOnly">
+                  <b>DecipherOnly</b>
                 </td>
                 <td>
-            S/MIME enveloped data.
+            The key may only be used for deciphering data during key agreement.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.SecureMimeType.SignedData">
-                  <b>SignedData</b>
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.DigitalSignature">
+                  <b>DigitalSignature</b>
                 </td>
                 <td>
-            S/MIME signed data.
+            The key may be used for digitally signing data.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.SecureMimeType.Unknown">
-                  <b>Unknown</b>
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.EncipherOnly">
+                  <b>EncipherOnly</b>
                 </td>
                 <td>
-            The S/MIME data type is unknown.
+            The key may only be used for enciphering data during key agreement.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.KeyAgreement">
+                  <b>KeyAgreement</b>
+                </td>
+                <td>
+            The key is meant to be used for key agreement.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.KeyCertSign">
+                  <b>KeyCertSign</b>
+                </td>
+                <td>
+            The key may be used for verifying signatures on certificates.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.KeyEncipherment">
+                  <b>KeyEncipherment</b>
+                </td>
+                <td>
+            The key is meant to be used for key encipherment.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.None">
+                  <b>None</b>
+                </td>
+                <td>
+            No limitations for the key usage are set.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.X509KeyUsageFlags.NonRepudiation">
+                  <b>NonRepudiation</b>
+                </td>
+                <td>
+            The key may be used to verify digital signatures used to
+            provide a non-repudiation service.
             </td>
               </tr>
             </table>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.SecureMimeType:Docs:Version Information">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.X509KeyUsageFlags:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.SecureMimeType:Members">
+        <div class="Members" id="T:MimeKit.Cryptography.X509KeyUsageFlags:Members">
         </div>
       </section>
     </div>
