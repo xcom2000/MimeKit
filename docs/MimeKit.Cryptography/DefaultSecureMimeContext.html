@@ -282,7 +282,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            The default database path for certificates and keys.
+            The default database path for certificates, private keys and CRLs.
             </td>
                   </tr>
                 </table>
@@ -292,24 +292,6 @@
             <div class="SectionBox" id="Public Properties">
               <div class="SubsectionBox">
                 <table class="TypeMembers">
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td>
-                      <b>
-                        <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.AllowOnlineCertificateRetrieval">AllowOnlineCertificateRetrieval</a>
-                      </b>
-                    </td>
-                    <td>
-                      <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                      </i>. 
-            Gets or sets a value indicating whether this <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> allows online
-            certificate retrieval.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
-                  </tr>
                   <tr valign="top">
                     <td>[read-only]<div>override </div></td>
                     <td>
@@ -364,23 +346,6 @@
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
             Gets the key exchange protocol.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td>
-                      <b>
-                        <a href="../MimeKit.Cryptography/CryptographyContext.html#P:MimeKit.Cryptography.CryptographyContext.OnlineCertificateRetrievalTimeout">OnlineCertificateRetrievalTimeout</a>
-                      </b>
-                    </td>
-                    <td>
-                      <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.TimeSpan">TimeSpan</a>
-                      </i>. 
-            Gets or sets the online certificate retrieval timeout.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
@@ -874,7 +839,9 @@
                     <td colspan="2">
                       <b>
                         <a href="#M:MimeKit.Cryptography.DefaultSecureMimeContext.Dispose(System.Boolean)">Dispose</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Releases all resources used by the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> object.
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -1103,7 +1070,15 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
                     </td>
                     <td>
-            An error occurred while reading one of the certificate stores.
+            An error occurred reading the database at the default location.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            The user does not have access to read the database at the default location.
             </td>
                   </tr>
                 </table>
@@ -1161,7 +1136,23 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
                     </td>
                     <td>
-            An error occurred while reading the file.
+            An error occurred reading the file.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            The specified file path is empty.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            The user does not have access to read the specified file.
             </td>
                   </tr>
                 </table>
@@ -1178,7 +1169,7 @@
             <h3 id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultDatabasePath">DefaultDatabasePath Field</h3>
             <blockquote id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultDatabasePath:member">
               <p class="Summary">
-            The default database path for certificates and keys.
+            The default database path for certificates, private keys and CRLs.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultDatabasePath</b> </div>
@@ -1195,8 +1186,8 @@
             <h3 id="M:MimeKit.Cryptography.DefaultSecureMimeContext.Dispose(System.Boolean)">Dispose Method</h3>
             <blockquote id="M:MimeKit.Cryptography.DefaultSecureMimeContext.Dispose(System.Boolean):member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
+            Releases all resources used by the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> object.
+            </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
               <h4 class="Subsection">Parameters</h4>
@@ -1205,9 +1196,8 @@
                   <dt>
                     <i>disposing</i>
                   </dt>
-                  <dd>
-                    <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                  </dd>
+                  <dd>If <tt>true</tt>, this method is being called by
+            <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Dispose">CryptographyContext.Dispose</a>; otherwise it is being called by the finalizer.</dd>
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
