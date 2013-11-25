@@ -359,7 +359,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.CmsRecipient(Org.BouncyCastle.X509.X509Certificate):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>The initial value of the <a href="../MimeKit.Cryptography/CmsRecipient.html#P:MimeKit.Cryptography.CmsRecipient.EncryptionAlgorithms">CmsRecipient.EncryptionAlgorithms</a> property will be set to
+            the Triple-DES encryption algorith, which should be safe to assume for all modern
+            S/MIME v3.x client implementations.</p>
+                <p>The <a href="../MimeKit.Cryptography/CmsRecipient.html#P:MimeKit.Cryptography.CmsRecipient.RecipientIdentifierType">CmsRecipient.RecipientIdentifierType</a> will be initialized to
+            <a href="../MimeKit.Cryptography/SubjectIdentifierType.html#F:MimeKit.Cryptography.SubjectIdentifierType.IssuerAndSerialNumber">SubjectIdentifierType.IssuerAndSerialNumber</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.CmsRecipient(Org.BouncyCastle.X509.X509Certificate):Version Information">
@@ -405,8 +409,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.CmsRecipient(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SubjectIdentifierType):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The initial value of the <a href="../MimeKit.Cryptography/CmsRecipient.html#P:MimeKit.Cryptography.CmsRecipient.EncryptionAlgorithms">CmsRecipient.EncryptionAlgorithms</a> property will be set to
+            the Triple-DES encryption algorith, which should be safe to assume for all modern
+            S/MIME v3.x client implementations.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.CmsRecipient(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.SubjectIdentifierType):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
@@ -423,8 +429,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CmsRecipient.Certificate:Value">The certificate.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CmsRecipient.Certificate:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The certificate is used for the purpose of encrypting data.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CmsRecipient.Certificate:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
@@ -442,8 +448,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CmsRecipient.EncryptionAlgorithms:Value">The encryption algorithms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CmsRecipient.EncryptionAlgorithms:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Provides the <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a> with an array of
+            encryption algorithms that are known to be supported by the
+            recpipient's client software and should be in the recipient's
+            order of preference.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CmsRecipient.EncryptionAlgorithms:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
@@ -460,8 +469,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CmsRecipient.RecipientIdentifierType:Value">The recipient identifier type.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CmsRecipient.RecipientIdentifierType:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Specifies how the certificate should be looked up on the recipient's end.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CmsRecipient.RecipientIdentifierType:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
