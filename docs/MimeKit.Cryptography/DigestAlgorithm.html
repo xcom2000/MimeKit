@@ -216,7 +216,19 @@
         <div class="Remarks" id="T:MimeKit.Cryptography.DigestAlgorithm:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.DigestAlgorithm:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            <p>Digest algorithms are secure hashing algorithms that are used
+            to generate unique fixed-length signatures for arbitrary data.</p>
+            <p>The most commonly used digest algorithms are currently MD5
+            and SHA-1, however, MD5 was successfully broken in 2008 and should
+            be avoided. In late 2013, Microsoft announced that they would be
+            retiring their use of SHA-1 in their products by 2016 with the
+            assumption that its days as an unbroken digest algorithm were
+            numbered. It is speculated that the SHA-1 digest algorithm will
+            be vulnerable to collisions, and thus no longer considered secure,
+            by 2018.</p>
+            <p>Microsoft and other vendors plan to move to the SHA-2 suite of
+            digest algorithms which includes the following 4 variants: SHA-224,
+            SHA-256, SHA-384, and SHA-512.</p>
           </div>
           <h2 class="Section">Members</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.DigestAlgorithm:Docs:Members">
@@ -286,7 +298,7 @@
                   <b>Sha1</b>
                 </td>
                 <td>
-            The SHA1 digest algorithm.
+            The SHA-1 digest algorithm.
             </td>
               </tr>
               <tr valign="top">
@@ -294,7 +306,7 @@
                   <b>Sha224</b>
                 </td>
                 <td>
-            The SHA224 digest algorithm.
+            The SHA-224 digest algorithm.
             </td>
               </tr>
               <tr valign="top">
@@ -302,7 +314,7 @@
                   <b>Sha256</b>
                 </td>
                 <td>
-            The SHA256 digest algorithm.
+            The SHA-256 digest algorithm.
             </td>
               </tr>
               <tr valign="top">
@@ -310,7 +322,7 @@
                   <b>Sha384</b>
                 </td>
                 <td>
-            The SHA384 digest algorithm.
+            The SHA-384 digest algorithm.
             </td>
               </tr>
               <tr valign="top">
@@ -318,7 +330,7 @@
                   <b>Sha512</b>
                 </td>
                 <td>
-            The SHA512 digest algorithm.
+            The SHA-512 digest algorithm.
             </td>
               </tr>
               <tr valign="top">
