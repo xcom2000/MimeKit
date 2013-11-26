@@ -220,7 +220,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.MimeMessage:Docs:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -441,14 +441,138 @@
                     <td>[read-only]<div></div></td>
                     <td>
                       <b>
-                        <a href="#P:MimeKit.MimeMessage.Sender">Sender</a>
+                        <a href="#P:MimeKit.MimeMessage.ResentBcc">ResentBcc</a>
                       </b>
                     </td>
                     <td>
                       <i>
                         <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
                       </i>. 
-            Gets the list of addresses in the Sender header.
+            Gets the list of addresses in the Resent-Bcc header.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.ResentCc">ResentCc</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
+            Gets the list of addresses in the Resent-Cc header.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.ResentDate">ResentDate</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTimeOffset">DateTimeOffset</a>
+                      </i>. 
+            Gets or sets the Resent-Date of the message.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.ResentFrom">ResentFrom</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
+            Gets the list of addresses in the Resent-From header.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.ResentMessageId">ResentMessageId</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets or sets the Resent-Message-Id header.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.ResentReplyTo">ResentReplyTo</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
+            Gets the list of addresses in the Resent-Reply-To header.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.ResentSender">ResentSender</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/MailboxAddress.html">MailboxAddress</a>
+                      </i>. 
+            Gets or sets the address in the Resent-Sender header.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.ResentTo">ResentTo</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a>
+                      </i>. 
+            Gets the list of addresses in the Resent-To header.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.Sender">Sender</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/MailboxAddress.html">MailboxAddress</a>
+                      </i>. 
+            Gets or sets the address in the Sender header.
             </td>
                   </tr>
                   <tr valign="top">
@@ -491,6 +615,19 @@
                 <table class="TypeMembers">
                   <tr valign="top">
                     <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Encrypt(MimeKit.Cryptography.CryptographyContext)">Encrypt</a>
+                      </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>)<blockquote>
+            Encrypt the message to the sender and all of the recipients
+            using the specified cryptography context.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
                       <div>static </div>
                     </td>
                     <td colspan="2">
@@ -531,6 +668,56 @@
                         <a href="#M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String)">Load</a>
                       </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
             Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified file.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext)">Sign</a>
+                      </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>)<blockquote>
+            Sign the message using the specified cryptography context using the SHA-1 digest algorithm.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm)">Sign</a>
+                      </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a>)<blockquote>
+            Sign the message using the specified cryptography context and digest algorithm.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext)">SignAndEncrypt</a>
+                      </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>)<blockquote>
+            Sign and encrypt the message to the sender and all of the recipients using
+            the specified cryptography context and the SHA-1 digest algorithm.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm)">SignAndEncrypt</a>
+                      </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a>)<blockquote>
+            Sign and encrypt the message to the sender and all of the recipients using
+            the specified cryptography context and the specified digest algorithm.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -598,7 +785,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimeMessage():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="C:MimeKit.MimeMessage(System.Object[])">MimeMessage Constructor</h3>
@@ -654,7 +841,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimeMessage(System.Object[]):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.Bcc">Bcc Property</h3>
@@ -672,7 +859,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Bcc:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.Body">Body Property</h3>
@@ -690,7 +877,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Body:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.Cc">Cc Property</h3>
@@ -708,7 +895,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Cc:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.Date">Date Property</h3>
@@ -726,7 +913,88 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Date:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Encrypt(MimeKit.Cryptography.CryptographyContext)">Encrypt Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Encrypt(MimeKit.Cryptography.CryptographyContext):member">
+              <p class="Summary">
+            Encrypt the message to the sender and all of the recipients
+            using the specified cryptography context.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Encrypt</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> ctx)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Encrypt(MimeKit.Cryptography.CryptographyContext):Parameters">
+                <dl>
+                  <dt>
+                    <i>ctx</i>
+                  </dt>
+                  <dd>The cryptography context.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Encrypt(MimeKit.Cryptography.CryptographyContext):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>ctx</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            An unknown type of cryptography context was used.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MimeKit/MimeMessage.html#P:MimeKit.MimeMessage.Body">MimeMessage.Body</a> has not been set.</p>
+                      <p>-or</p>
+                      <p>No recipients have been specified.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                    </td>
+                    <td>
+            A certificate could not be found for one or more of the recipients.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PublicKeyNotFoundException.html">MimeKit.Cryptography.PublicKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The public key could not be found for one or more of the recipients.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Encrypt(MimeKit.Cryptography.CryptographyContext):Remarks">
+            If either of the Resent-Sender or Resent-From headers are set, then the message
+            will be encrypted to all of the addresses specified in the Resent headers
+            (Resent-Sender, Resent-From, Resent-To, Resent-Cc, and Resent-Bcc),
+            otherwise the message will be encrypted to all of the addresses specified in
+            the standard address headers (Sender, From, To, Cc, and Bcc).
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Encrypt(MimeKit.Cryptography.CryptographyContext):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.From">From Property</h3>
@@ -744,7 +1012,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.From:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.Headers">Headers Property</h3>
@@ -762,7 +1030,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Headers:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.InReplyTo">InReplyTo Property</h3>
@@ -797,7 +1065,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeMessage.Load(System.IO.Stream)">Load Method</h3>
@@ -841,7 +1109,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeMessage.Load(System.String)">Load Method</h3>
@@ -917,7 +1185,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream)">Load Method</h3>
@@ -969,7 +1237,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String)">Load Method</h3>
@@ -1053,7 +1321,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.MessageId">MessageId Property</h3>
@@ -1096,7 +1364,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.MessageId:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.MimeVersion">MimeVersion Property</h3>
@@ -1131,7 +1399,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage">Conversion Method</h3>
@@ -1174,12 +1442,15 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage:Remarks">
-            Casting a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> to a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailMessage">System.Net.Mail.MailMessage</a>
-            makes it possible to use MimeKit with <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.SmtpClient">System.Net.Mail.SmtpClient</a>.
-            </div>
+                <p>Casting a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> to a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailMessage">System.Net.Mail.MailMessage</a>
+            makes it possible to use MimeKit with <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.SmtpClient">System.Net.Mail.SmtpClient</a>.</p>
+                <p>It should be noted, however, that <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailMessage">System.Net.Mail.MailMessage</a>
+            cannot represent all MIME structures that can be constructed using MimeKit,
+            so the conversion may not be perfect.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.op_Explicit(MimeKit.MimeMessage)~System.Net.Mail.MailMessage:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.References">References Property</h3>
@@ -1197,7 +1468,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.References:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.ReplyTo">ReplyTo Property</h3>
@@ -1215,25 +1486,566 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ResentBcc">ResentBcc Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ResentBcc:member">
+              <p class="Summary">
+            Gets the list of addresses in the Resent-Bcc header.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>ResentBcc</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentBcc:Value">The list of addresses in the Resent-Bcc header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentBcc:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentBcc:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ResentCc">ResentCc Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ResentCc:member">
+              <p class="Summary">
+            Gets the list of addresses in the Resent-Cc header.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>ResentCc</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentCc:Value">The list of addresses in the Resent-Cc header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentCc:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentCc:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ResentDate">ResentDate Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ResentDate:member">
+              <p class="Summary">
+            Gets or sets the Resent-Date of the message.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTimeOffset">DateTimeOffset</a> <b>ResentDate</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentDate:Value">The Resent-Date of the message.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentDate:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentDate:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ResentFrom">ResentFrom Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ResentFrom:member">
+              <p class="Summary">
+            Gets the list of addresses in the Resent-From header.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>ResentFrom</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentFrom:Value">The list of addresses in the Resent-From header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentFrom:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentFrom:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ResentMessageId">ResentMessageId Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ResentMessageId:member">
+              <p class="Summary">
+            Gets or sets the Resent-Message-Id header.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ResentMessageId</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentMessageId:Value">The Resent-Message-Id.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentMessageId:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>value</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <i>value</i> is improperly formatted.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentMessageId:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentMessageId:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ResentReplyTo">ResentReplyTo Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ResentReplyTo:member">
+              <p class="Summary">
+            Gets the list of addresses in the Resent-Reply-To header.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>ResentReplyTo</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentReplyTo:Value">The list of addresses in the Resent-Reply-To header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentReplyTo:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentReplyTo:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ResentSender">ResentSender Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ResentSender:member">
+              <p class="Summary">
+            Gets or sets the address in the Resent-Sender header.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/MailboxAddress.html">MailboxAddress</a> <b>ResentSender</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentSender:Value">The address in the Resent-Sender header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentSender:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentSender:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.ResentTo">ResentTo Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.ResentTo:member">
+              <p class="Summary">
+            Gets the list of addresses in the Resent-To header.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>ResentTo</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentTo:Value">The list of addresses in the Resent-To header.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentTo:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentTo:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.Sender">Sender Property</h3>
             <blockquote id="P:MimeKit.MimeMessage.Sender:member">
               <p class="Summary">
-            Gets the list of addresses in the Sender header.
+            Gets or sets the address in the Sender header.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/InternetAddressList.html">InternetAddressList</a> <b>Sender</b>  { get; }</div>
+              <div class="Signature">public <a href="../MimeKit/MailboxAddress.html">MailboxAddress</a> <b>Sender</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Sender:Value">The list of addresses in the Sender header.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Sender:Value">The address in the Sender header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Sender:Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Sender:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext)">Sign Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext):member">
+              <p class="Summary">
+            Sign the message using the specified cryptography context using the SHA-1 digest algorithm.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> ctx)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext):Parameters">
+                <dl>
+                  <dt>
+                    <i>ctx</i>
+                  </dt>
+                  <dd>The cryptography context.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>ctx</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MimeKit/MimeMessage.html#P:MimeKit.MimeMessage.Body">MimeMessage.Body</a> has not been set.</p>
+                      <p>-or</p>
+                      <p>A sender has not been specified.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                    </td>
+                    <td>
+            A signing certificate could not be found for the sender.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The private key could not be found for the sender.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext):Remarks">
+            If either of the Resent-Sender or Resent-From headers are set, then the message
+            will be signed using the Resent-Sender (or first mailbox in the Resent-From)
+            address as the signer address, otherwise the Sender or From address will be
+            used instead.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm)">Sign Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):member">
+              <p class="Summary">
+            Sign the message using the specified cryptography context and digest algorithm.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> ctx, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> digestAlgo)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):Parameters">
+                <dl>
+                  <dt>
+                    <i>ctx</i>
+                  </dt>
+                  <dd>The cryptography context.</dd>
+                  <dt>
+                    <i>digestAlgo</i>
+                  </dt>
+                  <dd>The digest algorithm.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>ctx</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MimeKit/MimeMessage.html#P:MimeKit.MimeMessage.Body">MimeMessage.Body</a> has not been set.</p>
+                      <p>-or</p>
+                      <p>A sender has not been specified.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+            The <i>digestAlgo</i> was out of range.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The <i>digestAlgo</i> is not supported.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                    </td>
+                    <td>
+            A signing certificate could not be found for the sender.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The private key could not be found for the sender.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):Remarks">
+            If either of the Resent-Sender or Resent-From headers are set, then the message
+            will be signed using the Resent-Sender (or first mailbox in the Resent-From)
+            address as the signer address, otherwise the Sender or From address will be
+            used instead.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Sign(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext)">SignAndEncrypt Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext):member">
+              <p class="Summary">
+            Sign and encrypt the message to the sender and all of the recipients using
+            the specified cryptography context and the SHA-1 digest algorithm.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SignAndEncrypt</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> ctx)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext):Parameters">
+                <dl>
+                  <dt>
+                    <i>ctx</i>
+                  </dt>
+                  <dd>The cryptography context.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>ctx</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            An unknown type of cryptography context was used.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MimeKit/MimeMessage.html#P:MimeKit.MimeMessage.Body">MimeMessage.Body</a> has not been set.</p>
+                      <p>-or</p>
+                      <p>The sender has been specified.</p>
+                      <p>-or</p>
+                      <p>No recipients have been specified.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                    </td>
+                    <td>
+            A certificate could not be found for the signer or one or more of the recipients.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The private key could not be found for the sender.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PublicKeyNotFoundException.html">MimeKit.Cryptography.PublicKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The public key could not be found for one or more of the recipients.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext):Remarks">
+                <p>If either of the Resent-Sender or Resent-From headers are set, then the message
+            will be signed using the Resent-Sender (or first mailbox in the Resent-From)
+            address as the signer address, otherwise the Sender or From address will be
+            used instead.</p>
+                <p>Likewise, if either of the Resent-Sender or Resent-From headers are set, then the
+            message will be encrypted to all of the addresses specified in the Resent headers
+            (Resent-Sender, Resent-From, Resent-To, Resent-Cc, and Resent-Bcc),
+            otherwise the message will be encrypted to all of the addresses specified in
+            the standard address headers (Sender, From, To, Cc, and Bcc).</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm)">SignAndEncrypt Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):member">
+              <p class="Summary">
+            Sign and encrypt the message to the sender and all of the recipients using
+            the specified cryptography context and the specified digest algorithm.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SignAndEncrypt</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a> ctx, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> digestAlgo)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):Parameters">
+                <dl>
+                  <dt>
+                    <i>ctx</i>
+                  </dt>
+                  <dd>The cryptography context.</dd>
+                  <dt>
+                    <i>digestAlgo</i>
+                  </dt>
+                  <dd>The digest algorithm.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>ctx</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            An unknown type of cryptography context was used.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+            The <i>digestAlgo</i> was out of range.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MimeKit/MimeMessage.html#P:MimeKit.MimeMessage.Body">MimeMessage.Body</a> has not been set.</p>
+                      <p>-or</p>
+                      <p>The sender has been specified.</p>
+                      <p>-or</p>
+                      <p>No recipients have been specified.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The <i>digestAlgo</i> is not supported.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
+                    </td>
+                    <td>
+            A certificate could not be found for the signer or one or more of the recipients.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The private key could not be found for the sender.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PublicKeyNotFoundException.html">MimeKit.Cryptography.PublicKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The public key could not be found for one or more of the recipients.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):Remarks">
+                <p>If either of the Resent-Sender or Resent-From headers are set, then the message
+            will be signed using the Resent-Sender (or first mailbox in the Resent-From)
+            address as the signer address, otherwise the Sender or From address will be
+            used instead.</p>
+                <p>Likewise, if either of the Resent-Sender or Resent-From headers are set, then the
+            message will be encrypted to all of the addresses specified in the Resent headers
+            (Resent-Sender, Resent-From, Resent-To, Resent-Cc, and Resent-Bcc),
+            otherwise the message will be encrypted to all of the addresses specified in
+            the standard address headers (Sender, From, To, Cc, and Bcc).</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.SignAndEncrypt(MimeKit.Cryptography.CryptographyContext,MimeKit.Cryptography.DigestAlgorithm):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.Subject">Subject Property</h3>
@@ -1268,7 +2080,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Subject:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeMessage.To">To Property</h3>
@@ -1286,7 +2098,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.To:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream)">WriteTo Method</h3>
@@ -1328,7 +2140,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo Method</h3>
@@ -1378,7 +2190,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.16.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>
