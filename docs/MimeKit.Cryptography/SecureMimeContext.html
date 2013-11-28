@@ -770,7 +770,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a></nobr><blockquote>
-            Gets the X.509 certificate based on the selector.
+            Gets the X.509 certificate matching the specified selector.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -848,7 +848,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Crypto.AsymmetricKeyParameter</a></nobr><blockquote>
-            Gets the private key based on the provided selector.
+            Gets the private key for the certificate matching the specified selector.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -1530,7 +1530,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):member">
               <p class="Summary">
-            Gets the X.509 certificate based on the selector.
+            Gets the X.509 certificate matching the specified selector.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected abstract <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> <b>GetCertificate</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a> selector)</div>
@@ -1565,8 +1565,10 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCertificateRevocationLists():Returns">The certificate revocation lists.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCertificateRevocationLists():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A Certificate Revocation List (CRL) is a list of certificate serial numbers issued
+            by a particular Certificate Authority (CA) that have been revoked, either by the CA
+            itself or by the owner of the revoked certificate.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCertificateRevocationLists():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1609,7 +1611,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Constructs a <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a> with the appropriate certificate and
+            <a href="../MimeKit.Cryptography/CmsRecipient.html#P:MimeKit.Cryptography.CmsRecipient.EncryptionAlgorithms">CmsRecipient.EncryptionAlgorithms</a> for the specified mailbox.</p>
+                <p>If the mailbox is a <a href="../MimeKit.Cryptography/SecureMailboxAddress.html">MimeKit.Cryptography.SecureMailboxAddress</a>, the
+            <a href="../MimeKit.Cryptography/SecureMailboxAddress.html#P:MimeKit.Cryptography.SecureMailboxAddress.Fingerprint">SecureMailboxAddress.Fingerprint</a> property will be used instead of
+            the mailbox address.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Version Information">
@@ -1815,8 +1821,10 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetIntermediateCertificates():Returns">The intermediate certificates.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetIntermediateCertificates():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            An intermediate certificate is any certificate that exists between the root
+            certificate issued by a Certificate Authority (CA) and the certificate at
+            the end of the chain.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetIntermediateCertificates():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1869,7 +1877,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):member">
               <p class="Summary">
-            Gets the private key based on the provided selector.
+            Gets the private key for the certificate matching the specified selector.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected abstract <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Crypto.AsymmetricKeyParameter</a> <b>GetPrivateKey</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a> selector)</div>
@@ -1904,8 +1912,9 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetTrustedAnchors():Returns">The trusted anchors.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetTrustedAnchors():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A trusted anchor is a trusted root-level X.509 certificate,
+            generally issued by a certificate authority (CA).
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetTrustedAnchors():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>

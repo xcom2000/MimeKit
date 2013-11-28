@@ -874,7 +874,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/SecureMimeContext.html#M:MimeKit.Cryptography.SecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a></nobr><blockquote>
-            Gets the X.509 certificate based on the selector.
+            Gets the X.509 certificate matching the specified selector.
              (<i>Inherited from <a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -996,7 +996,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/SecureMimeContext.html#M:MimeKit.Cryptography.SecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Crypto.AsymmetricKeyParameter</a></nobr><blockquote>
-            Gets the private key based on the provided selector.
+            Gets the private key for the certificate matching the specified selector.
              (<i>Inherited from <a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -1060,8 +1060,8 @@
               <div class="Signature">public  <b>WindowsSecureMimeContext</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.WindowsSecureMimeContext():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Constructs an S/MIME context using the current user's X.509 store location.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.WindowsSecureMimeContext():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>

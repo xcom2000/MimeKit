@@ -217,8 +217,10 @@
         <div class="Remarks" id="T:MimeKit.Cryptography.DefaultSecureMimeContext:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.DefaultSecureMimeContext:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            The default S/MIME context is designed to be usable on any platform
+            where there exists a .NET runtime by storing certificates, CRLs, and
+            (encrypted) private keys in a SQLite database.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.DefaultSecureMimeContext:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -255,6 +257,21 @@
                     <td>
                       <div>
                         <b>
+                          <a href="#C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String)">DefaultSecureMimeContext</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> class.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
                           <a href="#C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String)">DefaultSecureMimeContext</a>
                         </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
@@ -265,8 +282,8 @@
                 </table>
               </div>
             </div>
-            <h2 class="Section">Protected Fields</h2>
-            <div class="SectionBox" id="Protected Fields">
+            <h2 class="Section">Public Fields</h2>
+            <div class="SectionBox" id="Public Fields">
               <div class="SubsectionBox">
                 <table class="TypeMembers">
                   <tr valign="top">
@@ -863,7 +880,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.DefaultSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a></nobr><blockquote>
-            Gets the X.509 certificate based on the selector.
+            Gets the X.509 certificate matching the specified selector.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -874,7 +891,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/SecureMimeContext.html#M:MimeKit.Cryptography.SecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a></nobr><blockquote>
-            Gets the X.509 certificate based on the selector.
+            Gets the X.509 certificate matching the specified selector.
              (<i>Inherited from <a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -985,7 +1002,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.DefaultSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Crypto.AsymmetricKeyParameter</a></nobr><blockquote>
-            Gets the private key based on the provided selector.
+            Gets the private key for the certificate matching the specified selector.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -996,7 +1013,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/SecureMimeContext.html#M:MimeKit.Cryptography.SecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Crypto.AsymmetricKeyParameter</a></nobr><blockquote>
-            Gets the private key based on the provided selector.
+            Gets the private key for the certificate matching the specified selector.
              (<i>Inherited from <a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -1085,10 +1102,60 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Not recommended for production use as the password to unlock the private keys is hard-coded.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext():Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String)">DefaultSecureMimeContext Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String):member">
+              <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/DefaultSecureMimeContext.html">MimeKit.Cryptography.DefaultSecureMimeContext</a> class.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>DefaultSecureMimeContext</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>password</i>
+                  </dt>
+                  <dd>The password used for encrypting and decrypting the private keys.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            The user does not have access to read the database at the default location.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An error occurred reading the database at the default location.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String):Remarks">
+            Allows the program to specify its own password for the default database.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1109,7 +1176,7 @@
                   <dt>
                     <i>password</i>
                   </dt>
-                  <dd>The password for SQLite database.</dd>
+                  <dd>The password used for encrypting and decrypting the private keys.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
@@ -1159,8 +1226,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Allows the program to specify its own location for the SQLite database. If the file does not exist,
+            it will be created and the necessary tables and indexes will be constructed.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.DefaultSecureMimeContext(System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1172,7 +1240,7 @@
             The default database path for certificates, private keys and CRLs.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultDatabasePath</b> </div>
+              <div class="Signature">public static readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>DefaultDatabasePath</b> </div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="F:MimeKit.Cryptography.DefaultSecureMimeContext.DefaultDatabasePath:Remarks">
                 <p>On Microsoft Windows-based systems, this path will be something like <tt>C:\Users\UserName\AppData\Roaming\mimekit\smime.db</tt>.</p>
@@ -1212,7 +1280,7 @@
             <h3 id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate Method</h3>
             <blockquote id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):member">
               <p class="Summary">
-            Gets the X.509 certificate based on the selector.
+            Gets the X.509 certificate matching the specified selector.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> <b>GetCertificate</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a> selector)</div>
@@ -1247,8 +1315,10 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetCertificateRevocationLists():Returns">The certificate revocation lists.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetCertificateRevocationLists():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A Certificate Revocation List (CRL) is a list of certificate serial numbers issued
+            by a particular Certificate Authority (CA) that have been revoked, either by the CA
+            itself or by the owner of the revoked certificate.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetCertificateRevocationLists():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1291,7 +1361,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Constructs a <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a> with the appropriate certificate and
+            <a href="../MimeKit.Cryptography/CmsRecipient.html#P:MimeKit.Cryptography.CmsRecipient.EncryptionAlgorithms">CmsRecipient.EncryptionAlgorithms</a> for the specified mailbox.</p>
+                <p>If the mailbox is a <a href="../MimeKit.Cryptography/SecureMailboxAddress.html">MimeKit.Cryptography.SecureMailboxAddress</a>, the
+            <a href="../MimeKit.Cryptography/SecureMailboxAddress.html#P:MimeKit.Cryptography.SecureMailboxAddress.Fingerprint">SecureMailboxAddress.Fingerprint</a> property will be used instead of
+            the mailbox address.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Version Information">
@@ -1357,8 +1431,10 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetIntermediateCertificates():Returns">The intermediate certificates.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetIntermediateCertificates():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            An intermediate certificate is any certificate that exists between the root
+            certificate issued by a Certificate Authority (CA) and the certificate at
+            the end of the chain.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetIntermediateCertificates():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1367,7 +1443,7 @@
             <h3 id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey Method</h3>
             <blockquote id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):member">
               <p class="Summary">
-            Gets the private key based on the provided selector.
+            Gets the private key for the certificate matching the specified selector.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Crypto.AsymmetricKeyParameter</a> <b>GetPrivateKey</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a> selector)</div>
@@ -1402,8 +1478,9 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetTrustedAnchors():Returns">The trusted anchors.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetTrustedAnchors():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A trusted anchor is a trusted root-level X.509 certificate,
+            generally issued by a Certificate Authority (CA).
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.DefaultSecureMimeContext.GetTrustedAnchors():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
