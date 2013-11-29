@@ -377,7 +377,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName</a>
+                        <a href="#M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetDigestAlgorithmName</a>
                       </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
             Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
             </blockquote></td>
@@ -693,9 +693,9 @@
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol:Value">The encryption protocol.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol:Remarks">The encryption protocol is used by <a href="../MimeKit.Cryptography/MultipartEncrypted.html">MimeKit.Cryptography.MultipartEncrypted</a>
+            in order to determine what the protocol parameter of the Content-Type
+            header should be.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.EncryptionProtocol:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -798,22 +798,22 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Maps the micalg parameter value string back to the appropriate <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithm(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):member">
+            <h3 id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetDigestAlgorithmName Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):member">
               <p class="Summary">
             Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetMicAlgorithmName</b> (<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> micalg)</div>
+              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetDigestAlgorithmName</b> (<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> micalg)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Parameters">
                 <dl>
                   <dt>
                     <i>micalg</i>
@@ -822,9 +822,9 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Returns">The micalg value.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Returns">The micalg value.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -841,11 +841,13 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Remarks">
+            Maps the <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> to the appropriate string identifier
+            as used by the micalg parameter value of a multipart/signed Content-Type
+            header.
+            </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1064,9 +1066,9 @@
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol:Value">The signature protocol.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol:Remarks">The signature protocol is used by <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>
+            in order to determine what the protocol parameter of the Content-Type
+            header should be.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CryptographyContext.SignatureProtocol:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1110,8 +1112,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Used in order to make sure that the protocol parameter value specified in either a multipart/signed
+            or multipart/encrypted part is supported by the supplied cryptography context.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.CryptographyContext.Supports(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>

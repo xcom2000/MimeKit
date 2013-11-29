@@ -391,7 +391,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            Gets the public key ring path.
+            Gets the public keyring path.
             </td>
                   </tr>
                   <tr valign="top">
@@ -405,7 +405,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            Gets the secret key ring path.
+            Gets the secret keyring path.
             </td>
                   </tr>
                 </table>
@@ -577,23 +577,11 @@
                   </tr>
                   <tr valign="top">
                     <td>
-                      <div>static </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetHashAlgorithm(MimeKit.Cryptography.DigestAlgorithm)">GetHashAlgorithm</a>
-                      </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a></nobr><blockquote>
-            Gets the equivalent <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a> for the
-            specified <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a>.
-            </blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
                       <div>override </div>
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName</a>
+                        <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetDigestAlgorithmName</a>
                       </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
             Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
             </blockquote></td>
@@ -604,10 +592,22 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName</a>
+                        <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetDigestAlgorithmName</a>
                       </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
             Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetHashAlgorithm(MimeKit.Cryptography.DigestAlgorithm)">GetHashAlgorithm</a>
+                      </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a></nobr><blockquote>
+            Gets the equivalent <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a> for the
+            specified <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a>.
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -1245,9 +1245,9 @@
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.EncryptionProtocol:Value">The encryption protocol.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.EncryptionProtocol:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.EncryptionProtocol:Remarks">The encryption protocol is used by <a href="../MimeKit.Cryptography/MultipartEncrypted.html">MimeKit.Cryptography.MultipartEncrypted</a>
+            in order to determine what the protocol parameter of the Content-Type
+            header should be.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.EncryptionProtocol:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1483,10 +1483,98 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Maps the micalg parameter value string back to the appropriate <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(System.String):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetDigestAlgorithmName Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):member">
+              <p class="Summary">
+            Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetDigestAlgorithmName</b> (<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> micalg)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Parameters">
+                <dl>
+                  <dt>
+                    <i>micalg</i>
+                  </dt>
+                  <dd>The digest algorithm.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Returns">The micalg value.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>micalg</i> is out of range.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Remarks">
+                <p>Maps the <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> to the appropriate string identifier
+            as used by the micalg parameter value of a multipart/signed Content-Type
+            header. For example:</p>
+                <table class="Documentation">
+                  <tr>
+                    <th>Algorithm</th>
+                    <th>Name</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.MD5">DigestAlgorithm.MD5</a>
+                    </td>
+                    <td>pgp-md5</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.Sha1">DigestAlgorithm.Sha1</a>
+                    </td>
+                    <td>pgp-sha1</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.RipeMD160">DigestAlgorithm.RipeMD160</a>
+                    </td>
+                    <td>pgp-ripemd160</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.MD2">DigestAlgorithm.MD2</a>
+                    </td>
+                    <td>pgp-md2</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.Tiger192">DigestAlgorithm.Tiger192</a>
+                    </td>
+                    <td>pgp-tiger192</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.Haval5160">DigestAlgorithm.Haval5160</a>
+                    </td>
+                    <td>pgp-haval-5-160</td>
+                  </tr>
+                </table>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1537,54 +1625,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetHashAlgorithm(MimeKit.Cryptography.DigestAlgorithm):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Maps a <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> to the equivalent <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetHashAlgorithm(MimeKit.Cryptography.DigestAlgorithm):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetMicAlgorithmName Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):member">
-              <p class="Summary">
-            Gets the string name of the digest algorithm for use with the micalg parameter of a multipart/signed part.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetMicAlgorithmName</b> (<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> micalg)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Parameters">
-                <dl>
-                  <dt>
-                    <i>micalg</i>
-                  </dt>
-                  <dd>The digest algorithm.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Returns">The micalg value.</blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
-                    </td>
-                    <td>
-                      <i>micalg</i> is out of range.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetMicAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2088,7 +2132,7 @@
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath">PublicKeyRingPath Property</h3>
             <blockquote id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath:member">
               <p class="Summary">
-            Gets the public key ring path.
+            Gets the public keyring path.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>PublicKeyRingPath</b>  { get; }</div>
@@ -2190,7 +2234,7 @@
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath">SecretKeyRingPath Property</h3>
             <blockquote id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath:member">
               <p class="Summary">
-            Gets the secret key ring path.
+            Gets the secret keyring path.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SecretKeyRingPath</b>  { get; }</div>
@@ -2642,9 +2686,9 @@
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SignatureProtocol:Value">The signature protocol.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SignatureProtocol:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SignatureProtocol:Remarks">The signature protocol is used by <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>
+            in order to determine what the protocol parameter of the Content-Type
+            header should be.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SignatureProtocol:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
