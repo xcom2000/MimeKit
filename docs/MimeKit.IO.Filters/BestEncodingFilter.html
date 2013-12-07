@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.IO.Filters.MimeFilterBase</title>
+    <title>MimeKit.IO.Filters.BestEncodingFilter</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -205,21 +205,22 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.IO.Filters Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.IO.Filters.MimeFilterBase">MimeFilterBase  Class</h1>
-        <p class="Summary" id="T:MimeKit.IO.Filters.MimeFilterBase:Summary">
-            A base implementation for MIME filters.
+        <h1 class="PageTitle" id="T:MimeKit.IO.Filters.BestEncodingFilter">BestEncodingFilter  Class</h1>
+        <p class="Summary" id="T:MimeKit.IO.Filters.BestEncodingFilter:Summary">
+            A filter that can be used to determine the most efficient Content-Transfer-Encoding.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.IO.Filters.MimeFilterBase:Signature">public abstract class  <b>MimeFilterBase</b> : <a href="../MimeKit.IO.Filters/IMimeFilter.html">IMimeFilter</a></div>
+          <div class="Signature" id="T:MimeKit.IO.Filters.BestEncodingFilter:Signature">public class  <b>BestEncodingFilter</b> : <a href="../MimeKit.IO.Filters/IMimeFilter.html">IMimeFilter</a></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.IO.Filters.MimeFilterBase:Docs">
+        <div class="Remarks" id="T:MimeKit.IO.Filters.BestEncodingFilter:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.IO.Filters.MimeFilterBase:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="T:MimeKit.IO.Filters.BestEncodingFilter:Docs:Remarks">
+            Keeps track of the content that gets passed through the filter in order to
+            determine the most efficient <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a> to use.
+            </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.IO.Filters.MimeFilterBase:Docs:Version Information">
+          <div class="SectionBox" id="T:MimeKit.IO.Filters.BestEncodingFilter:Docs:Version Information">
             <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
@@ -227,8 +228,8 @@
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-            <h2 class="Section">Protected Constructors</h2>
-            <div class="SectionBox" id="Protected Constructors">
+            <h2 class="Section">Public Constructors</h2>
+            <div class="SectionBox" id="Public Constructors">
               <div class="SubsectionBox">
                 <table class="TypeMembers">
                   <tr valign="top">
@@ -239,33 +240,12 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.IO.Filters.MimeFilterBase()">MimeFilterBase</a>
+                          <a href="#C:MimeKit.IO.Filters.BestEncodingFilter()">BestEncodingFilter</a>
                         </b>()</div>
                     </td>
                     <td>
-                      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <h2 class="Section">Protected Fields</h2>
-            <div class="SectionBox" id="Protected Fields">
-              <div class="SubsectionBox">
-                <table class="TypeMembers">
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td>
-                      <b>
-                        <a href="#F:MimeKit.IO.Filters.MimeFilterBase.output">output</a>
-                      </b>
-                    </td>
-                    <td>
-                      <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+            Initializes a new instance of the <a href="../MimeKit.IO.Filters/BestEncodingFilter.html">MimeKit.IO.Filters.BestEncodingFilter</a> class.
+            </td>
                   </tr>
                 </table>
               </div>
@@ -281,7 +261,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">Filter</a>
+                        <a href="#M:MimeKit.IO.Filters.BestEncodingFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">Filter</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</nobr><blockquote>
             Filters the specified input.
             </blockquote></td>
@@ -293,7 +273,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">Flush</a>
+                        <a href="#M:MimeKit.IO.Filters.BestEncodingFilter.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">Flush</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</nobr><blockquote>
             Filters the specified input, flushing all internally buffered data to the output.
             </blockquote></td>
@@ -305,7 +285,19 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.IO.Filters.MimeFilterBase.Reset()">Reset</a>
+                        <a href="#M:MimeKit.IO.Filters.BestEncodingFilter.GetBestEncoding(MimeKit.EncodingConstraint)">GetBestEncoding</a>
+                      </b>(<a href="../MimeKit/EncodingConstraint.html">MimeKit.EncodingConstraint</a>)<nobr> : <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a></nobr><blockquote>
+            Gets the best encoding given the specified constraints.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.IO.Filters.BestEncodingFilter.Reset()">Reset</a>
                       </b>()<blockquote>
             Resets the filter.
             </blockquote></td>
@@ -313,107 +305,36 @@
                 </table>
               </div>
             </div>
-            <h2 class="Section">Protected Methods</h2>
-            <div class="SectionBox" id="Protected Methods">
-              <div class="SubsectionBox">
-                <table class="TypeMembers">
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.IO.Filters.MimeFilterBase.EnsureOutputSize(System.Int32,System.Boolean)">EnsureOutputSize</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
-            Ensures that the output buffer is greater than or equal to the specified size.
-            </blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>abstract </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean)">Filter</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</nobr><blockquote>
-            Filter the specified input.
-            </blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.IO.Filters.MimeFilterBase.SaveRemainingInput(System.Byte[],System.Int32,System.Int32)">SaveRemainingInput</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
-            Saves the remaining input for the next round of processing.
-            </blockquote></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
           </div>
         </div>
-        <div class="Members" id="T:MimeKit.IO.Filters.MimeFilterBase:Members">
+        <div class="Members" id="T:MimeKit.IO.Filters.BestEncodingFilter:Members">
           <h2 class="Section" id="MemberDetails">Member Details</h2>
           <div class="SectionBox" id="_MemberDetails">
-            <h3 id="C:MimeKit.IO.Filters.MimeFilterBase()">MimeFilterBase Constructor</h3>
-            <blockquote id="C:MimeKit.IO.Filters.MimeFilterBase():member">
+            <h3 id="C:MimeKit.IO.Filters.BestEncodingFilter()">BestEncodingFilter Constructor</h3>
+            <blockquote id="C:MimeKit.IO.Filters.BestEncodingFilter():member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
-              <h2>Syntax</h2>
-              <div class="Signature">protected  <b>MimeFilterBase</b> ()</div>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.IO.Filters.MimeFilterBase():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.IO.Filters.MimeFilterBase():Version Information">
-                <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.IO.Filters.MimeFilterBase.EnsureOutputSize(System.Int32,System.Boolean)">EnsureOutputSize Method</h3>
-            <blockquote id="M:MimeKit.IO.Filters.MimeFilterBase.EnsureOutputSize(System.Int32,System.Boolean):member">
-              <p class="Summary">
-            Ensures that the output buffer is greater than or equal to the specified size.
+            Initializes a new instance of the <a href="../MimeKit.IO.Filters/BestEncodingFilter.html">MimeKit.IO.Filters.BestEncodingFilter</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnsureOutputSize</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> size, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> keep)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.EnsureOutputSize(System.Int32,System.Boolean):Parameters">
-                <dl>
-                  <dt>
-                    <i>size</i>
-                  </dt>
-                  <dd>The minimum size needed.</dd>
-                  <dt>
-                    <i>keep</i>
-                  </dt>
-                  <dd>If set to <tt>true</tt>, the current output should be preserved.</dd>
-                </dl>
-              </blockquote>
+              <div class="Signature">public  <b>BestEncodingFilter</b> ()</div>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.EnsureOutputSize(System.Int32,System.Boolean):Remarks">
+              <div class="SectionBox" id="C:MimeKit.IO.Filters.BestEncodingFilter():Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.EnsureOutputSize(System.Int32,System.Boolean):Version Information">
+              <div class="SectionBox" id="C:MimeKit.IO.Filters.BestEncodingFilter():Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">Filter Method</h3>
-            <blockquote id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):member">
+            <h3 id="M:MimeKit.IO.Filters.BestEncodingFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">Filter Method</h3>
+            <blockquote id="M:MimeKit.IO.Filters.BestEncodingFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):member">
               <p class="Summary">
             Filters the specified input.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] <b>Filter</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] input, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> outputIndex, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> outputLength)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Parameters">
                 <dl>
                   <dt>
                     <i>input</i>
@@ -438,11 +359,11 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Returns">
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Returns">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -468,70 +389,23 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Remarks">
+              <div class="SectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Version Information">
+              <div class="SectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean)">Filter Method</h3>
-            <blockquote id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):member">
-              <p class="Summary">
-            Filter the specified input.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">protected abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] <b>Filter</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] input, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> outputIndex, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> outputLength, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> flush)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Parameters">
-                <dl>
-                  <dt>
-                    <i>input</i>
-                  </dt>
-                  <dd>The input buffer.</dd>
-                  <dt>
-                    <i>startIndex</i>
-                  </dt>
-                  <dd>The starting index of the input buffer.</dd>
-                  <dt>
-                    <i>length</i>
-                  </dt>
-                  <dd>The length of the input buffer, starting at <i>startIndex</i>.</dd>
-                  <dt>
-                    <i>outputIndex</i>
-                  </dt>
-                  <dd>The output index.</dd>
-                  <dt>
-                    <i>outputLength</i>
-                  </dt>
-                  <dd>The output length.</dd>
-                  <dt>
-                    <i>flush</i>
-                  </dt>
-                  <dd>If set to <tt>true</tt>, all internally buffered data should be flushed to the output buffer.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Returns">The filtered output.</blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Version Information">
-                <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">Flush Method</h3>
-            <blockquote id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):member">
+            <h3 id="M:MimeKit.IO.Filters.BestEncodingFilter.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@)">Flush Method</h3>
+            <blockquote id="M:MimeKit.IO.Filters.BestEncodingFilter.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):member">
               <p class="Summary">
             Filters the specified input, flushing all internally buffered data to the output.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] <b>Flush</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] input, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> outputIndex, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> outputLength)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Parameters">
                 <dl>
                   <dt>
                     <i>input</i>
@@ -556,11 +430,11 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Returns">
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Returns">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -586,76 +460,54 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Remarks">
+              <div class="SectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Version Information">
+              <div class="SectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="F:MimeKit.IO.Filters.MimeFilterBase.output">output Field</h3>
-            <blockquote id="F:MimeKit.IO.Filters.MimeFilterBase.output:member">
+            <h3 id="M:MimeKit.IO.Filters.BestEncodingFilter.GetBestEncoding(MimeKit.EncodingConstraint)">GetBestEncoding Method</h3>
+            <blockquote id="M:MimeKit.IO.Filters.BestEncodingFilter.GetBestEncoding(MimeKit.EncodingConstraint):member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
+            Gets the best encoding given the specified constraints.
+            </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] <b>output</b> </div>
+              <div class="Signature">public <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a> <b>GetBestEncoding</b> (<a href="../MimeKit/EncodingConstraint.html">MimeKit.EncodingConstraint</a> constraint)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.GetBestEncoding(MimeKit.EncodingConstraint):Parameters">
+                <dl>
+                  <dt>
+                    <i>constraint</i>
+                  </dt>
+                  <dd>The encoding constraint.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.GetBestEncoding(MimeKit.EncodingConstraint):Returns">The best encoding.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="F:MimeKit.IO.Filters.MimeFilterBase.output:Remarks">
+              <div class="SectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.GetBestEncoding(MimeKit.EncodingConstraint):Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="F:MimeKit.IO.Filters.MimeFilterBase.output:Version Information">
+              <div class="SectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.GetBestEncoding(MimeKit.EncodingConstraint):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.IO.Filters.MimeFilterBase.Reset()">Reset Method</h3>
-            <blockquote id="M:MimeKit.IO.Filters.MimeFilterBase.Reset():member">
+            <h3 id="M:MimeKit.IO.Filters.BestEncodingFilter.Reset()">Reset Method</h3>
+            <blockquote id="M:MimeKit.IO.Filters.BestEncodingFilter.Reset():member">
               <p class="Summary">
             Resets the filter.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reset</b> ()</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reset</b> ()</div>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Reset():Remarks">
+              <div class="SectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Reset():Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Reset():Version Information">
-                <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.IO.Filters.MimeFilterBase.SaveRemainingInput(System.Byte[],System.Int32,System.Int32)">SaveRemainingInput Method</h3>
-            <blockquote id="M:MimeKit.IO.Filters.MimeFilterBase.SaveRemainingInput(System.Byte[],System.Int32,System.Int32):member">
-              <p class="Summary">
-            Saves the remaining input for the next round of processing.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SaveRemainingInput</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] input, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.SaveRemainingInput(System.Byte[],System.Int32,System.Int32):Parameters">
-                <dl>
-                  <dt>
-                    <i>input</i>
-                  </dt>
-                  <dd>The input buffer.</dd>
-                  <dt>
-                    <i>startIndex</i>
-                  </dt>
-                  <dd>The starting index of the buffer to save.</dd>
-                  <dt>
-                    <i>length</i>
-                  </dt>
-                  <dd>The length of the buffer to save, starting at <i>startIndex</i>.</dd>
-                </dl>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.SaveRemainingInput(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.SaveRemainingInput(System.Byte[],System.Int32,System.Int32):Version Information">
+              <div class="SectionBox" id="M:MimeKit.IO.Filters.BestEncodingFilter.Reset():Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>

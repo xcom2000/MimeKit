@@ -513,6 +513,18 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint)">GetBestEncoding</a>
+                      </b>(<a href="../MimeKit/EncodingConstraint.html">EncodingConstraint</a>)<nobr> : <a href="../MimeKit/ContentEncoding.html">ContentEncoding</a></nobr><blockquote>
+            Calculates the most efficient content encoding given the specified constraint.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.MimePart.VerifyContentMd5()">VerifyContentMd5</a>
                       </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
             Verifies the Content-Md5 value against an independently computed md5sum.
@@ -956,6 +968,35 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimePart.FileName:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint)">GetBestEncoding Method</h3>
+            <blockquote id="M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint):member">
+              <p class="Summary">
+            Calculates the most efficient content encoding given the specified constraint.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/ContentEncoding.html">ContentEncoding</a> <b>GetBestEncoding</b> (<a href="../MimeKit/EncodingConstraint.html">EncodingConstraint</a> constraint)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint):Parameters">
+                <dl>
+                  <dt>
+                    <i>constraint</i>
+                  </dt>
+                  <dd>
+                    <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                  </dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint):Returns">The most efficient content encoding.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint):Remarks">
+            If no <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a> is set, <a href="../MimeKit/ContentEncoding.html#F:MimeKit.ContentEncoding.SevenBit">ContentEncoding.SevenBit</a> will be returned.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
