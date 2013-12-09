@@ -320,7 +320,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
                       </i>. 
-            Gets the length of the stream.
+            Gets the length in bytes of the stream.
             </td>
                   </tr>
                   <tr valign="top">
@@ -336,7 +336,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
                       </i>. 
-            Gets or sets the position of the stream.
+            Gets or sets the position within the current stream.
             </td>
                   </tr>
                 </table>
@@ -366,7 +366,8 @@
                       <b>
                         <a href="#M:MimeKit.IO.ChainedStream.Flush()">Flush</a>
                       </b>()<blockquote>
-            Flushes any internal output buffers.
+            Clears all buffers for this stream and causes any buffered data to be written
+            to the underlying device.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -377,7 +378,8 @@
                       <b>
                         <a href="#M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32)">Read</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
-            Reads data into the specified buffer.
+            Reads a sequence of bytes from the stream and advances the position
+            within the stream by the number of bytes read.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -388,7 +390,7 @@
                       <b>
                         <a href="#M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin)">Seek</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.SeekOrigin">System.IO.SeekOrigin</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a></nobr><blockquote>
-            Seeks to the specified offset.
+            Sets the position within the current stream.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -399,7 +401,7 @@
                       <b>
                         <a href="#M:MimeKit.IO.ChainedStream.SetLength(System.Int64)">SetLength</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>)<blockquote>
-            Sets the length.
+            Sets the length of the stream.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -410,7 +412,8 @@
                       <b>
                         <a href="#M:MimeKit.IO.ChainedStream.Write(System.Byte[],System.Int32,System.Int32)">Write</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>
-            Writes the specified buffer.
+            Writes a sequence of bytes to the stream and advances the current
+            position within this stream by the number of bytes written.
             </blockquote></td>
                   </tr>
                 </table>
@@ -601,7 +604,8 @@
             <h3 id="M:MimeKit.IO.ChainedStream.Flush()">Flush Method</h3>
             <blockquote id="M:MimeKit.IO.ChainedStream.Flush():member">
               <p class="Summary">
-            Flushes any internal output buffers.
+            Clears all buffers for this stream and causes any buffered data to be written
+            to the underlying device.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Flush</b> ()</div>
@@ -628,6 +632,14 @@
             The stream does not support writing.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -642,49 +654,14 @@
             <h3 id="P:MimeKit.IO.ChainedStream.Length">Length Property</h3>
             <blockquote id="P:MimeKit.IO.ChainedStream.Length:member">
               <p class="Summary">
-            Gets the length of the stream.
+            Gets the length in bytes of the stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Length</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.ChainedStream.Length:Value">The length of the stream.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.ChainedStream.Length:Value">A long value representing the length of the stream in bytes.The length of the stream.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.IO.ChainedStream.Length:Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
-                    </td>
-                    <td>
-            The stream has been disposed.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Length:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Length:Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="P:MimeKit.IO.ChainedStream.Position">Position Property</h3>
-            <blockquote id="P:MimeKit.IO.ChainedStream.Position:member">
-              <p class="Summary">
-            Gets or sets the position of the stream.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Position</b>  { get; set; }</div>
-              <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.ChainedStream.Position:Value">The position of the stream.</blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.ChainedStream.Position:Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -709,6 +686,57 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Length:Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Length:Version Information">
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.IO.ChainedStream.Position">Position Property</h3>
+            <blockquote id="P:MimeKit.IO.ChainedStream.Position:member">
+              <p class="Summary">
+            Gets or sets the position within the current stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Position</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.ChainedStream.Position:Value">The current position within the stream.The position of the stream.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.ChainedStream.Position:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The stream has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The stream does not support seeking.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Position:Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
@@ -720,7 +748,8 @@
             <h3 id="M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32)">Read Method</h3>
             <blockquote id="M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32):member">
               <p class="Summary">
-            Reads data into the specified buffer.
+            Reads a sequence of bytes from the stream and advances the position
+            within the stream by the number of bytes read.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Read</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count)</div>
@@ -742,7 +771,8 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32):Returns">The number of bytes read.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32):Returns">The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many
+            bytes are not currently available, or zero (0) if the end of the stream has been reached.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32):Exceptions">
                 <table class="TypeDocumentation">
@@ -766,6 +796,34 @@
             The stream does not support reading.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>buffer</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>offset</i> is less than zero or greater than the length of <i>buffer</i>.</p>
+                      <p>-or-</p>
+                      <p>The <i>buffer</i> is not large enough to contain <i>count</i> bytes strting
+            at the specified <i>offet</i>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -780,7 +838,7 @@
             <h3 id="M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin)">Seek Method</h3>
             <blockquote id="M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin):member">
               <p class="Summary">
-            Seeks to the specified offset.
+            Sets the position within the current stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Seek</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.SeekOrigin">System.IO.SeekOrigin</a> origin)</div>
@@ -790,17 +848,15 @@
                   <dt>
                     <i>offset</i>
                   </dt>
-                  <dd>The offset from the specified origin.</dd>
+                  <dd>The offset into the stream relative to the <i>origin</i>.</dd>
                   <dt>
                     <i>origin</i>
                   </dt>
-                  <dd>The origin from which to seek.</dd>
+                  <dd>The origin to seek from.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin):Returns">The new position within the stream.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin):Exceptions">
                 <table class="TypeDocumentation">
@@ -854,7 +910,7 @@
             <h3 id="M:MimeKit.IO.ChainedStream.SetLength(System.Int64)">SetLength Method</h3>
             <blockquote id="M:MimeKit.IO.ChainedStream.SetLength(System.Int64):member">
               <p class="Summary">
-            Sets the length.
+            Sets the length of the stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetLength</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> value)</div>
@@ -864,7 +920,7 @@
                   <dt>
                     <i>value</i>
                   </dt>
-                  <dd>The new length.</dd>
+                  <dd>The desired length of the stream in bytes.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
@@ -904,7 +960,8 @@
             <h3 id="M:MimeKit.IO.ChainedStream.Write(System.Byte[],System.Int32,System.Int32)">Write Method</h3>
             <blockquote id="M:MimeKit.IO.ChainedStream.Write(System.Byte[],System.Int32,System.Int32):member">
               <p class="Summary">
-            Writes the specified buffer.
+            Writes a sequence of bytes to the stream and advances the current
+            position within this stream by the number of bytes written.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Write</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count)</div>
@@ -946,6 +1003,34 @@
                     </td>
                     <td>
             The stream does not support writing.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>buffer</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>offset</i> is less than zero or greater than the length of <i>buffer</i>.</p>
+                      <p>-or-</p>
+                      <p>The <i>buffer</i> is not large enough to contain <i>count</i> bytes strting
+            at the specified <i>offet</i>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
             </td>
                   </tr>
                 </table>
