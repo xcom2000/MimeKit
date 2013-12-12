@@ -647,7 +647,7 @@
                       <b>
                         <a href="#M:MimeKit.HeaderList.WriteTo(System.IO.Stream)">WriteTo</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
-            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to a stream.
+            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -659,7 +659,31 @@
                       <b>
                         <a href="#M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
                       </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
-            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to a stream.
+            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.HeaderList.WriteTo(System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
             </blockquote></td>
                   </tr>
                 </table>
@@ -2043,7 +2067,7 @@
             <h3 id="M:MimeKit.HeaderList.WriteTo(System.IO.Stream)">WriteTo Method</h3>
             <blockquote id="M:MimeKit.HeaderList.WriteTo(System.IO.Stream):member">
               <p class="Summary">
-            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to a stream.
+            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
@@ -2071,6 +2095,14 @@
                       <i>stream</i> is <tt>null</tt>.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2085,7 +2117,7 @@
             <h3 id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo Method</h3>
             <blockquote id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream):member">
               <p class="Summary">
-            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to a stream.
+            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
@@ -2121,6 +2153,14 @@
                         <i>stream</i> is <tt>null</tt>.</p>
                     </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2129,6 +2169,138 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.HeaderList.WriteTo(System.IO.Stream,System.Threading.CancellationToken)">WriteTo Method</h3>
+            <blockquote id="M:MimeKit.HeaderList.WriteTo(System.IO.Stream,System.Threading.CancellationToken):member">
+              <p class="Summary">
+            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> token)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>stream</i>
+                  </dt>
+                  <dd>The output stream.</dd>
+                  <dt>
+                    <i>token</i>
+                  </dt>
+                  <dd>A cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>stream</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken)">WriteTo Method</h3>
+            <blockquote id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):member">
+              <p class="Summary">
+            Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> token)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The formatting options.</dd>
+                  <dt>
+                    <i>stream</i>
+                  </dt>
+                  <dd>The output stream.</dd>
+                  <dt>
+                    <i>token</i>
+                  </dt>
+                  <dd>A cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>options</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>stream</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>

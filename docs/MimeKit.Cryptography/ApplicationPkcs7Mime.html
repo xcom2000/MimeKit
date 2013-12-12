@@ -619,6 +619,18 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint,System.Threading.CancellationToken)">GetBestEncoding</a>
+                      </b>(<a href="../MimeKit/EncodingConstraint.html">MimeKit.EncodingConstraint</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a></nobr><blockquote>
+            Calculates the most efficient content encoding given the specified constraint.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext)">Import</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>)<blockquote>
             Import the certificates contained in the content.
@@ -757,19 +769,8 @@
                       <b>
                         <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(System.IO.Stream)">WriteTo</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
-            Writes the entity instance to the specified stream.
+            Writes the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> to the specified output stream.
              (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>override </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
-                      </b>(<a href="../MimeKit/FormatOptions.html">MimeKit.FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
-            Writes the <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> to the specified stream.
-             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -780,7 +781,42 @@
                       <b>
                         <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo</a>
                       </b>(<a href="../MimeKit/FormatOptions.html">MimeKit.FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>
-            Writes the entity instance to the specified stream.
+            Writes the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> to the specified output stream.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> to the specified output stream.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="../MimeKit/FormatOptions.html">MimeKit.FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> to the specified output stream.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="../MimeKit/FormatOptions.html">MimeKit.FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> to the specified output stream.
              (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</i>)</blockquote></td>
                   </tr>
                 </table>
