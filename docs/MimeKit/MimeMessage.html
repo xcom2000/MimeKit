@@ -672,6 +672,50 @@
                   </tr>
                   <tr valign="top">
                     <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken)">Load</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
+            Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken)">Load</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
+            Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified file.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken)">Load</a>
+                      </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
+            Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken)">Load</a>
+                      </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
+            Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified file.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
                       <div>
                       </div>
                     </td>
@@ -1125,6 +1169,14 @@
                       <i>stream</i> is <tt>null</tt>.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -1198,7 +1250,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
                     </td>
                     <td>
-            An error occurred reading the file.
+            An I/O error occurred.
             </td>
                   </tr>
                 </table>
@@ -1252,6 +1304,14 @@
                       <p>
                         <i>stream</i> is <tt>null</tt>.</p>
                     </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
                   </tr>
                 </table>
               </blockquote>
@@ -1334,7 +1394,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
                     </td>
                     <td>
-            An error occurred reading the file.
+            An I/O error occurred.
             </td>
                   </tr>
                 </table>
@@ -1345,6 +1405,326 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken)">Load Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken):member">
+              <p class="Summary">
+            Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Load</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>stream</i>
+                  </dt>
+                  <dd>The stream.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>A cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken):Returns">The parsed message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>stream</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken)">Load Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken):member">
+              <p class="Summary">
+            Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified file.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Load</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> fileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>fileName</i>
+                  </dt>
+                  <dd>The name of the file to load.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>A cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken):Returns">The parsed message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>fileName</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            The specified file path is empty.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileNotFoundException">System.IO.FileNotFoundException</a>
+                    </td>
+                    <td>
+            The specified file could not be found.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            The user does not have access to read the specified file.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken)">Load Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):member">
+              <p class="Summary">
+            Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Load</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The parser options.</dd>
+                  <dt>
+                    <i>stream</i>
+                  </dt>
+                  <dd>The stream.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>A cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):Returns">The parsed message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>options</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>stream</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken)">Load Method</h3>
+            <blockquote id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):member">
+              <p class="Summary">
+            Load a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the specified file.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Load</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> fileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The parser options.</dd>
+                  <dt>
+                    <i>fileName</i>
+                  </dt>
+                  <dd>The name of the file to load.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>A cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):Returns">The parsed message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>options</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>fileName</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            The specified file path is empty.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileNotFoundException">System.IO.FileNotFoundException</a>
+                    </td>
+                    <td>
+            The specified file could not be found.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            The user does not have access to read the specified file.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2237,7 +2617,7 @@
             Writes the message to the specified output stream.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> token)</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -2246,7 +2626,7 @@
                   </dt>
                   <dd>The output stream.</dd>
                   <dt>
-                    <i>token</i>
+                    <i>cancellationToken</i>
                   </dt>
                   <dd>A cancellation token.</dd>
                 </dl>
@@ -2299,7 +2679,7 @@
             Writes the message to the specified output stream.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> token)</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -2312,7 +2692,7 @@
                   </dt>
                   <dd>The output stream.</dd>
                   <dt>
-                    <i>token</i>
+                    <i>cancellationToken</i>
                   </dt>
                   <dd>A cancellation token.</dd>
                 </dl>

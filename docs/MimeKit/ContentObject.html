@@ -460,7 +460,7 @@
             Decodes the content stream into another stream.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DecodeTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> token)</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DecodeTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.ContentObject.DecodeTo(System.IO.Stream,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -469,7 +469,7 @@
                   </dt>
                   <dd>The output stream.</dd>
                   <dt>
-                    <i>token</i>
+                    <i>cancellationToken</i>
                   </dt>
                   <dd>A cancellation token.</dd>
                 </dl>
@@ -608,7 +608,7 @@
             Copies the content stream to the specified output stream.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> token)</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.ContentObject.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -617,7 +617,7 @@
                   </dt>
                   <dd>The output stream.</dd>
                   <dt>
-                    <i>token</i>
+                    <i>cancellationToken</i>
                   </dt>
                   <dd>A cancellation token.</dd>
                 </dl>

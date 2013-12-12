@@ -1057,7 +1057,7 @@
             Calculates the most efficient content encoding given the specified constraint.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="../MimeKit/ContentEncoding.html">ContentEncoding</a> <b>GetBestEncoding</b> (<a href="../MimeKit/EncodingConstraint.html">EncodingConstraint</a> constraint, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> token)</div>
+              <div class="Signature">public <a href="../MimeKit/ContentEncoding.html">ContentEncoding</a> <b>GetBestEncoding</b> (<a href="../MimeKit/EncodingConstraint.html">EncodingConstraint</a> constraint, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -1066,7 +1066,7 @@
                   </dt>
                   <dd>The encoding constraint.</dd>
                   <dt>
-                    <i>token</i>
+                    <i>cancellationToken</i>
                   </dt>
                   <dd>A cancellation token.</dd>
                 </dl>
@@ -1180,7 +1180,7 @@
             Writes the <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> to the specified output stream.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> token)</div>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>WriteTo</b> (<a href="../MimeKit/FormatOptions.html">FormatOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.MimePart.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -1193,7 +1193,7 @@
                   </dt>
                   <dd>The output stream.</dd>
                   <dt>
-                    <i>token</i>
+                    <i>cancellationToken</i>
                   </dt>
                   <dd>A cancellation token.</dd>
                 </dl>

@@ -441,8 +441,32 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.MimeParser.ParseEntity(System.Threading.CancellationToken)">ParseEntity</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeEntity</a></nobr><blockquote>
+            Parses an entity from the stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.MimeParser.ParseMessage()">ParseMessage</a>
                       </b>()<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
+            Parses a message from the stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeParser.ParseMessage(System.Threading.CancellationToken)">ParseMessage</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
             Parses a message from the stream.
             </blockquote></td>
                   </tr>
@@ -1061,12 +1085,81 @@
               <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeEntity</a> <b>ParseEntity</b> ()</div>
               <h4 class="Subsection">Returns</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseEntity():Returns">The parsed entity.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseEntity():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeParser.ParseEntity():Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeParser.ParseEntity():Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeParser.ParseEntity(System.Threading.CancellationToken)">ParseEntity Method</h3>
+            <blockquote id="M:MimeKit.MimeParser.ParseEntity(System.Threading.CancellationToken):member">
+              <p class="Summary">
+            Parses an entity from the stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeEntity</a> <b>ParseEntity</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseEntity(System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>A cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseEntity(System.Threading.CancellationToken):Returns">The parsed entity.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseEntity(System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeParser.ParseEntity(System.Threading.CancellationToken):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeParser.ParseEntity(System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1079,12 +1172,81 @@
               <div class="Signature">public <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>ParseMessage</b> ()</div>
               <h4 class="Subsection">Returns</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseMessage():Returns">The parsed message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseMessage():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeParser.ParseMessage():Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeParser.ParseMessage():Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeParser.ParseMessage(System.Threading.CancellationToken)">ParseMessage Method</h3>
+            <blockquote id="M:MimeKit.MimeParser.ParseMessage(System.Threading.CancellationToken):member">
+              <p class="Summary">
+            Parses a message from the stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>ParseMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseMessage(System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>A cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseMessage(System.Threading.CancellationToken):Returns">The parsed message.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.ParseMessage(System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeParser.ParseMessage(System.Threading.CancellationToken):Remarks">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeParser.ParseMessage(System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
               <hr size="1" />
             </blockquote>
