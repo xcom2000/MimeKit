@@ -216,11 +216,13 @@
         <div class="Remarks" id="T:MimeKit.IO.ChainedStream:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IO.ChainedStream:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Chains multiple streams together such that reading or writing beyond the end
+            of one stream spills over into the next stream in the chain. The idea is to
+            make it appear is if the chain of streams is all one continuous stream.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IO.ChainedStream:Docs:Version Information">
-            <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+            <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -455,7 +457,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.ChainedStream():Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IO.ChainedStream.Add(System.IO.Stream)">Add Method</h3>
@@ -493,11 +495,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Add(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Adds the stream to the end of the chain.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Add(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.IO.ChainedStream.CanRead">CanRead Property</h3>
@@ -512,11 +514,12 @@
                 <tt>true</tt> if the stream supports reading; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.CanRead:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/ChainedStream.html">MimeKit.IO.ChainedStream</a> only supports reading if all of its
+            streams support it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.CanRead:Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.IO.ChainedStream.CanSeek">CanSeek Property</h3>
@@ -531,11 +534,12 @@
                 <tt>true</tt> if the stream supports seeking; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.CanSeek:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/ChainedStream.html">MimeKit.IO.ChainedStream</a> only supports seeking if all of its
+            streams support it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.CanSeek:Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.IO.ChainedStream.CanTimeout">CanTimeout Property</h3>
@@ -550,11 +554,12 @@
                 <tt>true</tt> if I/O operations can timeout; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.CanTimeout:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/ChainedStream.html">MimeKit.IO.ChainedStream</a> only supports timeouts if all of its
+            streams support them.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.CanTimeout:Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.IO.ChainedStream.CanWrite">CanWrite Property</h3>
@@ -569,11 +574,12 @@
                 <tt>true</tt> if the stream supports writing; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.CanWrite:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/ChainedStream.html">MimeKit.IO.ChainedStream</a> only supports writing if all of its
+            streams support it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.CanWrite:Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IO.ChainedStream.Dispose(System.Boolean)">Dispose Method</h3>
@@ -599,7 +605,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Dispose(System.Boolean):Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IO.ChainedStream.Flush()">Flush Method</h3>
@@ -645,11 +651,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Flush():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If all of the child streams support writing, then the current child stream
+            will be flushed.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Flush():Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.IO.ChainedStream.Length">Length Property</h3>
@@ -688,11 +695,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Length:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The length of a <a href="../MimeKit.IO/ChainedStream.html">MimeKit.IO.ChainedStream</a> is the combined lenths of all
+            of its chained streams.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Length:Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.IO.ChainedStream.Position">Position Property</h3>
@@ -739,11 +747,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Position:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            It is always possible to get the position of a <a href="../MimeKit.IO/ChainedStream.html">MimeKit.IO.ChainedStream</a>,
+            but setting the position is only possible if all of its streams are seekable.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.ChainedStream.Position:Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32)">Read Method</h3>
@@ -829,11 +838,14 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Reads up to the requested number of bytes if reading is supported. If the
+            current child stream does not have enough remaining data to complete the
+            read, the read will progress into the next stream in the chain in order
+            to complete the read.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Read(System.Byte[],System.Int32,System.Int32):Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin)">Seek Method</h3>
@@ -901,11 +913,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Seeks to the specified position within the stream if all child streams
+            support seeking.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Seek(System.Int64,System.IO.SeekOrigin):Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IO.ChainedStream.SetLength(System.Int64)">SetLength Method</h3>
@@ -951,11 +964,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.SetLength(System.Int64):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Setting the length of a <a href="../MimeKit.IO/ChainedStream.html">MimeKit.IO.ChainedStream</a> is not supported.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.SetLength(System.Int64):Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IO.ChainedStream.Write(System.Byte[],System.Int32,System.Int32)">Write Method</h3>
@@ -1038,11 +1051,14 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Write(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the requested number of bytes if writing is supported. If the
+            current child stream does not have enough remaining space to fit the
+            complete buffer, the data will spill over into the next stream in the
+            chain in order to complete the write.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Write(System.Byte[],System.Int32,System.Int32):Version Information">
-                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
+                <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>
