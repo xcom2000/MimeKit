@@ -501,7 +501,7 @@
                       <b>
                         <a href="#M:MimeKit.IO.FilteredStream.Dispose(System.Boolean)">Dispose</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
-            Dispose the specified disposing.
+            Disposes the stream.
             </blockquote></td>
                   </tr>
                 </table>
@@ -721,7 +721,7 @@
             <h3 id="M:MimeKit.IO.FilteredStream.Dispose(System.Boolean)">Dispose Method</h3>
             <blockquote id="M:MimeKit.IO.FilteredStream.Dispose(System.Boolean):member">
               <p class="Summary">
-            Dispose the specified disposing.
+            Disposes the stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
@@ -731,13 +731,14 @@
                   <dt>
                     <i>disposing</i>
                   </dt>
-                  <dd>If set to <tt>true</tt> disposing.</dd>
+                  <dd>If set to <tt>true</tt>, the stream is being disposed
+            via the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IO.Stream.Dispose">System.IO.Stream.Dispose</a> method.</dd>
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Dispose(System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Sets the internal disposed state to <tt>true</tt>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Dispose(System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -985,7 +986,7 @@
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ReadTimeout</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.FilteredStream.ReadTimeout:Value">The read timeout.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.FilteredStream.ReadTimeout:Value">A value, in miliseconds, that determines how long the stream will attempt to read before timing out.The read timeout.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.ReadTimeout:Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>
@@ -1252,7 +1253,7 @@
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>WriteTimeout</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.FilteredStream.WriteTimeout:Value">The write timeout.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.FilteredStream.WriteTimeout:Value">A value, in miliseconds, that determines how long the stream will attempt to write before timing out.The write timeout.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.WriteTimeout:Remarks">
                 <span class="NotEntered">Documentation for this section has not yet been entered.</span>

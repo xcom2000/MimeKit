@@ -216,8 +216,11 @@
         <div class="Remarks" id="T:MimeKit.IO.MeasuringStream:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IO.MeasuringStream:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            A <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a> keeps track of the number of bytes
+            that have been written to it. This is useful, for example, when you
+            need to know how large a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> is without
+            actually writing it to disk or into a memory buffer.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IO.MeasuringStream:Docs:Version Information">
             <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -419,7 +422,7 @@
                       <b>
                         <a href="#M:MimeKit.IO.MeasuringStream.Dispose(System.Boolean)">Dispose</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
-            Dispose the specified disposing.
+            Disposes the stream.
             </blockquote></td>
                   </tr>
                 </table>
@@ -458,8 +461,8 @@
                 <tt>true</tt> if the stream supports reading; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.CanRead:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a> is not readable.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.CanRead:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -477,8 +480,8 @@
                 <tt>true</tt> if the stream supports seeking; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.CanSeek:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a> is always seekable.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.CanSeek:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -496,8 +499,8 @@
                 <tt>true</tt> if reading and writing to the stream can timeout; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.CanTimeout:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writing to a <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a> cannot timeout.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.CanTimeout:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -515,8 +518,8 @@
                 <tt>true</tt> if the stream supports writing; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.CanWrite:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a> is always writable.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.CanWrite:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -525,7 +528,7 @@
             <h3 id="M:MimeKit.IO.MeasuringStream.Dispose(System.Boolean)">Dispose Method</h3>
             <blockquote id="M:MimeKit.IO.MeasuringStream.Dispose(System.Boolean):member">
               <p class="Summary">
-            Dispose the specified disposing.
+            Disposes the stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
@@ -535,13 +538,14 @@
                   <dt>
                     <i>disposing</i>
                   </dt>
-                  <dd>If set to <tt>true</tt> disposing.</dd>
+                  <dd>If set to <tt>true</tt>, the stream is being disposed
+            via the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IO.Stream.Dispose">System.IO.Stream.Dispose</a> method.</dd>
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Dispose(System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Sets the internal disposed state to <tt>true</tt>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Dispose(System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -582,8 +586,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Flush():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Since a <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a> does not actually do anything other than
+            count bytes, this method is a no-op.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Flush():Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -617,8 +622,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.Length:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The length of a <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a> indicates the
+            number of bytes that have been written to it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.Length:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -668,8 +674,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.Position:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Since it is possible to seek within a <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a>,
+            it is possible that the position will not always be identical to the
+            length of the stream, but typically it will be.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MeasuringStream.Position:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -730,8 +738,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Read(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Reading from a <a href="../MimeKit.IO/MeasuringStream.html">MimeKit.IO.MeasuringStream</a> is not supported.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Read(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -794,8 +802,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Seek(System.Int64,System.IO.SeekOrigin):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Allows seeking to a position between <tt>0</tt> and the <a href="../MimeKit.IO/MeasuringStream.html#P:MimeKit.IO.MeasuringStream.Length">MeasuringStream.Length</a> of the stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Seek(System.Int64,System.IO.SeekOrigin):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -844,8 +852,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.SetLength(System.Int64):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Sets the <a href="../MimeKit.IO/MeasuringStream.html#P:MimeKit.IO.MeasuringStream.Length">MeasuringStream.Length</a> to the specified value and updates
+            <a href="../MimeKit.IO/MeasuringStream.html#P:MimeKit.IO.MeasuringStream.Position">MeasuringStream.Position</a> to the specified value if (and only if)
+            the current position is greater than the new length value.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.SetLength(System.Int64):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -931,8 +941,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Write(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Increments the <a href="../MimeKit.IO/MeasuringStream.html#P:MimeKit.IO.MeasuringStream.Position">MeasuringStream.Position</a> property by the number of bytes written.
+            If the updated position is greater than the current length of the stream, then
+            the <a href="../MimeKit.IO/MeasuringStream.html#P:MimeKit.IO.MeasuringStream.Length">MeasuringStream.Length</a> property will be updated to be identical to the
+            position.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MeasuringStream.Write(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>

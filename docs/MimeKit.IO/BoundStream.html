@@ -216,7 +216,10 @@
         <div class="Remarks" id="T:MimeKit.IO.BoundStream:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IO.BoundStream:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            <p>Wraps an arbitrary stream, limiting I/O operations to a subset of the source stream.
+            If the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.EndBoundary">BoundStream.EndBoundary</a> is <tt>-1</tt>, then it the end of the stream is unbound.</p>
+            <p>When a <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a> is set to parse a persistent stream, it will construct
+            <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a>s using bounded streams instead of loading the content into memory.</p>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IO.BoundStream:Docs:Version Information">
@@ -493,7 +496,7 @@
                       <b>
                         <a href="#M:MimeKit.IO.BoundStream.Dispose(System.Boolean)">Dispose</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
-            Dispose the specified disposing.
+            Disposes the stream.
             </blockquote></td>
                   </tr>
                 </table>
@@ -566,8 +569,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.IO.BoundStream(System.IO.Stream,System.Int64,System.Int64,System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If the <i>endBoundary</i> is less than <tt>0</tt>, then the end of the stream
+            is unbounded.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.BoundStream(System.IO.Stream,System.Int64,System.Int64,System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -584,8 +588,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.IO.BoundStream.BaseStream:Value">The underlying stream.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.BaseStream:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            All I/O is performed on the base stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.BaseStream:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -603,8 +607,9 @@
                 <tt>true</tt> if the stream supports reading; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.CanRead:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> will only support reading if the
+            <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a> supports it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.CanRead:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -622,8 +627,9 @@
                 <tt>true</tt> if the stream supports seeking; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.CanSeek:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> will only support seeking if the
+            <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a> supports it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.CanSeek:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -641,8 +647,9 @@
                 <tt>true</tt> if I/O operations can timeout; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.CanTimeout:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> will only support timing out if the
+            <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a> supports it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.CanTimeout:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -660,8 +667,9 @@
                 <tt>true</tt> if the stream supports writing; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.CanWrite:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a> will only support writing if the
+            <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a> supports it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.CanWrite:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -670,7 +678,7 @@
             <h3 id="M:MimeKit.IO.BoundStream.Dispose(System.Boolean)">Dispose Method</h3>
             <blockquote id="M:MimeKit.IO.BoundStream.Dispose(System.Boolean):member">
               <p class="Summary">
-            Dispose the specified disposing.
+            Disposes the stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
@@ -680,13 +688,15 @@
                   <dt>
                     <i>disposing</i>
                   </dt>
-                  <dd>If set to <tt>true</tt> disposing.</dd>
+                  <dd>If set to <tt>true</tt>, the stream is being disposed
+            via the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IO.Stream.Dispose">System.IO.Stream.Dispose</a> method.</dd>
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Dispose(System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.LeaveOpen">BoundStream.LeaveOpen</a> property is <tt>false</tt>, then
+            the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a> is also disposed.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Dispose(System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -703,8 +713,10 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.IO.BoundStream.EndBoundary:Value">The end boundary offset of the underlying stream.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.EndBoundary:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The end boundary is the byte offset into the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>
+            that marks the end of the substream. If the value is less than 0,
+            then the end of the stream is treated as unbound.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.EndBoundary:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -753,8 +765,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Flush():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Flushes the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Flush():Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -796,8 +808,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.Length:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.EndBoundary">BoundStream.EndBoundary</a> property is greater than or equal to <tt>0</tt>,
+            then the length will be calculated by subtracting the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.StartBoundary">BoundStream.StartBoundary</a>
+            from the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.EndBoundary">BoundStream.EndBoundary</a>. If the end of the stream is unbound, then the
+            <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.StartBoundary">BoundStream.StartBoundary</a> will be subtracted from the length of the
+            <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.Length:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -847,8 +863,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.Position:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Setting the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.Position">BoundStream.Position</a> will seek both the <a href="../MimeKit.IO/BoundStream.html">MimeKit.IO.BoundStream</a>
+            and its <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.Position:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -937,8 +954,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Read(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Reads data from the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>, not allowing it to
+            read beyond the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.EndBoundary">BoundStream.EndBoundary</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Read(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -952,11 +970,11 @@
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ReadTimeout</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.BoundStream.ReadTimeout:Value">The read timeout.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.BoundStream.ReadTimeout:Value">A value, in miliseconds, that determines how long the stream will attempt to read before timing out.The read timeout.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.ReadTimeout:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets or sets the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>'s read timeout.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.ReadTimeout:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1027,8 +1045,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Seek(System.Int64,System.IO.SeekOrigin):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Seeks within the confines of the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.StartBoundary">BoundStream.StartBoundary</a> and the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.EndBoundary">BoundStream.EndBoundary</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Seek(System.Int64,System.IO.SeekOrigin):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1085,8 +1103,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.SetLength(System.Int64):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Updates the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.EndBoundary">BoundStream.EndBoundary</a> to be <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.StartBoundary">BoundStream.StartBoundary</a> plus
+            the specified new length. If the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a> needs to be grown
+            to allow this, then the length of the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a> will also be
+            updated.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.SetLength(System.Int64):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1103,8 +1124,9 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.IO.BoundStream.StartBoundary:Value">The start boundary offset of the underlying stream.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.StartBoundary:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The start boundary is the byte offset into the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>
+            that marks the beginning of the substream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.StartBoundary:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1190,8 +1212,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Write(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes data to the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>, not allowing it to
+            write beyond the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.EndBoundary">BoundStream.EndBoundary</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.BoundStream.Write(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
@@ -1205,11 +1228,11 @@
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>WriteTimeout</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.BoundStream.WriteTimeout:Value">The write timeout.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.BoundStream.WriteTimeout:Value">A value, in miliseconds, that determines how long the stream will attempt to write before timing out.The write timeout.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.WriteTimeout:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets or sets the <a href="../MimeKit.IO/BoundStream.html#P:MimeKit.IO.BoundStream.BaseStream">BoundStream.BaseStream</a>'s write timeout.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.BoundStream.WriteTimeout:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>

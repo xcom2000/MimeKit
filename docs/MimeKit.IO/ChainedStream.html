@@ -431,7 +431,7 @@
                       <b>
                         <a href="#M:MimeKit.IO.ChainedStream.Dispose(System.Boolean)">Dispose</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
-            Dispose the specified disposing.
+            Disposes the stream.
             </blockquote></td>
                   </tr>
                 </table>
@@ -579,7 +579,7 @@
             <h3 id="M:MimeKit.IO.ChainedStream.Dispose(System.Boolean)">Dispose Method</h3>
             <blockquote id="M:MimeKit.IO.ChainedStream.Dispose(System.Boolean):member">
               <p class="Summary">
-            Dispose the specified disposing.
+            Disposes the stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
@@ -589,13 +589,14 @@
                   <dt>
                     <i>disposing</i>
                   </dt>
-                  <dd>If set to <tt>true</tt> disposing.</dd>
+                  <dd>If set to <tt>true</tt>, the stream is being disposed
+            via the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IO.Stream.Dispose">System.IO.Stream.Dispose</a> method.</dd>
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Dispose(System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Sets the internal disposed state to <tt>true</tt>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.ChainedStream.Dispose(System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.17.0.0</div>
