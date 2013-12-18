@@ -216,8 +216,10 @@
         <div class="Remarks" id="T:MimeKit.ContentType:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.ContentType:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            The Content-Type header is a way for the originating client to
+            suggest to the receiving client the mime-type of the content and,
+            depending on that mime-type, presentation options such as charset.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.ContentType:Docs:Version Information">
             <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -369,8 +371,7 @@
                         <a href="#M:MimeKit.ContentType.Matches(System.String,System.String)">Matches</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
             Checks if the this instance of <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> matches
-            the specified mediaType and mediaSubtype.
-            Note: If the specified mediaType or mediaSubtype are "*", they match anything.
+            the specified media type and subtype.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -615,8 +616,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.ContentType(System.String,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> based on the media type and subtype provided.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.ContentType(System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -633,8 +634,9 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.Boundary:Value">The boundary.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.Boundary:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            This is a special parameter on <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> entities, designating to the
+            parser a unique string that should be considered the boundary marker for each sub-part.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.Boundary:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -651,8 +653,9 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.Charset:Value">The charset.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.Charset:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Text-based <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> entities will often include a charset parameter
+            so that the receiving client can properly render the text.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.Charset:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -662,8 +665,7 @@
             <blockquote id="M:MimeKit.ContentType.Matches(System.String,System.String):member">
               <p class="Summary">
             Checks if the this instance of <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> matches
-            the specified mediaType and mediaSubtype.
-            Note: If the specified mediaType or mediaSubtype are "*", they match anything.
+            the specified media type and subtype.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Matches</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mediaType, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> mediaSubtype)</div>
@@ -707,8 +709,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.ContentType.Matches(System.String,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If the specified <i>mediaType</i> or <i>mediaSubtype</i>
+            are <tt>"*"</tt>, they match anything.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.ContentType.Matches(System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -750,8 +753,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.MediaSubtype:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Represents the media subtype of the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>. Examples include
+            <tt>"html"</tt>, <tt>"jpeg"</tt>, and <tt>"octet-stream"</tt>. This string should
+            always be treated as case-insensitive.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.MediaSubtype:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -793,8 +798,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.MediaType:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Represents the media type of the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>. Examples include
+            <tt>"text"</tt>, <tt>"image"</tt>, and <tt>"application"</tt>. This string should
+            always be treated as case-insensitive.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.MediaType:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -811,8 +818,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.Name:Value">The name.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.Name:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The name parameter is a way for the originiating client to suggest
+            to the receiving client a display-name for the content, which may
+            be used by the receiving client if it cannot display the actual
+            content to the user.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.Name:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -829,8 +839,10 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentType.Parameters:Value">The parameters.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.Parameters:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            In addition to the media type and subtype, the Content-Type header may also
+            contain parameters to provide further hints to the receiving client as to
+            how to process or display the content.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentType.Parameters:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1295,8 +1307,8 @@
             <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.ContentType.ToString():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a string-representation of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.ContentType.ToString():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1344,8 +1356,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a string-representation of the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a>, optionally encoding
+            the parameters as they would be encoded for transport.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.ContentType.ToString(System.Text.Encoding,System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>

@@ -218,8 +218,11 @@
         <div class="Remarks" id="T:MimeKit.IO.MemoryBlockStream:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IO.MemoryBlockStream:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Instead of resizing an internal byte array, the <a href="../MimeKit.IO/MemoryBlockStream.html">MimeKit.IO.MemoryBlockStream</a>
+            chains blocks of non-contiguous memory. This helps improve performance by avoiding
+            unneeded copying of data from the old array to the newly allocated array as well
+            as the zeroing of the newly allocated array.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IO.MemoryBlockStream:Docs:Version Information">
             <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -322,7 +325,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
                       </i>. 
-            Gets the length in bytes of the stream.
+            Gets the length of the stream, in bytes.
             </td>
                   </tr>
                   <tr valign="top">
@@ -453,8 +456,9 @@
               <div class="Signature">public  <b>MemoryBlockStream</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.IO.MemoryBlockStream():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.IO/MemoryBlockStream.html">MimeKit.IO.MemoryBlockStream</a> with an initial memory block
+            of 2048 bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.MemoryBlockStream():Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -472,8 +476,8 @@
                 <tt>true</tt> if the stream supports reading; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanRead:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/MemoryBlockStream.html">MimeKit.IO.MemoryBlockStream</a> is always readable.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanRead:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -491,8 +495,8 @@
                 <tt>true</tt> if the stream supports seeking; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanSeek:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/MemoryBlockStream.html">MimeKit.IO.MemoryBlockStream</a> is always seekable.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanSeek:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -510,8 +514,8 @@
                 <tt>true</tt> if reading and writing to the stream can timeout; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanTimeout:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/MemoryBlockStream.html">MimeKit.IO.MemoryBlockStream</a> does not support timing out.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanTimeout:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -526,12 +530,11 @@
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>CanWrite</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanWrite:Value">
-                <tt>true</tt> if the stream supports writing; otherwise, <tt>false</tt>.
-            </blockquote>
+                <tt>true</tt> if the stream supports writing; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanWrite:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/MemoryBlockStream.html">MimeKit.IO.MemoryBlockStream</a> is always writable.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.CanWrite:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -608,12 +611,12 @@
             <h3 id="P:MimeKit.IO.MemoryBlockStream.Length">Length Property</h3>
             <blockquote id="P:MimeKit.IO.MemoryBlockStream.Length:member">
               <p class="Summary">
-            Gets the length in bytes of the stream.
+            Gets the length of the stream, in bytes.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Length</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.MemoryBlockStream.Length:Value">The length of the stream in bytes.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.MemoryBlockStream.Length:Value">The length of the stream, in bytes.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.IO.MemoryBlockStream.Length:Exceptions">
                 <table class="TypeDocumentation">
@@ -898,8 +901,8 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.MemoryBlockStream.ToArray():Returns">The array.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.ToArray():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Copies all of the stream data into a newly allocated byte array.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.ToArray():Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -985,8 +988,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Write(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the entire buffer to the buffer, adding memory blocks as needed.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Write(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>

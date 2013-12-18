@@ -216,8 +216,8 @@
         <div class="Remarks" id="T:MimeKit.IO.FilteredStream:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IO.FilteredStream:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Passes data through each <a href="../MimeKit.IO.Filters/IMimeFilter.html">MimeKit.IO.Filters.IMimeFilter</a> as the data is read or written.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IO.FilteredStream:Docs:Version Information">
             <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -547,8 +547,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.IO.FilteredStream(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a filtered stream using the specified source stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.FilteredStream(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -589,8 +589,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Add(MimeKit.IO.Filters.IMimeFilter):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Adds the <i>filter</i> to the end of the list of filters
+            that data will pass through as data is read from or written to the
+            underlying source stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Add(MimeKit.IO.Filters.IMimeFilter):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -608,8 +610,9 @@
                 <tt>true</tt> if the stream supports reading; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.CanRead:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/FilteredStream.html">MimeKit.IO.FilteredStream</a> will only support reading if the
+            <a href="../MimeKit.IO/FilteredStream.html#P:MimeKit.IO.FilteredStream.Source">FilteredStream.Source</a> supports it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.CanRead:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -646,8 +649,9 @@
                 <tt>true</tt> if I/O operations can timeout; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.CanTimeout:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/FilteredStream.html">MimeKit.IO.FilteredStream</a> will only support timing out if the
+            <a href="../MimeKit.IO/FilteredStream.html#P:MimeKit.IO.FilteredStream.Source">FilteredStream.Source</a> supports it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.CanTimeout:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -665,8 +669,9 @@
                 <tt>true</tt> if the stream supports writing; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.CanWrite:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The <a href="../MimeKit.IO/FilteredStream.html">MimeKit.IO.FilteredStream</a> will only support writing if the
+            <a href="../MimeKit.IO/FilteredStream.html#P:MimeKit.IO.FilteredStream.Source">FilteredStream.Source</a> supports it.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.CanWrite:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -711,8 +716,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Checks for the specified filter, by reference, in the list of
+            filters that have been added.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -787,8 +793,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Flush():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Flushes the state of all filters, writing any output to the underlying <a href="../MimeKit.IO/FilteredStream.html#P:MimeKit.IO.FilteredStream.Source">FilteredStream.Source</a>
+            stream and then calling <a href="http://www.go-mono.com/docs/monodoc.ashx?link=M:System.IO.Stream.Flush">System.IO.Stream.Flush</a> on the <a href="../MimeKit.IO/FilteredStream.html#P:MimeKit.IO.FilteredStream.Source">FilteredStream.Source</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Flush():Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -971,8 +978,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Read(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Reads up to the requested number of bytes, passing the data read from the <a href="../MimeKit.IO/FilteredStream.html#P:MimeKit.IO.FilteredStream.Source">FilteredStream.Source</a> stream
+            through each of the filters before finally copying the result into the provided buffer.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Read(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1035,8 +1043,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Remove(MimeKit.IO.Filters.IMimeFilter):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Removes the specified filter from the list if it exists.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Remove(MimeKit.IO.Filters.IMimeFilter):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1083,8 +1091,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Seek(System.Int64,System.IO.SeekOrigin):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Seeking is not supported by the <a href="../MimeKit.IO/FilteredStream.html">MimeKit.IO.FilteredStream</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Seek(System.Int64,System.IO.SeekOrigin):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1133,8 +1141,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.SetLength(System.Int64):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Setting the length of a <a href="../MimeKit.IO/FilteredStream.html">MimeKit.IO.FilteredStream</a> is not supported.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.SetLength(System.Int64):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1151,8 +1159,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.IO.FilteredStream.Source:Value">The underlying source stream.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.Source:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            In general, it is not a good idea to manipulate the underlying
+            source stream because most <a href="../MimeKit.IO.Filters/IMimeFilter.html">MimeKit.IO.Filters.IMimeFilter</a>s store
+            important state about previous bytes read from or written to
+            the source stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.FilteredStream.Source:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1238,8 +1249,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Write(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Filters the provided buffer through each of the filters before finally writing
+            the result to the underlying <a href="../MimeKit.IO/FilteredStream.html#P:MimeKit.IO.FilteredStream.Source">FilteredStream.Source</a> stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Write(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
