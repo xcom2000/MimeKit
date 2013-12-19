@@ -730,8 +730,10 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentDisposition.CreationDate:Value">The creation date.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.CreationDate:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Refers to the date and time that the content file was created on the
+            originating system. This parameter serves little purpose and is
+            typically not used by mail clients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.CreationDate:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -773,8 +775,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.Disposition:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The disposition is typically either <tt>"attachment"</tt> or <tt>"inline"</tt>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.Disposition:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -791,8 +793,9 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentDisposition.FileName:Value">The name of the file.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.FileName:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            When set, this can provide a useful hint for a default file name for the
+            content when the user decides to save it to disk.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.FileName:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -826,8 +829,8 @@
                 <tt>true</tt> if the <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> is an attachment; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.IsAttachment:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A convenience property to determine if the entity should be considered an attachment or not.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.IsAttachment:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -844,8 +847,10 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentDisposition.ModificationDate:Value">The modification date.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.ModificationDate:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Refers to the date and time that the content file was last modified on
+            the originating system. This parameter serves little purpose and is
+            typically not used by mail clients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.ModificationDate:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -862,8 +867,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentDisposition.Parameters:Value">The parameters.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.Parameters:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            In addition to the specifying whether the entity should be treated as an
+            attachment vs displayed inline, the Content-Disposition header may also
+            contain parameters to provide further information to the receiving client
+            such as the file attributes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.Parameters:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1326,8 +1334,10 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentDisposition.ReadDate:Value">The read date.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.ReadDate:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Refers to the date and time that the content file was last read on the
+            originating system. This parameter serves little purpose and is typically
+            not used by mail clients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.ReadDate:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1344,8 +1354,10 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ContentDisposition.Size:Value">The size.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.Size:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            When set, the size parameter typically refers to the original size of the
+            content on disk. This parameter is rarely used by mail clients as it serves
+            little purpose.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ContentDisposition.Size:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1364,8 +1376,8 @@
             <a href="../MimeKit/ContentDisposition.html">MimeKit.ContentDisposition</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.ContentDisposition.ToString():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a string-representation of the <a href="../MimeKit/ContentDisposition.html">MimeKit.ContentDisposition</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.ContentDisposition.ToString():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
@@ -1396,8 +1408,9 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.ContentDisposition.ToString(System.Text.Encoding,System.Boolean):Returns">The serialized string.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.ContentDisposition.ToString(System.Text.Encoding,System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a string-representation of the <a href="../MimeKit/ContentDisposition.html">MimeKit.ContentDisposition</a>,
+            optionally encoding the parameters as they would be encoded for trabsport.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.ContentDisposition.ToString(System.Text.Encoding,System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
