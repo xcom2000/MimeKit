@@ -216,11 +216,11 @@
         <div class="Remarks" id="T:MimeKit.IContentObject:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IContentObject:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Implemented by <a href="../MimeKit/ContentObject.html">MimeKit.ContentObject</a>.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IContentObject:Docs:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <h2 class="Section">Public Properties</h2>
@@ -361,11 +361,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IContentObject.DecodeTo(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If the content stream is encoded, this method will decode it into the
+            output stream using a suitable decoder.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IContentObject.DecodeTo(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IContentObject.DecodeTo(System.IO.Stream,System.Threading.CancellationToken)">DecodeTo Method</h3>
@@ -423,11 +424,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IContentObject.DecodeTo(System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If the content stream is encoded, this method will decode it into the
+            output stream using a suitable decoder.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IContentObject.DecodeTo(System.IO.Stream,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.IContentObject.Encoding">Encoding Property</h3>
@@ -441,11 +443,13 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.IContentObject.Encoding:Value">The encoding.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IContentObject.Encoding:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> is not encoded, this value will be
+            <a href="../MimeKit/ContentEncoding.html#F:MimeKit.ContentEncoding.Default">ContentEncoding.Default</a>. Otherwise, it will be
+            set to the raw content encoding of the stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IContentObject.Encoding:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.IContentObject.Stream">Stream Property</h3>
@@ -459,11 +463,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.IContentObject.Stream:Value">The stream.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IContentObject.Stream:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Represents the stream containing the content.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IContentObject.Stream:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IContentObject.WriteTo(System.IO.Stream)">WriteTo Method</h3>
@@ -509,11 +513,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IContentObject.WriteTo(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Copies the data from <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> into <i>stream</i>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IContentObject.WriteTo(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.IContentObject.WriteTo(System.IO.Stream,System.Threading.CancellationToken)">WriteTo Method</h3>
@@ -571,11 +575,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IContentObject.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Copies the data from <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> into <i>stream</i>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IContentObject.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.18.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>
