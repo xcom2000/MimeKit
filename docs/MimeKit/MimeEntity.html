@@ -216,11 +216,12 @@
         <div class="Remarks" id="T:MimeKit.MimeEntity:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.MimeEntity:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            There are 3 basic types of entities: <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>, <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a>,
+            and <a href="../MimeKit/MessagePart.html">MimeKit.MessagePart</a>. All other types are derivatives of one of those.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.MimeEntity:Docs:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -570,7 +571,7 @@
                       <b>
                         <a href="#M:MimeKit.MimeEntity.OnChanged()">OnChanged</a>
                       </b>()<blockquote>
-            Raises the changed event.
+            Raises the internal changed event.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -630,7 +631,7 @@
                       <b>
                         <a href="#M:MimeKit.MimeEntity.TryInit(System.Object)">TryInit</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
-            Try to use given object to initialize itself.
+            Tries to use the given object to initialize the appropriate property.
             </blockquote></td>
                   </tr>
                 </table>
@@ -676,11 +677,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimeEntity(MimeKit.ContentType):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Initializes the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> to the one provided.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimeEntity(MimeKit.ContentType):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="C:MimeKit.MimeEntity(MimeKit.MimeEntityConstructorInfo)">MimeEntity Constructor</h3>
@@ -707,7 +708,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimeEntity(MimeKit.MimeEntityConstructorInfo):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="C:MimeKit.MimeEntity(System.String,System.String)">MimeEntity Constructor</h3>
@@ -753,11 +754,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimeEntity(System.String,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Initializes the <a href="../MimeKit/ContentType.html">MimeKit.ContentType</a> based on the provided media type and subtype.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimeEntity(System.String,System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition Property</h3>
@@ -771,11 +772,13 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentDisposition:Value">The content disposition.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentDisposition:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Represents the pre-parsed Content-Disposition header value, if present.
+            If the Content-Disposition header is not set, then this property will
+            be <tt>null</tt>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentDisposition:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeEntity.ContentId">ContentId Property</h3>
@@ -789,11 +792,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentId:Value">The content identifier.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentId:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Represents the pre-parsed Content-Id header.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentId:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeEntity.ContentType">ContentType Property</h3>
@@ -807,11 +810,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentType:Value">The type of the content.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentType:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Represents the pre-parsed Content-Type header.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentType:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeEntity.Headers">Headers Property</h3>
@@ -825,11 +828,13 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.Headers:Value">The list of headers.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.Headers:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Represents the list of headers for a MIME part. Typically, the headers of
+            a MIME part will be various Content-* headers such as Content-Type or
+            Content-Disposition, but may include just about anything.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.Headers:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.MimeEntity.IsInitializing">IsInitializing Property</h3>
@@ -848,7 +853,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.IsInitializing:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(System.IO.Stream)">Load Method</h3>
@@ -900,7 +905,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(System.String)">Load Method</h3>
@@ -976,7 +981,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ContentType,System.IO.Stream)">Load Method</h3>
@@ -1037,7 +1042,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ContentType,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream)">Load Method</h3>
@@ -1097,7 +1102,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.String)">Load Method</h3>
@@ -1181,7 +1186,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(System.IO.Stream,System.Threading.CancellationToken)">Load Method</h3>
@@ -1245,7 +1250,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(System.IO.Stream,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(System.String,System.Threading.CancellationToken)">Load Method</h3>
@@ -1333,7 +1338,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(System.String,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ContentType,System.IO.Stream,System.Threading.CancellationToken)">Load Method</h3>
@@ -1406,7 +1411,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ContentType,System.IO.Stream,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,MimeKit.ContentType,System.IO.Stream)">Load Method</h3>
@@ -1474,7 +1479,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,MimeKit.ContentType,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken)">Load Method</h3>
@@ -1546,7 +1551,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken)">Load Method</h3>
@@ -1642,7 +1647,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,MimeKit.ContentType,System.IO.Stream,System.Threading.CancellationToken)">Load Method</h3>
@@ -1722,13 +1727,13 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.Load(MimeKit.ParserOptions,MimeKit.ContentType,System.IO.Stream,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.OnChanged()">OnChanged Method</h3>
             <blockquote id="M:MimeKit.MimeEntity.OnChanged():member">
               <p class="Summary">
-            Raises the changed event.
+            Raises the internal changed event.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnChanged</b> ()</div>
@@ -1738,7 +1743,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.OnChanged():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged Method</h3>
@@ -1763,11 +1768,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Whenever a header is changed, this method will be called in order to allow
+            custom <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> subclasses to update their state.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.RemoveHeader(System.String)">RemoveHeader Method</h3>
@@ -1788,11 +1794,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.RemoveHeader(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Removes all headers matching the specified name without
+            calling <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">MimeEntity.OnHeadersChanged(HeaderListChangedAction, Header)</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.RemoveHeader(System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[])">SetHeader Method</h3>
@@ -1817,11 +1824,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[]):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Sets the header to the specified value without
+            calling <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">MimeEntity.OnHeadersChanged(HeaderListChangedAction, Header)</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[]):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.SetHeader(System.String,System.String)">SetHeader Method</h3>
@@ -1846,17 +1854,18 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Sets the header to the specified value without
+            calling <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">MimeEntity.OnHeadersChanged(HeaderListChangedAction, Header)</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.SetHeader(System.String,System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.TryInit(System.Object)">TryInit Method</h3>
             <blockquote id="M:MimeKit.MimeEntity.TryInit(System.Object):member">
               <p class="Summary">
-            Try to use given object to initialize itself.
+            Tries to use the given object to initialize the appropriate property.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryInit</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> obj)</div>
@@ -1874,11 +1883,11 @@
                 <tt>true</tt> if the object was recognized and used; <tt>false</tt> otherwise.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.TryInit(System.Object):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Initializes the appropriate property based on the type of the object.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.TryInit(System.Object):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream)">WriteTo Method</h3>
@@ -1924,11 +1933,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the headers to the output stream, followed by a blank line.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream)">WriteTo Method</h3>
@@ -1982,11 +1991,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the headers to the output stream, followed by a blank line.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream,System.Threading.CancellationToken)">WriteTo Method</h3>
@@ -2044,11 +2053,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the headers to the output stream, followed by a blank line.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken)">WriteTo Method</h3>
@@ -2114,11 +2123,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the headers to the output stream, followed by a blank line.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.19.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>
