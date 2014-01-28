@@ -241,20 +241,6 @@
             Gets the content encoding.
             </td>
                   </tr>
-                  <tr valign="top">
-                    <td>[read-only]<div></div></td>
-                    <td>
-                      <b>
-                        <a href="#P:MimeKit.IContentObject.Stream">Stream</a>
-                      </b>
-                    </td>
-                    <td>
-                      <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>
-                      </i>. 
-            Gets the content stream.
-            </td>
-                  </tr>
                 </table>
               </div>
             </div>
@@ -284,6 +270,18 @@
                         <a href="#M:MimeKit.IContentObject.DecodeTo(System.IO.Stream,System.Threading.CancellationToken)">DecodeTo</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
             Decodes the content stream into another stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.IContentObject.Open()">Open</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>
+            Opens the decoded content stream.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -452,21 +450,22 @@
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="P:MimeKit.IContentObject.Stream">Stream Property</h3>
-            <blockquote id="P:MimeKit.IContentObject.Stream:member">
+            <h3 id="M:MimeKit.IContentObject.Open()">Open Method</h3>
+            <blockquote id="M:MimeKit.IContentObject.Open():member">
               <p class="Summary">
-            Gets the content stream.
+            Opens the decoded content stream.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>Stream</b>  { get; }</div>
-              <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IContentObject.Stream:Value">The stream.</blockquote>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>Open</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IContentObject.Open():Returns">The decoded content stream.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.IContentObject.Stream:Remarks">
-            Represents the stream containing the content.
+              <div class="SectionBox" id="M:MimeKit.IContentObject.Open():Remarks">
+            Provides a means of reading the decoded content without having to first
+            write it to another stream using <a href="../MimeKit/IContentObject.html#M:MimeKit.IContentObject.DecodeTo(System.IO.Stream)">IContentObject.DecodeTo(System.IO.Stream)</a>.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="P:MimeKit.IContentObject.Stream:Version Information">
+              <div class="SectionBox" id="M:MimeKit.IContentObject.Open():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>

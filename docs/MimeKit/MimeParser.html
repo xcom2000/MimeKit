@@ -212,7 +212,7 @@
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.MimeParser:Signature">public sealed class  <b>MimeParser</b></div>
+          <div class="Signature" id="T:MimeKit.MimeParser:Signature">public sealed class  <b>MimeParser</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeMessage&gt;</a></div>
         </div>
         <div class="Remarks" id="T:MimeKit.MimeParser:Docs">
           <h2 class="Section">Remarks</h2>
@@ -429,6 +429,18 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.MimeParser.GetEnumerator()">GetEnumerator</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerator`1">IEnumerator&lt;MimeMessage&gt;</a></nobr><blockquote>
+            Enumerates the messages in the stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.MimeParser.ParseEntity()">ParseEntity</a>
                       </b>()<nobr> : <a href="../MimeKit/MimeEntity.html">MimeEntity</a></nobr><blockquote>
             Parses an entity from the stream.
@@ -565,6 +577,27 @@
                       </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../MimeKit/MimeFormat.html">MimeFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
             Sets the stream to parse.
             </blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Explicitly Implemented Interface Members</h2>
+            <div class="SectionBox" id="Explicitly Implemented Interface Members">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="#M:MimeKit.MimeParser.System#Collections#IEnumerable#GetEnumerator()">
+                        <b>IEnumerable.GetEnumerator</b>
+                      </a>
+                    </td>
+                    <td>
+            Enumerates the messages in the stream.
+            </td>
                   </tr>
                 </table>
               </div>
@@ -1017,6 +1050,24 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeParser.CurrentStreamOffset:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeParser.GetEnumerator()">GetEnumerator Method</h3>
+            <blockquote id="M:MimeKit.MimeParser.GetEnumerator():member">
+              <p class="Summary">
+            Enumerates the messages in the stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerator`1">IEnumerator&lt;MimeMessage&gt;</a> <b>GetEnumerator</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.GetEnumerator():Returns">The enumerator.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeParser.GetEnumerator():Remarks">
+            This is mostly useful when parsing mbox-formatted streams.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeParser.GetEnumerator():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1675,6 +1726,25 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeParser.SetStream(MimeKit.ParserOptions,System.IO.Stream,MimeKit.MimeFormat,System.Boolean):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.MimeParser.System#Collections#IEnumerable#GetEnumerator()">System.Collections.IEnumerable.GetEnumerator Method</h3>
+            <blockquote id="M:MimeKit.MimeParser.System#Collections#IEnumerable#GetEnumerator():member">
+              <p class="Summary">
+            Enumerates the messages in the stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">
+                <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a> <b>System.Collections.IEnumerable.GetEnumerator</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeParser.System#Collections#IEnumerable#GetEnumerator():Returns">The enumerator.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeParser.System#Collections#IEnumerable#GetEnumerator():Remarks">
+            This is mostly useful when parsing mbox-formatted streams.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeParser.System#Collections#IEnumerable#GetEnumerator():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
               <hr size="1" />
             </blockquote>

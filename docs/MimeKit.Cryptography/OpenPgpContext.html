@@ -241,6 +241,21 @@
                     <td>
                       <div>
                         <b>
+                          <a href="#C:MimeKit.Cryptography.OpenPgpContext()">OpenPgpContext</a>
+                        </b>()</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a> class.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
                           <a href="#C:MimeKit.Cryptography.OpenPgpContext(System.String,System.String)">OpenPgpContext</a>
                         </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
@@ -381,7 +396,10 @@
               <div class="SubsectionBox">
                 <table class="TypeMembers">
                   <tr valign="top">
-                    <td>[read-only]<div></div></td>
+                    <td>
+                      <div>
+                      </div>
+                    </td>
                     <td>
                       <b>
                         <a href="#P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath">PublicKeyRingPath</a>
@@ -395,7 +413,10 @@
             </td>
                   </tr>
                   <tr valign="top">
-                    <td>[read-only]<div></div></td>
+                    <td>
+                      <div>
+                      </div>
+                    </td>
                     <td>
                       <b>
                         <a href="#P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath">SecretKeyRingPath</a>
@@ -879,6 +900,24 @@
         <div class="Members" id="T:MimeKit.Cryptography.OpenPgpContext:Members">
           <h2 class="Section" id="MemberDetails">Member Details</h2>
           <div class="SectionBox" id="_MemberDetails">
+            <h3 id="C:MimeKit.Cryptography.OpenPgpContext()">OpenPgpContext Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.OpenPgpContext():member">
+              <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a> class.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected  <b>OpenPgpContext</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.OpenPgpContext():Remarks">
+            Subclasses choosing to use this constructor MUST set the <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath">OpenPgpContext.PublicKeyRingPath</a>,
+            <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath">OpenPgpContext.SecretKeyRingPath</a>, <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingBundle">OpenPgpContext.PublicKeyRingBundle</a>, and the
+            <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingBundle">OpenPgpContext.SecretKeyRingBundle</a> properties themselves.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.OpenPgpContext():Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.20.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="C:MimeKit.Cryptography.OpenPgpContext(System.String,System.String)">OpenPgpContext Constructor</h3>
             <blockquote id="C:MimeKit.Cryptography.OpenPgpContext(System.String,System.String):member">
               <p class="Summary">
@@ -2135,7 +2174,7 @@
             Gets the public keyring path.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>PublicKeyRingPath</b>  { get; }</div>
+              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>PublicKeyRingPath</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath:Value">The public key ring path.</blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2173,7 +2212,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SavePublicKeyRingBundle():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Atomically saves the public key-ring bundle to the path specified by <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath">OpenPgpContext.PublicKeyRingPath</a>.</p>
+                <p>Called by <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Import(System.IO.Stream)">OpenPgpContext.Import(System.IO.Stream)</a> if any public keys were successfully imported.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SavePublicKeyRingBundle():Version Information">
@@ -2206,7 +2246,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SaveSecretKeyRingBundle():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Atomically saves the secret key-ring bundle to the path specified by <a href="../MimeKit.Cryptography/OpenPgpContext.html#P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath">OpenPgpContext.SecretKeyRingPath</a>.</p>
+                <p>Called by <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.ImportSecretKeys(System.IO.Stream)">OpenPgpContext.ImportSecretKeys(System.IO.Stream)</a> if any secret keys were successfully imported.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SaveSecretKeyRingBundle():Version Information">
@@ -2237,7 +2278,7 @@
             Gets the secret keyring path.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SecretKeyRingPath</b>  { get; }</div>
+              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>SecretKeyRingPath</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath:Value">The secret key ring path.</blockquote>
               <h2 class="Section">Remarks</h2>
