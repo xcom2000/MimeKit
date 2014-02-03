@@ -223,7 +223,7 @@
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.TextPart:Docs:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -753,11 +753,11 @@
               <div class="Signature">public  <b>TextPart</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.TextPart():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a default <a href="../MimeKit/TextPart.html">MimeKit.TextPart</a> with a mime-type of text/plain.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.TextPart():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="C:MimeKit.TextPart(MimeKit.MimeEntityConstructorInfo)">TextPart Constructor</h3>
@@ -780,7 +780,7 @@
               <div class="SectionBox" id="C:MimeKit.TextPart(MimeKit.MimeEntityConstructorInfo):Remarks">This constructor is used by <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.TextPart(MimeKit.MimeEntityConstructorInfo):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="C:MimeKit.TextPart(System.String)">TextPart Constructor</h3>
@@ -819,11 +819,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.TextPart(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a <a href="../MimeKit/TextPart.html">MimeKit.TextPart</a> with a textual mime-type of the
+            specified subtype.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.TextPart(System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="C:MimeKit.TextPart(System.String,System.Object[])">TextPart Constructor</h3>
@@ -889,7 +890,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.TextPart(System.String,System.Object[]):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.TextPart.GetText(System.Text.Encoding)">GetText Method</h3>
@@ -930,11 +931,13 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.TextPart.GetText(System.Text.Encoding):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Uses the provided charset encoding to convert the raw text content
+            into a unicode string, overriding any charset specified in the
+            Content-Type header.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.TextPart.GetText(System.Text.Encoding):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.TextPart.SetText(System.Text.Encoding,System.String)">SetText Method</h3>
@@ -980,11 +983,13 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.TextPart.SetText(System.Text.Encoding,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            This method is similar to setting the <a href="../MimeKit/TextPart.html#P:MimeKit.TextPart.Text">TextPart.Text</a> property, but allows
+            specifying a charset encoding to use. Also updates the
+            <a href="../MimeKit/ContentType.html#P:MimeKit.ContentType.Charset">ContentType.Charset</a> property.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.TextPart.SetText(System.Text.Encoding,System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.TextPart.Text">Text Property</h3>
@@ -1006,7 +1011,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.TextPart.Text:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>

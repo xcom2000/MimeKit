@@ -216,11 +216,15 @@
         <div class="Remarks" id="T:MimeKit.ParseException:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.ParseException:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            A <a href="../MimeKit/ParseException.html">MimeKit.ParseException</a> can be thrown by any of the Parse() methods
+            in MimeKit. Each exception instance will have a <a href="../MimeKit/ParseException.html#P:MimeKit.ParseException.TokenIndex">ParseException.TokenIndex</a>
+            which marks the byte offset of the token that failed to parse as well
+            as a <a href="../MimeKit/ParseException.html#P:MimeKit.ParseException.ErrorIndex">ParseException.ErrorIndex</a> which marks the byte offset where the error
+            occurred.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.ParseException:Docs:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -278,11 +282,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ParseException.ErrorIndex:Value">The index of the byte that caused error.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ParseException.ErrorIndex:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The error index is the byte offset at which the parser encountered an error.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ParseException.ErrorIndex:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.ParseException.TokenIndex">TokenIndex Property</h3>
@@ -296,11 +300,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.ParseException.TokenIndex:Value">The byte index of the token.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.ParseException.TokenIndex:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The token index is the byte offset at which the token started.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.ParseException.TokenIndex:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.21.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.22.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>
