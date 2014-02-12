@@ -99,6 +99,8 @@
 <li>
 <a href="http://www.ietf.org/rfc/rfc3851.txt">3851</a>: S/MIME Version 3.1 Message Specification (Obsoletes rfc2633)</li>
 <li>
+<a href="http://www.ietf.org/rfc/rfc4262.txt">4262</a>: X.509 Certificate Extension for S/MIME Capabilities</li>
+<li>
 <a href="http://www.ietf.org/rfc/rfc5322.txt">5322</a>: Internet Message Format (Obsoletes rfc2822) </li>
 <li>
 <a href="http://www.ietf.org/rfc/rfc5750.txt">5750</a>: S/MIME Version 3.2 Certificate Handling (Obsoletes rfc3850)</li>
@@ -122,10 +124,12 @@
 <a href="http://www.ietf.org/rfc/rfc2112.txt">2112</a>: The MIME Multipart/Related Content-type (Obsoletes rfc1872)</li>
 <li>
 <a href="http://www.ietf.org/rfc/rfc2387.txt">2387</a>: The MIME Multipart/Related Content-type (Obsoletes rfc2112)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc7103.txt">7103</a>: Advice for Safe Handling of Malformed Messages</li>
 </ul><h2>
 <a name="license-information" class="anchor" href="#license-information"><span class="octicon octicon-link"></span></a>License Information</h2>
 
-<p>MimeKit is Copyright (C) 2012, 2013 Jeffrey Stedfast and is licensed under the MIT/X11 license:</p>
+<p>MimeKit is Copyright (C) 2012-2014 Xamarin Inc. and is licensed under the MIT license:</p>
 
 <pre><code>Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -163,6 +167,17 @@ begin writing a new parser in C# which would not depend on GMime. This would als
 flexibility in that I'd be able use Generics and create a more .NET-compliant API.</p>
 
 <h2>
+<a name="installing-via-nuget" class="anchor" href="#installing-via-nuget"><span class="octicon octicon-link"></span></a>Installing via NuGet</h2>
+
+<p>The easiest way to install MimeKit is via <a href="https://www.nuget.org/packages/MimeKit/">NuGet</a>.</p>
+
+<p>In Visual Studio's <a href="http://docs.nuget.org/docs/start-here/using-the-package-manager-console">Package Manager Console</a>,
+simply enter the following command:</p>
+
+<pre><code>Install-Package MimeKit
+</code></pre>
+
+<h2>
 <a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h2>
 
 <p>First, you'll need to clone MimeKit and Bouncy Castle from my GitHub repository:</p>
@@ -178,7 +193,7 @@ files that I've added (to replace the Visual Studio 2003 project files). To swit
 git checkout -b visual-studio-2010 origin/visual-studio-2010
 </code></pre>
 
-<p>In the top-level MimeKit source directory, there are three solution files: MimeKit.sln, MimeKit.Net40.sln and MimeKit.Mobile.sln.</p>
+<p>In the top-level MimeKit source directory, there are several solution files:</p>
 
 <ul>
 <li>MimeKit.Mobile.sln just includes the Xamarin.iOS and Xamarin.Android projects.</li>
@@ -275,11 +290,9 @@ use code similar to this:</p>
             <span class="k">else</span>
                 <span class="nf">RenderText</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
         <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">entity</span><span class="p">.</span><span class="n">ContentType</span><span class="p">.</span><span class="n">Matches</span> <span class="p">(</span><span class="s">"image"</span><span class="p">,</span> <span class="s">"*"</span><span class="p">))</span> <span class="p">{</span>
-            <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MemoryStream</span> <span class="p">())</span> <span class="p">{</span>
-                <span class="c1">// If the content is base64 encoded (which it probably is), decode it.</span>
-                <span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">DecodeTo</span> <span class="p">(</span><span class="n">memory</span><span class="p">);</span>
-
-                <span class="n">RenderImage</span> <span class="p">(</span><span class="n">memory</span><span class="p">);</span>
+            <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">content</span> <span class="p">=</span> <span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">Open</span> <span class="p">())</span> <span class="p">{</span>
+                <span class="c1">// render the raw image content</span>
+                <span class="n">RenderImage</span> <span class="p">(</span><span class="n">content</span><span class="p">);</span>
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -304,25 +317,16 @@ save the decoded content to a file:</p>
 <span class="p">}</span>
 </pre></div>
 
-<p>You can also get access to the original encoded content and its encoding by poking at the Stream and
-Encoding properties of the ContentObject. This might be useful if you want to pass the content off
-to a UI control that can do its own loading from a stream.</p>
+<p>You can also get access to the original encoded content and its encoding by "opening" the ContentObject.
+This might be useful if you want to pass the content off to a UI control that can do its own loading
+from a stream.</p>
 
-<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">filtered</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FilteredStream</span> <span class="p">(</span><span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">Stream</span><span class="p">);</span>
-
-<span class="c1">// Note: if the MimePart was parsed by a MimeParser (or loaded using MimeMessage.Load</span>
-<span class="c1">// or MimeEntity.Load), the ContentObject.Encoding will match the part.Encoding.</span>
-
-<span class="c1">// Create an IMimeFilter that can decode the ContentEncoding.</span>
-<span class="kt">var</span> <span class="n">decoder</span> <span class="p">=</span> <span class="n">DecoderFilter</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">Encoding</span><span class="p">);</span>
-
-<span class="c1">// Add the filter to our filtered stream.</span>
-<span class="n">filtered</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">decoder</span><span class="p">);</span>
-
-<span class="c1">// At this point, you can now read from the 'filtered' stream as if it were the</span>
-<span class="c1">// original, raw content. Assuming you have an image UI control that could load</span>
-<span class="c1">// from a stream, you could do something like this:</span>
-<span class="n">imageControl</span><span class="p">.</span><span class="n">Load</span> <span class="p">(</span><span class="n">filtered</span><span class="p">);</span>
+<div class="highlight highlight-csharp"><pre><span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">stream</span> <span class="p">=</span> <span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">Open</span> <span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// At this point, you can now read from the stream as if it were the original,</span>
+    <span class="c1">// raw content. Assuming you have an image UI control that could load from a</span>
+    <span class="c1">// stream, you could do something like this:</span>
+    <span class="n">imageControl</span><span class="p">.</span><span class="n">Load</span> <span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 
 <p>There are a number of useful filters that can be applied to a FilteredStream, so if you find this type of
@@ -569,8 +573,8 @@ approach, it is possible that you may encounter an "application/pkcs7-mime" part
 <pre><code>git clone git@github.com/&lt;your-account&gt;/MimeKit.git
 </code></pre>
 
-<p>If you use <a href="http://xamarin.com/studio">Xamarin Studio</a> or <a href="http://monodevelop.org">MonoDevelop</a>, both MimeKit.sln
-and MimeKitDesktopOnly.sln are configured with the coding style used by MimeKit. If you use Visual Studio or some
+<p>If you use <a href="http://xamarin.com/studio">Xamarin Studio</a> or <a href="http://monodevelop.org">MonoDevelop</a>, all of the
+solution files are configured with the coding style used by MimeKit. If you use Visual Studio or some
 other editor, please try to maintain the existing coding style as best as you can.</p>
 
 <p>Once you've got some changes that you'd like to submit upstream to the official MimeKit repository,
