@@ -125,6 +125,10 @@
 <li>
 <a href="http://www.ietf.org/rfc/rfc2387.txt">2387</a>: The MIME Multipart/Related Content-type (Obsoletes rfc2112)</li>
 <li>
+<a href="http://www.ietf.org/rfc/rfc2388.txt">2388</a>: Returning Values from Forms: multipart/form-data</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc2557.txt">2557</a>: MIME Encapsulation of Aggregate Documents, such as HTML (MHTML) (Obsoletes rfc2110)</li>
+<li>
 <a href="http://www.ietf.org/rfc/rfc7103.txt">7103</a>: Advice for Safe Handling of Malformed Messages</li>
 </ul><h2>
 <a name="license-information" class="anchor" href="#license-information"><span class="octicon octicon-link"></span></a>License Information</h2>
@@ -396,6 +400,7 @@ part and add the text body part and all of the file attachments to the multipart
 <span class="kt">var</span> <span class="n">attachment</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimePart</span> <span class="p">(</span><span class="s">"image"</span><span class="p">,</span> <span class="s">"gif"</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">ContentObject</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ContentObject</span> <span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">OpenRead</span> <span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">ContentEncoding</span><span class="p">.</span><span class="n">Default</span><span class="p">),</span>
     <span class="n">ContentDisposition</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ContentDisposition</span> <span class="p">(</span><span class="n">ContentDisposition</span><span class="p">.</span><span class="n">Attachment</span><span class="p">),</span>
+    <span class="n">ContentTransferEncoding</span> <span class="p">=</span> <span class="n">ContentEncoding</span><span class="p">.</span><span class="n">Base64</span><span class="p">,</span>
     <span class="n">FileName</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">GetFileName</span> <span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="p">};</span>
 
@@ -433,6 +438,50 @@ like so:</p>
 
 <span class="c1">// now set the multipart/mixed as the message body</span>
 <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">multipart</span><span class="p">;</span>
+</pre></div>
+
+<h3>
+<a name="creating-a-message-using-a-bodybuilder-not-arnold-schwarzenegger" class="anchor" href="#creating-a-message-using-a-bodybuilder-not-arnold-schwarzenegger"><span class="octicon octicon-link"></span></a>Creating a Message Using a BodyBuilder (not Arnold Schwarzenegger)</h3>
+
+<p>If you are used to System.Net.Mail's API for creating messages, you will probably find using a BodyBuilder
+much more friendly than manually creating the tree of MIME parts. Here's how you could create a message body
+using a BodyBuilder:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeMessage</span> <span class="p">();</span>
+<span class="n">message</span><span class="p">.</span><span class="n">From</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Joey"</span><span class="p">,</span> <span class="s">"joey@friends.com"</span><span class="p">));</span>
+<span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"alice@wonderland.com"</span><span class="p">));</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Subject</span> <span class="p">=</span> <span class="s">"How you doin?"</span><span class="p">;</span>
+
+<span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">BodyBuilder</span> <span class="p">();</span>
+
+<span class="c1">// Set the plain-text version of the message text</span>
+<span class="n">builder</span><span class="p">.</span><span class="n">TextBody</span> <span class="p">=</span> <span class="s">@"Hey Alice,</span>
+
+<span class="s">What are you up to this weekend? Monica is throwing one of her parties on</span>
+<span class="s">Saturday and I was hoping you could make it.</span>
+
+<span class="s">Will you be my +1?</span>
+
+<span class="s">-- Joey</span>
+<span class="s">"</span><span class="p">;</span>
+
+<span class="c1">// Set the html version of the message text</span>
+<span class="n">builder</span><span class="p">.</span><span class="n">HtmlBody</span> <span class="p">=</span> <span class="s">@"&lt;p&gt;Hey Alice,&lt;br&gt;</span>
+<span class="s">&lt;p&gt;What are you up to this weekend? Monica is throwing one of her parties on</span>
+<span class="s">Saturday and I was hoping you could make it.&lt;br&gt;</span>
+<span class="s">&lt;p&gt;Will you be my +1?&lt;br&gt;</span>
+<span class="s">&lt;p&gt;-- Joey&lt;br&gt;</span>
+<span class="s">&lt;center&gt;&lt;img src=""sexy-pose.jpg""&gt;&lt;/center&gt;"</span><span class="p">;</span>
+
+<span class="c1">// Since sexy-pose.jpg is referenced from the html text, we'll need to add it</span>
+<span class="c1">// to builder.LinkedResources</span>
+<span class="n">builder</span><span class="p">.</span><span class="n">LinkedResources</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="s">"C:\\Users\\Joey\\Documents\\SexySelfies\\sexy-pose.jpg"</span><span class="p">);</span>
+
+<span class="c1">// We may also want to attach a calendar event for Monica's party...</span>
+<span class="n">builder</span><span class="p">.</span><span class="n">Attachments</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="s">"C:\\Users\Joey\\Documents\\party.ics"</span><span class="p">);</span>
+
+<span class="c1">// Now we just need to set the message body and we're done</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">builder</span><span class="p">.</span><span class="n">ToMessageBody</span> <span class="p">();</span>
 </pre></div>
 
 <h3>
