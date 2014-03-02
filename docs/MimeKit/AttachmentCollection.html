@@ -348,7 +348,7 @@
                       <b>
                         <a href="#M:MimeKit.AttachmentCollection.Clear()">Clear</a>
                       </b>()<blockquote>
-            Clear the attachment collection.
+            Clears the attachment collection.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -417,8 +417,8 @@
                       </a>
                     </td>
                     <td>
-                      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                    </td>
+            Gets an enumerator for the list of attachments.
+            </td>
                   </tr>
                 </table>
               </div>
@@ -437,8 +437,8 @@
               <div class="Signature">public  <b>AttachmentCollection</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.AttachmentCollection():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit/AttachmentCollection.html">MimeKit.AttachmentCollection</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.AttachmentCollection():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -462,7 +462,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.AttachmentCollection(System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Creates a new <a href="../MimeKit/AttachmentCollection.html">MimeKit.AttachmentCollection</a>.</p>
+                <p>If <i>linkedResources</i> is <tt>true</tt>, then the attachments
+            are treated as if they are linked to another <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.AttachmentCollection(System.Boolean):Version Information">
@@ -504,8 +506,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(MimeKit.MimePart):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Adds the specified <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> as an attachment.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(MimeKit.MimePart):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -577,9 +579,7 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String):Remarks">Adds the specified file as an attachment.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -660,9 +660,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,MimeKit.ContentType):Remarks">
-            For a list of known mime-types and their associated file extensions, see
-            http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
-            </div>
+                <p>Adds the specified file as an attachment using the supplied Content-Type.</p>
+                <p>For a list of known mime-types and their associated file extensions, see
+            http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,MimeKit.ContentType):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -671,14 +672,14 @@
             <h3 id="M:MimeKit.AttachmentCollection.Clear()">Clear Method</h3>
             <blockquote id="M:MimeKit.AttachmentCollection.Clear():member">
               <p class="Summary">
-            Clear the attachment collection.
+            Clears the attachment collection.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Clear():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Removes all attachments from the collection.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Clear():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -701,9 +702,8 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.Contains(MimeKit.MimePart):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.Contains(MimeKit.MimePart):Returns">true if the specified attachment exists;
+            otherwise false.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.Contains(MimeKit.MimePart):Exceptions">
                 <table class="TypeDocumentation">
@@ -723,8 +723,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Contains(MimeKit.MimePart):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Determines whether or not the collection contains the specified attachment.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Contains(MimeKit.MimePart):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -777,8 +777,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.CopyTo(MimeKit.MimePart[],System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Copies all of the attachments within the <a href="../MimeKit/AttachmentCollection.html">MimeKit.AttachmentCollection</a> into the array,
+            starting at the specified array index.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.CopyTo(MimeKit.MimePart[],System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -795,8 +796,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.AttachmentCollection.Count:Value">The number of attachments.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.AttachmentCollection.Count:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Indicates the number of attachments in the collection.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.AttachmentCollection.Count:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -813,8 +814,8 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.GetEnumerator():Returns">The enumerator.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.GetEnumerator():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets an enumerator for the list of attachments.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.GetEnumerator():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -832,8 +833,8 @@
                 <tt>true</tt> if the collection is read only; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.AttachmentCollection.IsReadOnly:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A <a href="../MimeKit/AttachmentCollection.html">MimeKit.AttachmentCollection</a> is never read-only.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.AttachmentCollection.IsReadOnly:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -876,8 +877,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Remove(MimeKit.MimePart):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Removes the specified attachment.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Remove(MimeKit.MimePart):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -886,19 +887,17 @@
             <h3 id="M:MimeKit.AttachmentCollection.System#Collections#IEnumerable#GetEnumerator()">System.Collections.IEnumerable.GetEnumerator Method</h3>
             <blockquote id="M:MimeKit.AttachmentCollection.System#Collections#IEnumerable#GetEnumerator():member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
+            Gets an enumerator for the list of attachments.
+            </p>
               <h2>Syntax</h2>
               <div class="Signature">
                 <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a> <b>System.Collections.IEnumerable.GetEnumerator</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.System#Collections#IEnumerable#GetEnumerator():Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.System#Collections#IEnumerable#GetEnumerator():Returns">The enumerator.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.System#Collections#IEnumerable#GetEnumerator():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets an enumerator for the list of attachments.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.System#Collections#IEnumerable#GetEnumerator():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
