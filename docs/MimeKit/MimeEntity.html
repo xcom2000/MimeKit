@@ -194,7 +194,7 @@
       <header class="inner">
         <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
         <h1 id="project_title">MimeKit</h1>
-        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
         <section id="downloads">
           <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
           <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
@@ -216,9 +216,12 @@
         <div class="Remarks" id="T:MimeKit.MimeEntity:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.MimeEntity:Docs:Remarks">
-            There are 3 basic types of entities: <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>, <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a>,
-            and <a href="../MimeKit/MessagePart.html">MimeKit.MessagePart</a>. All other types are derivatives of one of those.
-            </div>
+            <p>A MIME entity is really just a node in a tree structure of MIME parts in a MIME message.</p>
+            <p>There are 3 basic types of entities: <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a>, <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a>,
+            and <a href="../MimeKit/MessagePart.html">MimeKit.MessagePart</a> (which is actually just a special variation of
+            <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> who's content is another MIME message/document). All other types are
+            derivatives of one of those.</p>
+          </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.MimeEntity:Docs:Version Information">
             <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -292,6 +295,23 @@
                     </td>
                     <td>
                       <b>
+                        <a href="#P:MimeKit.MimeEntity.ContentBase">ContentBase</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>
+                      </i>. 
+            Gets or sets the base content URI.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
                         <a href="#P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition</a>
                       </b>
                     </td>
@@ -317,6 +337,23 @@
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
             Gets or sets the content identifier.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeEntity.ContentLocation">ContentLocation</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>
+                      </i>. 
+            Gets or sets the content location.
             </td>
                   </tr>
                   <tr valign="top">
@@ -569,18 +606,6 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.MimeEntity.OnChanged()">OnChanged</a>
-                      </b>()<blockquote>
-            Raises the internal changed event.
-            </blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
                         <a href="#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged</a>
                       </b>(<a href="../MimeKit/HeaderListChangedAction.html">HeaderListChangedAction</a>, <a href="../MimeKit/Header.html">Header</a>)<blockquote>
             Called when the headers change in some way.
@@ -761,6 +786,44 @@
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="P:MimeKit.MimeEntity.ContentBase">ContentBase Property</h3>
+            <blockquote id="P:MimeKit.MimeEntity.ContentBase:member">
+              <p class="Summary">
+            Gets or sets the base content URI.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a> <b>ContentBase</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentBase:Value">The base content URI or <tt>null</tt>.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentBase:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <i>value</i> is not an absolute URI.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentBase:Remarks">
+                <p>The Content-Base header specifies the base URI for the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>
+            in cases where the <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentLocation">MimeEntity.ContentLocation</a> is a relative URI.</p>
+                <p>The Content-Base URI must be an absolute URI.</p>
+                <p>For more information, see http://www.ietf.org/rfc/rfc2110.txt</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentBase:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition Property</h3>
             <blockquote id="P:MimeKit.MimeEntity.ContentDisposition:member">
               <p class="Summary">
@@ -792,10 +855,39 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentId:Value">The content identifier.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentId:Remarks">
-            Represents the pre-parsed Content-Id header.
-            </div>
+                <p>The Content-Id header is used for uniquely identifying a particular entity and
+            uses the same syntax as the Message-Id header on MIME messages.</p>
+                <p>Setting a Content-Id allows other <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> objects within the same
+            multipart/related container to reference this part by its unique identifier, typically
+            by using a "cid:" URI in an HTML-formatted message body. This can be useful, for example,
+            when the HTML-formatted message body needs to reference image attachments.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentId:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeEntity.ContentLocation">ContentLocation Property</h3>
+            <blockquote id="P:MimeKit.MimeEntity.ContentLocation:member">
+              <p class="Summary">
+            Gets or sets the content location.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a> <b>ContentLocation</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentLocation:Value">The content location or <tt>null</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentLocation:Remarks">
+                <p>The Content-Location header specifies the URI for a MIME entity and can be
+            either absolute or relative.</p>
+                <p>Setting a Content-Location URI allows other <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> objects
+            within the same multipart/related container to reference this part by URI. This
+            can be useful, for example, when constructing an HTML message body that needs to
+            reference image attachments.</p>
+                <p>For more information, see http://www.ietf.org/rfc/rfc2110.txt</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentLocation:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -809,9 +901,8 @@
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeEntity.ContentType:Value">The type of the content.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentType:Remarks">
-            Represents the pre-parsed Content-Type header.
-            </div>
+              <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentType:Remarks">The Content-Type header specifies information about the type of content contained
+            within the MIME entity.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeEntity.ContentType:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1826,22 +1917,6 @@
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.MimeEntity.OnChanged()">OnChanged Method</h3>
-            <blockquote id="M:MimeKit.MimeEntity.OnChanged():member">
-              <p class="Summary">
-            Raises the internal changed event.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnChanged</b> ()</div>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.MimeEntity.OnChanged():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.MimeEntity.OnChanged():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
-              <hr size="1" />
-            </blockquote>
             <h3 id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged Method</h3>
             <blockquote id="M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):member">
               <p class="Summary">
@@ -2029,7 +2104,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):Remarks">
-            Writes the headers to the output stream, followed by a blank line.
+            Writes the entity to the output stream.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream):Version Information">
@@ -2087,7 +2162,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Remarks">
-            Writes the headers to the output stream, followed by a blank line.
+            Writes the entity to the output stream.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
@@ -2149,7 +2224,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Remarks">
-            Writes the headers to the output stream, followed by a blank line.
+            Writes the entity to the output stream.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Version Information">
@@ -2219,8 +2294,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Remarks">
-            Writes the headers to the output stream, followed by a blank line.
-            </div>
+                <p>Writes the headers to the output stream, followed by a blank line.</p>
+                <p>Subclasses should override this method to write the content of the entity.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

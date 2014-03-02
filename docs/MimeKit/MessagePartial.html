@@ -194,7 +194,7 @@
       <header class="inner">
         <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
         <h1 id="project_title">MimeKit</h1>
-        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
         <section id="downloads">
           <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
           <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
@@ -215,9 +215,10 @@
         </div>
         <div class="Remarks" id="T:MimeKit.MessagePartial:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.MessagePartial:Docs:Remarks">
-            Represents a MIME part with a Content-Type of message/partial.
-            </div>
+          <div class="SectionBox" id="T:MimeKit.MessagePartial:Docs:Remarks">The "message/partial" MIME-type is used to split large messages into
+            multiple parts, typically to work around transport systems that have size
+            limitations (for example, some SMTP servers limit have a maximum message
+            size that they will accept).</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.MessagePartial:Docs:Version Information">
             <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -268,6 +269,23 @@
             <div class="SectionBox" id="Public Properties">
               <div class="SubsectionBox">
                 <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentBase">ContentBase</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>
+                      </i>. 
+            Gets or sets the base content URI.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
                   <tr valign="top">
                     <td>
                       <div>
@@ -326,7 +344,7 @@
                     </td>
                     <td>
                       <b>
-                        <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentLocation">ContentLocation</a>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentLocation">ContentLocation</a>
                       </b>
                     </td>
                     <td>
@@ -334,7 +352,7 @@
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>
                       </i>. 
             Gets or sets the content location.
-             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</td>
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -443,7 +461,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            Gets the identifier.
+            Gets the "id" parameter of the Content-Type header.
             </td>
                   </tr>
                   <tr valign="top">
@@ -474,7 +492,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;int&gt;</a>
                       </i>. 
-            Gets the part number for this partial message part.
+            Gets the "number" parameter of the Content-Type header.
             </td>
                   </tr>
                   <tr valign="top">
@@ -488,7 +506,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;int&gt;</a>
                       </i>. 
-            Gets the total number of parts.
+            Gets the "total" parameter of the Content-Type header.
             </td>
                   </tr>
                 </table>
@@ -563,7 +581,7 @@
                       <b>
                         <a href="#M:MimeKit.MessagePartial.Join(System.Collections.Generic.IEnumerable{MimeKit.MessagePartial})">Join</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MessagePartial&gt;</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
-            Join the specified message/partial parts into the complete message.
+            Joins the specified message/partial parts into the complete message.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -574,7 +592,7 @@
                       <b>
                         <a href="#M:MimeKit.MessagePartial.Join(MimeKit.ParserOptions,System.Collections.Generic.IEnumerable{MimeKit.MessagePartial})">Join</a>
                       </b>(<a href="../MimeKit/ParserOptions.html">ParserOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MessagePartial&gt;</a>)<nobr> : <a href="../MimeKit/MimeMessage.html">MimeMessage</a></nobr><blockquote>
-            Join the specified message/partial parts into the complete message.
+            Joins the specified message/partial parts into the complete message.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -585,8 +603,7 @@
                       <b>
                         <a href="#M:MimeKit.MessagePartial.Split(MimeKit.MimeMessage,System.Int32)">Split</a>
                       </b>(<a href="../MimeKit/MimeMessage.html">MimeMessage</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeMessage&gt;</a></nobr><blockquote>
-            Split the specified message into multiple messages, each with a
-            message/partial body no larger than the max size specified.
+            Splits the specified message into multiple messages.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -667,18 +684,6 @@
             <div class="SectionBox" id="Protected Methods">
               <div class="SubsectionBox">
                 <table class="TypeMembers">
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnChanged()">OnChanged</a>
-                      </b>()<blockquote>
-            Raises the internal changed event.
-             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
-                  </tr>
                   <tr valign="top">
                     <td>
                       <div>override </div>
@@ -798,7 +803,7 @@
                   <dt>
                     <i>number</i>
                   </dt>
-                  <dd>The part number for this partial message part.</dd>
+                  <dd>The (1-based) part number for this partial message part.</dd>
                   <dt>
                     <i>total</i>
                   </dt>
@@ -826,7 +831,7 @@
                     </td>
                     <td>
                       <p>
-                        <i>number</i> is negative.</p>
+                        <i>number</i> is less than <tt>1</tt>.</p>
                       <p>-or-</p>
                       <p>
                         <i>total</i> is less than <i>number</i>.</p>
@@ -836,7 +841,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MessagePartial(System.String,System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Creates a new message/partial entity.</p>
+                <p>Three (3) parameters must be specified in the Content-Type header
+            of a message/partial: id, number, and total.</p>
+                <p>The "id" parameter is a unique identifier used to match the parts together.</p>
+                <p>The "number" parameter is the sequential (1-based) index of the partial message fragment.</p>
+                <p>The "total" parameter is the total number of pieces that make up the complete message.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MessagePartial(System.String,System.Int32,System.Int32):Version Information">
@@ -846,7 +856,7 @@
             <h3 id="P:MimeKit.MessagePartial.Id">Id Property</h3>
             <blockquote id="P:MimeKit.MessagePartial.Id:member">
               <p class="Summary">
-            Gets the identifier.
+            Gets the "id" parameter of the Content-Type header.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Id</b>  { get; }</div>
@@ -854,8 +864,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MessagePartial.Id:Value">The identifier.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MessagePartial.Id:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The "id" parameter is a unique identifier used to match the parts together.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MessagePartial.Id:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -864,7 +874,7 @@
             <h3 id="M:MimeKit.MessagePartial.Join(System.Collections.Generic.IEnumerable{MimeKit.MessagePartial})">Join Method</h3>
             <blockquote id="M:MimeKit.MessagePartial.Join(System.Collections.Generic.IEnumerable{MimeKit.MessagePartial}):member">
               <p class="Summary">
-            Join the specified message/partial parts into the complete message.
+            Joins the specified message/partial parts into the complete message.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Join</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MessagePartial&gt;</a> partials)</div>
@@ -900,8 +910,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessagePartial.Join(System.Collections.Generic.IEnumerable{MimeKit.MessagePartial}):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Combines all of the message/partial fragments into its original,
+            complete, message.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessagePartial.Join(System.Collections.Generic.IEnumerable{MimeKit.MessagePartial}):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -910,7 +921,7 @@
             <h3 id="M:MimeKit.MessagePartial.Join(MimeKit.ParserOptions,System.Collections.Generic.IEnumerable{MimeKit.MessagePartial})">Join Method</h3>
             <blockquote id="M:MimeKit.MessagePartial.Join(MimeKit.ParserOptions,System.Collections.Generic.IEnumerable{MimeKit.MessagePartial}):member">
               <p class="Summary">
-            Join the specified message/partial parts into the complete message.
+            Joins the specified message/partial parts into the complete message.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit/MimeMessage.html">MimeMessage</a> <b>Join</b> (<a href="../MimeKit/ParserOptions.html">ParserOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MessagePartial&gt;</a> partials)</div>
@@ -966,8 +977,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessagePartial.Join(MimeKit.ParserOptions,System.Collections.Generic.IEnumerable{MimeKit.MessagePartial}):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Combines all of the message/partial fragments into its original,
+            complete, message.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessagePartial.Join(MimeKit.ParserOptions,System.Collections.Generic.IEnumerable{MimeKit.MessagePartial}):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -976,7 +988,7 @@
             <h3 id="P:MimeKit.MessagePartial.Number">Number Property</h3>
             <blockquote id="P:MimeKit.MessagePartial.Number:member">
               <p class="Summary">
-            Gets the part number for this partial message part.
+            Gets the "number" parameter of the Content-Type header.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;int&gt;</a> <b>Number</b>  { get; }</div>
@@ -984,8 +996,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MessagePartial.Number:Value">The part number.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MessagePartial.Number:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The "number" parameter is the sequential (1-based) index of the partial message fragment.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MessagePartial.Number:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -994,8 +1006,7 @@
             <h3 id="M:MimeKit.MessagePartial.Split(MimeKit.MimeMessage,System.Int32)">Split Method</h3>
             <blockquote id="M:MimeKit.MessagePartial.Split(MimeKit.MimeMessage,System.Int32):member">
               <p class="Summary">
-            Split the specified message into multiple messages, each with a
-            message/partial body no larger than the max size specified.
+            Splits the specified message into multiple messages.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeMessage&gt;</a> <b>Split</b> (<a href="../MimeKit/MimeMessage.html">MimeMessage</a> message, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> maxSize)</div>
@@ -1043,8 +1054,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessagePartial.Split(MimeKit.MimeMessage,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Splits the specified message into multiple messages, each with a
+            message/partial body no larger than the max size specified.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessagePartial.Split(MimeKit.MimeMessage,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1053,7 +1065,7 @@
             <h3 id="P:MimeKit.MessagePartial.Total">Total Property</h3>
             <blockquote id="P:MimeKit.MessagePartial.Total:member">
               <p class="Summary">
-            Gets the total number of parts.
+            Gets the "total" parameter of the Content-Type header.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;int&gt;</a> <b>Total</b>  { get; }</div>
@@ -1061,8 +1073,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MessagePartial.Total:Value">The total number of parts.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MessagePartial.Total:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The "total" parameter is the total number of pieces that make up the complete message.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MessagePartial.Total:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

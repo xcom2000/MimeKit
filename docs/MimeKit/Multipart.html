@@ -194,7 +194,7 @@
       <header class="inner">
         <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
         <h1 id="project_title">MimeKit</h1>
-        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools</h2>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
         <section id="downloads">
           <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
           <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
@@ -207,7 +207,7 @@
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
         <h1 class="PageTitle" id="T:MimeKit.Multipart">Multipart  Class</h1>
         <p class="Summary" id="T:MimeKit.Multipart:Summary">
-            A Multipart MIME part which may contain a collection of MIME parts.
+            A multipart MIME entity which may contain a collection of MIME entities.
             </p>
         <div>
           <h2>Syntax</h2>
@@ -216,7 +216,24 @@
         <div class="Remarks" id="T:MimeKit.Multipart:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.Multipart:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            <p>All multipart MIME entities will have a Content-Type with a media type of <tt>"multipart"</tt>.
+            The most common multipart MIME entity used in email is the <tt>"multipart/mixed"</tt> entity.</p>
+            <p>Four (4) initial subtypes were defined in the original MIME specifications: mixed, alternative,
+            digest, and parallel.</p>
+            <p>The "multipart/mixed" type is a sort of general-purpose container. When used in email, the
+            first entity is typically the "body" of the message while additional entities are most often
+            file attachments.</p>
+            <p>Speaking of message "bodies", the "multipart/alternative" type is used to offer a list of
+            alternative formats for the main body of the message (usually they will be "text/plain" and
+            "text/html"). These alternatives are in order of increasing faithfulness to the original document
+            (in other words, the last entity will be in a format that, when rendered, will most closely match
+            what the sending client's WYSISYG editor produced).</p>
+            <p>The "multipart/digest" type will typically contain a digest of MIME messages and is most
+            commonly used by mailing-list software.</p>
+            <p>The "multipart/parallel" type contains entities that are all meant to be shown (or heard)
+            in parallel.</p>
+            <p>Another commonly used type is the "multipart/related" type which contains, as one might expect,
+            inter-related MIME parts.</p>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.Multipart:Docs:Version Information">
@@ -243,8 +260,7 @@
                         </b>()</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class
-            with a default Content-Type of multipart/mixed.
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class.
             </td>
                   </tr>
                   <tr valign="top">
@@ -323,6 +339,23 @@
                     </td>
                     <td>
                       <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentBase">ContentBase</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>
+                      </i>. 
+            Gets or sets the base content URI.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
                         <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition</a>
                       </b>
                     </td>
@@ -348,6 +381,23 @@
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
             Gets or sets the content identifier.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentLocation">ContentLocation</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>
+                      </i>. 
+            Gets or sets the content location.
              (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
@@ -668,18 +718,6 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnChanged()">OnChanged</a>
-                      </b>()<blockquote>
-            Raises the internal changed event.
-             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
                         <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged</a>
                       </b>(<a href="../MimeKit/HeaderListChangedAction.html">HeaderListChangedAction</a>, <a href="../MimeKit/Header.html">Header</a>)<blockquote>
             Called when the headers change in some way.
@@ -765,15 +803,14 @@
             <h3 id="C:MimeKit.Multipart()">Multipart Constructor</h3>
             <blockquote id="C:MimeKit.Multipart():member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class
-            with a default Content-Type of multipart/mixed.
+            Initializes a new instance of the <a href="../MimeKit/Multipart.html">MimeKit.Multipart</a> class.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public  <b>Multipart</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Multipart():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new multipart/mixed entity.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Multipart():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -837,8 +874,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Multipart(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new multipart MIME entity with the specified subtype.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Multipart(System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1511,8 +1548,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the multipart MIME entity and its subparts to the output stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Multipart.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
