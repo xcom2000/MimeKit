@@ -207,7 +207,7 @@
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
         <h1 class="PageTitle" id="T:MimeKit.MessageIdList">MessageIdList  Class</h1>
         <p class="Summary" id="T:MimeKit.MessageIdList:Summary">
-            A list of Message-Ids, as found in the References header.
+            A list of Message-Ids.
             </p>
         <div>
           <h2>Syntax</h2>
@@ -216,8 +216,8 @@
         <div class="Remarks" id="T:MimeKit.MessageIdList:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.MessageIdList:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Used by the <a href="../MimeKit/MimeMessage.html#P:MimeKit.MimeMessage.References">MimeMessage.References</a> property.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.MessageIdList:Docs:Version Information">
             <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -435,7 +435,7 @@
                       <b>
                         <a href="#M:MimeKit.MessageIdList.ToString()">ToString</a>
                       </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Serializes the <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a> to a string.
+            Returns a string representation of the list of Message-Ids.
             </blockquote></td>
                   </tr>
                 </table>
@@ -456,8 +456,8 @@
                       </a>
                     </td>
                     <td>
-                      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                    </td>
+            Gets an enumerator for the list of Message-Ids.
+            </td>
                   </tr>
                 </table>
               </div>
@@ -476,8 +476,8 @@
               <div class="Signature">public  <b>MessageIdList</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MessageIdList():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new, empty, <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MessageIdList():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -526,8 +526,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Add(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Adds the specified Message-Id to the end of the list.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Add(System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -542,8 +542,8 @@
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Clear</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Clear():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Removes all of the Message-Ids in the list.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Clear():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -557,13 +557,11 @@
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/MessageIdList.html">MessageIdList</a> <b>Clone</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.MessageIdList.Clone():Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MessageIdList.Clone():Returns">An exact copy of the <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Clone():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates an exact copy of the <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Clone():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -607,8 +605,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Contains(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Determines whether or not the list contains the specified Message-Id.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Contains(System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -661,8 +659,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.CopyTo(System.String[],System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Copies all of the Message-Ids within the <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a> into the array,
+            starting at the specified array index.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.CopyTo(System.String[],System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -679,8 +678,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MessageIdList.Count:Value">The number of Message-Ids.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MessageIdList.Count:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Indicates the number of Message-Ids in the list.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MessageIdList.Count:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -697,8 +696,8 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.MessageIdList.GetEnumerator():Returns">The enumerator.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.GetEnumerator():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets an enumerator for the list of Message-Ids.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.GetEnumerator():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -741,8 +740,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.IndexOf(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Finds the index of the specified Message-Id, if it exists.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.IndexOf(System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -803,8 +802,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Insert(System.Int32,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Inserts the Message-Id at the specified index in the list.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Insert(System.Int32,System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -822,8 +821,8 @@
                 <tt>true</tt> if this instance is read only; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MessageIdList.IsReadOnly:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            A <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a> is never read-only.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MessageIdList.IsReadOnly:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -849,9 +848,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.MessageIdList.Item(System.Int32):Value">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MessageIdList.Item(System.Int32):Value">The Message-Id at the specified index.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.MessageIdList.Item(System.Int32):Exceptions">
                 <table class="TypeDocumentation">
@@ -887,8 +884,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MessageIdList.Item(System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets or sets the Message-Id at the specified index.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MessageIdList.Item(System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -932,8 +929,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Remove(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Removes the first instance of the specified Message-Id from the list if it exists.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.Remove(System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -974,8 +971,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.RemoveAt(System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Removes the Message-Id at the specified index.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.RemoveAt(System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -984,19 +981,17 @@
             <h3 id="M:MimeKit.MessageIdList.System#Collections#IEnumerable#GetEnumerator()">System.Collections.IEnumerable.GetEnumerator Method</h3>
             <blockquote id="M:MimeKit.MessageIdList.System#Collections#IEnumerable#GetEnumerator():member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
+            Gets an enumerator for the list of Message-Ids.
+            </p>
               <h2>Syntax</h2>
               <div class="Signature">
                 <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a> <b>System.Collections.IEnumerable.GetEnumerator</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.MessageIdList.System#Collections#IEnumerable#GetEnumerator():Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MessageIdList.System#Collections#IEnumerable#GetEnumerator():Returns">The enumerator.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.System#Collections#IEnumerable#GetEnumerator():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets an enumerator for the list of Message-Ids.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.System#Collections#IEnumerable#GetEnumerator():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1005,15 +1000,16 @@
             <h3 id="M:MimeKit.MessageIdList.ToString()">ToString Method</h3>
             <blockquote id="M:MimeKit.MessageIdList.ToString():member">
               <p class="Summary">
-            Serializes the <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a> to a string.
+            Returns a string representation of the list of Message-Ids.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.MessageIdList.ToString():Returns">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MessageIdList.ToString():Returns">A string representing the <a href="../MimeKit/MessageIdList.html">MimeKit.MessageIdList</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.ToString():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Each Message-Id will be surrounded by angle brackets.</p>
+                <p>If there are multiple Message-Ids in the list, they will be separated by whitespace.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MessageIdList.ToString():Version Information">

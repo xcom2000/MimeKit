@@ -312,7 +312,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            Gets or sets the <a href="../MimeKit/DomainList.html">MimeKit.DomainList</a> at the specified index.
+            Gets or sets the domain at the specified index.
             </td>
                   </tr>
                 </table>
@@ -438,7 +438,7 @@
                       <b>
                         <a href="#M:MimeKit.DomainList.ToString()">ToString</a>
                       </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Serializes the <a href="../MimeKit/DomainList.html">MimeKit.DomainList</a> to a string.
+            Returns a string representation of the list of domains.
             </blockquote></td>
                   </tr>
                 </table>
@@ -459,8 +459,8 @@
                       </a>
                     </td>
                     <td>
-                      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                    </td>
+            Gets an enumerator for the list of domains.
+            </td>
                   </tr>
                 </table>
               </div>
@@ -624,7 +624,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.Contains(System.String):Remarks">
-            Checks if the specified domain is contained with in the <a href="../MimeKit/DomainList.html">MimeKit.DomainList</a>.
+            Determines whether or not the domain list contains the specified domain.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.Contains(System.String):Version Information">
@@ -715,8 +715,8 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.DomainList.GetEnumerator():Returns">The enumerator.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.GetEnumerator():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets an enumerator for the list of domains.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.GetEnumerator():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -813,7 +813,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.Insert(System.Int32,System.String):Remarks">
-            Inerts the domain at the specified index in the list.
+            Inserts the domain at the specified index in the list.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.Insert(System.Int32,System.String):Version Information">
@@ -842,7 +842,7 @@
             <h3 id="P:MimeKit.DomainList.Item(System.Int32)">Item Property</h3>
             <blockquote id="P:MimeKit.DomainList.Item(System.Int32):member">
               <p class="Summary">
-            Gets or sets the <a href="../MimeKit/DomainList.html">MimeKit.DomainList</a> at the specified index.
+            Gets or sets the domain at the specified index.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">
@@ -859,9 +859,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.DomainList.Item(System.Int32):Value">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.DomainList.Item(System.Int32):Value">The domain at the specified index.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.DomainList.Item(System.Int32):Exceptions">
                 <table class="TypeDocumentation">
@@ -889,8 +887,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.DomainList.Item(System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets or sets the domain at the specified index.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.DomainList.Item(System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -933,7 +931,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.Remove(System.String):Remarks">
-            Removes the first instance of the specified domain from the list.
+            Removes the first instance of the specified domain from the list if it exists.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.Remove(System.String):Version Information">
@@ -975,7 +973,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.RemoveAt(System.Int32):Remarks">
-            Removed the domain at the specified index.
+            Removes the domain at the specified index.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.RemoveAt(System.Int32):Version Information">
@@ -985,19 +983,17 @@
             <h3 id="M:MimeKit.DomainList.System#Collections#IEnumerable#GetEnumerator()">System.Collections.IEnumerable.GetEnumerator Method</h3>
             <blockquote id="M:MimeKit.DomainList.System#Collections#IEnumerable#GetEnumerator():member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
+            Gets an enumerator for the list of domains.
+            </p>
               <h2>Syntax</h2>
               <div class="Signature">
                 <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a> <b>System.Collections.IEnumerable.GetEnumerator</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.DomainList.System#Collections#IEnumerable#GetEnumerator():Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.DomainList.System#Collections#IEnumerable#GetEnumerator():Returns">The enumerator.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.System#Collections#IEnumerable#GetEnumerator():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets an enumerator for the list of domains.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.System#Collections#IEnumerable#GetEnumerator():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1006,16 +1002,17 @@
             <h3 id="M:MimeKit.DomainList.ToString()">ToString Method</h3>
             <blockquote id="M:MimeKit.DomainList.ToString():member">
               <p class="Summary">
-            Serializes the <a href="../MimeKit/DomainList.html">MimeKit.DomainList</a> to a string.
+            Returns a string representation of the list of domains.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.DomainList.ToString():Returns">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current <a href="../MimeKit/DomainList.html">MimeKit.DomainList</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.DomainList.ToString():Returns">A string representing the <a href="../MimeKit/DomainList.html">MimeKit.DomainList</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.ToString():Remarks">
-            Returns a newly allocated string containing the list of domains separated by commas.
-            </div>
+                <p>Each non-empty domain string will be prepended by an '@'.</p>
+                <p>If there are multiple domains in the list, they will be separated by a comma.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.DomainList.ToString():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

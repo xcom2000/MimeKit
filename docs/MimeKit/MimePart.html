@@ -207,7 +207,7 @@
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
         <h1 class="PageTitle" id="T:MimeKit.MimePart">MimePart  Class</h1>
         <p class="Summary" id="T:MimeKit.MimePart:Summary">
-            A basic leaf-node MIME part that contains content such as the message body or an attachment.
+            A leaf-node MIME part that contains content such as the message body text or an attachment.
             </p>
         <div>
           <h2>Syntax</h2>
@@ -569,7 +569,7 @@
                       <b>
                         <a href="#M:MimeKit.MimePart.ComputeContentMd5()">ComputeContentMd5</a>
                       </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Computes the md5sum of the content.
+            Computes the MD5 checksum of the content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -763,8 +763,8 @@
               <div class="Signature">public  <b>MimePart</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new MIME entity with a Content-Type of application/octet-stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -806,8 +806,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(MimeKit.ContentType):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new MIME entity with the specified Content-Type value.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(MimeKit.ContentType):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -881,8 +881,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new MIME entity with the specified Content-Type value.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -932,8 +932,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new MIME entity with the specified media type and subtype.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1013,7 +1013,7 @@
             <h3 id="M:MimeKit.MimePart.ComputeContentMd5()">ComputeContentMd5 Method</h3>
             <blockquote id="M:MimeKit.MimePart.ComputeContentMd5():member">
               <p class="Summary">
-            Computes the md5sum of the content.
+            Computes the MD5 checksum of the content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ComputeContentMd5</b> ()</div>
@@ -1038,8 +1038,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimePart.ComputeContentMd5():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Computes the MD5 checksum of the MIME content in its canonical
+            format and then base64-encodes the result.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimePart.ComputeContentMd5():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1072,9 +1073,8 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.MimePart.ContentDuration:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="P:MimeKit.MimePart.ContentDuration:Remarks">The Content-Duration header specifies duration of timed media,
+            such as audio or video, in seconds.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimePart.ContentDuration:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1306,8 +1306,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimePart.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Updates the <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentTransferEncoding">MimePart.ContentTransferEncoding</a>, <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentDuration">MimePart.ContentDuration</a>,
+            and <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentMd5">MimePart.ContentMd5</a> properties if the corresponding headers have changed.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimePart.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1322,11 +1323,13 @@
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>VerifyContentMd5</b> ()</div>
               <h4 class="Subsection">Returns</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.MimePart.VerifyContentMd5():Returns">
-                <tt>true</tt>, if content md5sum was verified, <tt>false</tt> otherwise.</blockquote>
+                <tt>true</tt>, if content MD5 checksum was verified, <tt>false</tt> otherwise.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimePart.VerifyContentMd5():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Computes the MD5 checksum of the MIME content and compares it with the
+            value in the Content-MD5 header, returning <tt>true</tt> if and only if
+            the values match.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimePart.VerifyContentMd5():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1395,8 +1398,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimePart.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the MIME part to the output stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimePart.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

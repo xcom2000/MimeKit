@@ -216,7 +216,10 @@
         <div class="Remarks" id="T:MimeKit.MimeMessage:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.MimeMessage:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            <p>A message consists of header fields and, optionally, a body.</p>
+            <p>The body of the message can either be plain text or it can be a
+            tree of MIME entities such as a text/plain MIME part and a collection
+            of file attachments.</p>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.MimeMessage:Docs:Version Information">
@@ -400,7 +403,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            Gets or sets the message-id that this message is in reply to.
+            Gets or sets the Message-Id that this message is in reply to.
             </td>
                   </tr>
                   <tr valign="top">
@@ -888,8 +891,8 @@
               <div class="Signature">public  <b>MimeMessage</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimeMessage():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new MIME message.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimeMessage():Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1000,7 +1003,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Body:Value">The body of the message.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Body:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>The body of the message can either be plain text or it can be a
+            tree of MIME entities such as a text/plain MIME part and a collection
+            of file attachments.</p>
+                <p>For a convenient way of constructing message bodies, see the
+            <a href="../MimeKit/BodyBuilder.html">MimeKit.BodyBuilder</a> class.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Body:Version Information">
@@ -1036,8 +1043,10 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Cc:Value">The list of addresses in the Cc header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Cc:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The addresses in the Cc header are secondary recipients of the message
+            and are usually not the individuals being directly addressed in the
+            content of the message.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Cc:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1060,7 +1069,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.CreateFromMailMessage(System.Net.Mail.MailMessage):Returns">The message.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.CreateFromMailMessage(System.Net.Mail.MailMessage):Returns">The equivalent <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a>.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.CreateFromMailMessage(System.Net.Mail.MailMessage):Exceptions">
                 <table class="TypeDocumentation">
@@ -1198,7 +1207,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.From:Value">The list of addresses in the From header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.From:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>The "From" header specifies the author(s) of the message.</p>
+                <p>If more than one <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> is added to the
+            list of "From" addresses, the <a href="../MimeKit/MimeMessage.html#P:MimeKit.MimeMessage.Sender">MimeMessage.Sender</a> should be set to the
+            single <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> of the personal actually sending
+            the message.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.From:Version Information">
@@ -1216,8 +1229,11 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.Headers:Value">The list of headers.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Headers:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Represents the list of headers for a message. Typically, the headers of
+            a message will contain transmission headers such as From and To along
+            with metadata headers such as Subject and Date, but may include just
+            about anything.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Headers:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1226,7 +1242,7 @@
             <h3 id="P:MimeKit.MimeMessage.InReplyTo">InReplyTo Property</h3>
             <blockquote id="P:MimeKit.MimeMessage.InReplyTo:member">
               <p class="Summary">
-            Gets or sets the message-id that this message is in reply to.
+            Gets or sets the Message-Id that this message is in reply to.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>InReplyTo</b>  { get; set; }</div>
@@ -1251,8 +1267,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            If the message is a reply to another message, it will typically
+            use the In-Reply-To header to specify the Message-Id of the
+            original message being replied to.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.InReplyTo:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1311,8 +1329,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Loads a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the given stream, using the
+            default <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1395,8 +1414,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Loads a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the file at the given path, using the
+            default <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1463,8 +1483,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Loads a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the given stream, using the
+            specified <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1555,8 +1576,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Loads a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the file at the given path, using the
+            specified <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1627,8 +1649,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Loads a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the given stream, using the
+            default <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.IO.Stream,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1723,8 +1746,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Loads a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the file at the given path, using the
+            default <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(System.String,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1803,8 +1827,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Loads a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the given stream, using the
+            specified <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1907,8 +1932,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Loads a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> from the file at the given path, using the
+            specified <a href="../MimeKit/ParserOptions.html">MimeKit.ParserOptions</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.Load(MimeKit.ParserOptions,System.String,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1950,7 +1976,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.MessageId:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>The Message-Id is meant to be a globally unique identifier for
+            a message.</p>
+                <p>
+                  <a href="../MimeKit.Utils/MimeUtils.html#M:MimeKit.Utils.MimeUtils.GenerateMessageId">MimeKit.Utils.MimeUtils.GenerateMessageId</a> can be used
+            to generate this value.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.MessageId:Version Information">
@@ -1985,8 +2015,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The MIME-Version header specifies the version of the MIME specification
+            that the message was created for.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.MimeVersion:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2010,7 +2041,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.op_Explicit(System.Net.Mail.MailMessage)~MimeKit.MimeMessage:Returns">A <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeMessage.op_Explicit(System.Net.Mail.MailMessage)~MimeKit.MimeMessage:Returns">The equivalent <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.op_Explicit(System.Net.Mail.MailMessage)~MimeKit.MimeMessage:Remarks">
             Allows creation of messages using Microsoft's System.Net.Mail APIs.
@@ -2050,7 +2081,12 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Value">The list of addresses in the Reply-To header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>When the list of addresses in the Reply-To header is not empty,
+            it contains the address(es) where the author(s) of the message prefer
+            that replies be sent.</p>
+                <p>When the list of addresses in the Reply-To header is empty,
+            replies should be sent to the mailbox(es) specified in the From
+            header.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ReplyTo:Version Information">
@@ -2068,7 +2104,7 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentBcc:Value">The list of addresses in the Resent-Bcc header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentBcc:Remarks">
-            Recipients in the Resent Blind-Carpbon-Copy list will not be visible to
+            Recipients in the Resent-Bcc list will not be visible to
             the other recipients of the message.
             </div>
               <h2 class="Section">Requirements</h2>
@@ -2087,8 +2123,10 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentCc:Value">The list of addresses in the Resent-Cc header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentCc:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The addresses in the Resent-Cc header are secondary recipients of the message
+            and are usually not the individuals being directly addressed in the
+            content of the message.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentCc:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2123,7 +2161,12 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentFrom:Value">The list of addresses in the Resent-From header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentFrom:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>The "Resent-From" header specifies the author(s) of the messagebeing
+            resent.</p>
+                <p>If more than one <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> is added to the
+            list of "Resent-From" addresses, the <a href="../MimeKit/MimeMessage.html#P:MimeKit.MimeMessage.ResentSender">MimeMessage.ResentSender</a> should
+            be set to the single <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> of the personal actually
+            sending the message.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentFrom:Version Information">
@@ -2166,7 +2209,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentMessageId:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>The Resent-Message-Id is meant to be a globally unique identifier for
+            a message.</p>
+                <p>
+                  <a href="../MimeKit.Utils/MimeUtils.html#M:MimeKit.Utils.MimeUtils.GenerateMessageId">MimeKit.Utils.MimeUtils.GenerateMessageId</a> can be used
+            to generate this value.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentMessageId:Version Information">
@@ -2184,7 +2231,12 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentReplyTo:Value">The list of addresses in the Resent-Reply-To header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentReplyTo:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>When the list of addresses in the Resent-Reply-To header is not empty,
+            it contains the address(es) where the author(s) of the resent message prefer
+            that replies be sent.</p>
+                <p>When the list of addresses in the Resent-Reply-To header is empty,
+            replies should be sent to the mailbox(es) specified in the Resent-From
+            header.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentReplyTo:Version Information">
@@ -2221,8 +2273,9 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.ResentTo:Value">The list of addresses in the Resent-To header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentTo:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The addresses in the Resent-To header are the primary recipients of
+            the message.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.ResentTo:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2647,7 +2700,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Subject:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>The Subject is typically a short string denoting the topic of the message.</p>
+                <p>Replies will often use <tt>"Re: "</tt> followed by the Subject of the original message.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Subject:Version Information">
@@ -2665,8 +2719,9 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.To:Value">The list of addresses in the To header.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.To:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            The addresses in the To header are the primary recipients of
+            the message.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.To:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2715,8 +2770,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the message to the output stream using the default formatting options.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2773,8 +2828,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the message to the output stream using the provided formatting options.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2835,8 +2890,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the message to the output stream using the default formatting options.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(System.IO.Stream,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2905,8 +2960,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Writes the message to the output stream using the provided formatting options.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.MimeMessage.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

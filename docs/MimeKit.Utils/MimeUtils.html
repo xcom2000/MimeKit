@@ -216,8 +216,8 @@
         <div class="Remarks" id="T:MimeKit.Utils.MimeUtils:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.Utils.MimeUtils:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Various utility methods that don't belong anywhere else.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.Utils.MimeUtils:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -239,7 +239,8 @@
                       <b>
                         <a href="#M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.String)">EnumerateReferences</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;string&gt;</a></nobr><blockquote>
-            Enumerates the message-id references such as those that can be found in the In-Reply-To or References header.
+            Enumerates the message-id references such as those that can be found in
+            the In-Reply-To or References header.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -250,7 +251,8 @@
                       <b>
                         <a href="#M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.Byte[],System.Int32,System.Int32)">EnumerateReferences</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;string&gt;</a></nobr><blockquote>
-            Enumerates the message-id references such as those that can be found in the In-Reply-To or References header.
+            Enumerates the message-id references such as those that can be found in
+            the In-Reply-To or References header.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -261,7 +263,7 @@
                       <b>
                         <a href="#M:MimeKit.Utils.MimeUtils.GenerateMessageId()">GenerateMessageId</a>
                       </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Generates a token suitable for a Message-Id.
+            Generates a Message-Id.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -272,7 +274,7 @@
                       <b>
                         <a href="#M:MimeKit.Utils.MimeUtils.GenerateMessageId(System.String)">GenerateMessageId</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Generates a token suitable for a Message-Id.
+            Generates a Message-Id.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -283,8 +285,7 @@
                       <b>
                         <a href="#M:MimeKit.Utils.MimeUtils.Quote(System.String)">Quote</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Quotes the specified text, enclosing it in double-quotes and escaping
-            any backslashes and double-quotes within.
+            Quotes the specified text.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -317,8 +318,7 @@
                       <b>
                         <a href="#M:MimeKit.Utils.MimeUtils.Unquote(System.String)">Unquote</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Unquotes the specified text, removing any escaped backslashes and
-            double-quotes within.
+            Unquotes the specified text.
             </blockquote></td>
                   </tr>
                 </table>
@@ -332,7 +332,8 @@
             <h3 id="M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.String)">EnumerateReferences Method</h3>
             <blockquote id="M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.String):member">
               <p class="Summary">
-            Enumerates the message-id references such as those that can be found in the In-Reply-To or References header.
+            Enumerates the message-id references such as those that can be found in
+            the In-Reply-To or References header.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;string&gt;</a> <b>EnumerateReferences</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
@@ -366,8 +367,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Incrementally parses Message-Ids (such as those from a References header
+            in a MIME message) from the specified text.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -376,7 +378,8 @@
             <h3 id="M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.Byte[],System.Int32,System.Int32)">EnumerateReferences Method</h3>
             <blockquote id="M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.Byte[],System.Int32,System.Int32):member">
               <p class="Summary">
-            Enumerates the message-id references such as those that can be found in the In-Reply-To or References header.
+            Enumerates the message-id references such as those that can be found in
+            the In-Reply-To or References header.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;string&gt;</a> <b>EnumerateReferences</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length)</div>
@@ -427,8 +430,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Incrementally parses Message-Ids (such as those from a References header
+            in a MIME message) from the supplied buffer starting at the given index
+            and spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.EnumerateReferences(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -437,7 +442,7 @@
             <h3 id="M:MimeKit.Utils.MimeUtils.GenerateMessageId()">GenerateMessageId Method</h3>
             <blockquote id="M:MimeKit.Utils.MimeUtils.GenerateMessageId():member">
               <p class="Summary">
-            Generates a token suitable for a Message-Id.
+            Generates a Message-Id.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GenerateMessageId</b> ()</div>
@@ -445,8 +450,8 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.GenerateMessageId():Returns">The message identifier.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.GenerateMessageId():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Generates a new Message-Id using the local machine's domain.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.GenerateMessageId():Version Information">
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -455,7 +460,7 @@
             <h3 id="M:MimeKit.Utils.MimeUtils.GenerateMessageId(System.String)">GenerateMessageId Method</h3>
             <blockquote id="M:MimeKit.Utils.MimeUtils.GenerateMessageId(System.String):member">
               <p class="Summary">
-            Generates a token suitable for a Message-Id.
+            Generates a Message-Id.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GenerateMessageId</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> domain)</div>
@@ -489,8 +494,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.GenerateMessageId(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Generates a new Message-Id using the supplied domain.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.GenerateMessageId(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -499,8 +504,7 @@
             <h3 id="M:MimeKit.Utils.MimeUtils.Quote(System.String)">Quote Method</h3>
             <blockquote id="M:MimeKit.Utils.MimeUtils.Quote(System.String):member">
               <p class="Summary">
-            Quotes the specified text, enclosing it in double-quotes and escaping
-            any backslashes and double-quotes within.
+            Quotes the specified text.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Quote</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
@@ -514,9 +518,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.Quote(System.String):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.Quote(System.String):Returns">The quoted text.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.Quote(System.String):Exceptions">
                 <table class="TypeDocumentation">
@@ -536,8 +538,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.Quote(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Quotes the specified text, enclosing it in double-quotes and escaping
+            any backslashes and double-quotes within.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.Quote(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -585,8 +588,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParseVersion(System.String,System.Version@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a MIME version string from the specified text.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParseVersion(System.String,System.Version@):Version Information">
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -651,8 +654,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParseVersion(System.Byte[],System.Int32,System.Int32,System.Version@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a MIME version string from the supplied buffer starting at the given index
+            and spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParseVersion(System.Byte[],System.Int32,System.Int32,System.Version@):Version Information">
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -661,8 +665,7 @@
             <h3 id="M:MimeKit.Utils.MimeUtils.Unquote(System.String)">Unquote Method</h3>
             <blockquote id="M:MimeKit.Utils.MimeUtils.Unquote(System.String):member">
               <p class="Summary">
-            Unquotes the specified text, removing any escaped backslashes and
-            double-quotes within.
+            Unquotes the specified text.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Unquote</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
@@ -676,9 +679,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.Unquote(System.String):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.Unquote(System.String):Returns">The unquoted text.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.Unquote(System.String):Exceptions">
                 <table class="TypeDocumentation">
@@ -698,8 +699,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.Unquote(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Unquotes the specified text, removing any escaped backslashes within.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.Unquote(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

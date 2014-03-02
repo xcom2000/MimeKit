@@ -409,7 +409,7 @@
                       <b>
                         <a href="#M:MimeKit.Header.ToString()">ToString</a>
                       </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Returns a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current <a href="../MimeKit/Header.html">MimeKit.Header</a>.
+            Returns a string representation of the header.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -508,7 +508,7 @@
                       <b>
                         <a href="#M:MimeKit.Header.Unfold(System.String)">Unfold</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Unfold the specified header text.
+            Unfold the specified header value.
             </blockquote></td>
                   </tr>
                 </table>
@@ -926,12 +926,12 @@
             <h3 id="M:MimeKit.Header.ToString()">ToString Method</h3>
             <blockquote id="M:MimeKit.Header.ToString():member">
               <p class="Summary">
-            Returns a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current <a href="../MimeKit/Header.html">MimeKit.Header</a>.
+            Returns a string representation of the header.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Header.ToString():Returns">A <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current <a href="../MimeKit/Header.html">MimeKit.Header</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Header.ToString():Returns">A string representing the <a href="../MimeKit/Header.html">MimeKit.Header</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.ToString():Remarks">
             Formats the header field and value in a way that is suitable for display.
@@ -983,8 +983,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(System.Byte[],MimeKit.Header@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a header from the specified buffer.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(System.Byte[],MimeKit.Header@):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1032,8 +1032,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(System.String,MimeKit.Header@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a header from the specified text.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(System.String,MimeKit.Header@):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1089,8 +1089,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.Header@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a header from the specified buffer.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(MimeKit.ParserOptions,System.Byte[],MimeKit.Header@):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1146,8 +1146,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(MimeKit.ParserOptions,System.String,MimeKit.Header@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a header from the specified text.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(MimeKit.ParserOptions,System.String,MimeKit.Header@):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1207,8 +1207,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(System.Byte[],System.Int32,MimeKit.Header@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a header from the supplied buffer starting at the specified index.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(System.Byte[],System.Int32,MimeKit.Header@):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1276,8 +1276,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.Header@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a header from the supplied buffer starting at the specified index.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,MimeKit.Header@):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1342,8 +1342,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.Header@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a header from the supplied buffer starting at the given index
+            and spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(System.Byte[],System.Int32,System.Int32,MimeKit.Header@):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1416,8 +1417,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.Header@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Parses a header from the supplied buffer starting at the given index
+            and spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Header.TryParse(MimeKit.ParserOptions,System.Byte[],System.Int32,System.Int32,MimeKit.Header@):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1426,7 +1428,7 @@
             <h3 id="M:MimeKit.Header.Unfold(System.String)">Unfold Method</h3>
             <blockquote id="M:MimeKit.Header.Unfold(System.String):member">
               <p class="Summary">
-            Unfold the specified header text.
+            Unfold the specified header value.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Unfold</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
@@ -1440,9 +1442,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Header.Unfold(System.String):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Header.Unfold(System.String):Returns">The unfolded header value.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Header.Unfold(System.String):Remarks">
             Unfolds the header value so that it becomes suitable for display.
