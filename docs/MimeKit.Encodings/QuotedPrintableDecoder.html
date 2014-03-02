@@ -368,8 +368,8 @@
               <div class="Signature">public  <b>QuotedPrintableDecoder</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Encodings.QuotedPrintableDecoder():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new quoted-printable decoder.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Encodings.QuotedPrintableDecoder():Version Information">
                 <b>Namespace: </b>MimeKit.Encodings<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -448,7 +448,10 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Encodings.QuotedPrintableDecoder.Decode(System.Byte*,System.Int32,System.Byte*):Returns">The number of bytes written to the output buffer.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Encodings.QuotedPrintableDecoder.Decode(System.Byte*,System.Int32,System.Byte*):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Decodes the specified input into the output buffer.</p>
+                <p>The output buffer should be large enough to hold all of the
+            decoded input. For estimating the size needed for the output buffer,
+            see <a href="../MimeKit.Encodings/QuotedPrintableDecoder.html#M:MimeKit.Encodings.QuotedPrintableDecoder.EstimateOutputLength(System.Int32)">QuotedPrintableDecoder.EstimateOutputLength(int)</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Encodings.QuotedPrintableDecoder.Decode(System.Byte*,System.Int32,System.Byte*):Version Information">
@@ -528,7 +531,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Encodings.QuotedPrintableDecoder.Decode(System.Byte[],System.Int32,System.Int32,System.Byte[]):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Decodes the specified input into the output buffer.</p>
+                <p>The output buffer should be large enough to hold all of the
+            decoded input. For estimating the size needed for the output buffer,
+            see <a href="../MimeKit.Encodings/QuotedPrintableDecoder.html#M:MimeKit.Encodings.QuotedPrintableDecoder.EstimateOutputLength(System.Int32)">QuotedPrintableDecoder.EstimateOutputLength(int)</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Encodings.QuotedPrintableDecoder.Decode(System.Byte[],System.Int32,System.Int32,System.Byte[]):Version Information">
@@ -546,8 +552,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Encodings.QuotedPrintableDecoder.Encoding:Value">The encoding.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Encodings.QuotedPrintableDecoder.Encoding:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the encoding that the decoder supports.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Encodings.QuotedPrintableDecoder.Encoding:Version Information">
                 <b>Namespace: </b>MimeKit.Encodings<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

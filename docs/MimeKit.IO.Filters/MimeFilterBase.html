@@ -216,8 +216,8 @@
         <div class="Remarks" id="T:MimeKit.IO.Filters.MimeFilterBase:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IO.Filters.MimeFilterBase:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            A base implementation for MIME filters.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IO.Filters.MimeFilterBase:Docs:Version Information">
             <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -243,29 +243,28 @@
                         </b>()</div>
                     </td>
                     <td>
-                      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                    </td>
+            Initializes a new instance of the <a href="../MimeKit.IO.Filters/MimeFilterBase.html">MimeKit.IO.Filters.MimeFilterBase</a> class.
+            </td>
                   </tr>
                 </table>
               </div>
             </div>
-            <h2 class="Section">Protected Fields</h2>
-            <div class="SectionBox" id="Protected Fields">
+            <h2 class="Section">Protected Properties</h2>
+            <div class="SectionBox" id="Protected Properties">
               <div class="SubsectionBox">
                 <table class="TypeMembers">
                   <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
+                    <td>[read-only]<div></div></td>
                     <td>
                       <b>
-                        <a href="#F:MimeKit.IO.Filters.MimeFilterBase.output">output</a>
+                        <a href="#P:MimeKit.IO.Filters.MimeFilterBase.Output">Output</a>
                       </b>
                     </td>
                     <td>
                       <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</i>. 
+            Gets the output buffer.
+            </td>
                   </tr>
                 </table>
               </div>
@@ -363,14 +362,14 @@
             <h3 id="C:MimeKit.IO.Filters.MimeFilterBase()">MimeFilterBase Constructor</h3>
             <blockquote id="C:MimeKit.IO.Filters.MimeFilterBase():member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
+            Initializes a new instance of the <a href="../MimeKit.IO.Filters/MimeFilterBase.html">MimeKit.IO.Filters.MimeFilterBase</a> class.
+            </p>
               <h2>Syntax</h2>
               <div class="Signature">protected  <b>MimeFilterBase</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.MimeFilterBase():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.IO.Filters/MimeFilterBase.html">MimeKit.IO.Filters.MimeFilterBase</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.MimeFilterBase():Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -398,8 +397,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.EnsureOutputSize(System.Int32,System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Ensures that the output buffer is greater than or equal to the specified size.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.EnsureOutputSize(System.Int32,System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -438,9 +437,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Returns">The filtered output.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Exceptions">
                 <table class="TypeDocumentation">
@@ -469,8 +466,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Filters the specified input buffer starting at the given index,
+            spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -516,8 +514,9 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Returns">The filtered output.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Filters the specified input buffer starting at the given index,
+            spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -556,9 +555,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Returns">The filtered output.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Exceptions">
                 <table class="TypeDocumentation">
@@ -587,26 +584,29 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Filters the specified input buffer starting at the given index,
+            spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Flush(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="F:MimeKit.IO.Filters.MimeFilterBase.output">output Field</h3>
-            <blockquote id="F:MimeKit.IO.Filters.MimeFilterBase.output:member">
+            <h3 id="P:MimeKit.IO.Filters.MimeFilterBase.Output">Output Property</h3>
+            <blockquote id="P:MimeKit.IO.Filters.MimeFilterBase.Output:member">
               <p class="Summary">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </p>
+            Gets the output buffer.
+            </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] <b>output</b> </div>
+              <div class="Signature">protected <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] <b>Output</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.MimeFilterBase.Output:Value">The output buffer.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="F:MimeKit.IO.Filters.MimeFilterBase.output:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="P:MimeKit.IO.Filters.MimeFilterBase.Output:Remarks">
+            Gets the output buffer.
+            </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="F:MimeKit.IO.Filters.MimeFilterBase.output:Version Information">
+              <div class="SectionBox" id="P:MimeKit.IO.Filters.MimeFilterBase.Output:Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -619,8 +619,8 @@
               <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reset</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Reset():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Resets the filter.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.Reset():Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -652,8 +652,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.SaveRemainingInput(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Saves the remaining input for the next round of processing.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.MimeFilterBase.SaveRemainingInput(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

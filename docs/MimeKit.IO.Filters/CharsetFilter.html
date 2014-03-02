@@ -217,8 +217,8 @@
         <div class="Remarks" id="T:MimeKit.IO.Filters.CharsetFilter:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IO.Filters.CharsetFilter:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Incrementally converts text from one charset encoding to another.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IO.Filters.CharsetFilter:Docs:Version Information">
             <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -280,27 +280,6 @@
                 </table>
               </div>
             </div>
-            <h2 class="Section">Protected Fields</h2>
-            <div class="SectionBox" id="Protected Fields">
-              <div class="SubsectionBox">
-                <table class="TypeMembers">
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td>
-                      <b>
-                        <a href="../MimeKit.IO.Filters/MimeFilterBase.html#F:MimeKit.IO.Filters.MimeFilterBase.output">output</a>
-                      </b>
-                    </td>
-                    <td>
-                      <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../MimeKit.IO.Filters/MimeFilterBase.html">MimeFilterBase</a>.</i>)</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
             <h2 class="Section">Public Properties</h2>
             <div class="SectionBox" id="Public Properties">
               <div class="SubsectionBox">
@@ -332,6 +311,26 @@
                       </i>. 
             Gets the target encoding.
             </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Protected Properties</h2>
+            <div class="SectionBox" id="Protected Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.IO.Filters/MimeFilterBase.html#P:MimeKit.IO.Filters.MimeFilterBase.Output">Output</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</i>. 
+            Gets the output buffer.
+             (<i>Inherited from <a href="../MimeKit.IO.Filters/MimeFilterBase.html">MimeFilterBase</a>.</i>)</td>
                   </tr>
                 </table>
               </div>
@@ -461,15 +460,11 @@
                   <dt>
                     <i>sourceCodePage</i>
                   </dt>
-                  <dd>
-            Source code page.
-            </dd>
+                  <dd>Source code page.</dd>
                   <dt>
                     <i>targetCodePage</i>
                   </dt>
-                  <dd>
-            Target code page.
-            </dd>
+                  <dd>Target code page.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
@@ -505,8 +500,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.CharsetFilter(System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.IO.Filters/CharsetFilter.html">MimeKit.IO.Filters.CharsetFilter</a> to convert text from the specified
+            source encoding into the target charset encoding.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.CharsetFilter(System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -525,15 +521,11 @@
                   <dt>
                     <i>sourceEncodingName</i>
                   </dt>
-                  <dd>
-            Source encoding name.
-            </dd>
+                  <dd>Source encoding name.</dd>
                   <dt>
                     <i>targetEncodingName</i>
                   </dt>
-                  <dd>
-            Target encoding name.
-            </dd>
+                  <dd>Target encoding name.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
@@ -569,8 +561,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.CharsetFilter(System.String,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.IO.Filters/CharsetFilter.html">MimeKit.IO.Filters.CharsetFilter</a> to convert text from the specified
+            source encoding into the target charset encoding.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.CharsetFilter(System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -589,15 +582,11 @@
                   <dt>
                     <i>sourceEncoding</i>
                   </dt>
-                  <dd>
-            Source encoding.
-            </dd>
+                  <dd>Source encoding.</dd>
                   <dt>
                     <i>targetEncoding</i>
                   </dt>
-                  <dd>
-            Target encoding.
-            </dd>
+                  <dd>Target encoding.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
@@ -623,8 +612,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.CharsetFilter(System.Text.Encoding,System.Text.Encoding):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.IO.Filters/CharsetFilter.html">MimeKit.IO.Filters.CharsetFilter</a> to convert text from the specified
+            source encoding into the target charset encoding.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.CharsetFilter(System.Text.Encoding,System.Text.Encoding):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -670,8 +660,9 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.CharsetFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Returns">The filtered output.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.CharsetFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Filters the specified input buffer starting at the given index,
+            spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.CharsetFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -686,8 +677,8 @@
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reset</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.CharsetFilter.Reset():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Resets the filter.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.CharsetFilter.Reset():Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -701,13 +692,11 @@
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> <b>SourceEncoding</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.CharsetFilter.SourceEncoding:Value">
-            The source encoding.
-            </blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.CharsetFilter.SourceEncoding:Value">The source encoding.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.Filters.CharsetFilter.SourceEncoding:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the source encoding.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.Filters.CharsetFilter.SourceEncoding:Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -721,13 +710,11 @@
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> <b>TargetEncoding</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.CharsetFilter.TargetEncoding:Value">
-            The target encoding.
-            </blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.CharsetFilter.TargetEncoding:Value">The target encoding.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.Filters.CharsetFilter.TargetEncoding:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the target encoding.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.Filters.CharsetFilter.TargetEncoding:Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

@@ -216,8 +216,8 @@
         <div class="Remarks" id="T:MimeKit.IO.Filters.EncoderFilter:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.IO.Filters.EncoderFilter:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            Uses a <a href="../MimeKit.Encodings/IMimeEncoder.html">MimeKit.Encodings.IMimeEncoder</a> to incrementally encode data.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.IO.Filters.EncoderFilter:Docs:Version Information">
             <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -245,27 +245,6 @@
                     <td>
             Initializes a new instance of the <a href="../MimeKit.IO.Filters/EncoderFilter.html">MimeKit.IO.Filters.EncoderFilter</a> class.
             </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <h2 class="Section">Protected Fields</h2>
-            <div class="SectionBox" id="Protected Fields">
-              <div class="SubsectionBox">
-                <table class="TypeMembers">
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td>
-                      <b>
-                        <a href="../MimeKit.IO.Filters/MimeFilterBase.html#F:MimeKit.IO.Filters.MimeFilterBase.output">output</a>
-                      </b>
-                    </td>
-                    <td>
-                      <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../MimeKit.IO.Filters/MimeFilterBase.html">MimeFilterBase</a>.</i>)</td>
                   </tr>
                 </table>
               </div>
@@ -301,6 +280,26 @@
                       </i>. 
             Gets the encoding.
             </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Protected Properties</h2>
+            <div class="SectionBox" id="Protected Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit.IO.Filters/MimeFilterBase.html#P:MimeKit.IO.Filters.MimeFilterBase.Output">Output</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</i>. 
+            Gets the output buffer.
+             (<i>Inherited from <a href="../MimeKit.IO.Filters/MimeFilterBase.html">MimeFilterBase</a>.</i>)</td>
                   </tr>
                 </table>
               </div>
@@ -441,15 +440,13 @@
                   <dt>
                     <i>encoder</i>
                   </dt>
-                  <dd>
-            A specific encoder for the filter to use.
-            </dd>
+                  <dd>A specific encoder for the filter to use.</dd>
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.EncoderFilter(MimeKit.Encodings.IMimeEncoder):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.IO.Filters/EncoderFilter.html">MimeKit.IO.Filters.EncoderFilter</a> using the specified encoder.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.IO.Filters.EncoderFilter(MimeKit.Encodings.IMimeEncoder):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -468,19 +465,15 @@
                   <dt>
                     <i>encoding</i>
                   </dt>
-                  <dd>
-            The encoding to create a filter for.
-            </dd>
+                  <dd>The encoding to create a filter for.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Create(MimeKit.ContentEncoding):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Create(MimeKit.ContentEncoding):Returns">A new encoder filter.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Create(MimeKit.ContentEncoding):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.IO.Filters/EncoderFilter.html">MimeKit.IO.Filters.EncoderFilter</a> for the specified encoding.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Create(MimeKit.ContentEncoding):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -494,13 +487,11 @@
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Encodings/IMimeEncoder.html">MimeKit.Encodings.IMimeEncoder</a> <b>Encoder</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.EncoderFilter.Encoder:Value">
-            The encoder.
-            </blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.EncoderFilter.Encoder:Value">The encoder.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.Filters.EncoderFilter.Encoder:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the encoder used by this filter.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.Filters.EncoderFilter.Encoder:Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -514,13 +505,11 @@
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a> <b>Encoding</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.EncoderFilter.Encoding:Value">
-            The encoding.
-            </blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.IO.Filters.EncoderFilter.Encoding:Value">The encoding.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.Filters.EncoderFilter.Encoding:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the encoding that the encoder supports.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.Filters.EncoderFilter.Encoding:Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -566,8 +555,9 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Returns">The filtered output.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Filters the specified input buffer starting at the given index,
+            spanning across the specified number of bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Filter(System.Byte[],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -582,8 +572,8 @@
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reset</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Reset():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Resets the filter.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.Filters.EncoderFilter.Reset():Version Information">
                 <b>Namespace: </b>MimeKit.IO.Filters<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
