@@ -341,7 +341,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
                       </i>. 
-            Gets or sets the position within the current stream.
+            Gets or sets the current position within the stream.
             </td>
                   </tr>
                 </table>
@@ -604,8 +604,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Flush():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            This method does not do anything.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Flush():Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -639,8 +639,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.Length:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the length of the stream, in bytes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.Length:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -649,7 +649,7 @@
             <h3 id="P:MimeKit.IO.MemoryBlockStream.Position">Position Property</h3>
             <blockquote id="P:MimeKit.IO.MemoryBlockStream.Position:member">
               <p class="Summary">
-            Gets or sets the position within the current stream.
+            Gets or sets the current position within the stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Position</b>  { get; set; }</div>
@@ -690,8 +690,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.Position:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets or sets the current position within the stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.IO.MemoryBlockStream.Position:Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -772,8 +772,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Read(System.Byte[],System.Int32,System.Int32):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Reads a sequence of bytes from the stream and advances the position
+            within the stream by the number of bytes read.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Read(System.Byte[],System.Int32,System.Int32):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -836,8 +837,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Seek(System.Int64,System.IO.SeekOrigin):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Sets the position within the current stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Seek(System.Int64,System.IO.SeekOrigin):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -886,8 +887,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.SetLength(System.Int64):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Sets the length of the stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.SetLength(System.Int64):Version Information">
                 <b>Namespace: </b>MimeKit.IO<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -991,7 +992,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Write(System.Byte[],System.Int32,System.Int32):Remarks">
-            Writes the entire buffer to the buffer, adding memory blocks as needed.
+            Writes the entire buffer to the stream and advances the current position
+            within the stream by the number of bytes written, adding memory blocks as
+            needed in order to contain the newly written bytes.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.MemoryBlockStream.Write(System.Byte[],System.Int32,System.Int32):Version Information">

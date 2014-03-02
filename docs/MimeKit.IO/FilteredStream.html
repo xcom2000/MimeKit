@@ -320,7 +320,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
                       </i>. 
-            Gets the length in bytes of the stream.
+            Gets the length of the stream, in bytes.
             </td>
                   </tr>
                   <tr valign="top">
@@ -336,7 +336,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
                       </i>. 
-            Gets or sets the position within the current stream.
+            Gets or sets the current position within the stream.
             </td>
                   </tr>
                   <tr valign="top">
@@ -413,7 +413,7 @@
                       <b>
                         <a href="#M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter)">Contains</a>
                       </b>(<a href="../MimeKit.IO.Filters/IMimeFilter.html">MimeKit.IO.Filters.IMimeFilter</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
-            Contains the specified filter.
+            Checks if the filtered stream contains the specified filter.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -681,7 +681,7 @@
             <h3 id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter)">Contains Method</h3>
             <blockquote id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter):member">
               <p class="Summary">
-            Contains the specified filter.
+            Checks if the filtered stream contains the specified filter.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Contains</b> (<a href="../MimeKit.IO.Filters/IMimeFilter.html">MimeKit.IO.Filters.IMimeFilter</a> filter)</div>
@@ -695,9 +695,8 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter):Returns">true if the specified filter exists;
+            otherwise false.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter):Exceptions">
                 <table class="TypeDocumentation">
@@ -717,8 +716,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter):Remarks">
-            Checks for the specified filter, by reference, in the list of
-            filters that have been added.
+            Determines whether or not the filtered stream contains the specified filter.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.IO.FilteredStream.Contains(MimeKit.IO.Filters.IMimeFilter):Version Information">
@@ -807,7 +805,7 @@
             <h3 id="P:MimeKit.IO.FilteredStream.Length">Length Property</h3>
             <blockquote id="P:MimeKit.IO.FilteredStream.Length:member">
               <p class="Summary">
-            Gets the length in bytes of the stream.
+            Gets the length of the stream, in bytes.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Length</b>  { get; }</div>
@@ -850,7 +848,7 @@
             <h3 id="P:MimeKit.IO.FilteredStream.Position">Position Property</h3>
             <blockquote id="P:MimeKit.IO.FilteredStream.Position:member">
               <p class="Summary">
-            Gets or sets the position within the current stream.
+            Gets or sets the current position within the stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Position</b>  { get; set; }</div>
