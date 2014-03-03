@@ -295,7 +295,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Org.BouncyCastle.X509.X509Certificate&gt;</a>
                       </i>. 
-            Gets or sets the certificate chain.
+            Gets the certificate chain.
             </td>
                   </tr>
                   <tr valign="top">
@@ -425,9 +425,10 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.CmsSigner(Org.BouncyCastle.X509.X509Certificate,Org.BouncyCastle.Crypto.AsymmetricKeyParameter):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.CmsSigner(Org.BouncyCastle.X509.X509Certificate,Org.BouncyCastle.Crypto.AsymmetricKeyParameter):Remarks">The initial value of the <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> will be set to
+            <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.Sha1">DigestAlgorithm.Sha1</a> and both the <a href="../MimeKit.Cryptography/CmsSigner.html#P:MimeKit.Cryptography.CmsSigner.SignedAttributes">CmsSigner.SignedAttributes</a>
+            and <a href="../MimeKit.Cryptography/CmsSigner.html#P:MimeKit.Cryptography.CmsSigner.UnsignedAttributes">CmsSigner.UnsignedAttributes</a> properties will be initialized to empty
+            tables.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.CmsSigner(Org.BouncyCastle.X509.X509Certificate,Org.BouncyCastle.Crypto.AsymmetricKeyParameter):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -520,7 +521,7 @@
             <h3 id="P:MimeKit.Cryptography.CmsSigner.CertificateChain">CertificateChain Property</h3>
             <blockquote id="P:MimeKit.Cryptography.CmsSigner.CertificateChain:member">
               <p class="Summary">
-            Gets or sets the certificate chain.
+            Gets the certificate chain.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Org.BouncyCastle.X509.X509Certificate&gt;</a> <b>CertificateChain</b>  { get; }</div>
@@ -528,8 +529,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.CmsSigner.CertificateChain:Value">The certificate chain.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CmsSigner.CertificateChain:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the certificate chain.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.CmsSigner.CertificateChain:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

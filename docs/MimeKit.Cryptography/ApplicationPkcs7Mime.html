@@ -216,8 +216,9 @@
         <div class="Remarks" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            An application/pkcs7-mime is an S/MIME part and may contain encrypted,
+            signed or compressed data (or any combination of the above).
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.ApplicationPkcs7Mime:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -516,7 +517,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity)">Compress</a>
                       </b>(<a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Compress the specified entity.
+            Compresses the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -527,7 +528,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity)">Compress</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Compress the specified entity.
+            Compresses the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -551,7 +552,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress()">Decompress</a>
                       </b>()<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decompress using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            Decompresses the content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -563,7 +564,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext)">Decompress</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decompress using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            Decompresses the content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -575,7 +576,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt()">Decrypt</a>
                       </b>()<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt the content.
+            Decrypts the content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -587,7 +588,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext)">Decrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt using the specified <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            Decrypts the content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -598,7 +599,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">Encrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Encrypt the specified entity.
+            Encrypts the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -609,7 +610,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">Encrypt</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Encrypt the specified entity.
+            Encrypts the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -620,7 +621,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">Encrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Encrypt the specified entity.
+            Encrypts the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -631,7 +632,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">Encrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Encrypt the specified entity.
+            Encrypts the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -667,7 +668,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext)">Import</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>)<blockquote>
-            Import the certificates contained in the content.
+            Imports the certificates contained in the content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -678,7 +679,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Sign</a>
                       </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign the specified entity.
+            Cryptographically signs the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -689,7 +690,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Sign</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign the specified entity.
+            Cryptographically signs the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -700,7 +701,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Sign</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign the specified entity.
+            Cryptographically signs the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -711,7 +712,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Sign</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign the specified entity.
+            Cryptographically signs the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -722,7 +723,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">SignAndEncrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign and Encrypt the specified entity.
+            Cryptographically signs and encrypts the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -733,7 +734,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">SignAndEncrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign and Encrypt the specified entity.
+            Cryptographically signs and encrypts the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -744,7 +745,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">SignAndEncrypt</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign and Encrypt the specified entity.
+            Cryptographically signs and encrypts the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -755,7 +756,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">SignAndEncrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign and Encrypt the specified entity.
+            Cryptographically signs and encrypts the specified entity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -767,7 +768,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@)">Verify</a>
                       </b>(<i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            Verifies the signed-data and returns the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -779,7 +780,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@)">Verify</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            Verifies the signed-data and returns the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -1037,7 +1038,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity)">Compress Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):member">
               <p class="Summary">
-            Compress the specified entity.
+            Compresses the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Compress</b> (<a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1051,9 +1052,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Returns">The compressed entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1081,9 +1080,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Remarks">
-            It should be noted that this feature is not supported by most mail clients,
-            even among those that support S/MIME.
-            </div>
+                <p>Compresses the specified entity using the default <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.</p>
+                <p>It should be noted that this feature is not supported by most mail clients,
+            even among those that support S/MIME.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1092,7 +1092,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity)">Compress Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Compress the specified entity.
+            Compresses the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Compress</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1110,9 +1110,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Returns">The compressed entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1144,9 +1142,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Remarks">
-            It should be noted that this feature is not supported by most mail clients,
-            even among those that support S/MIME.
-            </div>
+                <p>Compresses the specified entity using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.</p>
+                <p>It should be noted that this feature is not supported by most mail clients,
+            even among those that support S/MIME.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Compress(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1155,7 +1154,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress()">Decompress Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress():member">
               <p class="Summary">
-            Decompress using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            Decompresses the content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decompress</b> ()</div>
@@ -1188,8 +1187,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Decompresses the content using the default <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1198,7 +1197,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext)">Decompress Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):member">
               <p class="Summary">
-            Decompress using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            Decompresses the content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decompress</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx)</div>
@@ -1248,8 +1247,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Decompresses the content using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decompress(MimeKit.Cryptography.SecureMimeContext):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1258,7 +1257,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt()">Decrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt():member">
               <p class="Summary">
-            Decrypt the content.
+            Decrypts the content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> ()</div>
@@ -1291,8 +1290,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Decrypts the content using the default <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1301,7 +1300,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext)">Decrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):member">
               <p class="Summary">
-            Decrypt using the specified <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            Decrypts the content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx)</div>
@@ -1351,8 +1350,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Decrypts the content using the specified <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Decrypt(MimeKit.Cryptography.SecureMimeContext):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1361,7 +1360,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">Encrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Encrypt the specified entity.
+            Encrypts the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1379,9 +1378,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">The encrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1413,8 +1410,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Encrypts the entity to the specified recipients using the default <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1423,7 +1420,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">Encrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):member">
               <p class="Summary">
-            Encrypt the specified entity.
+            Encrypts the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1441,9 +1438,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">The encrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1491,8 +1486,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Encrypts the entity to the specified recipients using the default <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1501,7 +1496,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">Encrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Encrypt the specified entity.
+            Encrypts the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1523,9 +1518,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">The encrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1560,8 +1553,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Encrypts the entity to the specified recipients using the supplied <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1570,7 +1563,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">Encrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):member">
               <p class="Summary">
-            Encrypt the specified entity.
+            Encrypts the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1592,9 +1585,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">The encrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1645,8 +1636,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Encrypts the entity to the specified recipients using the supplied <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Encrypt(MimeKit.Cryptography.SecureMimeContext,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1655,7 +1646,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext)">Import Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext):member">
               <p class="Summary">
-            Import the certificates contained in the content.
+            Imports the certificates contained in the content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Import</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx)</div>
@@ -1695,8 +1686,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Imports the certificates contained in the content.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Import(MimeKit.Cryptography.SecureMimeContext):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1713,8 +1704,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType:Value">The value of the "smime-type" parameter.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the value of the "smime-type" parameter.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.ApplicationPkcs7Mime.SecureMimeType:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1723,7 +1714,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Sign the specified entity.
+            Cryptographically signs the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1741,9 +1732,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">The signed entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1775,11 +1764,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Remarks">
-            For better interoperability with other mail clients, you should use
+                <p>Signs the entity using the supplied signer.</p>
+                <p>For better interoperability with other mail clients, you should use
             <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">MultipartSigned.Create(SecureMimeContext, CmsSigner, MimeKit.MimeEntity)</a>
             instead as the multipart/signed format is supported among a much larger
-            subset of mail client software.
-            </div>
+            subset of mail client software.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1788,7 +1778,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Sign the specified entity.
+            Cryptographically signs the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1810,9 +1800,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">The signed entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1847,11 +1835,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Remarks">
-            For better interoperability with other mail clients, you should use
+                <p>Signs the entity using the supplied signer and <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.</p>
+                <p>For better interoperability with other mail clients, you should use
             <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">MultipartSigned.Create(SecureMimeContext, CmsSigner, MimeKit.MimeEntity)</a>
             instead as the multipart/signed format is supported among a much larger
-            subset of mail client software.
-            </div>
+            subset of mail client software.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1860,7 +1849,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Sign the specified entity.
+            Cryptographically signs the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Sign</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1882,9 +1871,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">The signed entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1924,11 +1911,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Remarks">
-            For better interoperability with other mail clients, you should use
-            <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">MultipartSigned.Create(CryptographyContext, MimeKit.MailboxAddress, DigestAlgorithm, MimeKit.MimeEntity)</a>
+                <p>Signs the entity using the supplied signer and digest algorithm.</p>
+                <p>For better interoperability with other mail clients, you should use
+            <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">MultipartSigned.Create(SecureMimeContext, CmsSigner, MimeKit.MimeEntity)</a>
             instead as the multipart/signed format is supported among a much larger
-            subset of mail client software.
-            </div>
+            subset of mail client software.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1937,7 +1925,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Sign the specified entity.
+            Cryptographically signs the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1963,9 +1951,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">The signed entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -2008,11 +1994,12 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Remarks">
-            For better interoperability with other mail clients, you should use
-            <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">MultipartSigned.Create(CryptographyContext, MimeKit.MailboxAddress, DigestAlgorithm, MimeKit.MimeEntity)</a>
+                <p>Signs the entity using the supplied signer, digest algorithm and <a href="../MimeKit.Cryptography/SecureMimeContext.html">MimeKit.Cryptography.SecureMimeContext</a>.</p>
+                <p>For better interoperability with other mail clients, you should use
+            <a href="../MimeKit.Cryptography/MultipartSigned.html#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">MultipartSigned.Create(SecureMimeContext, CmsSigner, MimeKit.MimeEntity)</a>
             instead as the multipart/signed format is supported among a much larger
-            subset of mail client software.
-            </div>
+            subset of mail client software.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Sign(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2021,7 +2008,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">SignAndEncrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Sign and Encrypt the specified entity.
+            Cryptographically signs and encrypts the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>SignAndEncrypt</b> (<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -2043,9 +2030,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">The signed and encrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -2080,8 +2065,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs entity using the supplied signer and then
+            encrypts the result to the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2090,7 +2076,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity)">SignAndEncrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Sign and Encrypt the specified entity.
+            Cryptographically signs and encrypts the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>SignAndEncrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -2116,9 +2102,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Returns">The signed and encrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -2156,8 +2140,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs entity using the supplied signer and then
+            encrypts the result to the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.Cryptography.CmsRecipientCollection,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2166,7 +2151,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">SignAndEncrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):member">
               <p class="Summary">
-            Sign and Encrypt the specified entity.
+            Cryptographically signs and encrypts the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>SignAndEncrypt</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -2192,9 +2177,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">The signed and encrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -2239,8 +2222,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs entity using the supplied signer and then
+            encrypts the result to the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2249,7 +2233,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity)">SignAndEncrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):member">
               <p class="Summary">
-            Sign and Encrypt the specified entity.
+            Cryptographically signs and encrypts the specified entity.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>SignAndEncrypt</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -2279,9 +2263,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Returns">The signed and encrypted entity.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -2329,8 +2311,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs entity using the supplied signer and then
+            encrypts the result to the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.SignAndEncrypt(MimeKit.Cryptography.SecureMimeContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2339,7 +2322,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@)">Verify Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):member">
               <p class="Summary">
-            Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            Verifies the signed-data and returns the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -2381,8 +2364,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Verifies the signed-data and returns the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.MimeEntity@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2391,7 +2374,7 @@
             <h3 id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@)">Verify Method</h3>
             <blockquote id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):member">
               <p class="Summary">
-            Verify the signed-data and return the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            Verifies the signed-data and returns the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -2445,8 +2428,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Verifies the signed-data and returns the unencapsulated <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.ApplicationPkcs7Mime.Verify(MimeKit.Cryptography.SecureMimeContext,MimeKit.MimeEntity@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

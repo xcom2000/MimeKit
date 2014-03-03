@@ -455,7 +455,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Decrypt(System.IO.Stream)">Decrypt</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt the specified encryptedData.
+            Decrypts the specified encryptedData.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -695,7 +695,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Sign the content using the specified signer.
+            Cryptographically signs the content.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -775,7 +775,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/CryptographyContext.html#M:MimeKit.Cryptography.CryptographyContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the specified content and signatureData.
+            Verifies the specified content using the detached signatureData.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</blockquote></td>
                   </tr>
                 </table>
