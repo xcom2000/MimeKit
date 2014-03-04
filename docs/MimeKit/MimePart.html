@@ -216,8 +216,8 @@
         <div class="Remarks" id="T:MimeKit.MimePart:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.MimePart:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            A leaf-node MIME part that contains content such as the message body text or an attachment.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.MimePart:Docs:Version Information">
             <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -450,7 +450,7 @@
                       <i>
                         <a href="../MimeKit/IContentObject.html">IContentObject</a>
                       </i>. 
-            Gets or sets the content of the mime part.
+            Gets or sets the MIME content.
             </td>
                   </tr>
                   <tr valign="top">
@@ -531,27 +531,6 @@
                       </i>. 
             Gets a value indicating whether this <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> is an attachment.
             </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <h2 class="Section">Protected Properties</h2>
-            <div class="SectionBox" id="Protected Properties">
-              <div class="SubsectionBox">
-                <table class="TypeMembers">
-                  <tr valign="top">
-                    <td>[read-only]<div></div></td>
-                    <td>
-                      <b>
-                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.IsInitializing">IsInitializing</a>
-                      </b>
-                    </td>
-                    <td>
-                      <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                      </i>. 
-            Gets a value indicating whether this instance is initializing.
-             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
                   </tr>
                 </table>
               </div>
@@ -763,7 +742,7 @@
               <div class="Signature">public  <b>MimePart</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart():Remarks">
-            Creates a new MIME entity with a Content-Type of application/octet-stream.
+            Creates a new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> with a Content-Type of application/octet-stream.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart():Version Information">
@@ -806,7 +785,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(MimeKit.ContentType):Remarks">
-            Creates a new MIME entity with the specified Content-Type value.
+            Creates a new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> with the specified Content-Type value.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(MimeKit.ContentType):Version Information">
@@ -881,7 +860,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String):Remarks">
-            Creates a new MIME entity with the specified Content-Type value.
+            Creates a new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> with the specified Content-Type value.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String):Version Information">
@@ -932,7 +911,7 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String,System.String):Remarks">
-            Creates a new MIME entity with the specified media type and subtype.
+            Creates a new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> with the specified media type and subtype.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String,System.String):Version Information">
@@ -1003,8 +982,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String,System.String,System.Object[]):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> with the specified media type and subtype.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.MimePart(System.String,System.String,System.Object[]):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1103,16 +1082,16 @@
             <h3 id="P:MimeKit.MimePart.ContentObject">ContentObject Property</h3>
             <blockquote id="P:MimeKit.MimePart.ContentObject:member">
               <p class="Summary">
-            Gets or sets the content of the mime part.
+            Gets or sets the MIME content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/IContentObject.html">IContentObject</a> <b>ContentObject</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.MimePart.ContentObject:Value">The content of the mime part.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimePart.ContentObject:Value">The MIME content.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.MimePart.ContentObject:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets or sets the MIME content.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimePart.ContentObject:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
