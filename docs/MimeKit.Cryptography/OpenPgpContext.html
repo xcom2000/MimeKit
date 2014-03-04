@@ -444,7 +444,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream)">Decrypt</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt the encrypted data.
+            Decrypts the specified encryptedData.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -467,7 +467,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt an encrypted stream.
+            Decrypts the specified encryptedData and extracts the digital signers if the content was also signed.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -684,7 +684,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Sign the content using the specified signer.
+            Cryptographically signs the content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -707,7 +707,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPgpSignature.html">ApplicationPgpSignature</a></nobr><blockquote>
-            Sign the content using the specified signer.
+            Cryptographically signs the content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -719,7 +719,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Signs and encrypts the specified content for the specified recipients.
+            Cryptographically signs and encrypts the specified content for the specified recipients.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -731,7 +731,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">SignAndEncrypt</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Signs and encrypts the specified content for the specified recipients.
+            Cryptographically signs and encrypts the specified content for the specified recipients.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -742,7 +742,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String)">Supports</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
-            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            Checks whether or not the specified protocol is supported.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -764,7 +764,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the specified content and signatureData.
+            Verifies the specified content using the detached signatureData.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -842,7 +842,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetPublicKey(MimeKit.MailboxAddress)">GetPublicKey</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey</a></nobr><blockquote>
-            Gets the public key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the public key associated with the mailbox address.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -854,7 +854,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">GetPublicKeys</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a></nobr><blockquote>
-            Gets the public keys for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>es.
+            Gets the public keys for the specified mailbox addresses.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -866,7 +866,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress)">GetSigningKey</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a></nobr><blockquote>
-            Gets the signing key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the signing key associated with the mailbox address.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -978,8 +978,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.OpenPgpContext(System.String,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.Cryptography/OpenPgpContext.html">MimeKit.Cryptography.OpenPgpContext</a> using the specified public and private keyring paths.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.OpenPgpContext(System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -988,7 +988,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream)">Decrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream):member">
               <p class="Summary">
-            Decrypt the encrypted data.
+            Decrypts the specified encryptedData.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData)</div>
@@ -1054,8 +1054,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Decrypts the specified encryptedData.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1064,7 +1064,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):member">
               <p class="Summary">
-            Decrypt an encrypted stream.
+            Decrypts the specified encryptedData and extracts the digital signers if the content was also signed.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> signatures)</div>
@@ -1126,8 +1126,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Decrypts the specified encryptedData and extracts the digital signers if the content was also signed.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1205,8 +1205,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Encrypts the specified content for the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1268,8 +1268,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Encrypts the specified content for the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1330,8 +1330,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Exports the specified public keys.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1382,8 +1382,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Exports the public keys for the specified mailboxes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1426,8 +1426,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey}):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Exports the specified public keys.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey}):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1479,8 +1479,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(Org.BouncyCastle.Bcpg.HashAlgorithmTag):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the equivalent <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> for the specified
+            <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.HashAlgorithmTag</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(Org.BouncyCastle.Bcpg.HashAlgorithmTag):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1611,6 +1612,30 @@
                     </td>
                     <td>pgp-haval-5-160</td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.Sha256">DigestAlgorithm.Sha256</a>
+                    </td>
+                    <td>pgp-sha256</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.Sha384">DigestAlgorithm.Sha384</a>
+                    </td>
+                    <td>pgp-sha384</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.Sha512">DigestAlgorithm.Sha512</a>
+                    </td>
+                    <td>pgp-sha512</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/DigestAlgorithm.html#F:MimeKit.Cryptography.DigestAlgorithm.Sha224">DigestAlgorithm.Sha224</a>
+                    </td>
+                    <td>pgp-sha224</td>
+                  </tr>
                 </table>
               </div>
               <h2 class="Section">Requirements</h2>
@@ -1709,8 +1734,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPasswordForKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the password for key.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPasswordForKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1769,8 +1794,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the private key from the specified secret key.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1829,8 +1854,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(System.Int64):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the private key.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(System.Int64):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1839,7 +1864,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKey(MimeKit.MailboxAddress)">GetPublicKey Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKey(MimeKit.MailboxAddress):member">
               <p class="Summary">
-            Gets the public key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the public key associated with the mailbox address.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey</a> <b>GetPublicKey</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> mailbox)</div>
@@ -1881,8 +1906,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKey(MimeKit.MailboxAddress):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the public key associated with the mailbox address.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKey(MimeKit.MailboxAddress):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1934,8 +1959,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeyAlgorithm(Org.BouncyCastle.Bcpg.PublicKeyAlgorithmTag):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the equivalent <a href="../MimeKit.Cryptography/PublicKeyAlgorithm.html">MimeKit.Cryptography.PublicKeyAlgorithm</a> for the specified
+            <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.PublicKeyAlgorithmTag</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeyAlgorithm(Org.BouncyCastle.Bcpg.PublicKeyAlgorithmTag):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1944,7 +1970,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">GetPublicKeys Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):member">
               <p class="Summary">
-            Gets the public keys for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>es.
+            Gets the public keys for the specified mailbox addresses.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a> <b>GetPublicKeys</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> mailboxes)</div>
@@ -1986,8 +2012,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the public keys for the specified mailbox addresses.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1996,7 +2022,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress)">GetSigningKey Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress):member">
               <p class="Summary">
-            Gets the signing key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the signing key associated with the mailbox address.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected virtual <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a> <b>GetSigningKey</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> mailbox)</div>
@@ -2046,8 +2072,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the signing key associated with the mailbox address.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2098,8 +2124,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Import(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Imports public pgp keys from the specified stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Import(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2150,8 +2176,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.ImportSecretKeys(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Imports secret pgp keys from the specified stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.ImportSecretKeys(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2168,8 +2194,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.KeyExchangeProtocol:Value">The key exchange protocol.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.KeyExchangeProtocol:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the key exchange protocol.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.KeyExchangeProtocol:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2186,8 +2212,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingBundle:Value">The public keyring bundle.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingBundle:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the public keyring bundle.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingBundle:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2204,8 +2230,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath:Value">The public key ring path.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the public keyring path.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2290,8 +2316,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingBundle:Value">The secret keyring bundle.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingBundle:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the secret keyring bundle.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingBundle:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2308,8 +2334,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath:Value">The secret key ring path.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the secret keyring path.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2318,7 +2344,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):member">
               <p class="Summary">
-            Sign the content using the specified signer.
+            Cryptographically signs the content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>Sign</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -2413,8 +2439,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the content using the specified signer and digest algorithm.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2423,7 +2449,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):member">
               <p class="Summary">
-            Sign the content using the specified signer.
+            Cryptographically signs the content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/ApplicationPgpSignature.html">ApplicationPgpSignature</a> <b>Sign</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -2510,8 +2536,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the content using the specified signer and digest algorithm.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2520,7 +2546,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):member">
               <p class="Summary">
-            Signs and encrypts the specified content for the specified recipients.
+            Cryptographically signs and encrypts the specified content for the specified recipients.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>SignAndEncrypt</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> recipients, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -2642,8 +2668,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs and encrypts the specified content for the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2652,7 +2678,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">SignAndEncrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream):member">
               <p class="Summary">
-            Signs and encrypts the specified content for the specified recipients.
+            Cryptographically signs and encrypts the specified content for the specified recipients.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>SignAndEncrypt</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a> recipients, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -2735,8 +2761,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs and encrypts the specified content for the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2763,7 +2789,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String)">Supports Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String):member">
               <p class="Summary">
-            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            Checks whether or not the specified protocol is supported.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Supports</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> protocol)</div>
@@ -2798,8 +2824,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Used in order to make sure that the protocol parameter value specified in either a multipart/signed
+            or multipart/encrypted part is supported by the supplied cryptography context.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2808,7 +2835,7 @@
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream)">Verify Method</h3>
             <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream):member">
               <p class="Summary">
-            Verify the specified content and signatureData.
+            Verifies the specified content using the detached signatureData.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signatureData)</div>
@@ -2850,8 +2877,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Verifies the specified content using the detached signatureData.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

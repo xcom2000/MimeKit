@@ -427,7 +427,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream)">Decrypt</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt the encrypted data.
+            Decrypts the specified encryptedData.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -450,7 +450,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt an encrypted stream.
+            Decrypts the specified encryptedData and extracts the digital signers if the content was also signed.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -631,7 +631,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Sign the content using the specified signer.
+            Cryptographically signs the content.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -654,7 +654,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPgpSignature.html">ApplicationPgpSignature</a></nobr><blockquote>
-            Sign the content using the specified signer.
+            Cryptographically signs the content.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -666,7 +666,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Signs and encrypts the specified content for the specified recipients.
+            Cryptographically signs and encrypts the specified content for the specified recipients.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -678,7 +678,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">SignAndEncrypt</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Signs and encrypts the specified content for the specified recipients.
+            Cryptographically signs and encrypts the specified content for the specified recipients.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -689,7 +689,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String)">Supports</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
-            Checks whether or not the specified protocol is supported by the <a href="../MimeKit.Cryptography/CryptographyContext.html">MimeKit.Cryptography.CryptographyContext</a>.
+            Checks whether or not the specified protocol is supported.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -711,7 +711,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the specified content and signatureData.
+            Verifies the specified content using the detached signatureData.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -789,7 +789,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetPublicKey(MimeKit.MailboxAddress)">GetPublicKey</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey</a></nobr><blockquote>
-            Gets the public key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the public key associated with the mailbox address.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -801,7 +801,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">GetPublicKeys</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a></nobr><blockquote>
-            Gets the public keys for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>es.
+            Gets the public keys for the specified mailbox addresses.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -813,7 +813,7 @@
                       <b>
                         <a href="../MimeKit.Cryptography/OpenPgpContext.html#M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress)">GetSigningKey</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a></nobr><blockquote>
-            Gets the signing key associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the signing key associated with the mailbox address.
              (<i>Inherited from <a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">

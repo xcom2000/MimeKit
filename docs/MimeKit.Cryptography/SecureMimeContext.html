@@ -388,7 +388,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Compress(System.IO.Stream)">Compress</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Compress the specified stream.
+            Compresses the specified stream.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -411,7 +411,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Decrypt(System.IO.Stream)">Decrypt</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt the specified encryptedData.
+            Decrypts the specified encryptedData.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -470,7 +470,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.Cryptography.CmsSigner,System.IO.Stream)">EncapsulatedSign</a>
                       </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign and encapsulate the content using the specified signer.
+            Cryptographically signs and encapsulates the content using the specified signer.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -482,7 +482,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">EncapsulatedSign</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign and encapsulate the content using the specified signer.
+            Cryptographically signs and encapsulates the content using the specified signer and digest algorithm.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -494,7 +494,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,System.IO.Stream)">Encrypt</a>
                       </b>(<a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Encrypt the specified content for the specified recipients.
+            Encrypts the specified content for the specified recipients.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -593,7 +593,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate)">Import</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a>)<blockquote>
-            Import the specified certificate.
+            Imports the specified certificate.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -604,7 +604,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl)">Import</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a>)<blockquote>
-            Import the specified certificate revocation list.
+            Imports the specified certificate revocation list.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -650,7 +650,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm)">IsEnabled</a>
                       </b>(<a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
-            Determines whether the specified encryption algorithm is enabled.
+            Checks whether the specified encryption algorithm is enabled.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -662,7 +662,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.Cryptography.CmsSigner,System.IO.Stream)">Sign</a>
                       </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Signature.html">ApplicationPkcs7Signature</a></nobr><blockquote>
-            Sign the content using the specified signer.
+            Cryptographically signs the content using the specified signer.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -673,7 +673,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Sign the content using the specified signer.
+            Cryptographically signs the content using the specified signer and digest algorithm.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -718,7 +718,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@)">Verify</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the digital signatures of the specified signedData and extract the original content.
+            Verifies the digital signatures of the specified signedData and extract the original content.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -729,7 +729,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.IO.Stream)">Verify</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the digital signatures of the specified content using the detached signatureData.
+            Verifies the specified content using the detached signatureData.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -805,7 +805,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipients(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">GetCmsRecipients</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a>)<nobr> : <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a></nobr><blockquote>
-            Gets the <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a>s for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>es.
+            Gets a collection of CmsRecipients for the specified mailboxes.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -827,7 +827,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.SecureMimeContext.GetDigestOid(MimeKit.Cryptography.DigestAlgorithm)">GetDigestOid</a>
                       </b>(<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Gets the digest oid.
+            Gets the OID for the digest algorithm.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -942,7 +942,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Compress(System.IO.Stream)">Compress Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Compress(System.IO.Stream):member">
               <p class="Summary">
-            Compress the specified stream.
+            Compresses the specified stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Compress</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
@@ -985,8 +985,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Compress(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Compresses the specified stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Compress(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1037,8 +1037,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Decompress(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Decompress the specified stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Decompress(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1047,7 +1047,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Decrypt(System.IO.Stream)">Decrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Decrypt(System.IO.Stream):member">
               <p class="Summary">
-            Decrypt the specified encryptedData.
+            Decrypts the specified encryptedData.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData)</div>
@@ -1089,8 +1089,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Decrypt(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Decrypts the specified encryptedData.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Decrypt(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1114,8 +1114,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Disable(MimeKit.Cryptography.EncryptionAlgorithm):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Disables the encryption algorithm.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Disable(MimeKit.Cryptography.EncryptionAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1139,8 +1139,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Enable(MimeKit.Cryptography.EncryptionAlgorithm):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Enables the encryption algorithm.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Enable(MimeKit.Cryptography.EncryptionAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1157,8 +1157,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EnabledEncryptionAlgorithms:Value">The enabled encryption algorithms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EnabledEncryptionAlgorithms:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the enabled encryption algorithms in ranked order.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EnabledEncryptionAlgorithms:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1167,7 +1167,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.Cryptography.CmsSigner,System.IO.Stream)">EncapsulatedSign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.Cryptography.CmsSigner,System.IO.Stream):member">
               <p class="Summary">
-            Sign and encapsulate the content using the specified signer.
+            Cryptographically signs and encapsulates the content using the specified signer.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>EncapsulatedSign</b> (<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -1218,8 +1218,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.Cryptography.CmsSigner,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs and encapsulates the content using the specified signer.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.Cryptography.CmsSigner,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1228,7 +1228,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">EncapsulatedSign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):member">
               <p class="Summary">
-            Sign and encapsulate the content using the specified signer.
+            Cryptographically signs and encapsulates the content using the specified signer and digest algorithm.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public virtual <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>EncapsulatedSign</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -1307,8 +1307,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs and encapsulates the content using the specified signer and digest algorithm.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1317,7 +1317,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,System.IO.Stream)">Encrypt Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,System.IO.Stream):member">
               <p class="Summary">
-            Encrypt the specified content for the specified recipients.
+            Encrypts the specified content for the specified recipients.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>Encrypt</b> (<a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> recipients, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -1368,8 +1368,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Encrypts the specified content for the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Encrypt(MimeKit.Cryptography.CmsRecipientCollection,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1445,8 +1445,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Encrypts the specified content for the specified recipients.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1463,8 +1463,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank:Value">The preferred encryption algorithm ranking.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the preferred rank order for the encryption algorithms; from the strongest to the weakest.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.EncryptionAlgorithmRank:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1550,8 +1550,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Exports the certificates for the specified mailboxes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1577,8 +1577,8 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Returns">The certificate on success; otherwise <tt>null</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the first certificate that matches the specified selector.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1655,7 +1655,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipients(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">GetCmsRecipients Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipients(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):member">
               <p class="Summary">
-            Gets the <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a>s for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>es.
+            Gets a collection of CmsRecipients for the specified mailboxes.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">CmsRecipientCollection</a> <b>GetCmsRecipients</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MailboxAddress&gt;</a> mailboxes)</div>
@@ -1669,7 +1669,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipients(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Returns">The <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a>s.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipients(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Returns">A <a href="../MimeKit.Cryptography/CmsRecipientCollection.html">MimeKit.Cryptography.CmsRecipientCollection</a>.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipients(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Exceptions">
                 <table class="TypeDocumentation">
@@ -1697,8 +1697,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipients(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets a collection of CmsRecipients for the specified mailboxes.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsRecipients(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1745,7 +1745,11 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                <p>Constructs a <a href="../MimeKit.Cryptography/CmsSigner.html">MimeKit.Cryptography.CmsSigner</a> with the appropriate signing certificate
+            for the specified mailbox.</p>
+                <p>If the mailbox is a <a href="../MimeKit.Cryptography/SecureMailboxAddress.html">MimeKit.Cryptography.SecureMailboxAddress</a>, the
+            <a href="../MimeKit.Cryptography/SecureMailboxAddress.html#P:MimeKit.Cryptography.SecureMailboxAddress.Fingerprint">SecureMailboxAddress.Fingerprint</a> property will be used instead of
+            the mailbox address for database lookups.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Version Information">
@@ -1887,7 +1891,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.GetDigestOid(MimeKit.Cryptography.DigestAlgorithm)">GetDigestOid Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.GetDigestOid(MimeKit.Cryptography.DigestAlgorithm):member">
               <p class="Summary">
-            Gets the digest oid.
+            Gets the OID for the digest algorithm.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetDigestOid</b> (<a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo)</div>
@@ -1929,8 +1933,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetDigestOid(MimeKit.Cryptography.DigestAlgorithm):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the OID for the digest algorithm.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetDigestOid(MimeKit.Cryptography.DigestAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1976,8 +1980,8 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Returns">The private key on success; otherwise <tt>null</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the private key for the first certificate that matches the specified selector.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2005,7 +2009,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate)">Import Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):member">
               <p class="Summary">
-            Import the specified certificate.
+            Imports the specified certificate.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Import</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> certificate)</div>
@@ -2037,8 +2041,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Imports the specified certificate.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2047,7 +2051,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl)">Import Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):member">
               <p class="Summary">
-            Import the specified certificate revocation list.
+            Imports the specified certificate revocation list.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Import</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a> crl)</div>
@@ -2079,8 +2083,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Imports the specified certificate revocation list.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2130,8 +2134,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Import(System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Imports certificates (as from a certs-only application/pkcs-mime part)
+            from the specified stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Import(System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2188,8 +2193,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Import(System.IO.Stream,System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Imports certificates and keys from a pkcs12-encoded stream.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Import(System.IO.Stream,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2198,7 +2203,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm)">IsEnabled Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm):member">
               <p class="Summary">
-            Determines whether the specified encryption algorithm is enabled.
+            Checks whether the specified encryption algorithm is enabled.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsEnabled</b> (<a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a> algorithm)</div>
@@ -2216,8 +2221,8 @@
                 <tt>true</tt> if the specified encryption algorithm is enabled; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Determines whether the specified encryption algorithm is enabled.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.IsEnabled(MimeKit.Cryptography.EncryptionAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2234,8 +2239,8 @@
               <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.KeyExchangeProtocol:Value">The key exchange protocol.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.KeyExchangeProtocol:Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Gets the key exchange protocol.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.SecureMimeContext.KeyExchangeProtocol:Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2244,7 +2249,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.Cryptography.CmsSigner,System.IO.Stream)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.Cryptography.CmsSigner,System.IO.Stream):member">
               <p class="Summary">
-            Sign the content using the specified signer.
+            Cryptographically signs the content using the specified signer.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/ApplicationPkcs7Signature.html">ApplicationPkcs7Signature</a> <b>Sign</b> (<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -2295,8 +2300,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.Cryptography.CmsSigner,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the content using the specified signer.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.Cryptography.CmsSigner,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2305,7 +2310,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):member">
               <p class="Summary">
-            Sign the content using the specified signer.
+            Cryptographically signs the content using the specified signer and digest algorithm.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>Sign</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
@@ -2384,8 +2389,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the content using the specified signer and digest algorithm.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2447,8 +2452,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Supports(System.String):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Used in order to make sure that the protocol parameter value specified in either a multipart/signed
+            or multipart/encrypted part is supported by the supplied cryptography context.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Supports(System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2497,8 +2503,9 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.TryGetEncryptionAlgorithm(Org.BouncyCastle.Asn1.X509.AlgorithmIdentifier,MimeKit.Cryptography.EncryptionAlgorithm@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Attempts to map a <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Asn1.X509.AlgorithmIdentifier</a>
+            to a <a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">MimeKit.Cryptography.EncryptionAlgorithm</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.TryGetEncryptionAlgorithm(Org.BouncyCastle.Asn1.X509.AlgorithmIdentifier,MimeKit.Cryptography.EncryptionAlgorithm@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2530,8 +2537,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Updates the known S/MIME capabilities of the client used by the recipient that owns the specified certificate.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2540,7 +2547,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@)">Verify Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):member">
               <p class="Summary">
-            Verify the digital signatures of the specified signedData and extract the original content.
+            Verifies the digital signatures of the specified signedData and extract the original content.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signedData, <i>out</i> <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -2586,8 +2593,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Verifies the digital signatures of the specified signedData and extract the original content.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,MimeKit.MimeEntity@):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -2596,7 +2603,7 @@
             <h3 id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.IO.Stream)">Verify Method</h3>
             <blockquote id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.IO.Stream):member">
               <p class="Summary">
-            Verify the digital signatures of the specified content using the detached signatureData.
+            Verifies the specified content using the detached signatureData.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> signatureData)</div>
@@ -2646,8 +2653,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.IO.Stream):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Verifies the specified content using the detached signatureData.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.SecureMimeContext.Verify(System.IO.Stream,System.IO.Stream):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>

@@ -207,7 +207,7 @@
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
         <h1 class="PageTitle" id="T:MimeKit.Cryptography.MultipartSigned">MultipartSigned  Class</h1>
         <p class="Summary" id="T:MimeKit.Cryptography.MultipartSigned:Summary">
-            A signed multipart, as sued by both S/MIME and PGP/MIME protocols.
+            A signed multipart, as used by both S/MIME and PGP/MIME protocols.
             </p>
         <div>
           <h2>Syntax</h2>
@@ -216,8 +216,10 @@
         <div class="Remarks" id="T:MimeKit.Cryptography.MultipartSigned:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.MultipartSigned:Docs:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+            The first child of a multipart/signed is the content while the second child
+            is the detached signature data. Any other children are not defined and could
+            be anything.
+            </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.MultipartSigned:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -546,7 +548,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Create</a>
                       </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a></nobr><blockquote>
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -557,7 +559,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Create</a>
                       </b>(<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a></nobr><blockquote>
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -568,7 +570,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Create(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Create</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a></nobr><blockquote>
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -579,7 +581,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Create</a>
                       </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a></nobr><blockquote>
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -590,7 +592,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.OpenPgpContext,Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Create</a>
                       </b>(<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>)<nobr> : <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a></nobr><blockquote>
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -662,7 +664,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Verify()">Verify</a>
                       </b>()<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the multipart/signed content.
+            Verifies the multipart/signed part.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -674,7 +676,7 @@
                       <b>
                         <a href="#M:MimeKit.Cryptography.MultipartSigned.Verify(MimeKit.Cryptography.CryptographyContext)">Verify</a>
                       </b>(<a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>)<nobr> : <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a></nobr><blockquote>
-            Verify the multipart/signed content.
+            Verifies the multipart/signed part.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -841,8 +843,8 @@
               <div class="Signature">public  <b>MultipartSigned</b> ()</div>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.MultipartSigned():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.MultipartSigned():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -874,7 +876,7 @@
             <h3 id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Create Method</h3>
             <blockquote id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a> <b>Create</b> (<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -892,9 +894,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">A new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -934,8 +934,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the entity using the supplied signer in order
+            to generate a detached signature and then adds the entity along with
+            the detached signature data to a new multipart/signed part.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -944,7 +946,7 @@
             <h3 id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity)">Create Method</h3>
             <blockquote id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a> <b>Create</b> (<a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a> ctx, <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> signer, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -966,9 +968,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Returns">A new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1003,8 +1003,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the entity using the supplied signer in order
+            to generate a detached signature and then adds the entity along with
+            the detached signature data to a new multipart/signed part.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.SecureMimeContext,MimeKit.Cryptography.CmsSigner,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1013,7 +1015,7 @@
             <h3 id="M:MimeKit.Cryptography.MultipartSigned.Create(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Create Method</h3>
             <blockquote id="M:MimeKit.Cryptography.MultipartSigned.Create(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a> <b>Create</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1035,9 +1037,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">A new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1095,8 +1095,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the entity using the supplied signer and digest algorithm in
+            order to generate a detached signature and then adds the entity along with the
+            detached signature data to a new multipart/signed part.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1105,7 +1107,7 @@
             <h3 id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Create Method</h3>
             <blockquote id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a> <b>Create</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a> ctx, <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1206,8 +1208,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the entity using the supplied signer and digest algorithm in
+            order to generate a detached signature and then adds the entity along with the
+            detached signature data to a new multipart/signed part.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.CryptographyContext,MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1216,7 +1220,7 @@
             <h3 id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.OpenPgpContext,Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity)">Create Method</h3>
             <blockquote id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.OpenPgpContext,Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):member">
               <p class="Summary">
-            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance with the entity as the content.
+            Creates a new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public static <a href="../MimeKit.Cryptography/MultipartSigned.html">MultipartSigned</a> <b>Create</b> (<a href="../MimeKit.Cryptography/OpenPgpContext.html">OpenPgpContext</a> ctx, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> entity)</div>
@@ -1242,9 +1246,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.OpenPgpContext,Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.OpenPgpContext,Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Returns">A new <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a> instance.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.OpenPgpContext,Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Exceptions">
                 <table class="TypeDocumentation">
@@ -1303,8 +1305,10 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.OpenPgpContext,Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Cryptographically signs the entity using the supplied signer and digest algorithm in
+            order to generate a detached signature and then adds the entity along with the
+            detached signature data to a new multipart/signed part.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Create(MimeKit.Cryptography.OpenPgpContext,Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,MimeKit.MimeEntity):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1313,7 +1317,7 @@
             <h3 id="M:MimeKit.Cryptography.MultipartSigned.Verify()">Verify Method</h3>
             <blockquote id="M:MimeKit.Cryptography.MultipartSigned.Verify():member">
               <p class="Summary">
-            Verify the multipart/signed content.
+            Verifies the multipart/signed part.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> ()</div>
@@ -1356,8 +1360,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Verify():Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Verifies the multipart/signed part using the default cryptography context.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Verify():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
@@ -1366,7 +1370,7 @@
             <h3 id="M:MimeKit.Cryptography.MultipartSigned.Verify(MimeKit.Cryptography.CryptographyContext)">Verify Method</h3>
             <blockquote id="M:MimeKit.Cryptography.MultipartSigned.Verify(MimeKit.Cryptography.CryptographyContext):member">
               <p class="Summary">
-            Verify the multipart/signed content.
+            Verifies the multipart/signed part.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> <b>Verify</b> (<a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a> ctx)</div>
@@ -1424,8 +1428,8 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Verify(MimeKit.Cryptography.CryptographyContext):Remarks">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </div>
+            Verifies the multipart/signed part using the supplied cryptography context.
+            </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.MultipartSigned.Verify(MimeKit.Cryptography.CryptographyContext):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.27.0.0</div>
