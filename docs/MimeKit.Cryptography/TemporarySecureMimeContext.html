@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.WindowsSecureMimeContext</title>
+    <title>MimeKit.Cryptography.TemporarySecureMimeContext</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -205,21 +205,23 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.WindowsSecureMimeContext">WindowsSecureMimeContext  Class</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.WindowsSecureMimeContext:Summary">
-            An S/MIME cryptography context that uses Windows' <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.X509Certificates.X509Store">System.Security.Cryptography.X509Certificates.X509Store</a>.
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.TemporarySecureMimeContext">TemporarySecureMimeContext  Class</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.TemporarySecureMimeContext:Summary">
+            An S/MIME context that does not persist certificates, private keys or CRLs.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.WindowsSecureMimeContext:Signature">public class  <b>WindowsSecureMimeContext</b> : <a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a></div>
+          <div class="Signature" id="T:MimeKit.Cryptography.TemporarySecureMimeContext:Signature">public class  <b>TemporarySecureMimeContext</b> : <a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.WindowsSecureMimeContext:Docs">
+        <div class="Remarks" id="T:MimeKit.Cryptography.TemporarySecureMimeContext:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.WindowsSecureMimeContext:Docs:Remarks">
-            An S/MIME cryptography context that uses Windows' <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.X509Certificates.X509Store">System.Security.Cryptography.X509Certificates.X509Store</a>.
+          <div class="SectionBox" id="T:MimeKit.Cryptography.TemporarySecureMimeContext:Docs:Remarks">
+            A <a href="../MimeKit.Cryptography/TemporarySecureMimeContext.html">MimeKit.Cryptography.TemporarySecureMimeContext</a> is a special S/MIME context that
+            does not use a persistent store for certificates, private keys, or CRLs.
+            Instead, certificates, private keys, and CRLs are maintained in memory only.
             </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.WindowsSecureMimeContext:Docs:Version Information">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.TemporarySecureMimeContext:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
@@ -239,26 +241,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.WindowsSecureMimeContext()">WindowsSecureMimeContext</a>
+                          <a href="#C:MimeKit.Cryptography.TemporarySecureMimeContext()">TemporarySecureMimeContext</a>
                         </b>()</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/WindowsSecureMimeContext.html">MimeKit.Cryptography.WindowsSecureMimeContext</a> class.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td>
-                      <div>
-                        <b>
-                          <a href="#C:MimeKit.Cryptography.WindowsSecureMimeContext(System.Security.Cryptography.X509Certificates.StoreLocation)">WindowsSecureMimeContext</a>
-                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.X509Certificates.StoreLocation">System.Security.Cryptography.X509Certificates.StoreLocation</a>)</div>
-                    </td>
-                    <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/WindowsSecureMimeContext.html">MimeKit.Cryptography.WindowsSecureMimeContext</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/TemporarySecureMimeContext.html">MimeKit.Cryptography.TemporarySecureMimeContext</a> class.
             </td>
                   </tr>
                 </table>
@@ -352,20 +339,6 @@
             Gets the signature protocol.
              (<i>Inherited from <a href="../MimeKit.Cryptography/CryptographyContext.html">CryptographyContext</a>.</i>)</td>
                   </tr>
-                  <tr valign="top">
-                    <td>[read-only]<div></div></td>
-                    <td>
-                      <b>
-                        <a href="#P:MimeKit.Cryptography.WindowsSecureMimeContext.StoreLocation">StoreLocation</a>
-                      </b>
-                    </td>
-                    <td>
-                      <i>
-                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.X509Certificates.StoreLocation">System.Security.Cryptography.X509Certificates.StoreLocation</a>
-                      </i>. 
-            Gets the X.509 store location.
-            </td>
-                  </tr>
                 </table>
               </div>
             </div>
@@ -436,17 +409,6 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.Decrypt(System.IO.Stream)">Decrypt</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
-            Decrypt the encrypted data.
-            </blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>override </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
                         <a href="../MimeKit.Cryptography/SecureMimeContext.html#M:MimeKit.Cryptography.SecureMimeContext.Decrypt(System.IO.Stream)">Decrypt</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a></nobr><blockquote>
             Decrypts the specified encryptedData.
@@ -510,17 +472,6 @@
                       </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
             Cryptographically signs and encapsulates the content using the specified signer.
              (<i>Inherited from <a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>.</i>)</blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>override </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">EncapsulatedSign</a>
-                      </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a></nobr><blockquote>
-            Sign and encapsulate the content using the specified signer.
-            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -640,9 +591,9 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate)">Import</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate)">Import</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a>)<blockquote>
-            Import the specified certificate.
+            Imports the specified certificate.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -662,9 +613,9 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl)">Import</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl)">Import</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a>)<blockquote>
-            Import the specified certificate revocation list.
+            Imports the specified certificate revocation list.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -707,7 +658,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(System.IO.Stream,System.String)">Import</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(System.IO.Stream,System.String)">Import</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
             Imports certificates and keys from a pkcs12-encoded stream.
             </blockquote></td>
@@ -746,17 +697,6 @@
                       </b>(<a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit.Cryptography/ApplicationPkcs7Signature.html">ApplicationPkcs7Signature</a></nobr><blockquote>
             Cryptographically signs the content using the specified signer.
              (<i>Inherited from <a href="../MimeKit.Cryptography/SecureMimeContext.html">SecureMimeContext</a>.</i>)</blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>override </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign</a>
-                      </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
-            Sign the content using the specified signer.
-            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -862,9 +802,9 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a></nobr><blockquote>
-            Gets the X.509 certificate based on the selector.
+            Gets the X.509 certificate matching the specified selector.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -884,7 +824,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificateRevocationLists()">GetCertificateRevocationLists</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificateRevocationLists()">GetCertificateRevocationLists</a>
                       </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Store</a></nobr><blockquote>
             Gets the certificate revocation lists.
             </blockquote></td>
@@ -906,9 +846,9 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress)">GetCmsRecipient</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress)">GetCmsRecipient</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>)<nobr> : <a href="../MimeKit.Cryptography/CmsRecipient.html">CmsRecipient</a></nobr><blockquote>
-            Gets the X.509 certificate associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a> for the specified mailbox.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -940,9 +880,9 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm)">GetCmsSigner</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm)">GetCmsSigner</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a>)<nobr> : <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a></nobr><blockquote>
-            Gets the cms signer for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the <a href="../MimeKit.Cryptography/CmsSigner.html">MimeKit.Cryptography.CmsSigner</a> for the specified mailbox.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -962,7 +902,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.GetIntermediateCertificates()">GetIntermediateCertificates</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.GetIntermediateCertificates()">GetIntermediateCertificates</a>
                       </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Store</a></nobr><blockquote>
             Gets the intermediate certificates.
             </blockquote></td>
@@ -984,9 +924,9 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Crypto.AsymmetricKeyParameter</a></nobr><blockquote>
-            Gets the private key based on the provided selector.
+            Gets the private key for the certificate matching the specified selector.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -1006,7 +946,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.GetTrustedAnchors()">GetTrustedAnchors</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.GetTrustedAnchors()">GetTrustedAnchors</a>
                       </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Utilities.Collections.HashSet</a></nobr><blockquote>
             Gets the trusted anchors.
             </blockquote></td>
@@ -1028,7 +968,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.WindowsSecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime)">UpdateSecureMimeCapabilities</a>
+                        <a href="#M:MimeKit.Cryptography.TemporarySecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime)">UpdateSecureMimeCapabilities</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a>, <a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>)<blockquote>
             Updates the known S/MIME capabilities of the client used by the recipient that owns the specified certificate.
             </blockquote></td>
@@ -1049,200 +989,34 @@
             </div>
           </div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.WindowsSecureMimeContext:Members">
+        <div class="Members" id="T:MimeKit.Cryptography.TemporarySecureMimeContext:Members">
           <h2 class="Section" id="MemberDetails">Member Details</h2>
           <div class="SectionBox" id="_MemberDetails">
-            <h3 id="C:MimeKit.Cryptography.WindowsSecureMimeContext()">WindowsSecureMimeContext Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.WindowsSecureMimeContext():member">
+            <h3 id="C:MimeKit.Cryptography.TemporarySecureMimeContext()">TemporarySecureMimeContext Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.TemporarySecureMimeContext():member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/WindowsSecureMimeContext.html">MimeKit.Cryptography.WindowsSecureMimeContext</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/TemporarySecureMimeContext.html">MimeKit.Cryptography.TemporarySecureMimeContext</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>WindowsSecureMimeContext</b> ()</div>
+              <div class="Signature">public  <b>TemporarySecureMimeContext</b> ()</div>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.WindowsSecureMimeContext():Remarks">
-            Constructs an S/MIME context using the current user's X.509 store location.
+              <div class="SectionBox" id="C:MimeKit.Cryptography.TemporarySecureMimeContext():Remarks">
+            Creates a new <a href="../MimeKit.Cryptography/TemporarySecureMimeContext.html">MimeKit.Cryptography.TemporarySecureMimeContext</a>.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.WindowsSecureMimeContext():Version Information">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.TemporarySecureMimeContext():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="C:MimeKit.Cryptography.WindowsSecureMimeContext(System.Security.Cryptography.X509Certificates.StoreLocation)">WindowsSecureMimeContext Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.WindowsSecureMimeContext(System.Security.Cryptography.X509Certificates.StoreLocation):member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/WindowsSecureMimeContext.html">MimeKit.Cryptography.WindowsSecureMimeContext</a> class.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public  <b>WindowsSecureMimeContext</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.X509Certificates.StoreLocation">System.Security.Cryptography.X509Certificates.StoreLocation</a> location)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.WindowsSecureMimeContext(System.Security.Cryptography.X509Certificates.StoreLocation):Parameters">
-                <dl>
-                  <dt>
-                    <i>location</i>
-                  </dt>
-                  <dd>The X.509 store location.</dd>
-                </dl>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.WindowsSecureMimeContext(System.Security.Cryptography.X509Certificates.StoreLocation):Remarks">
-            Creates a new <a href="../MimeKit.Cryptography/WindowsSecureMimeContext.html">MimeKit.Cryptography.WindowsSecureMimeContext</a>.
-            </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.WindowsSecureMimeContext(System.Security.Cryptography.X509Certificates.StoreLocation):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Decrypt(System.IO.Stream)">Decrypt Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Decrypt(System.IO.Stream):member">
-              <p class="Summary">
-            Decrypt the encrypted data.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public override <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> <b>Decrypt</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Decrypt(System.IO.Stream):Parameters">
-                <dl>
-                  <dt>
-                    <i>encryptedData</i>
-                  </dt>
-                  <dd>The encrypted data.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Decrypt(System.IO.Stream):Returns">The decrypted <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.</blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Decrypt(System.IO.Stream):Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                    </td>
-                    <td>
-                      <i>encryptedData</i> is <tt>null</tt>.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.CryptographicException">System.Security.Cryptography.CryptographicException</a>
-                    </td>
-                    <td>
-            An error occurred in the cryptographic message syntax subsystem.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Decrypt(System.IO.Stream):Remarks">
-            Decrypt the encrypted data.
-            </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Decrypt(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">EncapsulatedSign Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):member">
-              <p class="Summary">
-            Sign and encapsulate the content using the specified signer.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public override <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">ApplicationPkcs7Mime</a> <b>EncapsulatedSign</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Parameters">
-                <dl>
-                  <dt>
-                    <i>signer</i>
-                  </dt>
-                  <dd>The signer.</dd>
-                  <dt>
-                    <i>digestAlgo</i>
-                  </dt>
-                  <dd>The digest algorithm to use for signing.</dd>
-                  <dt>
-                    <i>content</i>
-                  </dt>
-                  <dd>The content.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Returns">A new <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">MimeKit.Cryptography.ApplicationPkcs7Mime</a> instance
-            containing the detached signature data.</blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                    </td>
-                    <td>
-                      <p>
-                        <i>signer</i> is <tt>null</tt>.</p>
-                      <p>-or-</p>
-                      <p>
-                        <i>content</i> is <tt>null</tt>.</p>
-                    </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
-                    </td>
-                    <td>
-                      <i>digestAlgo</i> is out of range.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
-                    </td>
-                    <td>
-            The specified <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> is not supported by this context.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
-                    </td>
-                    <td>
-            A signing certificate could not be found for <i>signer</i>.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.CryptographicException">System.Security.Cryptography.CryptographicException</a>
-                    </td>
-                    <td>
-            An error occurred in the cryptographic message syntax subsystem.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Remarks">
-            Sign and encapsulate the content using the specified signer.
-            </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.EncapsulatedSign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector)">GetCertificate Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):member">
-              <p class="Summary">
-            Gets the X.509 certificate based on the selector.
+            Gets the X.509 certificate matching the specified selector.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> <b>GetCertificate</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a> selector)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Parameters">
                 <dl>
                   <dt>
                     <i>selector</i>
@@ -1251,43 +1025,45 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Returns">The certificate on success; otherwise <tt>null</tt>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Returns">The certificate on success; otherwise <tt>null</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Remarks">
-            Gets the X.509 certificate based on the selector.
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Remarks">
+            Gets the first certificate that matches the specified selector.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificate(Org.BouncyCastle.X509.Store.IX509Selector):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificateRevocationLists()">GetCertificateRevocationLists Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificateRevocationLists():member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificateRevocationLists()">GetCertificateRevocationLists Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificateRevocationLists():member">
               <p class="Summary">
             Gets the certificate revocation lists.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Store</a> <b>GetCertificateRevocationLists</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificateRevocationLists():Returns">The certificate revocation lists.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificateRevocationLists():Returns">The certificate revocation lists.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificateRevocationLists():Remarks">
-            Gets the certificate revocation lists.
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificateRevocationLists():Remarks">
+            A Certificate Revocation List (CRL) is a list of certificate serial numbers issued
+            by a particular Certificate Authority (CA) that have been revoked, either by the CA
+            itself or by the owner of the revoked certificate.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCertificateRevocationLists():Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCertificateRevocationLists():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress)">GetCmsRecipient Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress)">GetCmsRecipient Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):member">
               <p class="Summary">
-            Gets the X.509 certificate associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a> for the specified mailbox.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="../MimeKit.Cryptography/CmsRecipient.html">CmsRecipient</a> <b>GetCmsRecipient</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> mailbox)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Parameters">
                 <dl>
                   <dt>
                     <i>mailbox</i>
@@ -1296,9 +1072,9 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Returns">The certificate.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Returns">A <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a>.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1315,23 +1091,27 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Remarks">
-            Gets the X.509 certificate associated with the <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
-            </div>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Remarks">
+                <p>Constructs a <a href="../MimeKit.Cryptography/CmsRecipient.html">MimeKit.Cryptography.CmsRecipient</a> with the appropriate certificate and
+            <a href="../MimeKit.Cryptography/CmsRecipient.html#P:MimeKit.Cryptography.CmsRecipient.EncryptionAlgorithms">CmsRecipient.EncryptionAlgorithms</a> for the specified mailbox.</p>
+                <p>If the mailbox is a <a href="../MimeKit.Cryptography/SecureMailboxAddress.html">MimeKit.Cryptography.SecureMailboxAddress</a>, the
+            <a href="../MimeKit.Cryptography/SecureMailboxAddress.html#P:MimeKit.Cryptography.SecureMailboxAddress.Fingerprint">SecureMailboxAddress.Fingerprint</a> property will be used instead of
+            the mailbox address.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsRecipient(MimeKit.MailboxAddress):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm)">GetCmsSigner Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm)">GetCmsSigner Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):member">
               <p class="Summary">
-            Gets the cms signer for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
+            Gets the <a href="../MimeKit.Cryptography/CmsSigner.html">MimeKit.Cryptography.CmsSigner</a> for the specified mailbox.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="../MimeKit.Cryptography/CmsSigner.html">CmsSigner</a> <b>GetCmsSigner</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> mailbox, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Parameters">
                 <dl>
                   <dt>
                     <i>mailbox</i>
@@ -1344,9 +1124,9 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Returns">The cms signer.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Returns">A <a href="../MimeKit.Cryptography/CmsSigner.html">MimeKit.Cryptography.CmsSigner</a>.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1363,41 +1143,47 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Remarks">
-            Gets the cms signer for the specified <a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>.
-            </div>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Remarks">
+                <p>Constructs a <a href="../MimeKit.Cryptography/CmsSigner.html">MimeKit.Cryptography.CmsSigner</a> with the appropriate signing certificate
+            for the specified mailbox.</p>
+                <p>If the mailbox is a <a href="../MimeKit.Cryptography/SecureMailboxAddress.html">MimeKit.Cryptography.SecureMailboxAddress</a>, the
+            <a href="../MimeKit.Cryptography/SecureMailboxAddress.html#P:MimeKit.Cryptography.SecureMailboxAddress.Fingerprint">SecureMailboxAddress.Fingerprint</a> property will be used instead of
+            the mailbox address for database lookups.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetCmsSigner(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetIntermediateCertificates()">GetIntermediateCertificates Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetIntermediateCertificates():member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetIntermediateCertificates()">GetIntermediateCertificates Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetIntermediateCertificates():member">
               <p class="Summary">
             Gets the intermediate certificates.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Store</a> <b>GetIntermediateCertificates</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetIntermediateCertificates():Returns">The intermediate certificates.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetIntermediateCertificates():Returns">The intermediate certificates.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetIntermediateCertificates():Remarks">
-            Gets the intermediate certificates.
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetIntermediateCertificates():Remarks">
+            An intermediate certificate is any certificate that exists between the root
+            certificate issued by a Certificate Authority (CA) and the certificate at
+            the end of the chain.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetIntermediateCertificates():Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetIntermediateCertificates():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector)">GetPrivateKey Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):member">
               <p class="Summary">
-            Gets the private key based on the provided selector.
+            Gets the private key for the certificate matching the specified selector.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Crypto.AsymmetricKeyParameter</a> <b>GetPrivateKey</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a> selector)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Parameters">
                 <dl>
                   <dt>
                     <i>selector</i>
@@ -1406,43 +1192,44 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Returns">The private key on success; otherwise <tt>null</tt>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Returns">The private key on success; otherwise <tt>null</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Remarks">
-            Gets the private key based on the provided selector.
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Remarks">
+            Gets the private key for the first certificate that matches the specified selector.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetPrivateKey(Org.BouncyCastle.X509.Store.IX509Selector):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetTrustedAnchors()">GetTrustedAnchors Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetTrustedAnchors():member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetTrustedAnchors()">GetTrustedAnchors Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetTrustedAnchors():member">
               <p class="Summary">
             Gets the trusted anchors.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Utilities.Collections.HashSet</a> <b>GetTrustedAnchors</b> ()</div>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetTrustedAnchors():Returns">The trusted anchors.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetTrustedAnchors():Returns">The trusted anchors.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetTrustedAnchors():Remarks">
-            Gets the trusted anchors.
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetTrustedAnchors():Remarks">
+            A trusted anchor is a trusted root-level X.509 certificate,
+            generally issued by a certificate authority (CA).
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.GetTrustedAnchors():Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.GetTrustedAnchors():Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate)">Import Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate)">Import Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):member">
               <p class="Summary">
-            Import the specified certificate.
+            Imports the specified certificate.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Import</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> certificate)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Parameters">
                 <dl>
                   <dt>
                     <i>certificate</i>
@@ -1451,7 +1238,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1468,23 +1255,23 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Remarks">
-            Import the specified certificate.
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Remarks">
+            Imports the specified certificate.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Certificate):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl)">Import Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl)">Import Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):member">
               <p class="Summary">
-            Import the specified certificate revocation list.
+            Imports the specified certificate revocation list.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Import</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a> crl)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Parameters">
                 <dl>
                   <dt>
                     <i>crl</i>
@@ -1493,7 +1280,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1510,23 +1297,23 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Remarks">
-            Import the specified certificate revocation list.
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Remarks">
+            Imports the specified certificate revocation list.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(Org.BouncyCastle.X509.X509Crl):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(System.IO.Stream,System.String)">Import Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(System.IO.Stream,System.String):member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(System.IO.Stream,System.String)">Import Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(System.IO.Stream,System.String):member">
               <p class="Summary">
             Imports certificates and keys from a pkcs12-encoded stream.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Import</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(System.IO.Stream,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(System.IO.Stream,System.String):Parameters">
                 <dl>
                   <dt>
                     <i>stream</i>
@@ -1539,7 +1326,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(System.IO.Stream,System.String):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(System.IO.Stream,System.String):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1557,141 +1344,26 @@
                         <i>password</i> is <tt>null</tt>.</p>
                     </td>
                   </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
-                    </td>
-                    <td>
-            Importing keys is not supported by this cryptography context.
-            </td>
-                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(System.IO.Stream,System.String):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(System.IO.Stream,System.String):Remarks">
             Imports certificates and keys from a pkcs12-encoded stream.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Import(System.IO.Stream,System.String):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.Import(System.IO.Stream,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):member">
-              <p class="Summary">
-            Sign the content using the specified signer.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public override <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> <b>Sign</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> signer, <a href="../MimeKit.Cryptography/DigestAlgorithm.html">DigestAlgorithm</a> digestAlgo, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> content)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Parameters">
-                <dl>
-                  <dt>
-                    <i>signer</i>
-                  </dt>
-                  <dd>The signer.</dd>
-                  <dt>
-                    <i>digestAlgo</i>
-                  </dt>
-                  <dd>The digest algorithm to use for signing.</dd>
-                  <dt>
-                    <i>content</i>
-                  </dt>
-                  <dd>The content.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Returns">A new <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> instance
-            containing the detached signature data.</blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                    </td>
-                    <td>
-                      <p>
-                        <i>signer</i> is <tt>null</tt>.</p>
-                      <p>-or-</p>
-                      <p>
-                        <i>content</i> is <tt>null</tt>.</p>
-                    </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
-                    </td>
-                    <td>
-                      <i>digestAlgo</i> is out of range.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
-                    </td>
-                    <td>
-            The specified <a href="../MimeKit.Cryptography/DigestAlgorithm.html">MimeKit.Cryptography.DigestAlgorithm</a> is not supported by this context.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="../MimeKit.Cryptography/CertificateNotFoundException.html">MimeKit.Cryptography.CertificateNotFoundException</a>
-                    </td>
-                    <td>
-            A signing certificate could not be found for <i>signer</i>.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.CryptographicException">System.Security.Cryptography.CryptographicException</a>
-                    </td>
-                    <td>
-            An error occurred in the cryptographic message syntax subsystem.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Remarks">
-            Sign the content using the specified signer.
-            </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="P:MimeKit.Cryptography.WindowsSecureMimeContext.StoreLocation">StoreLocation Property</h3>
-            <blockquote id="P:MimeKit.Cryptography.WindowsSecureMimeContext.StoreLocation:member">
-              <p class="Summary">
-            Gets the X.509 store location.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Security.Cryptography.X509Certificates.StoreLocation">System.Security.Cryptography.X509Certificates.StoreLocation</a> <b>StoreLocation</b>  { get; }</div>
-              <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.WindowsSecureMimeContext.StoreLocation:Value">The store location.</blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.WindowsSecureMimeContext.StoreLocation:Remarks">
-            Gets the X.509 store location.
-            </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="P:MimeKit.Cryptography.WindowsSecureMimeContext.StoreLocation:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MimeKit.Cryptography.WindowsSecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime)">UpdateSecureMimeCapabilities Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.WindowsSecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):member">
+            <h3 id="M:MimeKit.Cryptography.TemporarySecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime)">UpdateSecureMimeCapabilities Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.TemporarySecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):member">
               <p class="Summary">
             Updates the known S/MIME capabilities of the client used by the recipient that owns the specified certificate.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>UpdateSecureMimeCapabilities</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> certificate, <a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">EncryptionAlgorithm</a>[] algorithms, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> timestamp)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Parameters">
                 <dl>
                   <dt>
                     <i>certificate</i>
@@ -1708,11 +1380,11 @@
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Remarks">
             Updates the known S/MIME capabilities of the client used by the recipient that owns the specified certificate.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.WindowsSecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.TemporarySecureMimeContext.UpdateSecureMimeCapabilities(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.EncryptionAlgorithm[],System.DateTime):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.28.0.0</div>
               <hr size="1" />
             </blockquote>
