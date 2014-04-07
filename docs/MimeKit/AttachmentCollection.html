@@ -220,7 +220,7 @@
             </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.AttachmentCollection:Docs:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -346,6 +346,30 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[])">Add</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<blockquote>
+            Add the specified attachment.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[],MimeKit.ContentType)">Add</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="../MimeKit/ContentType.html">ContentType</a>)<blockquote>
+            Add the specified attachment.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.AttachmentCollection.Clear()">Clear</a>
                       </b>()<blockquote>
             Clears the attachment collection.
@@ -441,7 +465,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.AttachmentCollection():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="C:MimeKit.AttachmentCollection(System.Boolean)">AttachmentCollection Constructor</h3>
@@ -468,7 +492,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.AttachmentCollection(System.Boolean):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.Add(MimeKit.MimePart)">Add Method</h3>
@@ -510,7 +534,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(MimeKit.MimePart):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.Add(System.String)">Add Method</h3>
@@ -582,7 +606,7 @@
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String):Remarks">Adds the specified file as an attachment.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.Add(System.String,MimeKit.ContentType)">Add Method</h3>
@@ -666,7 +690,136 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,MimeKit.ContentType):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[])">Add Method</h3>
+            <blockquote id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[]):member">
+              <p class="Summary">
+            Add the specified attachment.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Add</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> fileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] data)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[]):Parameters">
+                <dl>
+                  <dt>
+                    <i>fileName</i>
+                  </dt>
+                  <dd>The name of the file.</dd>
+                  <dt>
+                    <i>data</i>
+                  </dt>
+                  <dd>The file data to attach.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[]):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>fileName</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>data</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <p>The specified file path is empty.</p>
+                      <p>-or-</p>
+                      <p>The specified data is empty.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[]):Remarks">Adds the data as an attachment, using the specified file name for deducing
+            the mime-type by extension and for setting the Content-Location.</div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[]):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[],MimeKit.ContentType)">Add Method</h3>
+            <blockquote id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[],MimeKit.ContentType):member">
+              <p class="Summary">
+            Add the specified attachment.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Add</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> fileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] data, <a href="../MimeKit/ContentType.html">ContentType</a> contentType)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[],MimeKit.ContentType):Parameters">
+                <dl>
+                  <dt>
+                    <i>fileName</i>
+                  </dt>
+                  <dd>The name of the file.</dd>
+                  <dt>
+                    <i>data</i>
+                  </dt>
+                  <dd>The file data.</dd>
+                  <dt>
+                    <i>contentType</i>
+                  </dt>
+                  <dd>The mime-type of the file.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[],MimeKit.ContentType):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>fileName</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>data</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>contentType</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <p>The specified file path is empty.</p>
+                      <p>-or-</p>
+                      <p>The data is empty.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[],MimeKit.ContentType):Remarks">
+                <p>Adds the specified data as an attachment using the supplied Content-Type.</p>
+                <p>The file name parameter is used to set the Content-Location.</p>
+                <p>For a list of known mime-types and their associated file extensions, see
+            http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Add(System.String,System.Byte[],MimeKit.ContentType):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.Clear()">Clear Method</h3>
@@ -682,7 +835,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Clear():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.Contains(MimeKit.MimePart)">Contains Method</h3>
@@ -727,7 +880,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Contains(MimeKit.MimePart):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.CopyTo(MimeKit.MimePart[],System.Int32)">CopyTo Method</h3>
@@ -782,7 +935,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.CopyTo(MimeKit.MimePart[],System.Int32):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.AttachmentCollection.Count">Count Property</h3>
@@ -800,7 +953,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.AttachmentCollection.Count:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.GetEnumerator()">GetEnumerator Method</h3>
@@ -818,7 +971,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.GetEnumerator():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.AttachmentCollection.IsReadOnly">IsReadOnly Property</h3>
@@ -837,7 +990,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.AttachmentCollection.IsReadOnly:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.Remove(MimeKit.MimePart)">Remove Method</h3>
@@ -881,7 +1034,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.Remove(MimeKit.MimePart):Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.AttachmentCollection.System#Collections#IEnumerable#GetEnumerator()">System.Collections.IEnumerable.GetEnumerator Method</h3>
@@ -900,7 +1053,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.AttachmentCollection.System#Collections#IEnumerable#GetEnumerator():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.30.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.31.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>
