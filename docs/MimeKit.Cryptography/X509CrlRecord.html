@@ -1,0 +1,547 @@
+<html>
+  <head>
+    <title>MimeKit.Cryptography.X509CrlRecord</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        color: black
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        color: black
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
+    </div>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.X509CrlRecord">X509CrlRecord  Class</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.X509CrlRecord:Summary">
+            An X.509 certificate revocation list (CRL) record.
+            </p>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.Cryptography.X509CrlRecord:Signature">public class  <b>X509CrlRecord</b></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.Cryptography.X509CrlRecord:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.Cryptography.X509CrlRecord:Docs:Remarks">
+            Represents an X.509 certificate revocation list record loaded from a database.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.Cryptography.X509CrlRecord:Docs:Version Information">
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+          <h2 class="Section" id="Members">Members</h2>
+          <div class="SectionBox" id="_Members">
+            <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+            <h2 class="Section">Public Constructors</h2>
+            <div class="SectionBox" id="Public Constructors">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.Cryptography.X509CrlRecord()">X509CrlRecord</a>
+                        </b>()</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/X509CrlRecord.html">MimeKit.Cryptography.X509CrlRecord</a> class.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.Cryptography.X509CrlRecord(Org.BouncyCastle.X509.X509Crl)">X509CrlRecord</a>
+                        </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/X509CrlRecord.html">MimeKit.Cryptography.X509CrlRecord</a> class.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Properties</h2>
+            <div class="SectionBox" id="Public Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Cryptography.X509CrlRecord.Crl">Crl</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a>
+                      </i>. 
+            Gets the certificate revocation list.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Cryptography.X509CrlRecord.Id">Id</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the identifier.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Cryptography.X509CrlRecord.IsDelta">IsDelta</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets whether or not this certificate revocation list is a delta.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Cryptography.X509CrlRecord.IssuerName">IssuerName</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the issuer name of the certificate revocation list.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Cryptography.X509CrlRecord.NextUpdate">NextUpdate</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>
+                      </i>. 
+            Gets the end date and time where the certificate is valid.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Cryptography.X509CrlRecord.ThisUpdate">ThisUpdate</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>
+                      </i>. 
+            Gets the date and time of the most recent update.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Members" id="T:MimeKit.Cryptography.X509CrlRecord:Members">
+          <h2 class="Section" id="MemberDetails">Member Details</h2>
+          <div class="SectionBox" id="_MemberDetails">
+            <h3 id="C:MimeKit.Cryptography.X509CrlRecord()">X509CrlRecord Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.X509CrlRecord():member">
+              <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/X509CrlRecord.html">MimeKit.Cryptography.X509CrlRecord</a> class.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>X509CrlRecord</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.X509CrlRecord():Remarks">
+            This constructor is only meant to be used by implementors of <a href="../MimeKit.Cryptography/IX509CertificateDatabase.html">MimeKit.Cryptography.IX509CertificateDatabase</a>
+            when loading records from the database.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.X509CrlRecord():Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MimeKit.Cryptography.X509CrlRecord(Org.BouncyCastle.X509.X509Crl)">X509CrlRecord Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.X509CrlRecord(Org.BouncyCastle.X509.X509Crl):member">
+              <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/X509CrlRecord.html">MimeKit.Cryptography.X509CrlRecord</a> class.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>X509CrlRecord</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a> crl)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.X509CrlRecord(Org.BouncyCastle.X509.X509Crl):Parameters">
+                <dl>
+                  <dt>
+                    <i>crl</i>
+                  </dt>
+                  <dd>The certificate revocation list.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.X509CrlRecord(Org.BouncyCastle.X509.X509Crl):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>crl</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.X509CrlRecord(Org.BouncyCastle.X509.X509Crl):Remarks">
+            Creates a new CRL record for storing in a <a href="../MimeKit.Cryptography/IX509CertificateDatabase.html">MimeKit.Cryptography.IX509CertificateDatabase</a>.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.X509CrlRecord(Org.BouncyCastle.X509.X509Crl):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Cryptography.X509CrlRecord.Crl">Crl Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.X509CrlRecord.Crl:member">
+              <p class="Summary">
+            Gets the certificate revocation list.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a> <b>Crl</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.Crl:Value">The certificate revocation list.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.Crl:Remarks">
+            Gets the certificate revocation list.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.Crl:Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Cryptography.X509CrlRecord.Id">Id Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.X509CrlRecord.Id:member">
+              <p class="Summary">
+            Gets the identifier.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Id</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.Id:Value">The identifier.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.Id:Remarks">
+            The id is typically the ROWID of the certificate revocation list in the
+            database and is not generally useful outside of the internals of the
+            database implementation.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.Id:Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Cryptography.X509CrlRecord.IsDelta">IsDelta Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.X509CrlRecord.IsDelta:member">
+              <p class="Summary">
+            Gets whether or not this certificate revocation list is a delta.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsDelta</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.IsDelta:Value">
+                <tt>true</tt> if th crl is delta; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.IsDelta:Remarks">
+            Indicates whether or not this certificate revocation list is a delta.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.IsDelta:Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Cryptography.X509CrlRecord.IssuerName">IssuerName Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.X509CrlRecord.IssuerName:member">
+              <p class="Summary">
+            Gets the issuer name of the certificate revocation list.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>IssuerName</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.IssuerName:Value">The issuer's name.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.IssuerName:Remarks">
+            Gets the issuer name of the certificate revocation list.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.IssuerName:Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Cryptography.X509CrlRecord.NextUpdate">NextUpdate Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.X509CrlRecord.NextUpdate:member">
+              <p class="Summary">
+            Gets the end date and time where the certificate is valid.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> <b>NextUpdate</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.NextUpdate:Value">The date and time.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.NextUpdate:Remarks">
+            Gets the end date and time where the certificate is valid.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.NextUpdate:Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Cryptography.X509CrlRecord.ThisUpdate">ThisUpdate Property</h3>
+            <blockquote id="P:MimeKit.Cryptography.X509CrlRecord.ThisUpdate:member">
+              <p class="Summary">
+            Gets the date and time of the most recent update.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> <b>ThisUpdate</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.ThisUpdate:Value">The date and time.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.ThisUpdate:Remarks">
+            Gets the date and time of the most recent update.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Cryptography.X509CrlRecord.ThisUpdate:Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+              <hr size="1" />
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

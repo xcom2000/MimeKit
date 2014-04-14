@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.EncryptionAlgorithm</title>
+    <title>MimeKit.Cryptography.X509CertificateRecordFields</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -205,146 +205,88 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.EncryptionAlgorithm">EncryptionAlgorithm  Enum</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Summary">
-            Encryption algorithms supported by S/MIME.
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.X509CertificateRecordFields">X509CertificateRecordFields  Enum</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.X509CertificateRecordFields:Summary">
+            X.509 certificate record fields.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Signature">public enum <b>EncryptionAlgorithm</b></div>
+          <div class="Signature" id="T:MimeKit.Cryptography.X509CertificateRecordFields:Signature">[System.Flags]<br />public enum <b>X509CertificateRecordFields</b></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Docs">
+        <div class="Remarks" id="T:MimeKit.Cryptography.X509CertificateRecordFields:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Docs:Remarks">
-            <p>Represents the list of available encryption algorithms for use with S/MIME.</p>
-            <p>RC-2/40 was required by all S/MIME v2 implementations. However, since the
-            mid-to-late 1990's, RC-2/40 has been considered to be extremely weak and starting with
-            S/MIME v3.0 (published in 1999), all S/MIME implementations are required to implement
-            support for Triple-DES (aka 3DES) and should no longer encrypt using RC-2/40 unless
-            explicitly requested to do so by the user.</p>
-            <p>These days, most S/MIME implementations support the AES-128 and AES-256
-            algorithms which are the recommended algorithms specified in S/MIME v3.2 and
-            should be preferred over the use of Triple-DES unless the client capabilities
-            of one or more of the recipients is unknown (or only supports Triple-DES).</p>
-          </div>
+          <div class="SectionBox" id="T:MimeKit.Cryptography.X509CertificateRecordFields:Docs:Remarks">
+            The record fields are used when querying the <a href="../MimeKit.Cryptography/IX509CertificateDatabase.html">MimeKit.Cryptography.IX509CertificateDatabase</a>
+            for certificates.
+            </div>
           <h2 class="Section">Members</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Docs:Members">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.X509CertificateRecordFields:Docs:Members">
             <table class="Enumeration">
               <tr>
                 <th>Member Name</th>
                 <th>Description</th>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Aes128">
-                  <b>Aes128</b>
+                <td id="F:MimeKit.Cryptography.X509CertificateRecordFields.Algorithms">
+                  <b>Algorithms</b>
                 </td>
                 <td>
-            The AES 128-bit encryption algorithm.
+            The "algorithms" field is used for storing the last known list of
+            <a href="../MimeKit.Cryptography/EncryptionAlgorithm.html">MimeKit.Cryptography.EncryptionAlgorithm</a> values that are supported by the
+            client associated with the certificate.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Aes192">
-                  <b>Aes192</b>
+                <td id="F:MimeKit.Cryptography.X509CertificateRecordFields.AlgorithmsUpdated">
+                  <b>AlgorithmsUpdated</b>
                 </td>
                 <td>
-            The AES 192-bit encryption algorithm.
+            The "algorithms updated" field is used to store the timestamp of the
+            most recent update to the Algorithms field.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Aes256">
-                  <b>Aes256</b>
+                <td id="F:MimeKit.Cryptography.X509CertificateRecordFields.Certificate">
+                  <b>Certificate</b>
                 </td>
                 <td>
-            The AES 256-bit encryption algorithm.
+            The "certificate" field is sued for storing the binary data of the actual
+            certificate.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Camellia128">
-                  <b>Camellia128</b>
+                <td id="F:MimeKit.Cryptography.X509CertificateRecordFields.Id">
+                  <b>Id</b>
                 </td>
                 <td>
-            The Camellia 128-bit encryption algorithm.
+            The "id" field is typically just the ROWID in the database.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Camellia192">
-                  <b>Camellia192</b>
+                <td id="F:MimeKit.Cryptography.X509CertificateRecordFields.PrivateKey">
+                  <b>PrivateKey</b>
                 </td>
                 <td>
-            The Camellia 192-bit encryption algorithm.
+            The "private key" field is used to store the encrypted binary data of the
+            private key associated with the certificate, if available.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Camellia256">
-                  <b>Camellia256</b>
+                <td id="F:MimeKit.Cryptography.X509CertificateRecordFields.Trusted">
+                  <b>Trusted</b>
                 </td>
                 <td>
-            The Camellia 256-bit encryption algorithm.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Cast5">
-                  <b>Cast5</b>
-                </td>
-                <td>
-            The Cast-5 128-bit encryption algorithm.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Des">
-                  <b>Des</b>
-                </td>
-                <td>
-            The DES 56-bit encryption algorithm.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Idea">
-                  <b>Idea</b>
-                </td>
-                <td>
-            The IDEA 128-bit encryption algorithm.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.RC2128">
-                  <b>RC2128</b>
-                </td>
-                <td>
-            The RC2 128-bit encryption algorithm.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.RC240">
-                  <b>RC240</b>
-                </td>
-                <td>
-            The RC2 40-bit encryption algorithm.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.RC264">
-                  <b>RC264</b>
-                </td>
-                <td>
-            The RC2 64-bit encryption algorithm.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.TripleDes">
-                  <b>TripleDes</b>
-                </td>
-                <td>
-            The Triple-DES encryption algorithm.
+            The "trusted" field is a boolean value indicating whether the certificate
+            is trusted.
             </td>
               </tr>
             </table>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Docs:Version Information">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.X509CertificateRecordFields:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Members">
+        <div class="Members" id="T:MimeKit.Cryptography.X509CertificateRecordFields:Members">
         </div>
       </section>
     </div>
