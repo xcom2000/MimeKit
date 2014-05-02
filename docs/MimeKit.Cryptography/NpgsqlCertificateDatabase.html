@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.SqliteCertificateDatabase</title>
+    <title>MimeKit.Cryptography.NpgsqlCertificateDatabase</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -205,24 +205,24 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.SqliteCertificateDatabase">SqliteCertificateDatabase  Class</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Summary">
-            An X.509 certificate database built on SQLite.
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.NpgsqlCertificateDatabase">NpgsqlCertificateDatabase  Class</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.NpgsqlCertificateDatabase:Summary">
+            An X.509 certificate database built on PostgreSQL.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Signature">public class  <b>SqliteCertificateDatabase</b> : <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a></div>
+          <div class="Signature" id="T:MimeKit.Cryptography.NpgsqlCertificateDatabase:Signature">public class  <b>NpgsqlCertificateDatabase</b> : <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Docs">
+        <div class="Remarks" id="T:MimeKit.Cryptography.NpgsqlCertificateDatabase:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Docs:Remarks">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.NpgsqlCertificateDatabase:Docs:Remarks">
             <p>An X.509 certificate database is used for storing certificates, metdata related to the certificates
             (such as encryption algorithms supported by the associated client), certificate revocation lists (CRLs),
             and private keys.</p>
-            <p>This particular database uses SQLite to store the data.</p>
+            <p>This particular database uses PostgreSQL to store the data.</p>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Docs:Version Information">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.NpgsqlCertificateDatabase:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
@@ -242,11 +242,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String)">SqliteCertificateDatabase</a>
+                          <a href="#C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.Data.IDbConnection,System.String)">NpgsqlCertificateDatabase</a>
                         </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/NpgsqlCertificateDatabase.html">MimeKit.Cryptography.NpgsqlCertificateDatabase</a> class.
             </td>
                   </tr>
                   <tr valign="top">
@@ -257,11 +257,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String)">SqliteCertificateDatabase</a>
+                          <a href="#C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.String,System.String)">NpgsqlCertificateDatabase</a>
                         </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/NpgsqlCertificateDatabase.html">MimeKit.Cryptography.NpgsqlCertificateDatabase</a> class.
             </td>
                   </tr>
                 </table>
@@ -560,7 +560,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand</a>
+                        <a href="#M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the command to create the certificates table.
             </blockquote></td>
@@ -582,7 +582,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand</a>
+                        <a href="#M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the command to create the CRLs table.
             </blockquote></td>
@@ -900,23 +900,23 @@
             </div>
           </div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Members">
+        <div class="Members" id="T:MimeKit.Cryptography.NpgsqlCertificateDatabase:Members">
           <h2 class="Section" id="MemberDetails">Member Details</h2>
           <div class="SectionBox" id="_MemberDetails">
-            <h3 id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String)">SqliteCertificateDatabase Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):member">
+            <h3 id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.Data.IDbConnection,System.String)">NpgsqlCertificateDatabase Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.Data.IDbConnection,System.String):member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/NpgsqlCertificateDatabase.html">MimeKit.Cryptography.NpgsqlCertificateDatabase</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>SqliteCertificateDatabase</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+              <div class="Signature">public  <b>NpgsqlCertificateDatabase</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.Data.IDbConnection,System.String):Parameters">
                 <dl>
                   <dt>
                     <i>connection</i>
                   </dt>
-                  <dd>The SQLite connection.</dd>
+                  <dd>The Npgsql connection.</dd>
                   <dt>
                     <i>password</i>
                   </dt>
@@ -924,7 +924,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):Exceptions">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.Data.IDbConnection,System.String):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -945,28 +945,28 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):Remarks">
-            Creates a new <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> using the provided SQLite database connection.
+              <div class="SectionBox" id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.Data.IDbConnection,System.String):Remarks">
+            Creates a new <a href="../MimeKit.Cryptography/NpgsqlCertificateDatabase.html">MimeKit.Cryptography.NpgsqlCertificateDatabase</a> using the provided Npgsql database connection.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):Version Information">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.Data.IDbConnection,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String)">SqliteCertificateDatabase Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):member">
+            <h3 id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.String,System.String)">NpgsqlCertificateDatabase Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.String,System.String):member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/NpgsqlCertificateDatabase.html">MimeKit.Cryptography.NpgsqlCertificateDatabase</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>SqliteCertificateDatabase</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> fileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+              <div class="Signature">public  <b>NpgsqlCertificateDatabase</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> connectionString, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.String,System.String):Parameters">
                 <dl>
                   <dt>
-                    <i>fileName</i>
+                    <i>connectionString</i>
                   </dt>
-                  <dd>The file name.</dd>
+                  <dd>The connection string.</dd>
                   <dt>
                     <i>password</i>
                   </dt>
@@ -974,7 +974,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):Exceptions">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.String,System.String):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -986,7 +986,7 @@
                     </td>
                     <td>
                       <p>
-                        <i>fileName</i> is <tt>null</tt>.</p>
+                        <i>connectionString</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
                         <i>password</i> is <tt>null</tt>.</p>
@@ -997,50 +997,28 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
                     </td>
                     <td>
-            The specified file path is empty.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
-                    </td>
-                    <td>
-            The user does not have access to read the specified file.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
-                    </td>
-                    <td>
-            An error occurred reading the file.
+                      <i>connectionString</i> is empty.
             </td>
                   </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):Remarks">
-                <p>Creates a new <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> and opens a connection to the
-            SQLite database at the specified path using the Mono.Data.Sqlite binding to the native
-            SQLite library.</p>
-                <p>If Mono.Data.Sqlite is not available or if an alternative binding to the native
-            SQLite library is preferred, then consider using
-            <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html#M:MimeKit.Cryptography.SqliteCertificateDatabase.#ctor(System.Data.IDbConnection,System.String)">SqliteCertificateDatabase.#ctor(System.Data.IDbConnection, string)</a> instead.</p>
-              </div>
+              <div class="SectionBox" id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.String,System.String):Remarks">Creates a new <a href="../MimeKit.Cryptography/NpgsqlCertificateDatabase.html">MimeKit.Cryptography.NpgsqlCertificateDatabase</a> and opens a connection to the
+            PostgreSQL database using the specified connection string.</div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):Version Information">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.NpgsqlCertificateDatabase(System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):member">
+            <h3 id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):member">
               <p class="Summary">
             Gets the command to create the certificates table.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetCreateCertificatesTableCommand</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Parameters">
                 <dl>
                   <dt>
                     <i>connection</i>
@@ -1049,26 +1027,26 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Returns">The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Returns">The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Remarks">
             Constructs the command to create a certificates table suitable for storing
             <a href="../MimeKit.Cryptography/X509CertificateRecord.html">MimeKit.Cryptography.X509CertificateRecord</a> objects.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):member">
+            <h3 id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):member">
               <p class="Summary">
             Gets the command to create the CRLs table.
             </p>
               <h2>Syntax</h2>
               <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetCreateCrlsTableCommand</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Parameters">
                 <dl>
                   <dt>
                     <i>connection</i>
@@ -1077,14 +1055,14 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Returns">The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Returns">The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Remarks">
             Constructs the command to create a CRLs table suitable for storing
             <a href="../MimeKit.Cryptography/X509CertificateRecord.html">MimeKit.Cryptography.X509CertificateRecord</a> objects.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.NpgsqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>

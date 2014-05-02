@@ -222,7 +222,7 @@
             </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.OpenPgpContext:Docs:Version Information">
-            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -560,6 +560,30 @@
                         <a href="#M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey})">Export</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey&gt;</a>)<nobr> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></nobr><blockquote>
             Exports the specified public keys.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream)">GetDecryptedStream</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>
+            Decrypts the specified encryptedData.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@)">GetDecryptedStream</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>
+            Decrypts the specified encryptedData and extracts the digital signers if the content was also signed.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -916,7 +940,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.OpenPgpContext():Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="C:MimeKit.Cryptography.OpenPgpContext(System.String,System.String)">OpenPgpContext Constructor</h3>
@@ -982,7 +1006,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Cryptography.OpenPgpContext(System.String,System.String):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream)">Decrypt Method</h3>
@@ -1058,7 +1082,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@)">Decrypt Method</h3>
@@ -1130,7 +1154,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Decrypt(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">Encrypt Method</h3>
@@ -1209,7 +1233,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">Encrypt Method</h3>
@@ -1272,7 +1296,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Encrypt(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.EncryptionProtocol">EncryptionProtocol Property</h3>
@@ -1290,7 +1314,7 @@
             header should be.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.EncryptionProtocol:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Export(Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle)">Export Method</h3>
@@ -1334,7 +1358,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKeyRingBundle):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">Export Method</h3>
@@ -1386,7 +1410,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey})">Export Method</h3>
@@ -1430,7 +1454,147 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Export(System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey}):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream)">GetDecryptedStream Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream):member">
+              <p class="Summary">
+            Decrypts the specified encryptedData.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>GetDecryptedStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream):Parameters">
+                <dl>
+                  <dt>
+                    <i>encryptedData</i>
+                  </dt>
+                  <dd>The encrypted data.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream):Returns">The decrypted stream.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>encryptedData</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The private key could not be found to decrypt the stream.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The user chose to cancel the password prompt.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            3 bad attempts were made to unlock the secret key.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream):Remarks">
+            Decrypts the specified encryptedData.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@)">GetDecryptedStream Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):member">
+              <p class="Summary">
+            Decrypts the specified encryptedData and extracts the digital signers if the content was also signed.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>GetDecryptedStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> encryptedData, <i>out</i> <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">DigitalSignatureCollection</a> signatures)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Parameters">
+                <dl>
+                  <dt>
+                    <i>encryptedData</i>
+                  </dt>
+                  <dd>The encrypted data.</dd>
+                  <dt>
+                    <i>signatures</i>
+                  </dt>
+                  <dd>A list of digital signatures if the data was both signed and encrypted.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Returns">The decrypted stream.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>encryptedData</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Cryptography/PrivateKeyNotFoundException.html">MimeKit.Cryptography.PrivateKeyNotFoundException</a>
+                    </td>
+                    <td>
+            The private key could not be found to decrypt the stream.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The user chose to cancel the password prompt.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            3 bad attempts were made to unlock the secret key.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Remarks">
+            Decrypts the specified encryptedData and extracts the digital signers if the content was also signed.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDecryptedStream(System.IO.Stream,MimeKit.Cryptography.DigitalSignatureCollection@):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(Org.BouncyCastle.Bcpg.HashAlgorithmTag)">GetDigestAlgorithm Method</h3>
@@ -1484,7 +1648,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(Org.BouncyCastle.Bcpg.HashAlgorithmTag):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(System.String)">GetDigestAlgorithm Method</h3>
@@ -1528,7 +1692,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithm(System.String):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm)">GetDigestAlgorithmName Method</h3>
@@ -1640,7 +1804,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetDigestAlgorithmName(MimeKit.Cryptography.DigestAlgorithm):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetHashAlgorithm(MimeKit.Cryptography.DigestAlgorithm)">GetHashAlgorithm Method</h3>
@@ -1694,7 +1858,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetHashAlgorithm(MimeKit.Cryptography.DigestAlgorithm):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetPasswordForKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey)">GetPasswordForKey Method</h3>
@@ -1738,7 +1902,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPasswordForKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey)">GetPrivateKey Method</h3>
@@ -1798,7 +1962,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(System.Int64)">GetPrivateKey Method</h3>
@@ -1858,7 +2022,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPrivateKey(System.Int64):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKey(MimeKit.MailboxAddress)">GetPublicKey Method</h3>
@@ -1910,7 +2074,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKey(MimeKit.MailboxAddress):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeyAlgorithm(Org.BouncyCastle.Bcpg.PublicKeyAlgorithmTag)">GetPublicKeyAlgorithm Method</h3>
@@ -1964,7 +2128,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeyAlgorithm(Org.BouncyCastle.Bcpg.PublicKeyAlgorithmTag):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress})">GetPublicKeys Method</h3>
@@ -2016,7 +2180,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetPublicKeys(System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress}):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress)">GetSigningKey Method</h3>
@@ -2076,7 +2240,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.GetSigningKey(MimeKit.MailboxAddress):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Import(System.IO.Stream)">Import Method</h3>
@@ -2128,7 +2292,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Import(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.ImportSecretKeys(System.IO.Stream)">ImportSecretKeys Method</h3>
@@ -2180,7 +2344,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.ImportSecretKeys(System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.KeyExchangeProtocol">KeyExchangeProtocol Property</h3>
@@ -2198,7 +2362,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.KeyExchangeProtocol:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingBundle">PublicKeyRingBundle Property</h3>
@@ -2216,7 +2380,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingBundle:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath">PublicKeyRingPath Property</h3>
@@ -2234,7 +2398,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.PublicKeyRingPath:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.SavePublicKeyRingBundle()">SavePublicKeyRingBundle Method</h3>
@@ -2268,7 +2432,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SavePublicKeyRingBundle():Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.SaveSecretKeyRingBundle()">SaveSecretKeyRingBundle Method</h3>
@@ -2302,7 +2466,7 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SaveSecretKeyRingBundle():Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingBundle">SecretKeyRingBundle Property</h3>
@@ -2320,7 +2484,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingBundle:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath">SecretKeyRingPath Property</h3>
@@ -2338,7 +2502,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SecretKeyRingPath:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign Method</h3>
@@ -2443,7 +2607,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Sign(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream)">Sign Method</h3>
@@ -2540,7 +2704,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Sign(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream)">SignAndEncrypt Method</h3>
@@ -2672,7 +2836,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(MimeKit.MailboxAddress,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{MimeKit.MailboxAddress},System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream)">SignAndEncrypt Method</h3>
@@ -2765,7 +2929,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.SignAndEncrypt(Org.BouncyCastle.Bcpg.OpenPgp.PgpSecretKey,MimeKit.Cryptography.DigestAlgorithm,System.Collections.Generic.IEnumerable{Org.BouncyCastle.Bcpg.OpenPgp.PgpPublicKey},System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.Cryptography.OpenPgpContext.SignatureProtocol">SignatureProtocol Property</h3>
@@ -2783,7 +2947,7 @@
             header should be.</div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.Cryptography.OpenPgpContext.SignatureProtocol:Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String)">Supports Method</h3>
@@ -2829,7 +2993,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Supports(System.String):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream)">Verify Method</h3>
@@ -2881,7 +3045,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.Cryptography.OpenPgpContext.Verify(System.IO.Stream,System.IO.Stream):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0</div>
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>

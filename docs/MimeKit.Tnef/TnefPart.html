@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.ApplicationPgpEncrypted</title>
+    <title>MimeKit.Tnef.TnefPart</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -204,25 +204,25 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
-          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.ApplicationPgpEncrypted">ApplicationPgpEncrypted  Class</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.ApplicationPgpEncrypted:Summary">
-            A MIME part with a Content-Type of application/pgp-encrypted.
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Tnef Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.Tnef.TnefPart">TnefPart  Class</h1>
+        <p class="Summary" id="T:MimeKit.Tnef.TnefPart:Summary">
+            A MIME part containing Microsoft TNEF data.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.ApplicationPgpEncrypted:Signature">public class  <b>ApplicationPgpEncrypted</b> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></div>
+          <div class="Signature" id="T:MimeKit.Tnef.TnefPart:Signature">public class  <b>TnefPart</b> : <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.ApplicationPgpEncrypted:Docs">
+        <div class="Remarks" id="T:MimeKit.Tnef.TnefPart:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.ApplicationPgpEncrypted:Docs:Remarks">
-            An application/pgp-encrypted part will typically be the first child of
-            a <a href="../MimeKit.Cryptography/MultipartEncrypted.html">MimeKit.Cryptography.MultipartEncrypted</a> part and contains only a Version
-            header.
-            </div>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPart:Docs:Remarks">
+            <p>Represents an application/ms-tnef or application/vnd.ms-tnef part.</p>
+            <p>TNEF (Transport Neutral Encapsulation Format) attachments are most often
+            sent by Microsoft Outlook clients.</p>
+          </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.ApplicationPgpEncrypted:Docs:Version Information">
-            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPart:Docs:Version Information">
+            <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -241,11 +241,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.ApplicationPgpEncrypted()">ApplicationPgpEncrypted</a>
+                          <a href="#C:MimeKit.Tnef.TnefPart()">TnefPart</a>
                         </b>()</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/ApplicationPgpEncrypted.html">MimeKit.Cryptography.ApplicationPgpEncrypted</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Tnef/TnefPart.html">MimeKit.Tnef.TnefPart</a> class.
             </td>
                   </tr>
                   <tr valign="top">
@@ -256,12 +256,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.ApplicationPgpEncrypted(MimeKit.MimeEntityConstructorInfo)">ApplicationPgpEncrypted</a>
+                          <a href="#C:MimeKit.Tnef.TnefPart(MimeKit.MimeEntityConstructorInfo)">TnefPart</a>
                         </b>(<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a>)</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/ApplicationPgpEncrypted.html">MimeKit.Cryptography.ApplicationPgpEncrypted</a>
-            class based on the <a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a>.
+            Initializes a new instance of the <a href="../MimeKit.Tnef/TnefPart.html">MimeKit.Tnef.TnefPart</a> class.
             </td>
                   </tr>
                 </table>
@@ -495,6 +494,30 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.Tnef.TnefPart.ConvertToMessage()">ConvertToMessage</a>
+                      </b>()<nobr> : <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a></nobr><blockquote>
+            Converts the TNEF content into a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a>.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPart.ExtractAttachments()">ExtractAttachments</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MimePart&gt;</a></nobr><blockquote>
+            Extracts the embedded attachments from the TNEF data.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint,System.Threading.CancellationToken)">GetBestEncoding</a>
                       </b>(<a href="../MimeKit/EncodingConstraint.html">MimeKit.EncodingConstraint</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a></nobr><blockquote>
             Calculates the most efficient content encoding given the specified constraint.
@@ -630,36 +653,36 @@
             </div>
           </div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.ApplicationPgpEncrypted:Members">
+        <div class="Members" id="T:MimeKit.Tnef.TnefPart:Members">
           <h2 class="Section" id="MemberDetails">Member Details</h2>
           <div class="SectionBox" id="_MemberDetails">
-            <h3 id="C:MimeKit.Cryptography.ApplicationPgpEncrypted()">ApplicationPgpEncrypted Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.ApplicationPgpEncrypted():member">
+            <h3 id="C:MimeKit.Tnef.TnefPart()">TnefPart Constructor</h3>
+            <blockquote id="C:MimeKit.Tnef.TnefPart():member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/ApplicationPgpEncrypted.html">MimeKit.Cryptography.ApplicationPgpEncrypted</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Tnef/TnefPart.html">MimeKit.Tnef.TnefPart</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>ApplicationPgpEncrypted</b> ()</div>
+              <div class="Signature">public  <b>TnefPart</b> ()</div>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.ApplicationPgpEncrypted():Remarks">
-            Creates a new MIME part with a Content-Type of application/pgp-encrypted
-            and content matching <tt>"Version: 1\n"</tt>.
+              <div class="SectionBox" id="C:MimeKit.Tnef.TnefPart():Remarks">
+            Creates a new <a href="../MimeKit.Tnef/TnefPart.html">MimeKit.Tnef.TnefPart</a> with a Content-Type of application/vnd.ms-tnef
+            and a Content-Disposition value of "attachment" and a filename paremeter with a
+            value of "winmail.dat".
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.ApplicationPgpEncrypted():Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <div class="SectionBox" id="C:MimeKit.Tnef.TnefPart():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="C:MimeKit.Cryptography.ApplicationPgpEncrypted(MimeKit.MimeEntityConstructorInfo)">ApplicationPgpEncrypted Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.ApplicationPgpEncrypted(MimeKit.MimeEntityConstructorInfo):member">
+            <h3 id="C:MimeKit.Tnef.TnefPart(MimeKit.MimeEntityConstructorInfo)">TnefPart Constructor</h3>
+            <blockquote id="C:MimeKit.Tnef.TnefPart(MimeKit.MimeEntityConstructorInfo):member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/ApplicationPgpEncrypted.html">MimeKit.Cryptography.ApplicationPgpEncrypted</a>
-            class based on the <a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a>.
+            Initializes a new instance of the <a href="../MimeKit.Tnef/TnefPart.html">MimeKit.Tnef.TnefPart</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>ApplicationPgpEncrypted</b> (<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a> entity)</div>
+              <div class="Signature">public  <b>TnefPart</b> (<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeKit.MimeEntityConstructorInfo</a> entity)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.ApplicationPgpEncrypted(MimeKit.MimeEntityConstructorInfo):Parameters">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Tnef.TnefPart(MimeKit.MimeEntityConstructorInfo):Parameters">
                 <dl>
                   <dt>
                     <i>entity</i>
@@ -668,10 +691,82 @@
                 </dl>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.ApplicationPgpEncrypted(MimeKit.MimeEntityConstructorInfo):Remarks">This constructor is used by <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>.</div>
+              <div class="SectionBox" id="C:MimeKit.Tnef.TnefPart(MimeKit.MimeEntityConstructorInfo):Remarks">This constructor is used by <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>.</div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.ApplicationPgpEncrypted(MimeKit.MimeEntityConstructorInfo):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <div class="SectionBox" id="C:MimeKit.Tnef.TnefPart(MimeKit.MimeEntityConstructorInfo):Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPart.ConvertToMessage()">ConvertToMessage Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPart.ConvertToMessage():member">
+              <p class="Summary">
+            Converts the TNEF content into a <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a>.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a> <b>ConvertToMessage</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPart.ConvertToMessage():Returns">A message representing the TNEF data in MIME format.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPart.ConvertToMessage():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentObject">MimeKit.MimePart.ContentObject</a> property is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPart.ConvertToMessage():Remarks">
+            TNEF data often contains properties that map to <a href="../MimeKit/MimeMessage.html">MimeKit.MimeMessage</a>
+            headers. TNEF data also often contains file attachments which will be
+            mapped to MIME parts.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPart.ConvertToMessage():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPart.ExtractAttachments()">ExtractAttachments Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPart.ExtractAttachments():member">
+              <p class="Summary">
+            Extracts the embedded attachments from the TNEF data.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MimeKit.MimePart&gt;</a> <b>ExtractAttachments</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPart.ExtractAttachments():Returns">The attachments.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPart.ExtractAttachments():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentObject">MimeKit.MimePart.ContentObject</a> property is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPart.ExtractAttachments():Remarks">
+            Parses the TNEF data and extracts all of the embedded file attachments.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPart.ExtractAttachments():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>

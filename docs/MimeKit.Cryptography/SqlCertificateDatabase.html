@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.SqliteCertificateDatabase</title>
+    <title>MimeKit.Cryptography.SqlCertificateDatabase</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -205,33 +205,33 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.SqliteCertificateDatabase">SqliteCertificateDatabase  Class</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Summary">
-            An X.509 certificate database built on SQLite.
+        <h1 class="PageTitle" id="T:MimeKit.Cryptography.SqlCertificateDatabase">SqlCertificateDatabase  Class</h1>
+        <p class="Summary" id="T:MimeKit.Cryptography.SqlCertificateDatabase:Summary">
+            An abstract X.509 certificate database built on generic SQL storage.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Signature">public class  <b>SqliteCertificateDatabase</b> : <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a></div>
+          <div class="Signature" id="T:MimeKit.Cryptography.SqlCertificateDatabase:Signature">public abstract class  <b>SqlCertificateDatabase</b> : <a href="../MimeKit.Cryptography/X509CertificateDatabase.html">X509CertificateDatabase</a></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Docs">
+        <div class="Remarks" id="T:MimeKit.Cryptography.SqlCertificateDatabase:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Docs:Remarks">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.SqlCertificateDatabase:Docs:Remarks">
             <p>An X.509 certificate database is used for storing certificates, metdata related to the certificates
             (such as encryption algorithms supported by the associated client), certificate revocation lists (CRLs),
             and private keys.</p>
             <p>This particular database uses SQLite to store the data.</p>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Docs:Version Information">
+          <div class="SectionBox" id="T:MimeKit.Cryptography.SqlCertificateDatabase:Docs:Version Information">
             <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
 								See Also: Inherited members from
-								<a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.
+								<a href="../MimeKit.Cryptography/X509CertificateDatabase.html">X509CertificateDatabase</a>.
 							</p>
-            <h2 class="Section">Public Constructors</h2>
-            <div class="SectionBox" id="Public Constructors">
+            <h2 class="Section">Protected Constructors</h2>
+            <div class="SectionBox" id="Protected Constructors">
               <div class="SubsectionBox">
                 <table class="TypeMembers">
                   <tr valign="top">
@@ -242,26 +242,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String)">SqliteCertificateDatabase</a>
+                          <a href="#C:MimeKit.Cryptography.SqlCertificateDatabase(System.Data.IDbConnection,System.String)">SqlCertificateDatabase</a>
                         </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> class.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td>
-                      <div>
-                        <b>
-                          <a href="#C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String)">SqliteCertificateDatabase</a>
-                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
-                    </td>
-                    <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">MimeKit.Cryptography.SqlCertificateDatabase</a> class.
             </td>
                   </tr>
                 </table>
@@ -535,11 +520,11 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.Dispose(System.Boolean)">Dispose</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.Dispose(System.Boolean)">Dispose</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
             Releases the unmanaged resources used by the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> and
             optionally releases the managed resources.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -556,11 +541,11 @@
                   </tr>
                   <tr valign="top">
                     <td>
-                      <div>override </div>
+                      <div>abstract </div>
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the command to create the certificates table.
             </blockquote></td>
@@ -571,43 +556,21 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
-            Gets the command to create the certificates table.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>override </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the command to create the CRLs table.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
-                      <div>abstract </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
-            Gets the command to create the CRLs table.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
                       <div>override </div>
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CertificateRecord)">GetDeleteCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CertificateRecord)">GetDeleteCommand</a>
                       </b>(<a href="../MimeKit.Cryptography/X509CertificateRecord.html">X509CertificateRecord</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to delete the specified certificate record.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -626,10 +589,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CrlRecord)">GetDeleteCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CrlRecord)">GetDeleteCommand</a>
                       </b>(<a href="../MimeKit.Cryptography/X509CrlRecord.html">X509CrlRecord</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to delete the specified CRL record.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -648,10 +611,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CertificateRecord)">GetInsertCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CertificateRecord)">GetInsertCommand</a>
                       </b>(<a href="../MimeKit.Cryptography/X509CertificateRecord.html">X509CertificateRecord</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to insert the specified certificate record.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -670,10 +633,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CrlRecord)">GetInsertCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CrlRecord)">GetInsertCommand</a>
                       </b>(<a href="../MimeKit.Cryptography/X509CrlRecord.html">X509CrlRecord</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to insert the specified CRL record.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -692,10 +655,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectAllCrlsCommand()">GetSelectAllCrlsCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectAllCrlsCommand()">GetSelectAllCrlsCommand</a>
                       </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to select all CRLs in the table.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -714,10 +677,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.Asn1.X509.X509Name,MimeKit.Cryptography.X509CrlRecordFields)">GetSelectCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.Asn1.X509.X509Name,MimeKit.Cryptography.X509CrlRecordFields)">GetSelectCommand</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Asn1.X509.X509Name</a>, <a href="../MimeKit.Cryptography/X509CrlRecordFields.html">X509CrlRecordFields</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to select the CRL records matching the specified issuer.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -736,10 +699,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a>, <a href="../MimeKit.Cryptography/X509CertificateRecordFields.html">X509CertificateRecordFields</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to select the record matching the specified certificate.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -758,10 +721,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Crl,MimeKit.Cryptography.X509CrlRecordFields)">GetSelectCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Crl,MimeKit.Cryptography.X509CrlRecordFields)">GetSelectCommand</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a>, <a href="../MimeKit.Cryptography/X509CrlRecordFields.html">X509CrlRecordFields</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to select the record for the specified CRL.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -780,10 +743,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(MimeKit.MailboxAddress,System.DateTime,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(MimeKit.MailboxAddress,System.DateTime,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand</a>
                       </b>(<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../MimeKit.Cryptography/X509CertificateRecordFields.html">X509CertificateRecordFields</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to select the certificate records for the specified mailbox.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -802,10 +765,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.Store.IX509Selector,System.Boolean,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.Store.IX509Selector,System.Boolean,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand</a>
                       </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../MimeKit.Cryptography/X509CertificateRecordFields.html">X509CertificateRecordFields</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to select the certificate records for the specified mailbox.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -824,10 +787,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CrlRecord)">GetUpdateCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CrlRecord)">GetUpdateCommand</a>
                       </b>(<a href="../MimeKit.Cryptography/X509CrlRecord.html">X509CrlRecord</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to update the specified CRL record.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -846,10 +809,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html#M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CertificateRecord,MimeKit.Cryptography.X509CertificateRecordFields)">GetUpdateCommand</a>
+                        <a href="#M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CertificateRecord,MimeKit.Cryptography.X509CertificateRecordFields)">GetUpdateCommand</a>
                       </b>(<a href="../MimeKit.Cryptography/X509CertificateRecord.html">X509CertificateRecord</a>, <a href="../MimeKit.Cryptography/X509CertificateRecordFields.html">X509CertificateRecordFields</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a></nobr><blockquote>
             Gets the database command to update the specified record.
-             (<i>Inherited from <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">SqlCertificateDatabase</a>.</i>)</blockquote></td>
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -900,23 +863,23 @@
             </div>
           </div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.SqliteCertificateDatabase:Members">
+        <div class="Members" id="T:MimeKit.Cryptography.SqlCertificateDatabase:Members">
           <h2 class="Section" id="MemberDetails">Member Details</h2>
           <div class="SectionBox" id="_MemberDetails">
-            <h3 id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String)">SqliteCertificateDatabase Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):member">
+            <h3 id="C:MimeKit.Cryptography.SqlCertificateDatabase(System.Data.IDbConnection,System.String)">SqlCertificateDatabase Constructor</h3>
+            <blockquote id="C:MimeKit.Cryptography.SqlCertificateDatabase(System.Data.IDbConnection,System.String):member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> class.
+            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">MimeKit.Cryptography.SqlCertificateDatabase</a> class.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>SqliteCertificateDatabase</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+              <div class="Signature">protected  <b>SqlCertificateDatabase</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqlCertificateDatabase(System.Data.IDbConnection,System.String):Parameters">
                 <dl>
                   <dt>
                     <i>connection</i>
                   </dt>
-                  <dd>The SQLite connection.</dd>
+                  <dd>The database <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a>.</dd>
                   <dt>
                     <i>password</i>
                   </dt>
@@ -924,7 +887,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):Exceptions">
+              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqlCertificateDatabase(System.Data.IDbConnection,System.String):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -945,102 +908,52 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):Remarks">
-            Creates a new <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> using the provided SQLite database connection.
+              <div class="SectionBox" id="C:MimeKit.Cryptography.SqlCertificateDatabase(System.Data.IDbConnection,System.String):Remarks">
+            Creates a new <a href="../MimeKit.Cryptography/SqlCertificateDatabase.html">MimeKit.Cryptography.SqlCertificateDatabase</a> using the provided database connection.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.Data.IDbConnection,System.String):Version Information">
+              <div class="SectionBox" id="C:MimeKit.Cryptography.SqlCertificateDatabase(System.Data.IDbConnection,System.String):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String)">SqliteCertificateDatabase Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):member">
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.Dispose(System.Boolean)">Dispose Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.Dispose(System.Boolean):member">
               <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> class.
+            Releases the unmanaged resources used by the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> and
+            optionally releases the managed resources.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>SqliteCertificateDatabase</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> fileName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> password)</div>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.Dispose(System.Boolean):Parameters">
                 <dl>
                   <dt>
-                    <i>fileName</i>
+                    <i>disposing</i>
                   </dt>
-                  <dd>The file name.</dd>
-                  <dt>
-                    <i>password</i>
-                  </dt>
-                  <dd>The password used for encrypting and decrypting the private keys.</dd>
+                  <dd>
+                    <tt>true</tt> to release both managed and unmanaged resources;
+            <tt>false</tt> to release only the unmanaged resources.</dd>
                 </dl>
               </blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                    </td>
-                    <td>
-                      <p>
-                        <i>fileName</i> is <tt>null</tt>.</p>
-                      <p>-or-</p>
-                      <p>
-                        <i>password</i> is <tt>null</tt>.</p>
-                    </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
-                    </td>
-                    <td>
-            The specified file path is empty.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
-                    </td>
-                    <td>
-            The user does not have access to read the specified file.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
-                    </td>
-                    <td>
-            An error occurred reading the file.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):Remarks">
-                <p>Creates a new <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> and opens a connection to the
-            SQLite database at the specified path using the Mono.Data.Sqlite binding to the native
-            SQLite library.</p>
-                <p>If Mono.Data.Sqlite is not available or if an alternative binding to the native
-            SQLite library is preferred, then consider using
-            <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html#M:MimeKit.Cryptography.SqliteCertificateDatabase.#ctor(System.Data.IDbConnection,System.String)">SqliteCertificateDatabase.#ctor(System.Data.IDbConnection, string)</a> instead.</p>
-              </div>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.Dispose(System.Boolean):Remarks">
+            Releases the unmanaged resources used by the <a href="../MimeKit.Cryptography/SqliteCertificateDatabase.html">MimeKit.Cryptography.SqliteCertificateDatabase</a> and
+            optionally releases the managed resources.
+            </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.SqliteCertificateDatabase(System.String,System.String):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.Dispose(System.Boolean):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):member">
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection)">GetCreateCertificatesTableCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):member">
               <p class="Summary">
             Gets the command to create the certificates table.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetCreateCertificatesTableCommand</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection)</div>
+              <div class="Signature">protected abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetCreateCertificatesTableCommand</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Parameters">
                 <dl>
                   <dt>
                     <i>connection</i>
@@ -1049,26 +962,26 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Returns">The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Returns">The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Remarks">
             Constructs the command to create a certificates table suitable for storing
             <a href="../MimeKit.Cryptography/X509CertificateRecord.html">MimeKit.Cryptography.X509CertificateRecord</a> objects.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCertificatesTableCommand(System.Data.IDbConnection):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand Method</h3>
-            <blockquote id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):member">
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection)">GetCreateCrlsTableCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):member">
               <p class="Summary">
             Gets the command to create the CRLs table.
             </p>
               <h2>Syntax</h2>
-              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetCreateCrlsTableCommand</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection)</div>
+              <div class="Signature">protected abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetCreateCrlsTableCommand</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbConnection">System.Data.IDbConnection</a> connection)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Parameters">
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Parameters">
                 <dl>
                   <dt>
                     <i>connection</i>
@@ -1077,14 +990,369 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Returns">The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a>.</blockquote>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Returns">The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a>.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Remarks">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Remarks">
             Constructs the command to create a CRLs table suitable for storing
             <a href="../MimeKit.Cryptography/X509CertificateRecord.html">MimeKit.Cryptography.X509CertificateRecord</a> objects.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MimeKit.Cryptography.SqliteCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Version Information">
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetCreateCrlsTableCommand(System.Data.IDbConnection):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CertificateRecord)">GetDeleteCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CertificateRecord):member">
+              <p class="Summary">
+            Gets the database command to delete the specified certificate record.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetDeleteCommand</b> (<a href="../MimeKit.Cryptography/X509CertificateRecord.html">X509CertificateRecord</a> record)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CertificateRecord):Parameters">
+                <dl>
+                  <dt>
+                    <i>record</i>
+                  </dt>
+                  <dd>The certificate record.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CertificateRecord):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CertificateRecord):Remarks">
+            Gets the database command to delete the specified certificate record.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CertificateRecord):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CrlRecord)">GetDeleteCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CrlRecord):member">
+              <p class="Summary">
+            Gets the database command to delete the specified CRL record.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetDeleteCommand</b> (<a href="../MimeKit.Cryptography/X509CrlRecord.html">X509CrlRecord</a> record)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CrlRecord):Parameters">
+                <dl>
+                  <dt>
+                    <i>record</i>
+                  </dt>
+                  <dd>The record.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CrlRecord):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CrlRecord):Remarks">
+            Gets the database command to delete the specified CRL record.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetDeleteCommand(MimeKit.Cryptography.X509CrlRecord):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CertificateRecord)">GetInsertCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CertificateRecord):member">
+              <p class="Summary">
+            Gets the database command to insert the specified certificate record.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetInsertCommand</b> (<a href="../MimeKit.Cryptography/X509CertificateRecord.html">X509CertificateRecord</a> record)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CertificateRecord):Parameters">
+                <dl>
+                  <dt>
+                    <i>record</i>
+                  </dt>
+                  <dd>The certificate record.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CertificateRecord):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CertificateRecord):Remarks">
+            Gets the database command to insert the specified certificate record.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CertificateRecord):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CrlRecord)">GetInsertCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CrlRecord):member">
+              <p class="Summary">
+            Gets the database command to insert the specified CRL record.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetInsertCommand</b> (<a href="../MimeKit.Cryptography/X509CrlRecord.html">X509CrlRecord</a> record)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CrlRecord):Parameters">
+                <dl>
+                  <dt>
+                    <i>record</i>
+                  </dt>
+                  <dd>The CRL record.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CrlRecord):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CrlRecord):Remarks">
+            Gets the database command to insert the specified CRL record.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetInsertCommand(MimeKit.Cryptography.X509CrlRecord):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectAllCrlsCommand()">GetSelectAllCrlsCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectAllCrlsCommand():member">
+              <p class="Summary">
+            Gets the database command to select all CRLs in the table.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetSelectAllCrlsCommand</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectAllCrlsCommand():Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectAllCrlsCommand():Remarks">
+            Gets the database command to select all CRLs in the table.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectAllCrlsCommand():Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.Asn1.X509.X509Name,MimeKit.Cryptography.X509CrlRecordFields)">GetSelectCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.Asn1.X509.X509Name,MimeKit.Cryptography.X509CrlRecordFields):member">
+              <p class="Summary">
+            Gets the database command to select the CRL records matching the specified issuer.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetSelectCommand</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.Asn1.X509.X509Name</a> issuer, <a href="../MimeKit.Cryptography/X509CrlRecordFields.html">X509CrlRecordFields</a> fields)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.Asn1.X509.X509Name,MimeKit.Cryptography.X509CrlRecordFields):Parameters">
+                <dl>
+                  <dt>
+                    <i>issuer</i>
+                  </dt>
+                  <dd>The issuer.</dd>
+                  <dt>
+                    <i>fields</i>
+                  </dt>
+                  <dd>The fields to return.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.Asn1.X509.X509Name,MimeKit.Cryptography.X509CrlRecordFields):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.Asn1.X509.X509Name,MimeKit.Cryptography.X509CrlRecordFields):Remarks">
+            Gets the database command to select the CRL records matching the specified issuer.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.Asn1.X509.X509Name,MimeKit.Cryptography.X509CrlRecordFields):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.X509CertificateRecordFields):member">
+              <p class="Summary">
+            Gets the database command to select the record matching the specified certificate.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetSelectCommand</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Certificate</a> certificate, <a href="../MimeKit.Cryptography/X509CertificateRecordFields.html">X509CertificateRecordFields</a> fields)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.X509CertificateRecordFields):Parameters">
+                <dl>
+                  <dt>
+                    <i>certificate</i>
+                  </dt>
+                  <dd>The certificate.</dd>
+                  <dt>
+                    <i>fields</i>
+                  </dt>
+                  <dd>The fields to return.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.X509CertificateRecordFields):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.X509CertificateRecordFields):Remarks">
+            Gets the database command to select the record matching the specified certificate.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Certificate,MimeKit.Cryptography.X509CertificateRecordFields):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Crl,MimeKit.Cryptography.X509CrlRecordFields)">GetSelectCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Crl,MimeKit.Cryptography.X509CrlRecordFields):member">
+              <p class="Summary">
+            Gets the database command to select the record for the specified CRL.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetSelectCommand</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.X509Crl</a> crl, <a href="../MimeKit.Cryptography/X509CrlRecordFields.html">X509CrlRecordFields</a> fields)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Crl,MimeKit.Cryptography.X509CrlRecordFields):Parameters">
+                <dl>
+                  <dt>
+                    <i>crl</i>
+                  </dt>
+                  <dd>The X.509 CRL.</dd>
+                  <dt>
+                    <i>fields</i>
+                  </dt>
+                  <dd>The fields to return.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Crl,MimeKit.Cryptography.X509CrlRecordFields):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Crl,MimeKit.Cryptography.X509CrlRecordFields):Remarks">
+            Gets the database command to select the record for the specified CRL.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.X509Crl,MimeKit.Cryptography.X509CrlRecordFields):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(MimeKit.MailboxAddress,System.DateTime,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(MimeKit.MailboxAddress,System.DateTime,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):member">
+              <p class="Summary">
+            Gets the database command to select the certificate records for the specified mailbox.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetSelectCommand</b> (<a href="../MimeKit/MailboxAddress.html">MimeKit.MailboxAddress</a> mailbox, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> now, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> requirePrivateKey, <a href="../MimeKit.Cryptography/X509CertificateRecordFields.html">X509CertificateRecordFields</a> fields)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(MimeKit.MailboxAddress,System.DateTime,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):Parameters">
+                <dl>
+                  <dt>
+                    <i>mailbox</i>
+                  </dt>
+                  <dd>The mailbox.</dd>
+                  <dt>
+                    <i>now</i>
+                  </dt>
+                  <dd>The date and time for which the certificate should be valid.</dd>
+                  <dt>
+                    <i>requirePrivateKey</i>
+                  </dt>
+                  <dd>true</dd>
+                  <dt>
+                    <i>fields</i>
+                  </dt>
+                  <dd>The fields to return.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(MimeKit.MailboxAddress,System.DateTime,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(MimeKit.MailboxAddress,System.DateTime,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):Remarks">
+            Gets the database command to select the certificate records for the specified mailbox.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(MimeKit.MailboxAddress,System.DateTime,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.Store.IX509Selector,System.Boolean,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields)">GetSelectCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.Store.IX509Selector,System.Boolean,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):member">
+              <p class="Summary">
+            Gets the database command to select the certificate records for the specified mailbox.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetSelectCommand</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Org.BouncyCastle.X509.Store.IX509Selector</a> selector, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> trustedOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> requirePrivateKey, <a href="../MimeKit.Cryptography/X509CertificateRecordFields.html">X509CertificateRecordFields</a> fields)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.Store.IX509Selector,System.Boolean,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):Parameters">
+                <dl>
+                  <dt>
+                    <i>selector</i>
+                  </dt>
+                  <dd>Selector.</dd>
+                  <dt>
+                    <i>trustedOnly</i>
+                  </dt>
+                  <dd>If set to <tt>true</tt> trusted only.</dd>
+                  <dt>
+                    <i>requirePrivateKey</i>
+                  </dt>
+                  <dd>true</dd>
+                  <dt>
+                    <i>fields</i>
+                  </dt>
+                  <dd>The fields to return.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.Store.IX509Selector,System.Boolean,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.Store.IX509Selector,System.Boolean,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):Remarks">
+            Gets the database command to select the certificate records for the specified mailbox.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetSelectCommand(Org.BouncyCastle.X509.Store.IX509Selector,System.Boolean,System.Boolean,MimeKit.Cryptography.X509CertificateRecordFields):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CrlRecord)">GetUpdateCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CrlRecord):member">
+              <p class="Summary">
+            Gets the database command to update the specified CRL record.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetUpdateCommand</b> (<a href="../MimeKit.Cryptography/X509CrlRecord.html">X509CrlRecord</a> record)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CrlRecord):Parameters">
+                <dl>
+                  <dt>
+                    <i>record</i>
+                  </dt>
+                  <dd>The CRL record.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CrlRecord):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CrlRecord):Remarks">
+            Gets the database command to update the specified CRL record.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CrlRecord):Version Information">
+                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CertificateRecord,MimeKit.Cryptography.X509CertificateRecordFields)">GetUpdateCommand Method</h3>
+            <blockquote id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CertificateRecord,MimeKit.Cryptography.X509CertificateRecordFields):member">
+              <p class="Summary">
+            Gets the database command to update the specified record.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Data.IDbCommand">System.Data.IDbCommand</a> <b>GetUpdateCommand</b> (<a href="../MimeKit.Cryptography/X509CertificateRecord.html">X509CertificateRecord</a> record, <a href="../MimeKit.Cryptography/X509CertificateRecordFields.html">X509CertificateRecordFields</a> fields)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CertificateRecord,MimeKit.Cryptography.X509CertificateRecordFields):Parameters">
+                <dl>
+                  <dt>
+                    <i>record</i>
+                  </dt>
+                  <dd>The certificate record.</dd>
+                  <dt>
+                    <i>fields</i>
+                  </dt>
+                  <dd>The fields to update.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CertificateRecord,MimeKit.Cryptography.X509CertificateRecordFields):Returns">The database command.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CertificateRecord,MimeKit.Cryptography.X509CertificateRecordFields):Remarks">
+            Gets the database command to update the specified record.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Cryptography.SqlCertificateDatabase.GetUpdateCommand(MimeKit.Cryptography.X509CertificateRecord,MimeKit.Cryptography.X509CertificateRecordFields):Version Information">
                 <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.32.0.0, 0.33.0.0</div>
               <hr size="1" />
             </blockquote>
