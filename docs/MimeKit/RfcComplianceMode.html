@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.DigitalSignatureCollection</title>
+    <title>MimeKit.RfcComplianceMode</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -204,84 +204,50 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
-          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.DigitalSignatureCollection">DigitalSignatureCollection  Class</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.DigitalSignatureCollection:Summary">
-            A collection of digital signatures.
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.RfcComplianceMode">RfcComplianceMode  Enum</h1>
+        <p class="Summary" id="T:MimeKit.RfcComplianceMode:Summary">
+            An RFC compliance mode.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.DigitalSignatureCollection:Signature">public class  <b>DigitalSignatureCollection</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;IDigitalSignature&gt;</a></div>
+          <div class="Signature" id="T:MimeKit.RfcComplianceMode:Signature">public enum <b>RfcComplianceMode</b></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.DigitalSignatureCollection:Docs">
+        <div class="Remarks" id="T:MimeKit.RfcComplianceMode:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.DigitalSignatureCollection:Docs:Remarks">When verifying a digitally signed MIME part such as a <a href="../MimeKit.Cryptography/MultipartSigned.html">MimeKit.Cryptography.MultipartSigned</a>
-            or a <a href="../MimeKit.Cryptography/ApplicationPkcs7Mime.html">MimeKit.Cryptography.ApplicationPkcs7Mime</a>, you will get back a collection of
-            digital signatures. Typically, a signed message will only have a single signature
-            (created by the sender of the message), but it is possible for there to be
-            multiple signatures.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.DigitalSignatureCollection:Docs:Version Information">
-            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.36.0.0</div>
-          <h2 class="Section" id="Members">Members</h2>
-          <div class="SectionBox" id="_Members">
-            <p>
-								See Also: Inherited members from
-								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;IDigitalSignature&gt;</a>.
-							</p>
-            <h2 class="Section">Public Constructors</h2>
-            <div class="SectionBox" id="Public Constructors">
-              <div class="SubsectionBox">
-                <table class="TypeMembers">
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td>
-                      <div>
-                        <b>
-                          <a href="#C:MimeKit.Cryptography.DigitalSignatureCollection(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature})">DigitalSignatureCollection</a>
-                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a>)</div>
-                    </td>
-                    <td>
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">MimeKit.Cryptography.DigitalSignatureCollection</a> class.
+          <div class="SectionBox" id="T:MimeKit.RfcComplianceMode:Docs:Remarks">
+            An RFC compliance mode.
+            </div>
+          <h2 class="Section">Members</h2>
+          <div class="SectionBox" id="T:MimeKit.RfcComplianceMode:Docs:Members">
+            <table class="Enumeration">
+              <tr>
+                <th>Member Name</th>
+                <th>Description</th>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.RfcComplianceMode.Loose">
+                  <b>Loose</b>
+                </td>
+                <td>
+            Attempt to be much more liberal accepting broken and/or invalid formatting.
             </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.RfcComplianceMode.Strict">
+                  <b>Strict</b>
+                </td>
+                <td>
+            Do not attempt to be overly liberal in accepting broken and/or invalid formatting.
+            </td>
+              </tr>
+            </table>
           </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.RfcComplianceMode:Docs:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.36.0.0</div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.DigitalSignatureCollection:Members">
-          <h2 class="Section" id="MemberDetails">Member Details</h2>
-          <div class="SectionBox" id="_MemberDetails">
-            <h3 id="C:MimeKit.Cryptography.DigitalSignatureCollection(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature})">DigitalSignatureCollection Constructor</h3>
-            <blockquote id="C:MimeKit.Cryptography.DigitalSignatureCollection(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}):member">
-              <p class="Summary">
-            Initializes a new instance of the <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">MimeKit.Cryptography.DigitalSignatureCollection</a> class.
-            </p>
-              <h2>Syntax</h2>
-              <div class="Signature">public  <b>DigitalSignatureCollection</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;IDigitalSignature&gt;</a> signatures)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MimeKit.Cryptography.DigitalSignatureCollection(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}):Parameters">
-                <dl>
-                  <dt>
-                    <i>signatures</i>
-                  </dt>
-                  <dd>The signatures.</dd>
-                </dl>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.DigitalSignatureCollection(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}):Remarks">
-            Creates a new <a href="../MimeKit.Cryptography/DigitalSignatureCollection.html">MimeKit.Cryptography.DigitalSignatureCollection</a>.
-            </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MimeKit.Cryptography.DigitalSignatureCollection(System.Collections.Generic.IList{MimeKit.Cryptography.IDigitalSignature}):Version Information">
-                <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.36.0.0</div>
-              <hr size="1" />
-            </blockquote>
-          </div>
+        <div class="Members" id="T:MimeKit.RfcComplianceMode:Members">
         </div>
       </section>
     </div>
