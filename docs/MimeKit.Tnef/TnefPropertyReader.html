@@ -1,0 +1,1832 @@
+<html>
+  <head>
+    <title>MimeKit.Tnef.TnefPropertyReader</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        color: black
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        color: black
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
+    </div>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Tnef Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.Tnef.TnefPropertyReader">TnefPropertyReader  Class</h1>
+        <p class="Summary" id="T:MimeKit.Tnef.TnefPropertyReader:Summary">
+            A TNEF property reader.
+            </p>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.Tnef.TnefPropertyReader:Signature">public class  <b>TnefPropertyReader</b></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.Tnef.TnefPropertyReader:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPropertyReader:Docs:Remarks">
+            A TNEF property reader.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPropertyReader:Docs:Version Information">
+            <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+          <h2 class="Section" id="Members">Members</h2>
+          <div class="SectionBox" id="_Members">
+            <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+            <h2 class="Section">Public Properties</h2>
+            <div class="SectionBox" id="Public Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.IsComputedProperty">IsComputedProperty</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets a value indicating whether the current property is a computed property.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.IsEmbeddedMessage">IsEmbeddedMessage</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets a value indicating whether the current property is an embedded TNEF message.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.IsLargeValue">IsLargeValue</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets a value indicating whether the current property has a large value.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.IsMultiValuedProperty">IsMultiValuedProperty</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets a value indicating whether or not the current property has multiple values.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.IsNamedProperty">IsNamedProperty</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets a value indicating whether or not the current property is a named property.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.IsObjectProperty">IsObjectProperty</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets a value indicating whether the current property contains object values.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.ObjectIid">ObjectIid</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Guid">Guid</a>
+                      </i>. 
+            Gets the object iid.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.PropertyCount">PropertyCount</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the number of properties available.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.PropertyNameId">PropertyNameId</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit.Tnef/TnefNameId.html">TnefNameId</a>
+                      </i>. 
+            Gets the property name identifier.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.PropertyTag">PropertyTag</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit.Tnef/TnefPropertyTag.html">TnefPropertyTag</a>
+                      </i>. 
+            Gets the property tag.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.RawValueLength">RawValueLength</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the length of the raw value.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.RawValueStreamOffset">RawValueStreamOffset</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the raw value stream offset.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.RowCount">RowCount</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the number of table rows available.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.ValueCount">ValueCount</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the number of values available.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefPropertyReader.ValueType">ValueType</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a>
+                      </i>. 
+            Gets the type of the value.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Methods</h2>
+            <div class="SectionBox" id="Public Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.Equals(System.Object)">Equals</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Determines whether the specified <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> is equal to the current <a href="../MimeKit.Tnef/TnefPropertyReader.html">MimeKit.Tnef.TnefPropertyReader</a>.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.GetEmbeddedMessageReader()">GetEmbeddedMessageReader</a>
+                      </b>()<nobr> : <a href="../MimeKit.Tnef/TnefReader.html">TnefReader</a></nobr><blockquote>
+            Gets the embedded TNEF message reader.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.GetHashCode()">GetHashCode</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Serves as a hash function for a <a href="../MimeKit.Tnef/TnefPropertyReader.html">MimeKit.Tnef.TnefPropertyReader</a> object.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.GetRawValueReadStream()">GetRawValueReadStream</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>
+            Gets the raw value of the attribute or property as a stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadNextProperty()">ReadNextProperty</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Advances to the next MAPI property.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadNextRow()">ReadNextRow</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Advances to the next table row of properties.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadNextValue()">ReadNextValue</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Advances to the next value in the TNEF stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadRawValue(System.Byte[],System.Int32,System.Int32)">ReadRawValue</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Reads the raw attribute or property value as a sequence of bytes.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadTextValue(System.Char[],System.Int32,System.Int32)">ReadTextValue</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Reads the raw attribute or property value as a sequence of unicode characters.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValue()">ReadValue</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a></nobr><blockquote>
+            Reads the value.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBoolean()">ReadValueAsBoolean</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Reads the value as a boolean.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBytes()">ReadValueAsBytes</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[]</nobr><blockquote>
+            Reads the value as a byte array.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDateTime()">ReadValueAsDateTime</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a></nobr><blockquote>
+            Reads the value as a date and time.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDouble()">ReadValueAsDouble</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></nobr><blockquote>
+            Reads the value as a double.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsFloat()">ReadValueAsFloat</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>
+            Reads the value as a float.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsGuid()">ReadValueAsGuid</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Guid">Guid</a></nobr><blockquote>
+            Reads the value as a GUID.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt16()">ReadValueAsInt16</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a></nobr><blockquote>
+            Reads the value as a 16-bit integer.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt32()">ReadValueAsInt32</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Reads the value as a 32-bit integer.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt64()">ReadValueAsInt64</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a></nobr><blockquote>
+            Reads the value as a 64-bit integer.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsString()">ReadValueAsString</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Reads the value as a string.
+            </blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Members" id="T:MimeKit.Tnef.TnefPropertyReader:Members">
+          <h2 class="Section" id="MemberDetails">Member Details</h2>
+          <div class="SectionBox" id="_MemberDetails">
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.Equals(System.Object)">Equals Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.Equals(System.Object):member">
+              <p class="Summary">
+            Determines whether the specified <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> is equal to the current <a href="../MimeKit.Tnef/TnefPropertyReader.html">MimeKit.Tnef.TnefPropertyReader</a>.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Equals</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> obj)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.Equals(System.Object):Parameters">
+                <dl>
+                  <dt>
+                    <i>obj</i>
+                  </dt>
+                  <dd>The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> to compare with the current <a href="../MimeKit.Tnef/TnefPropertyReader.html">MimeKit.Tnef.TnefPropertyReader</a>.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.Equals(System.Object):Returns">
+                <tt>true</tt> if the specified <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> is equal to the current
+            <a href="../MimeKit.Tnef/TnefPropertyReader.html">MimeKit.Tnef.TnefPropertyReader</a>; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.Equals(System.Object):Remarks">
+            Determines whether the specified <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> is equal to the current <a href="../MimeKit.Tnef/TnefPropertyReader.html">MimeKit.Tnef.TnefPropertyReader</a>.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.Equals(System.Object):Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.GetEmbeddedMessageReader()">GetEmbeddedMessageReader Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.GetEmbeddedMessageReader():member">
+              <p class="Summary">
+            Gets the embedded TNEF message reader.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit.Tnef/TnefReader.html">TnefReader</a> <b>GetEmbeddedMessageReader</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetEmbeddedMessageReader():Returns">The embedded TNEF message reader.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetEmbeddedMessageReader():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The property does not contain any more values.</p>
+                      <p>-or-</p>
+                      <p>The property value is not an embedded message.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetEmbeddedMessageReader():Remarks">
+            Gets the embedded TNEF message reader.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetEmbeddedMessageReader():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.GetHashCode()">GetHashCode Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.GetHashCode():member">
+              <p class="Summary">
+            Serves as a hash function for a <a href="../MimeKit.Tnef/TnefPropertyReader.html">MimeKit.Tnef.TnefPropertyReader</a> object.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>GetHashCode</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetHashCode():Returns">A hash code for this instance that is suitable for use in hashing algorithms
+            and data structures such as a hash table.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetHashCode():Remarks">
+            Serves as a hash function for a <a href="../MimeKit.Tnef/TnefPropertyReader.html">MimeKit.Tnef.TnefPropertyReader</a> object.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetHashCode():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.GetRawValueReadStream()">GetRawValueReadStream Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.GetRawValueReadStream():member">
+              <p class="Summary">
+            Gets the raw value of the attribute or property as a stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>GetRawValueReadStream</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetRawValueReadStream():Returns">The raw value stream.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetRawValueReadStream():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The property does not contain any more values.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetRawValueReadStream():Remarks">
+            Gets the raw value of the attribute or property as a stream.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.GetRawValueReadStream():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.IsComputedProperty">IsComputedProperty Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.IsComputedProperty:member">
+              <p class="Summary">
+            Gets a value indicating whether the current property is a computed property.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsComputedProperty</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsComputedProperty:Value">
+                <tt>true</tt> if the current property is a computed property; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsComputedProperty:Remarks">
+            Gets a value indicating whether the current property is a computed property.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsComputedProperty:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.IsEmbeddedMessage">IsEmbeddedMessage Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.IsEmbeddedMessage:member">
+              <p class="Summary">
+            Gets a value indicating whether the current property is an embedded TNEF message.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsEmbeddedMessage</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsEmbeddedMessage:Value">
+                <tt>true</tt> if the current property is an embedded TNEF message; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsEmbeddedMessage:Remarks">
+            Gets a value indicating whether the current property is an embedded TNEF message.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsEmbeddedMessage:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.IsLargeValue">IsLargeValue Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.IsLargeValue:member">
+              <p class="Summary">
+            Gets a value indicating whether the current property has a large value.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsLargeValue</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsLargeValue:Value">
+                <tt>true</tt> if the current property has a large value; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsLargeValue:Remarks">
+            Gets a value indicating whether the current property has a large value.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsLargeValue:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.IsMultiValuedProperty">IsMultiValuedProperty Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.IsMultiValuedProperty:member">
+              <p class="Summary">
+            Gets a value indicating whether or not the current property has multiple values.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsMultiValuedProperty</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsMultiValuedProperty:Value">
+                <tt>true</tt> if the current property has multiple values; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsMultiValuedProperty:Remarks">
+            Gets a value indicating whether or not the current property has multiple values.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsMultiValuedProperty:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.IsNamedProperty">IsNamedProperty Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.IsNamedProperty:member">
+              <p class="Summary">
+            Gets a value indicating whether or not the current property is a named property.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsNamedProperty</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsNamedProperty:Value">
+                <tt>true</tt> if the current property is a named property; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsNamedProperty:Remarks">
+            Gets a value indicating whether or not the current property is a named property.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsNamedProperty:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.IsObjectProperty">IsObjectProperty Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.IsObjectProperty:member">
+              <p class="Summary">
+            Gets a value indicating whether the current property contains object values.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsObjectProperty</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsObjectProperty:Value">
+                <tt>true</tt> if the current property contains object values; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsObjectProperty:Remarks">
+            Gets a value indicating whether the current property contains object values.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.IsObjectProperty:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.ObjectIid">ObjectIid Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.ObjectIid:member">
+              <p class="Summary">
+            Gets the object iid.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Guid">Guid</a> <b>ObjectIid</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ObjectIid:Value">The object iid.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ObjectIid:Remarks">
+            Gets the object iid.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ObjectIid:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.PropertyCount">PropertyCount Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.PropertyCount:member">
+              <p class="Summary">
+            Gets the number of properties available.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>PropertyCount</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyCount:Value">The property count.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyCount:Remarks">
+            Gets the number of properties available.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyCount:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.PropertyNameId">PropertyNameId Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.PropertyNameId:member">
+              <p class="Summary">
+            Gets the property name identifier.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit.Tnef/TnefNameId.html">TnefNameId</a> <b>PropertyNameId</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyNameId:Value">The property name identifier.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyNameId:Remarks">
+            Gets the property name identifier.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyNameId:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.PropertyTag">PropertyTag Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.PropertyTag:member">
+              <p class="Summary">
+            Gets the property tag.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit.Tnef/TnefPropertyTag.html">TnefPropertyTag</a> <b>PropertyTag</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyTag:Value">The property tag.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyTag:Remarks">
+            Gets the property tag.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.PropertyTag:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.RawValueLength">RawValueLength Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.RawValueLength:member">
+              <p class="Summary">
+            Gets the length of the raw value.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>RawValueLength</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RawValueLength:Value">The length of the raw value.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RawValueLength:Remarks">
+            Gets the length of the raw value.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RawValueLength:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.RawValueStreamOffset">RawValueStreamOffset Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.RawValueStreamOffset:member">
+              <p class="Summary">
+            Gets the raw value stream offset.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>RawValueStreamOffset</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RawValueStreamOffset:Value">The raw value stream offset.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RawValueStreamOffset:Remarks">
+            Gets the raw value stream offset.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RawValueStreamOffset:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextProperty()">ReadNextProperty Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextProperty():member">
+              <p class="Summary">
+            Advances to the next MAPI property.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ReadNextProperty</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextProperty():Returns">
+                <tt>true</tt> if there is another property available to be read; otherwise <tt>false</tt>.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextProperty():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Tnef/TnefException.html">MimeKit.Tnef.TnefException</a>
+                    </td>
+                    <td>
+            The TNEF data is corrupt or invalid.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextProperty():Remarks">
+            Advances to the next MAPI property.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextProperty():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextRow()">ReadNextRow Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextRow():member">
+              <p class="Summary">
+            Advances to the next table row of properties.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ReadNextRow</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextRow():Returns">
+                <tt>true</tt> if there is another row available to be read; otherwise <tt>false</tt>.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextRow():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Tnef/TnefException.html">MimeKit.Tnef.TnefException</a>
+                    </td>
+                    <td>
+            The TNEF data is corrupt or invalid.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextRow():Remarks">
+            Advances to the next table row of properties.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextRow():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextValue()">ReadNextValue Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextValue():member">
+              <p class="Summary">
+            Advances to the next value in the TNEF stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ReadNextValue</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextValue():Returns">
+                <tt>true</tt> if there is another value available to be read; otherwise <tt>false</tt>.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextValue():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Tnef/TnefException.html">MimeKit.Tnef.TnefException</a>
+                    </td>
+                    <td>
+            The TNEF data is corrupt or invalid.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextValue():Remarks">
+            Advances to the next value in the TNEF stream.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadNextValue():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadRawValue(System.Byte[],System.Int32,System.Int32)">ReadRawValue Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadRawValue(System.Byte[],System.Int32,System.Int32):member">
+              <p class="Summary">
+            Reads the raw attribute or property value as a sequence of bytes.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ReadRawValue</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadRawValue(System.Byte[],System.Int32,System.Int32):Parameters">
+                <dl>
+                  <dt>
+                    <i>buffer</i>
+                  </dt>
+                  <dd>The buffer to read data into.</dd>
+                  <dt>
+                    <i>offset</i>
+                  </dt>
+                  <dd>The offset into the buffer to start reading data.</dd>
+                  <dt>
+                    <i>count</i>
+                  </dt>
+                  <dd>The number of bytes to read.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadRawValue(System.Byte[],System.Int32,System.Int32):Returns">The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many
+            bytes are not currently available, or zero (0) if the end of the stream has been reached.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadRawValue(System.Byte[],System.Int32,System.Int32):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>buffer</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>offset</i> is less than zero or greater than the length of <i>buffer</i>.</p>
+                      <p>-or-</p>
+                      <p>The <i>buffer</i> is not large enough to contain <i>count</i> bytes starting
+            at the specified <i>offset</i>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadRawValue(System.Byte[],System.Int32,System.Int32):Remarks">
+            Reads the raw attribute or property value as a sequence of bytes.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadRawValue(System.Byte[],System.Int32,System.Int32):Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadTextValue(System.Char[],System.Int32,System.Int32)">ReadTextValue Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadTextValue(System.Char[],System.Int32,System.Int32):member">
+              <p class="Summary">
+            Reads the raw attribute or property value as a sequence of unicode characters.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ReadTextValue</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadTextValue(System.Char[],System.Int32,System.Int32):Parameters">
+                <dl>
+                  <dt>
+                    <i>buffer</i>
+                  </dt>
+                  <dd>The buffer to read data into.</dd>
+                  <dt>
+                    <i>offset</i>
+                  </dt>
+                  <dd>The offset into the buffer to start reading data.</dd>
+                  <dt>
+                    <i>count</i>
+                  </dt>
+                  <dd>The number of characters to read.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadTextValue(System.Char[],System.Int32,System.Int32):Returns">The total number of characters read into the buffer. This can be less than the number of characters
+            requested if that many bytes are not currently available, or zero (0) if the end of the stream has been
+            reached.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadTextValue(System.Char[],System.Int32,System.Int32):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>buffer</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>offset</i> is less than zero or greater than the length of <i>buffer</i>.</p>
+                      <p>-or-</p>
+                      <p>The <i>buffer</i> is not large enough to contain <i>count</i> characters starting
+            at the specified <i>offset</i>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadTextValue(System.Char[],System.Int32,System.Int32):Remarks">
+            Reads the raw attribute or property value as a sequence of unicode characters.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadTextValue(System.Char[],System.Int32,System.Int32):Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValue()">ReadValue Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValue():member">
+              <p class="Summary">
+            Reads the value.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>ReadValue</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValue():Returns">The value.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValue():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValue():Remarks">
+            Reads an attribute or property value as its native type.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValue():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBoolean()">ReadValueAsBoolean Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBoolean():member">
+              <p class="Summary">
+            Reads the value as a boolean.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ReadValueAsBoolean</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBoolean():Returns">The value as a boolean.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBoolean():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a boolean.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBoolean():Remarks">
+            Reads any integer-based attribute or property value as a boolean.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBoolean():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBytes()">ReadValueAsBytes Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBytes():member">
+              <p class="Summary">
+            Reads the value as a byte array.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] <b>ReadValueAsBytes</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBytes():Returns">The value as a byte array.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBytes():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a byte array.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBytes():Remarks">
+            Reads any string, binary blob, Class ID, or Object attribute or property value as a byte array.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsBytes():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDateTime()">ReadValueAsDateTime Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDateTime():member">
+              <p class="Summary">
+            Reads the value as a date and time.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a> <b>ReadValueAsDateTime</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDateTime():Returns">The value as a date and time.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDateTime():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a date and time.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDateTime():Remarks">
+            Reads any date and time attribute or property value as a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.DateTime">DateTime</a>.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDateTime():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDouble()">ReadValueAsDouble Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDouble():member">
+              <p class="Summary">
+            Reads the value as a double.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>ReadValueAsDouble</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDouble():Returns">The value as a double.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDouble():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a double.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDouble():Remarks">
+            Reads any numeric attribute or property value as a double.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsDouble():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsFloat()">ReadValueAsFloat Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsFloat():member">
+              <p class="Summary">
+            Reads the value as a float.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>ReadValueAsFloat</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsFloat():Returns">The value as a float.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsFloat():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a float.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsFloat():Remarks">
+            Reads any numeric attribute or property value as a float.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsFloat():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsGuid()">ReadValueAsGuid Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsGuid():member">
+              <p class="Summary">
+            Reads the value as a GUID.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Guid">Guid</a> <b>ReadValueAsGuid</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsGuid():Returns">The value as a GUID.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsGuid():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a GUID.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsGuid():Remarks">
+            Reads any Class ID or Object value as a GUID.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsGuid():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt16()">ReadValueAsInt16 Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt16():member">
+              <p class="Summary">
+            Reads the value as a 16-bit integer.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a> <b>ReadValueAsInt16</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt16():Returns">The value as a 16-bit integer.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt16():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a 16-bit integer.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt16():Remarks">
+            Reads any integer-based attribute or property value as a 16-bit integer.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt16():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt32()">ReadValueAsInt32 Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt32():member">
+              <p class="Summary">
+            Reads the value as a 32-bit integer.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ReadValueAsInt32</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt32():Returns">The value as a 32-bit integer.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt32():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a 32-bit integer.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt32():Remarks">
+            Reads any integer-based attribute or property value as a 32-bit integer.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt32():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt64()">ReadValueAsInt64 Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt64():member">
+              <p class="Summary">
+            Reads the value as a 64-bit integer.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>ReadValueAsInt64</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt64():Returns">The value as a 64-bit integer.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt64():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a 64-bit integer.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt64():Remarks">
+            Reads any integer-based attribute or property value as a 64-bit integer.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsInt64():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsString()">ReadValueAsString Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsString():member">
+              <p class="Summary">
+            Reads the value as a string.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ReadValueAsString</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsString():Returns">The value as a string.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsString():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            There are no more values to read or the value could not be read as a string.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.EndOfStreamException">System.IO.EndOfStreamException</a>
+                    </td>
+                    <td>
+            The TNEF stream is truncated and the value could not be read.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsString():Remarks">
+            Reads any string or binary blob values as a string.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefPropertyReader.ReadValueAsString():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.RowCount">RowCount Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.RowCount:member">
+              <p class="Summary">
+            Gets the number of table rows available.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>RowCount</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RowCount:Value">The row count.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RowCount:Remarks">
+            Gets the number of table rows available.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.RowCount:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.ValueCount">ValueCount Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.ValueCount:member">
+              <p class="Summary">
+            Gets the number of values available.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ValueCount</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ValueCount:Value">The value count.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ValueCount:Remarks">
+            Gets the number of values available.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ValueCount:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefPropertyReader.ValueType">ValueType Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefPropertyReader.ValueType:member">
+              <p class="Summary">
+            Gets the type of the value.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Type">Type</a> <b>ValueType</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ValueType:Value">The type of the value.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ValueType:Remarks">
+            Gets the type of the value.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefPropertyReader.ValueType:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,389 @@
+<html>
+  <head>
+    <title>MimeKit.Tnef.TnefPropertyType</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        color: black
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        color: black
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
+    </div>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Tnef Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.Tnef.TnefPropertyType">TnefPropertyType  Enum</h1>
+        <p class="Summary" id="T:MimeKit.Tnef.TnefPropertyType:Summary">
+            The type of value that a TNEF property contains.
+            </p>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.Tnef.TnefPropertyType:Signature">public enum <b>TnefPropertyType</b></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.Tnef.TnefPropertyType:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPropertyType:Docs:Remarks">
+            The type of value that a TNEF property contains.
+            </div>
+          <h2 class="Section">Members</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPropertyType:Docs:Members">
+            <table class="Enumeration">
+              <tr>
+                <th>Member Name</th>
+                <th>Description</th>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.AppTime">
+                  <b>AppTime</b>
+                </td>
+                <td>
+            The property has a 64-bit integer value specifying the number of 100ns periods since Jan 1, 1601.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Binary">
+                  <b>Binary</b>
+                </td>
+                <td>
+            The property has a binary blob value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Boolean">
+                  <b>Boolean</b>
+                </td>
+                <td>
+            The property has a boolean value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.ClassId">
+                  <b>ClassId</b>
+                </td>
+                <td>
+            The property has an OLE GUID value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Currency">
+                  <b>Currency</b>
+                </td>
+                <td>
+            The property has a 64-bit integer value representing 1/10000th of a monetary unit (i.e., 1/100th of a cent).
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Double">
+                  <b>Double</b>
+                </td>
+                <td>
+            The property has a 64-bit floating point value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Error">
+                  <b>Error</b>
+                </td>
+                <td>
+            The property has a 32-bit error value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.I2">
+                  <b>I2</b>
+                </td>
+                <td>
+            The property has a signed 16-bit value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.I8">
+                  <b>I8</b>
+                </td>
+                <td>
+            The property has a signed 64-bit value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Long">
+                  <b>Long</b>
+                </td>
+                <td>
+            The property has a signed 32-bit value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.MultiValued">
+                  <b>MultiValued</b>
+                </td>
+                <td>
+            A flag indicating that the property contains multiple values.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Null">
+                  <b>Null</b>
+                </td>
+                <td>
+            The property has a null value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Object">
+                  <b>Object</b>
+                </td>
+                <td>
+            The property has an embedded object value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.R4">
+                  <b>R4</b>
+                </td>
+                <td>
+            THe property has a 32-bit floating point value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.String8">
+                  <b>String8</b>
+                </td>
+                <td>
+            The property has a null-terminated 8-bit character string value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.SysTime">
+                  <b>SysTime</b>
+                </td>
+                <td>
+            The property has a 64-bit integer value specifying the number of 100ns periods since Jan 1, 1601.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Unicode">
+                  <b>Unicode</b>
+                </td>
+                <td>
+            The property has a null-terminated unicode character string value.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyType.Unspecified">
+                  <b>Unspecified</b>
+                </td>
+                <td>
+            The type of the property is unspecified.
+            </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPropertyType:Docs:Version Information">
+            <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+        </div>
+        <div class="Members" id="T:MimeKit.Tnef.TnefPropertyType:Members">
+        </div>
+      </section>
+    </div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

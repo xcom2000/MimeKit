@@ -1,0 +1,4213 @@
+<html>
+  <head>
+    <title>MimeKit.Tnef.TnefPropertyId</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        color: black
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        color: black
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
+    </div>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Tnef Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.Tnef.TnefPropertyId">TnefPropertyId  Enum</h1>
+        <p class="Summary" id="T:MimeKit.Tnef.TnefPropertyId:Summary">
+            A TNEF property identifier.
+            </p>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.Tnef.TnefPropertyId:Signature">public enum <b>TnefPropertyId</b></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.Tnef.TnefPropertyId:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPropertyId:Docs:Remarks">
+            A TNEF property identifier.
+            </div>
+          <h2 class="Section">Members</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPropertyId:Docs:Members">
+            <table class="Enumeration">
+              <tr>
+                <th>Member Name</th>
+                <th>Description</th>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AbDefaultDir">
+                  <b>AbDefaultDir</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AbDefaultPab">
+                  <b>AbDefaultPab</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AbProviderId">
+                  <b>AbProviderId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AbProviders">
+                  <b>AbProviders</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AbSearchPath">
+                  <b>AbSearchPath</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AbSearchPathUpdate">
+                  <b>AbSearchPathUpdate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Access">
+                  <b>Access</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AccessLevel">
+                  <b>AccessLevel</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Account">
+                  <b>Account</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AcknowledgementMode">
+                  <b>AcknowledgementMode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Addrtype">
+                  <b>Addrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AlternateRecipient">
+                  <b>AlternateRecipient</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AlternateRecipientAllowed">
+                  <b>AlternateRecipientAllowed</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Anr">
+                  <b>Anr</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Assistant">
+                  <b>Assistant</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AssistantTelephoneNumber">
+                  <b>AssistantTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AssocContentCount">
+                  <b>AssocContentCount</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachAdditionalInfo">
+                  <b>AttachAdditionalInfo</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachContentBase">
+                  <b>AttachContentBase</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachContentId">
+                  <b>AttachContentId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachContentLocation">
+                  <b>AttachContentLocation</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachData">
+                  <b>AttachData</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachDisposition">
+                  <b>AttachDisposition</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachEncoding">
+                  <b>AttachEncoding</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachExtension">
+                  <b>AttachExtension</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachFilename">
+                  <b>AttachFilename</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachFlags">
+                  <b>AttachFlags</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachLongFilename">
+                  <b>AttachLongFilename</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachLongPathname">
+                  <b>AttachLongPathname</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachmentX400Parameters">
+                  <b>AttachmentX400Parameters</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachMethod">
+                  <b>AttachMethod</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachMimeSequence">
+                  <b>AttachMimeSequence</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachMimeTag">
+                  <b>AttachMimeTag</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachNetscapeMacInfo">
+                  <b>AttachNetscapeMacInfo</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachNum">
+                  <b>AttachNum</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachPathname">
+                  <b>AttachPathname</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachRendering">
+                  <b>AttachRendering</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachSize">
+                  <b>AttachSize</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachTag">
+                  <b>AttachTag</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AttachTransportName">
+                  <b>AttachTransportName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AuthorizingUsers">
+                  <b>AuthorizingUsers</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AutoForwarded">
+                  <b>AutoForwarded</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AutoForwardingComment">
+                  <b>AutoForwardingComment</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.AutoResponseSuppress">
+                  <b>AutoResponseSuppress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BeeperTelephoneNumber">
+                  <b>BeeperTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Birthday">
+                  <b>Birthday</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Body">
+                  <b>Body</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BodyContentId">
+                  <b>BodyContentId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BodyContentLocation">
+                  <b>BodyContentLocation</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BodyCrc">
+                  <b>BodyCrc</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BodyHtml">
+                  <b>BodyHtml</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Business2TelephoneNumber">
+                  <b>Business2TelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BusinessAddressCity">
+                  <b>BusinessAddressCity</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BusinessAddressCountry">
+                  <b>BusinessAddressCountry</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BusinessAddressPostalCode">
+                  <b>BusinessAddressPostalCode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BusinessAddressPostOfficeBox">
+                  <b>BusinessAddressPostOfficeBox</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BusinessAddressStateOrProvince">
+                  <b>BusinessAddressStateOrProvince</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BusinessAddressStreet">
+                  <b>BusinessAddressStreet</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BusinessFaxNumber">
+                  <b>BusinessFaxNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.BusinessHomePage">
+                  <b>BusinessHomePage</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CallbackTelephoneNumber">
+                  <b>CallbackTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CarTelephoneNumber">
+                  <b>CarTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CellularTelephoneNumber">
+                  <b>CellularTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ChildrensNames">
+                  <b>ChildrensNames</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ClientSubmitTime">
+                  <b>ClientSubmitTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Comment">
+                  <b>Comment</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CommonViewsEntryId">
+                  <b>CommonViewsEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CompanyMainPhoneNumber">
+                  <b>CompanyMainPhoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CompanyName">
+                  <b>CompanyName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ComputerNetworkName">
+                  <b>ComputerNetworkName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContactAddrtypes">
+                  <b>ContactAddrtypes</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContactDefaultAddressIndex">
+                  <b>ContactDefaultAddressIndex</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContactEmailAddresses">
+                  <b>ContactEmailAddresses</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContactEntryIds">
+                  <b>ContactEntryIds</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContactVersion">
+                  <b>ContactVersion</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContainerClass">
+                  <b>ContainerClass</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContainerContents">
+                  <b>ContainerContents</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContainerFlags">
+                  <b>ContainerFlags</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContainerHierarchy">
+                  <b>ContainerHierarchy</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContainerModifyVersion">
+                  <b>ContainerModifyVersion</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentConfidentialityAlgorithmId">
+                  <b>ContentConfidentialityAlgorithmId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentCorrelator">
+                  <b>ContentCorrelator</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentCount">
+                  <b>ContentCount</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentIdentifier">
+                  <b>ContentIdentifier</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentIntegrityCheck">
+                  <b>ContentIntegrityCheck</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentLength">
+                  <b>ContentLength</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentReturnRequested">
+                  <b>ContentReturnRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentsSortOrder">
+                  <b>ContentsSortOrder</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ContentUnread">
+                  <b>ContentUnread</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ControlFlags">
+                  <b>ControlFlags</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ControlId">
+                  <b>ControlId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ControlStructure">
+                  <b>ControlStructure</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ControlType">
+                  <b>ControlType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ConversationIndex">
+                  <b>ConversationIndex</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ConversationKey">
+                  <b>ConversationKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ConversationTopic">
+                  <b>ConversationTopic</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ConversionEits">
+                  <b>ConversionEits</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ConversionProhibited">
+                  <b>ConversionProhibited</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ConversionWithLossProhibited">
+                  <b>ConversionWithLossProhibited</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ConvertedEits">
+                  <b>ConvertedEits</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Correlate">
+                  <b>Correlate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CorrelateMtsid">
+                  <b>CorrelateMtsid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Country">
+                  <b>Country</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CreateTemplates">
+                  <b>CreateTemplates</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CreationTime">
+                  <b>CreationTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CreationVersion">
+                  <b>CreationVersion</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CurrentVersion">
+                  <b>CurrentVersion</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.CustomerId">
+                  <b>CustomerId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DefaultProfile">
+                  <b>DefaultProfile</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DefaultStore">
+                  <b>DefaultStore</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DefaultViewEntryId">
+                  <b>DefaultViewEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DefCreateDl">
+                  <b>DefCreateDl</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DefCreateMailuser">
+                  <b>DefCreateMailuser</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DeferredDeliveryTime">
+                  <b>DeferredDeliveryTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Delegation">
+                  <b>Delegation</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DeleteAfterSubmit">
+                  <b>DeleteAfterSubmit</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DeliverTime">
+                  <b>DeliverTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DeliveryPoint">
+                  <b>DeliveryPoint</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Deltax">
+                  <b>Deltax</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Deltay">
+                  <b>Deltay</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DepartmentName">
+                  <b>DepartmentName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Depth">
+                  <b>Depth</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DetailsTable">
+                  <b>DetailsTable</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DiscardReason">
+                  <b>DiscardReason</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DiscloseRecipients">
+                  <b>DiscloseRecipients</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DisclosureOfRecipients">
+                  <b>DisclosureOfRecipients</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DiscreteValues">
+                  <b>DiscreteValues</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DiscVal">
+                  <b>DiscVal</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DisplayBcc">
+                  <b>DisplayBcc</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DisplayCc">
+                  <b>DisplayCc</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DisplayName">
+                  <b>DisplayName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DisplayNamePrefix">
+                  <b>DisplayNamePrefix</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DisplayTo">
+                  <b>DisplayTo</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DisplayType">
+                  <b>DisplayType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DlExpansionHistory">
+                  <b>DlExpansionHistory</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.DlExpansionProhibited">
+                  <b>DlExpansionProhibited</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.EmailAddress">
+                  <b>EmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.EndDate">
+                  <b>EndDate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.EntryId">
+                  <b>EntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ExpandBeginTime">
+                  <b>ExpandBeginTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ExpandedBeginTime">
+                  <b>ExpandedBeginTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ExpandedEndTime">
+                  <b>ExpandedEndTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ExpandEndTime">
+                  <b>ExpandEndTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ExpiryTime">
+                  <b>ExpiryTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ExplicitConversion">
+                  <b>ExplicitConversion</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FilteringHooks">
+                  <b>FilteringHooks</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FinderEntryId">
+                  <b>FinderEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FolderAssociatedContents">
+                  <b>FolderAssociatedContents</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FolderType">
+                  <b>FolderType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormCategory">
+                  <b>FormCategory</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormCategorySub">
+                  <b>FormCategorySub</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormClsid">
+                  <b>FormClsid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormContactName">
+                  <b>FormContactName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormDesignerGuid">
+                  <b>FormDesignerGuid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormDesignerName">
+                  <b>FormDesignerName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormHidden">
+                  <b>FormHidden</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormHostMap">
+                  <b>FormHostMap</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormMessageBehavior">
+                  <b>FormMessageBehavior</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FormVersion">
+                  <b>FormVersion</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.FtpSite">
+                  <b>FtpSite</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Gender">
+                  <b>Gender</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Generation">
+                  <b>Generation</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.GivenName">
+                  <b>GivenName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.GovernmentIdNumber">
+                  <b>GovernmentIdNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Hasattach">
+                  <b>Hasattach</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HeaderFolderEntryId">
+                  <b>HeaderFolderEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Hobbies">
+                  <b>Hobbies</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Home2TelephoneNumber">
+                  <b>Home2TelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HomeAddressCity">
+                  <b>HomeAddressCity</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HomeAddressCountry">
+                  <b>HomeAddressCountry</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HomeAddressPostalCode">
+                  <b>HomeAddressPostalCode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HomeAddressPostOfficeBox">
+                  <b>HomeAddressPostOfficeBox</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HomeAddressStateOrProvince">
+                  <b>HomeAddressStateOrProvince</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HomeAddressStreet">
+                  <b>HomeAddressStreet</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HomeFaxNumber">
+                  <b>HomeFaxNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.HomeTelephoneNumber">
+                  <b>HomeTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Icon">
+                  <b>Icon</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IdentityDisplay">
+                  <b>IdentityDisplay</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IdentityEntryId">
+                  <b>IdentityEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IdentitySearchKey">
+                  <b>IdentitySearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ImplicitConversionProhibited">
+                  <b>ImplicitConversionProhibited</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Importance">
+                  <b>Importance</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IncompleteCopy">
+                  <b>IncompleteCopy</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.INetMailOverrideCharset">
+                  <b>INetMailOverrideCharset</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.INetMailOverrideFormat">
+                  <b>INetMailOverrideFormat</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InitialDetailsPane">
+                  <b>InitialDetailsPane</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Initials">
+                  <b>Initials</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InReplyToId">
+                  <b>InReplyToId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InstanceKey">
+                  <b>InstanceKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetApproved">
+                  <b>InternetApproved</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetArticleNumber">
+                  <b>InternetArticleNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetControl">
+                  <b>InternetControl</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetCPID">
+                  <b>InternetCPID</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetDistribution">
+                  <b>InternetDistribution</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetFollowupTo">
+                  <b>InternetFollowupTo</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetLines">
+                  <b>InternetLines</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetMessageId">
+                  <b>InternetMessageId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetNewsgroups">
+                  <b>InternetNewsgroups</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetNntpPath">
+                  <b>InternetNntpPath</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetOrganization">
+                  <b>InternetOrganization</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetPrecedence">
+                  <b>InternetPrecedence</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.InternetReferences">
+                  <b>InternetReferences</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmId">
+                  <b>IpmId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmOutboxEntryId">
+                  <b>IpmOutboxEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmOutboxSearchKey">
+                  <b>IpmOutboxSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmReturnRequested">
+                  <b>IpmReturnRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmSentmailEntryId">
+                  <b>IpmSentmailEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmSentmailSearchKey">
+                  <b>IpmSentmailSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmSubtreeEntryId">
+                  <b>IpmSubtreeEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmSubtreeSearchKey">
+                  <b>IpmSubtreeSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmWastebasketEntryId">
+                  <b>IpmWastebasketEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IpmWastebasketSearchKey">
+                  <b>IpmWastebasketSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.IsdnNumber">
+                  <b>IsdnNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Keyword">
+                  <b>Keyword</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Language">
+                  <b>Language</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Languages">
+                  <b>Languages</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LastModificationTime">
+                  <b>LastModificationTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LatestDeliveryTime">
+                  <b>LatestDeliveryTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ListHelp">
+                  <b>ListHelp</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ListSubscribe">
+                  <b>ListSubscribe</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ListUnsubscribe">
+                  <b>ListUnsubscribe</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Locality">
+                  <b>Locality</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LocallyDelivered">
+                  <b>LocallyDelivered</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Location">
+                  <b>Location</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockBranchId">
+                  <b>LockBranchId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockDepth">
+                  <b>LockDepth</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockEnlistmentContext">
+                  <b>LockEnlistmentContext</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockExpiryTime">
+                  <b>LockExpiryTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockPersistent">
+                  <b>LockPersistent</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockResourceDid">
+                  <b>LockResourceDid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockResourceFid">
+                  <b>LockResourceFid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockResourceMid">
+                  <b>LockResourceMid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockScope">
+                  <b>LockScope</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockTimeout">
+                  <b>LockTimeout</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.LockType">
+                  <b>LockType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MailPermission">
+                  <b>MailPermission</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ManagerName">
+                  <b>ManagerName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MappingSignature">
+                  <b>MappingSignature</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MdbProvider">
+                  <b>MdbProvider</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageAttachments">
+                  <b>MessageAttachments</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageCcMe">
+                  <b>MessageCcMe</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageClass">
+                  <b>MessageClass</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageCodepage">
+                  <b>MessageCodepage</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageDeliveryId">
+                  <b>MessageDeliveryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageDeliveryTime">
+                  <b>MessageDeliveryTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageDownloadTime">
+                  <b>MessageDownloadTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageFlags">
+                  <b>MessageFlags</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageRecipients">
+                  <b>MessageRecipients</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageRecipMe">
+                  <b>MessageRecipMe</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageSecurityLabel">
+                  <b>MessageSecurityLabel</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageSize">
+                  <b>MessageSize</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageSubmissionId">
+                  <b>MessageSubmissionId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageToken">
+                  <b>MessageToken</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MessageToMe">
+                  <b>MessageToMe</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MhsCommonName">
+                  <b>MhsCommonName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MiddleName">
+                  <b>MiddleName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MiniIcon">
+                  <b>MiniIcon</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MobileTelephoneNumber">
+                  <b>MobileTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ModifyVersion">
+                  <b>ModifyVersion</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.MsgStatus">
+                  <b>MsgStatus</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NdrDiagCode">
+                  <b>NdrDiagCode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NdrReasonCode">
+                  <b>NdrReasonCode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NdrStatusCode">
+                  <b>NdrStatusCode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NewsgroupName">
+                  <b>NewsgroupName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Nickname">
+                  <b>Nickname</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NntpXref">
+                  <b>NntpXref</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NonReceiptNotificationRequested">
+                  <b>NonReceiptNotificationRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NonReceiptReason">
+                  <b>NonReceiptReason</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NormalizedSubject">
+                  <b>NormalizedSubject</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.NtSecurityDescriptor">
+                  <b>NtSecurityDescriptor</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Null">
+                  <b>Null</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ObjectType">
+                  <b>ObjectType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ObsoletedIpms">
+                  <b>ObsoletedIpms</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Office2TelephoneNumber">
+                  <b>Office2TelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OfficeLocation">
+                  <b>OfficeLocation</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OfficeTelephoneNumber">
+                  <b>OfficeTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OofReplyType">
+                  <b>OofReplyType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OrganizationalIdNumber">
+                  <b>OrganizationalIdNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OrigEntryId">
+                  <b>OrigEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalAuthorAddrtype">
+                  <b>OriginalAuthorAddrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalAuthorEmailAddress">
+                  <b>OriginalAuthorEmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalAuthorEntryId">
+                  <b>OriginalAuthorEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalAuthorName">
+                  <b>OriginalAuthorName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalAuthorSearchKey">
+                  <b>OriginalAuthorSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalDeliveryTime">
+                  <b>OriginalDeliveryTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalDisplayBcc">
+                  <b>OriginalDisplayBcc</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalDisplayCc">
+                  <b>OriginalDisplayCc</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalDisplayName">
+                  <b>OriginalDisplayName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalDisplayTo">
+                  <b>OriginalDisplayTo</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalEits">
+                  <b>OriginalEits</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalEntryId">
+                  <b>OriginalEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginallyIntendedRecipAddrtype">
+                  <b>OriginallyIntendedRecipAddrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginallyIntendedRecipEmailAddress">
+                  <b>OriginallyIntendedRecipEmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginallyIntendedRecipEntryId">
+                  <b>OriginallyIntendedRecipEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginallyIntendedRecipientName">
+                  <b>OriginallyIntendedRecipientName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSearchKey">
+                  <b>OriginalSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSenderAddrtype">
+                  <b>OriginalSenderAddrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSenderEmailAddress">
+                  <b>OriginalSenderEmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSenderEntryId">
+                  <b>OriginalSenderEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSenderName">
+                  <b>OriginalSenderName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSenderSearchKey">
+                  <b>OriginalSenderSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSensitivity">
+                  <b>OriginalSensitivity</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSentRepresentingAddrtype">
+                  <b>OriginalSentRepresentingAddrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSentRepresentingEmailAddress">
+                  <b>OriginalSentRepresentingEmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSentRepresentingEntryId">
+                  <b>OriginalSentRepresentingEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSentRepresentingName">
+                  <b>OriginalSentRepresentingName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSentRepresentingSearchKey">
+                  <b>OriginalSentRepresentingSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSubject">
+                  <b>OriginalSubject</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginalSubmitTime">
+                  <b>OriginalSubmitTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginatingMtaCertificate">
+                  <b>OriginatingMtaCertificate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginatorAndDlExpansionHistory">
+                  <b>OriginatorAndDlExpansionHistory</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginatorCertificate">
+                  <b>OriginatorCertificate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginatorDeliveryReportRequested">
+                  <b>OriginatorDeliveryReportRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginatorNonDeliveryReportRequested">
+                  <b>OriginatorNonDeliveryReportRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginatorRequestedAlternateRecipient">
+                  <b>OriginatorRequestedAlternateRecipient</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginatorReturnAddress">
+                  <b>OriginatorReturnAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OriginCheck">
+                  <b>OriginCheck</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OrigMessageClass">
+                  <b>OrigMessageClass</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OtherAddressCity">
+                  <b>OtherAddressCity</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OtherAddressCountry">
+                  <b>OtherAddressCountry</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OtherAddressPostalCode">
+                  <b>OtherAddressPostalCode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OtherAddressPostOfficeBox">
+                  <b>OtherAddressPostOfficeBox</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OtherAddressStateOrProvince">
+                  <b>OtherAddressStateOrProvince</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OtherAddressStreet">
+                  <b>OtherAddressStreet</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OtherTelephoneNumber">
+                  <b>OtherTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OwnerApptId">
+                  <b>OwnerApptId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.OwnStoreEntryId">
+                  <b>OwnStoreEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PagerTelephoneNumber">
+                  <b>PagerTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ParentDisplay">
+                  <b>ParentDisplay</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ParentEntryId">
+                  <b>ParentEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ParentKey">
+                  <b>ParentKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PersonalHomePage">
+                  <b>PersonalHomePage</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PhysicalDeliveryBureauFaxDelivery">
+                  <b>PhysicalDeliveryBureauFaxDelivery</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PhysicalDeliveryMode">
+                  <b>PhysicalDeliveryMode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PhysicalDeliveryReportRequest">
+                  <b>PhysicalDeliveryReportRequest</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PhysicalForwardingAddress">
+                  <b>PhysicalForwardingAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PhysicalForwardingAddressRequested">
+                  <b>PhysicalForwardingAddressRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PhysicalForwardingProhibited">
+                  <b>PhysicalForwardingProhibited</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PhysicalRenditionAttributes">
+                  <b>PhysicalRenditionAttributes</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PostalAddress">
+                  <b>PostalAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PostalCode">
+                  <b>PostalCode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PostFolderEntries">
+                  <b>PostFolderEntries</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PostFolderNames">
+                  <b>PostFolderNames</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PostOfficeBox">
+                  <b>PostOfficeBox</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PostReplyDenied">
+                  <b>PostReplyDenied</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PostReplyFolderEntries">
+                  <b>PostReplyFolderEntries</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PostReplyFolderNames">
+                  <b>PostReplyFolderNames</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PreferredByName">
+                  <b>PreferredByName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Preprocess">
+                  <b>Preprocess</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PrimaryCapability">
+                  <b>PrimaryCapability</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PrimaryFaxNumber">
+                  <b>PrimaryFaxNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PrimaryTelephoneNumber">
+                  <b>PrimaryTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Priority">
+                  <b>Priority</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Profession">
+                  <b>Profession</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProfileName">
+                  <b>ProfileName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProofOfDelivery">
+                  <b>ProofOfDelivery</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProofOfDeliveryRequested">
+                  <b>ProofOfDeliveryRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProofOfSubmission">
+                  <b>ProofOfSubmission</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProofOfSubmissionRequested">
+                  <b>ProofOfSubmissionRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PropIdSecureMax">
+                  <b>PropIdSecureMax</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.PropIdSecureMin">
+                  <b>PropIdSecureMin</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProviderDisplay">
+                  <b>ProviderDisplay</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProviderDllName">
+                  <b>ProviderDllName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProviderOrdinal">
+                  <b>ProviderOrdinal</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProviderSubmitTime">
+                  <b>ProviderSubmitTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ProviderUid">
+                  <b>ProviderUid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Puid">
+                  <b>Puid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RadioTelephoneNumber">
+                  <b>RadioTelephoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RcvdRepresentingAddrtype">
+                  <b>RcvdRepresentingAddrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RcvdRepresentingEmailAddress">
+                  <b>RcvdRepresentingEmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RcvdRepresentingEntryId">
+                  <b>RcvdRepresentingEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RcvdRepresentingName">
+                  <b>RcvdRepresentingName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RcvdRepresentingSearchKey">
+                  <b>RcvdRepresentingSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReadReceiptEntryId">
+                  <b>ReadReceiptEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReadReceiptRequested">
+                  <b>ReadReceiptRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReadReceiptSearchKey">
+                  <b>ReadReceiptSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReceiptTime">
+                  <b>ReceiptTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReceivedByAddrtype">
+                  <b>ReceivedByAddrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReceivedByEmailAddress">
+                  <b>ReceivedByEmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReceivedByEntryId">
+                  <b>ReceivedByEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReceivedByName">
+                  <b>ReceivedByName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReceivedBySearchKey">
+                  <b>ReceivedBySearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReceiveFolderSettings">
+                  <b>ReceiveFolderSettings</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RecipientCertificate">
+                  <b>RecipientCertificate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RecipientNumberForAdvice">
+                  <b>RecipientNumberForAdvice</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RecipientReassignmentProhibited">
+                  <b>RecipientReassignmentProhibited</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RecipientStatus">
+                  <b>RecipientStatus</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RecipientType">
+                  <b>RecipientType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RecordKey">
+                  <b>RecordKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RedirectionHistory">
+                  <b>RedirectionHistory</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReferredByName">
+                  <b>ReferredByName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RegisteredMailType">
+                  <b>RegisteredMailType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RelatedIpms">
+                  <b>RelatedIpms</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RemoteProgress">
+                  <b>RemoteProgress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RemoteProgressText">
+                  <b>RemoteProgressText</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RemoteValidateOk">
+                  <b>RemoteValidateOk</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RenderingPosition">
+                  <b>RenderingPosition</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReplyRecipientEntries">
+                  <b>ReplyRecipientEntries</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReplyRecipientNames">
+                  <b>ReplyRecipientNames</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReplyRequested">
+                  <b>ReplyRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReplyTime">
+                  <b>ReplyTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReportEntryId">
+                  <b>ReportEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReportingDlName">
+                  <b>ReportingDlName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReportingMtaCertificate">
+                  <b>ReportingMtaCertificate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReportName">
+                  <b>ReportName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReportSearchKey">
+                  <b>ReportSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReportTag">
+                  <b>ReportTag</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReportText">
+                  <b>ReportText</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReportTime">
+                  <b>ReportTime</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RequestedDeliveryMethod">
+                  <b>RequestedDeliveryMethod</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ResourceFlags">
+                  <b>ResourceFlags</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ResourceMethods">
+                  <b>ResourceMethods</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ResourcePath">
+                  <b>ResourcePath</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ResourceType">
+                  <b>ResourceType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ResponseRequested">
+                  <b>ResponseRequested</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Responsibility">
+                  <b>Responsibility</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ReturnedIpm">
+                  <b>ReturnedIpm</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Rowid">
+                  <b>Rowid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RowType">
+                  <b>RowType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RtfCompressed">
+                  <b>RtfCompressed</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RtfInSync">
+                  <b>RtfInSync</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RtfSyncBodyCount">
+                  <b>RtfSyncBodyCount</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RtfSyncBodyCrc">
+                  <b>RtfSyncBodyCrc</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RtfSyncBodyTag">
+                  <b>RtfSyncBodyTag</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RtfSyncPrefixCount">
+                  <b>RtfSyncPrefixCount</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.RtfSyncTrailingCount">
+                  <b>RtfSyncTrailingCount</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Search">
+                  <b>Search</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SearchKey">
+                  <b>SearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Security">
+                  <b>Security</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Selectable">
+                  <b>Selectable</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SenderAddrtype">
+                  <b>SenderAddrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SenderEmailAddress">
+                  <b>SenderEmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SenderEntryId">
+                  <b>SenderEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SenderName">
+                  <b>SenderName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SenderSearchKey">
+                  <b>SenderSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SendInternetEncoding">
+                  <b>SendInternetEncoding</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SendRecallReport">
+                  <b>SendRecallReport</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SendRichInfo">
+                  <b>SendRichInfo</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Sensitivity">
+                  <b>Sensitivity</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SentmailEntryId">
+                  <b>SentmailEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SentRepresentingAddrtype">
+                  <b>SentRepresentingAddrtype</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SentRepresentingEmailAddress">
+                  <b>SentRepresentingEmailAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SentRepresentingEntryId">
+                  <b>SentRepresentingEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SentRepresentingName">
+                  <b>SentRepresentingName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SentRepresentingSearchKey">
+                  <b>SentRepresentingSearchKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ServiceDeleteFiles">
+                  <b>ServiceDeleteFiles</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ServiceDllName">
+                  <b>ServiceDllName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ServiceEntryName">
+                  <b>ServiceEntryName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ServiceExtraUids">
+                  <b>ServiceExtraUids</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ServiceName">
+                  <b>ServiceName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Services">
+                  <b>Services</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ServiceSupportFiles">
+                  <b>ServiceSupportFiles</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ServiceUid">
+                  <b>ServiceUid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SevenBitDisplayName">
+                  <b>SevenBitDisplayName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SmtpAddress">
+                  <b>SmtpAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SpoolerStatus">
+                  <b>SpoolerStatus</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SpouseName">
+                  <b>SpouseName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StartDate">
+                  <b>StartDate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StateOrProvince">
+                  <b>StateOrProvince</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Status">
+                  <b>Status</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StatusCode">
+                  <b>StatusCode</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StatusString">
+                  <b>StatusString</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StoreEntryId">
+                  <b>StoreEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StoreProviders">
+                  <b>StoreProviders</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StoreRecordKey">
+                  <b>StoreRecordKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StoreState">
+                  <b>StoreState</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StoreSupportMask">
+                  <b>StoreSupportMask</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.StreetAddress">
+                  <b>StreetAddress</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Subfolders">
+                  <b>Subfolders</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Subject">
+                  <b>Subject</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SubjectIpm">
+                  <b>SubjectIpm</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SubjectPrefix">
+                  <b>SubjectPrefix</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SubmitFlags">
+                  <b>SubmitFlags</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Supersedes">
+                  <b>Supersedes</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.SupplementaryInfo">
+                  <b>SupplementaryInfo</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Surname">
+                  <b>Surname</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TelexNumber">
+                  <b>TelexNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Templateid">
+                  <b>Templateid</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Title">
+                  <b>Title</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TnefCorrelationKey">
+                  <b>TnefCorrelationKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TransmitableDisplayName">
+                  <b>TransmitableDisplayName</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TransportKey">
+                  <b>TransportKey</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TransportMessageHeaders">
+                  <b>TransportMessageHeaders</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TransportProviders">
+                  <b>TransportProviders</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TransportStatus">
+                  <b>TransportStatus</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TtytddPhoneNumber">
+                  <b>TtytddPhoneNumber</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.TypeOfMtsUser">
+                  <b>TypeOfMtsUser</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.UserCertificate">
+                  <b>UserCertificate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.UserX509Certificate">
+                  <b>UserX509Certificate</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ValidFolderMask">
+                  <b>ValidFolderMask</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.ViewsEntryId">
+                  <b>ViewsEntryId</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.WeddingAnniversary">
+                  <b>WeddingAnniversary</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.X400ContentType">
+                  <b>X400ContentType</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.X400DeferredDeliveryCancel">
+                  <b>X400DeferredDeliveryCancel</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Xpos">
+                  <b>Xpos</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Tnef.TnefPropertyId.Ypos">
+                  <b>Ypos</b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefPropertyId:Docs:Version Information">
+            <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+        </div>
+        <div class="Members" id="T:MimeKit.Tnef.TnefPropertyId:Members">
+        </div>
+      </section>
+    </div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

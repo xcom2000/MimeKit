@@ -1,0 +1,1079 @@
+<html>
+  <head>
+    <title>MimeKit.Tnef.TnefReader</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        color: black
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        color: black
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
+    </div>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Tnef Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.Tnef.TnefReader">TnefReader  Class</h1>
+        <p class="Summary" id="T:MimeKit.Tnef.TnefReader:Summary">
+            A TNEF reader.
+            </p>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.Tnef.TnefReader:Signature">public class  <b>TnefReader</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.Tnef.TnefReader:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefReader:Docs:Remarks">
+            A TNEF reader.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.Tnef.TnefReader:Docs:Version Information">
+            <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+          <h2 class="Section" id="Members">Members</h2>
+          <div class="SectionBox" id="_Members">
+            <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+            <h2 class="Section">Public Constructors</h2>
+            <div class="SectionBox" id="Public Constructors">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.Tnef.TnefReader(System.IO.Stream)">TnefReader</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> class.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.Tnef.TnefReader(System.IO.Stream,System.Int32,MimeKit.Tnef.TnefComplianceMode)">TnefReader</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MimeKit.Tnef/TnefComplianceMode.html">TnefComplianceMode</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> class.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Properties</h2>
+            <div class="SectionBox" id="Public Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.AttachmentKey">AttachmentKey</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a>
+                      </i>. 
+            Gets the attachment key value.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.AttributeLevel">AttributeLevel</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit.Tnef/TnefAttributeLevel.html">TnefAttributeLevel</a>
+                      </i>. 
+            Gets the current attribute's level.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.AttributeRawValueLength">AttributeRawValueLength</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the length of the current attribute's raw value.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.AttributeRawValueStreamOffset">AttributeRawValueStreamOffset</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the stream offset of the current attribute's raw value.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.AttributeTag">AttributeTag</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit.Tnef/TnefAttributeTag.html">TnefAttributeTag</a>
+                      </i>. 
+            Gets the current attribute's tag.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.ComplianceMode">ComplianceMode</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit.Tnef/TnefComplianceMode.html">TnefComplianceMode</a>
+                      </i>. 
+            Gets the compliance mode.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.ComplianceStatus">ComplianceStatus</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit.Tnef/TnefComplianceStatus.html">TnefComplianceStatus</a>
+                      </i>. 
+            Gets the current compliance status of the TNEF stream.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.MessageCodepage">MessageCodepage</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the message codepage.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.StreamOffset">StreamOffset</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the current stream offset.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.TnefPropertyReader">TnefPropertyReader</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit.Tnef/TnefPropertyReader.html">TnefPropertyReader</a>
+                      </i>. 
+            Gets the TNEF property reader.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.Tnef.TnefReader.TnefVersion">TnefVersion</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                      </i>. 
+            Gets the TNEF version.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Methods</h2>
+            <div class="SectionBox" id="Public Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefReader.Close()">Close</a>
+                      </b>()<blockquote>
+            Closes the TNEF reader and the underlying stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefReader.Dispose()">Dispose</a>
+                      </b>()<blockquote>
+            Releases all resource used by the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> object.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefReader.Finalize()">Finalize</a>
+                      </b>()<blockquote>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> is reclaimed by garbage collection.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefReader.ReadAttributeRawValue(System.Byte[],System.Int32,System.Int32)">ReadAttributeRawValue</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>
+            Reads the raw attribute value data from the underlying TNEF stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefReader.ReadNextAttribute()">ReadNextAttribute</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Advances to the next attribute in the TNEF stream.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefReader.ResetComplianceStatus()">ResetComplianceStatus</a>
+                      </b>()<blockquote>
+            Resets the compliance status.
+            </blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Protected Methods</h2>
+            <div class="SectionBox" id="Protected Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Tnef.TnefReader.Dispose(System.Boolean)">Dispose</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>
+            Releases the unmanaged resources used by the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> and
+            optionally releases the managed resources.
+            </blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Members" id="T:MimeKit.Tnef.TnefReader:Members">
+          <h2 class="Section" id="MemberDetails">Member Details</h2>
+          <div class="SectionBox" id="_MemberDetails">
+            <h3 id="C:MimeKit.Tnef.TnefReader(System.IO.Stream)">TnefReader Constructor</h3>
+            <blockquote id="C:MimeKit.Tnef.TnefReader(System.IO.Stream):member">
+              <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> class.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>TnefReader</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> inputStream)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Tnef.TnefReader(System.IO.Stream):Parameters">
+                <dl>
+                  <dt>
+                    <i>inputStream</i>
+                  </dt>
+                  <dd>The input stream.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Tnef.TnefReader(System.IO.Stream):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>inputStream</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Tnef.TnefReader(System.IO.Stream):Remarks">
+            Creates a new <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> for the specified input stream.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Tnef.TnefReader(System.IO.Stream):Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MimeKit.Tnef.TnefReader(System.IO.Stream,System.Int32,MimeKit.Tnef.TnefComplianceMode)">TnefReader Constructor</h3>
+            <blockquote id="C:MimeKit.Tnef.TnefReader(System.IO.Stream,System.Int32,MimeKit.Tnef.TnefComplianceMode):member">
+              <p class="Summary">
+            Initializes a new instance of the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> class.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>TnefReader</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> inputStream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> defaultMessageCodepage, <a href="../MimeKit.Tnef/TnefComplianceMode.html">TnefComplianceMode</a> complianceMode)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Tnef.TnefReader(System.IO.Stream,System.Int32,MimeKit.Tnef.TnefComplianceMode):Parameters">
+                <dl>
+                  <dt>
+                    <i>inputStream</i>
+                  </dt>
+                  <dd>The input stream.</dd>
+                  <dt>
+                    <i>defaultMessageCodepage</i>
+                  </dt>
+                  <dd>The default message codepage.</dd>
+                  <dt>
+                    <i>complianceMode</i>
+                  </dt>
+                  <dd>The compliance mode.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Tnef.TnefReader(System.IO.Stream,System.Int32,MimeKit.Tnef.TnefComplianceMode):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>inputStream</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>defaultMessageCodepage</i> is not a valid codepage.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>defaultMessageCodepage</i> is not a supported codepage.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Tnef/TnefException.html">MimeKit.Tnef.TnefException</a>
+                    </td>
+                    <td>
+            The TNEF stream is corrupted or invalid.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Tnef.TnefReader(System.IO.Stream,System.Int32,MimeKit.Tnef.TnefComplianceMode):Remarks">
+                <p>When reading a TNEF stream using the <a href="../MimeKit.Tnef/TnefComplianceMode.html#F:MimeKit.Tnef.TnefComplianceMode.Strict">TnefComplianceMode.Strict</a> mode,
+            a <a href="../MimeKit.Tnef/TnefException.html">MimeKit.Tnef.TnefException</a> will be thrown immediately at the first sign of
+            invalid or corrupted data.</p>
+                <p>When reading a TNEF stream using the <a href="../MimeKit.Tnef/TnefComplianceMode.html#F:MimeKit.Tnef.TnefComplianceMode.Loose">TnefComplianceMode.Loose</a> mode,
+            however, compliance issues are accumulated in the <a href="../MimeKit.Tnef/TnefReader.html#P:MimeKit.Tnef.TnefReader.ComplianceMode">TnefReader.ComplianceMode</a>
+            property, but exceptions are not raised unless the stream is too corrupted to continue.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Tnef.TnefReader(System.IO.Stream,System.Int32,MimeKit.Tnef.TnefComplianceMode):Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.AttachmentKey">AttachmentKey Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.AttachmentKey:member">
+              <p class="Summary">
+            Gets the attachment key value.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a> <b>AttachmentKey</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.AttachmentKey:Value">The attachment key value.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttachmentKey:Remarks">
+            Gets the attachment key value.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttachmentKey:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.AttributeLevel">AttributeLevel Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.AttributeLevel:member">
+              <p class="Summary">
+            Gets the current attribute's level.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit.Tnef/TnefAttributeLevel.html">TnefAttributeLevel</a> <b>AttributeLevel</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeLevel:Value">The current attribute's level.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeLevel:Remarks">
+            Gets the current attribute's level.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeLevel:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.AttributeRawValueLength">AttributeRawValueLength Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.AttributeRawValueLength:member">
+              <p class="Summary">
+            Gets the length of the current attribute's raw value.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>AttributeRawValueLength</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeRawValueLength:Value">The length of the current attribute's raw value.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeRawValueLength:Remarks">
+            Gets the length of the current attribute's raw value.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeRawValueLength:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.AttributeRawValueStreamOffset">AttributeRawValueStreamOffset Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.AttributeRawValueStreamOffset:member">
+              <p class="Summary">
+            Gets the stream offset of the current attribute's raw value.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>AttributeRawValueStreamOffset</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeRawValueStreamOffset:Value">The stream offset of the current attribute's raw value.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeRawValueStreamOffset:Remarks">
+            Gets the stream offset of the current attribute's raw value.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeRawValueStreamOffset:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.AttributeTag">AttributeTag Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.AttributeTag:member">
+              <p class="Summary">
+            Gets the current attribute's tag.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit.Tnef/TnefAttributeTag.html">TnefAttributeTag</a> <b>AttributeTag</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeTag:Value">The current attribute's tag.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeTag:Remarks">
+            Gets the current attribute's tag.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.AttributeTag:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefReader.Close()">Close Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefReader.Close():member">
+              <p class="Summary">
+            Closes the TNEF reader and the underlying stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Close</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.Close():Remarks">
+            Closes the TNEF reader and the underlying stream.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.Close():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.ComplianceMode">ComplianceMode Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.ComplianceMode:member">
+              <p class="Summary">
+            Gets the compliance mode.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit.Tnef/TnefComplianceMode.html">TnefComplianceMode</a> <b>ComplianceMode</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.ComplianceMode:Value">The compliance mode.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.ComplianceMode:Remarks">
+            Gets the compliance mode.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.ComplianceMode:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.ComplianceStatus">ComplianceStatus Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.ComplianceStatus:member">
+              <p class="Summary">
+            Gets the current compliance status of the TNEF stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit.Tnef/TnefComplianceStatus.html">TnefComplianceStatus</a> <b>ComplianceStatus</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.ComplianceStatus:Value">The compliance status.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.ComplianceStatus:Remarks">
+                <p>Gets the current compliance status of the TNEF stream.</p>
+                <p>As the reader progresses, this value may change if errors are encountered.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.ComplianceStatus:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefReader.Dispose()">Dispose Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefReader.Dispose():member">
+              <p class="Summary">
+            Releases all resource used by the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> object.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.Dispose():Remarks">Call <a href="../MimeKit.Tnef/TnefReader.html#M:MimeKit.Tnef.TnefReader.Dispose">TnefReader.Dispose</a> when you are finished using the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a>. The
+            <a href="../MimeKit.Tnef/TnefReader.html#M:MimeKit.Tnef.TnefReader.Dispose">TnefReader.Dispose</a> method leaves the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> in an unusable state. After calling
+            <a href="../MimeKit.Tnef/TnefReader.html#M:MimeKit.Tnef.TnefReader.Dispose">TnefReader.Dispose</a>, you must release all references to the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> so the garbage
+            collector can reclaim the memory that the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> was occupying.</div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.Dispose():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefReader.Dispose(System.Boolean)">Dispose Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefReader.Dispose(System.Boolean):member">
+              <p class="Summary">
+            Releases the unmanaged resources used by the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> and
+            optionally releases the managed resources.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefReader.Dispose(System.Boolean):Parameters">
+                <dl>
+                  <dt>
+                    <i>disposing</i>
+                  </dt>
+                  <dd>
+                    <tt>true</tt> to release both managed and unmanaged resources;
+            <tt>false</tt> to release only the unmanaged resources.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.Dispose(System.Boolean):Remarks">
+            Releases the unmanaged resources used by the <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> and
+            optionally releases the managed resources.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.Dispose(System.Boolean):Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefReader.Finalize()">Finalize Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefReader.Finalize():member">
+              <p class="Summary">
+            Releases unmanaged resources and performs other cleanup operations before the
+            <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> is reclaimed by garbage collection.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">
+                <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Finalize</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.Finalize():Remarks">
+            Releases unmanaged resources and performs other cleanup operations before the
+            <a href="../MimeKit.Tnef/TnefReader.html">MimeKit.Tnef.TnefReader</a> is reclaimed by garbage collection.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.Finalize():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.MessageCodepage">MessageCodepage Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.MessageCodepage:member">
+              <p class="Summary">
+            Gets the message codepage.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MessageCodepage</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.MessageCodepage:Value">The message codepage.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.MessageCodepage:Remarks">
+            Gets the message codepage.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.MessageCodepage:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefReader.ReadAttributeRawValue(System.Byte[],System.Int32,System.Int32)">ReadAttributeRawValue Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefReader.ReadAttributeRawValue(System.Byte[],System.Int32,System.Int32):member">
+              <p class="Summary">
+            Reads the raw attribute value data from the underlying TNEF stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ReadAttributeRawValue</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefReader.ReadAttributeRawValue(System.Byte[],System.Int32,System.Int32):Parameters">
+                <dl>
+                  <dt>
+                    <i>buffer</i>
+                  </dt>
+                  <dd>The buffer to read data into.</dd>
+                  <dt>
+                    <i>offset</i>
+                  </dt>
+                  <dd>The offset into the buffer to start reading data.</dd>
+                  <dt>
+                    <i>count</i>
+                  </dt>
+                  <dd>The number of bytes to read.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefReader.ReadAttributeRawValue(System.Byte[],System.Int32,System.Int32):Returns">The total number of bytes read into the buffer. This can be less than the number
+            of bytes requested if that many bytes are not available, or zero (0) if the end of the
+            value has been reached.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefReader.ReadAttributeRawValue(System.Byte[],System.Int32,System.Int32):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>buffer</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>offset</i> is less than zero or greater than the length of <i>buffer</i>.</p>
+                      <p>-or-</p>
+                      <p>The <i>buffer</i> is not large enough to contain <i>count</i> bytes starting
+            at the specified <i>offset</i>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The stream has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.ReadAttributeRawValue(System.Byte[],System.Int32,System.Int32):Remarks">
+            Reads the raw attribute value data from the underlying TNEF stream.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.ReadAttributeRawValue(System.Byte[],System.Int32,System.Int32):Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefReader.ReadNextAttribute()">ReadNextAttribute Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefReader.ReadNextAttribute():member">
+              <p class="Summary">
+            Advances to the next attribute in the TNEF stream.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ReadNextAttribute</b> ()</div>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefReader.ReadNextAttribute():Returns">
+                <tt>true</tt> if there is another attribute available to be read; otherwise <tt>false</tt>.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Tnef.TnefReader.ReadNextAttribute():Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MimeKit.Tnef/TnefException.html">MimeKit.Tnef.TnefException</a>
+                    </td>
+                    <td>
+            The TNEF stream is corrupted or invalid.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.ReadNextAttribute():Remarks">
+            Advances to the next attribute in the TNEF stream.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.ReadNextAttribute():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Tnef.TnefReader.ResetComplianceStatus()">ResetComplianceStatus Method</h3>
+            <blockquote id="M:MimeKit.Tnef.TnefReader.ResetComplianceStatus():member">
+              <p class="Summary">
+            Resets the compliance status.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ResetComplianceStatus</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.ResetComplianceStatus():Remarks">
+            Resets the compliance status.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Tnef.TnefReader.ResetComplianceStatus():Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.StreamOffset">StreamOffset Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.StreamOffset:member">
+              <p class="Summary">
+            Gets the current stream offset.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>StreamOffset</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.StreamOffset:Value">The stream offset.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.StreamOffset:Remarks">
+            Gets the current stream offset.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.StreamOffset:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.TnefPropertyReader">TnefPropertyReader Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.TnefPropertyReader:member">
+              <p class="Summary">
+            Gets the TNEF property reader.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit.Tnef/TnefPropertyReader.html">TnefPropertyReader</a> <b>TnefPropertyReader</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.TnefPropertyReader:Value">The TNEF property reader.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.TnefPropertyReader:Remarks">
+            Gets the TNEF property reader.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.TnefPropertyReader:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.Tnef.TnefReader.TnefVersion">TnefVersion Property</h3>
+            <blockquote id="P:MimeKit.Tnef.TnefReader.TnefVersion:member">
+              <p class="Summary">
+            Gets the TNEF version.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>TnefVersion</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.Tnef.TnefReader.TnefVersion:Value">The TNEF version.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.TnefVersion:Remarks">
+            Gets the TNEF version.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.Tnef.TnefReader.TnefVersion:Version Information">
+                <b>Namespace: </b>MimeKit.Tnef<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.37.0.0</div>
+              <hr size="1" />
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
