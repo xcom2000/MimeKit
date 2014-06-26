@@ -123,11 +123,15 @@
 <li>
 <a href="http://www.ietf.org/rfc/rfc2112.txt">2112</a>: The MIME Multipart/Related Content-type (Obsoletes rfc1872)</li>
 <li>
+<a href="http://www.ietf.org/rfc/rfc2298.txt">2298</a>: An Extensible Message Format for Message Disposition Notifications</li>
+<li>
 <a href="http://www.ietf.org/rfc/rfc2387.txt">2387</a>: The MIME Multipart/Related Content-type (Obsoletes rfc2112)</li>
 <li>
 <a href="http://www.ietf.org/rfc/rfc2388.txt">2388</a>: Returning Values from Forms: multipart/form-data</li>
 <li>
 <a href="http://www.ietf.org/rfc/rfc2557.txt">2557</a>: MIME Encapsulation of Aggregate Documents, such as HTML (MHTML) (Obsoletes rfc2110)</li>
+<li>
+<a href="http://www.ietf.org/rfc/rfc3798.txt">3798</a>: Message Disposition Notification (Obsoletes rfc2298)</li>
 <li>
 <a href="http://www.ietf.org/rfc/rfc7103.txt">7103</a>: Advice for Safe Handling of Malformed Messages</li>
 </ul><h2>
@@ -157,8 +161,8 @@ THE SOFTWARE.
 <h2>
 <a name="history" class="anchor" href="#history"><span class="octicon octicon-link"></span></a>History</h2>
 
-<p>As a developer and user of Electronic Mail clients, I had come to realize that the vast majority of E-Mail client
-(and server) software had less-than-satisfactory MIME implementations. More often than not these E-Mail clients
+<p>As a developer and user of Electronic Mail clients, I had come to realize that the vast majority of email client
+(and server) software had less-than-satisfactory MIME implementations. More often than not these email clients
 created broken MIME messages and/or would incorrectly try to parse a MIME message thus subtracting from the full
 benefits that MIME was meant to provide. MimeKit is meant to address this issue by following the MIME specification
 as closely as possible while also providing programmers with an extremely easy to use high-level API.</p>
@@ -169,6 +173,24 @@ which is implemented in C and later added a C# binding called GMime-Sharp.</p>
 <p>Now that I typically find myself working in C# rather than lower level languages like C, I decided to
 begin writing a new parser in C# which would not depend on GMime. This would also allow me to have more
 flexibility in that I'd be able use Generics and create a more .NET-compliant API.</p>
+
+<h2>
+<a name="performance" class="anchor" href="#performance"><span class="octicon octicon-link"></span></a>Performance</h2>
+
+<p>While mainstream beliefs may suggest that C# can never be as fast as C, it turns out that with a bit of creative
+parser design and a few clever optimizations 
+<sup>[<a href="http://jeffreystedfast.blogspot.com/2013/09/optimization-tips-tricks-used-by.html">1</a>]
+[<a href="http://jeffreystedfast.blogspot.com/2013/10/optimization-tips-tricks-used-by.html">2</a>]</sup>, MimeKit's performance
+is actually <a href="http://jeffreystedfast.blogspot.com/2014/03/gmime-gets-speed-boost.html">on par with GMime</a>.</p>
+
+<p>Since GMime is pretty well-known as a high-performance native MIME parser and MimeKit more-or-less matches GMime's
+performance, it stands to reason that MimeKit is likely unsurpassed in performance in the .NET MIME parser space.</p>
+
+<p>For a comparison, as I <a href="http://jeffreystedfast.blogspot.com/2013/10/optimization-tips-tricks-used-by.html">blogged here</a>
+(I have since optimized MimeKit by at least another 30%), MimeKit is more than 25x faster than OpenPOP.NET, 75x faster
+than SharpMimeTools, and 65x faster than regex-based parsers. Even the commercial MIME parser offerings such as LimiLabs'
+Mail.dll and NewtonIdeas' Mime4Net cannot even come close to matching MimeKit's performance (they are both orders of
+magnitude slower than MimeKit).</p>
 
 <h2>
 <a name="installing-via-nuget" class="anchor" href="#installing-via-nuget"><span class="octicon octicon-link"></span></a>Installing via NuGet</h2>
@@ -188,6 +210,7 @@ simply enter the following command:</p>
 
 <pre><code>git clone https://github.com/jstedfast/MimeKit.git
 git clone https://github.com/jstedfast/bc-csharp.git
+git clone https://github.com/jstedfast/Portable.Text.Encoding.git
 </code></pre>
 
 <p>Currently, MimeKit depends on the visual-studio-2010 branch of bc-csharp for the Visual Studio 2010 project
@@ -200,11 +223,9 @@ git checkout -b visual-studio-2010 origin/visual-studio-2010
 <p>In the top-level MimeKit source directory, there are several solution files:</p>
 
 <ul>
-<li>MimeKit.Mobile.sln just includes the Xamarin.iOS and Xamarin.Android projects.</li>
-<li>MimeKit.Net40.sln just includes the .NET Framework 4.0 C# project (MimeKit/MimeKit.csproj) and the UnitTests
-project (UnitTests/UnitTests.csproj).</li>
-<li>MimeKit.sln includes everything that is in the MimeKit.Net40.sln solution as well as the projects for Xamarin.Android,
-Xamarin.iOS, and Xamarin.Mac.</li>
+<li>MimeKit.sln includes projects for .NET 4.5, .NET 4.0, PCL (Profile7 and Profile111), Xamarin.Android, Xamarin.iOS, and Xamarin.Mac as well as the unit tests.</li>
+<li>MimeKit.Mobile.sln just includes the Xamarin.Android and Xamarin.iOS projects.</li>
+<li>MimeKit.Net40.sln just includes the .NET 4.0 project.</li>
 </ul><p>If you don't have the Xamarin products, you'll probably want to open the MimeKit.Net40.sln instead of MimeKit.sln.</p>
 
 <p>Once you've opened the appropriate MimeKit solution file in either Xamarin Studio or Visual Studio 2010+ (either will work),
@@ -254,53 +275,28 @@ unless you wish to parse a Unix mbox file stream. However, this is how you would
 <p>The MimeMessage.Body is the top-level MIME entity of the message. Generally, it will either be a
 TextPart or a Multipart.</p>
 
-<p>As an example, if you wanted to render the MimeMessage to some sort of UI control, you might
-use code similar to this:</p>
+<p>As an example, if you wanted to rip out all of the attachments of a message, your code might look
+something like this:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">void</span> <span class="nf">RenderMessage</span> <span class="p">(</span><span class="n">MimeMessage</span> <span class="n">message</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">RenderMimeEntity</span> <span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">Body</span><span class="p">);</span>
-<span class="p">}</span>
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">attachments</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">MimePart</span><span class="p">&gt;</span> <span class="p">();</span>
+<span class="kt">var</span> <span class="n">multiparts</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Multipart</span><span class="p">&gt;</span> <span class="p">();</span>
+<span class="kt">var</span> <span class="n">iter</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeIterator</span> <span class="p">(</span><span class="n">message</span><span class="p">);</span>
 
-<span class="k">void</span> <span class="nf">RenderMimeEntity</span> <span class="p">(</span><span class="n">MimeEntity</span> <span class="n">entity</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">MessagePart</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// This entity is an attached message/rfc822 mime part.</span>
-        <span class="kt">var</span> <span class="n">messagePart</span> <span class="p">=</span> <span class="p">(</span><span class="n">MessagePart</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
+<span class="c1">// collect our list of attachments and their parent multiparts</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">iter</span><span class="p">.</span><span class="n">MoveNext</span> <span class="p">())</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">multipart</span> <span class="p">=</span> <span class="n">iter</span><span class="p">.</span><span class="n">Parent</span> <span class="k">as</span> <span class="n">Multipart</span><span class="p">;</span>
+    <span class="kt">var</span> <span class="n">part</span> <span class="p">=</span> <span class="n">iter</span><span class="p">.</span><span class="n">Current</span> <span class="k">as</span> <span class="n">MimePart</span><span class="p">;</span>
 
-        <span class="c1">// If you'd like to render this inline instead of treating</span>
-        <span class="c1">// it as an attachment, you would just continue to recurse:</span>
-        <span class="n">RenderMessage</span> <span class="p">(</span><span class="n">messagePart</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">Multipart</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// This entity is a multipart container.</span>
-        <span class="kt">var</span> <span class="n">multipart</span> <span class="p">=</span> <span class="p">(</span><span class="n">Multipart</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
-
-        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">subpart</span> <span class="k">in</span> <span class="n">multipart</span><span class="p">)</span>
-            <span class="n">RenderMimeEntity</span> <span class="p">(</span><span class="n">subpart</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="c1">// Everything that isn't either a MessagePart or a Multipart is a MimePart</span>
-        <span class="kt">var</span> <span class="n">part</span> <span class="p">=</span> <span class="p">(</span><span class="n">MimePart</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
-
-        <span class="c1">// Don't render anything that is explicitly marked as an attachment.</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">part</span><span class="p">.</span><span class="n">IsAttachment</span><span class="p">)</span>
-            <span class="k">return</span><span class="p">;</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="n">part</span> <span class="k">is</span> <span class="n">TextPart</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">// This is a mime part with textual content.</span>
-            <span class="kt">var</span> <span class="n">text</span> <span class="p">=</span> <span class="p">(</span><span class="n">TextPart</span><span class="p">)</span> <span class="n">part</span><span class="p">;</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">ContentType</span><span class="p">.</span><span class="n">Matches</span> <span class="p">(</span><span class="s">"text"</span><span class="p">,</span> <span class="s">"html"</span><span class="p">))</span>
-                <span class="n">RenderHtml</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
-            <span class="k">else</span>
-                <span class="nf">RenderText</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="n">Text</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">entity</span><span class="p">.</span><span class="n">ContentType</span><span class="p">.</span><span class="n">Matches</span> <span class="p">(</span><span class="s">"image"</span><span class="p">,</span> <span class="s">"*"</span><span class="p">))</span> <span class="p">{</span>
-            <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">content</span> <span class="p">=</span> <span class="n">part</span><span class="p">.</span><span class="n">ContentObject</span><span class="p">.</span><span class="n">Open</span> <span class="p">())</span> <span class="p">{</span>
-                <span class="c1">// render the raw image content</span>
-                <span class="n">RenderImage</span> <span class="p">(</span><span class="n">content</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">parent</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">part</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">part</span><span class="p">.</span><span class="n">IsAttachment</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// keep track of each attachment's parent multipart</span>
+        <span class="n">multiparts</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">multipart</span><span class="p">);</span>
+        <span class="n">attachments</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">part</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
+
+<span class="c1">// now remove each attachment from its parent multipart...</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">attachments</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+    <span class="n">multiparts</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Remove</span> <span class="p">(</span><span class="n">attachments</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 </pre></div>
 
 <h3>
@@ -485,12 +481,94 @@ using a BodyBuilder:</p>
 </pre></div>
 
 <h3>
-<a name="digitally-signing-messages-with-smime-or-pgpmime" class="anchor" href="#digitally-signing-messages-with-smime-or-pgpmime"><span class="octicon octicon-link"></span></a>Digitally Signing Messages with S/MIME or PGP/MIME</h3>
+<a name="preparing-to-use-mimekits-smime-support" class="anchor" href="#preparing-to-use-mimekits-smime-support"><span class="octicon octicon-link"></span></a>Preparing to use MimeKit's S/MIME support</h3>
 
-<p>Both S/MIME and PGP/MIME use a multipart/signed to contain the signed content and the detached signature data.</p>
+<p>Before you can begin using MimeKit's S/MIME support, you will need to decide which
+database to use for certificate storage.</p>
 
-<p>To create a multipart/signed MIME part, let's pretend we're going to digitally sign our multipart/mixed example
-from the previous sample using S/MIME.</p>
+<p>If you are targetting any of the Xamarin platforms (or Linux), you won't need to do
+anything (although you certianly can if you want to) because, by default, I've
+configured MimeKit to use the Mono.Data.Sqlite binding to SQLite.</p>
+
+<p>If you are, however, on any of the Windows platforms, you'll need to pick a System.Data
+provider such as <a href="https://www.nuget.org/packages/System.Data.SQLite">System.Data.SQLite</a>.
+Once you've made your choice and installed it (via NuGet or however), you'll need to
+implement your own <code>SecureMimeContext</code> class. Luckily, it's very simple to do. Assuming
+you've chosen System.Data.SQLite, here's how you'd implement your own <code>SecureMimeContext</code>
+class:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="k">using</span> <span class="nn">System.Data.SQLite</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">MimeKit.Cryptography</span><span class="p">;</span>
+
+<span class="k">using</span> <span class="nn">MyAppNamespace</span> <span class="p">{</span>
+    <span class="k">class</span> <span class="nc">MySecureMimeContext</span> <span class="p">:</span> <span class="n">DefaultSecureMimeContext</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">MySecureMimeContext</span> <span class="p">()</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">OpenDatabase</span> <span class="p">(</span><span class="s">"C:\\wherever\\certdb.sqlite"</span><span class="p">))</span>
+        <span class="p">{</span>
+        <span class="p">}</span>
+
+        <span class="k">static</span> <span class="n">IX509CertificateDatabase</span> <span class="nf">OpenDatabase</span> <span class="p">(</span><span class="kt">string</span> <span class="n">fileName</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">builder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SQLiteConnectionStringBuilder</span> <span class="p">();</span>
+            <span class="n">builder</span><span class="p">.</span><span class="n">DateTimeFormat</span> <span class="p">=</span> <span class="n">SQLiteDateFormats</span><span class="p">.</span><span class="n">Ticks</span><span class="p">;</span>
+            <span class="n">builder</span><span class="p">.</span><span class="n">DataSource</span> <span class="p">=</span> <span class="n">fileName</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(!</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span> <span class="p">(</span><span class="n">fileName</span><span class="p">))</span>
+                <span class="n">SQLiteConnection</span><span class="p">.</span><span class="n">CreateFile</span> <span class="p">(</span><span class="n">fileName</span><span class="p">);</span>
+
+            <span class="kt">var</span> <span class="n">sqlite</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SQLiteConnection</span> <span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">);</span>
+            <span class="n">sqlite</span><span class="p">.</span><span class="n">Open</span> <span class="p">();</span>
+
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">SqliteCertificateDatabase</span> <span class="p">(</span><span class="n">sqlite</span><span class="p">,</span> <span class="s">"password"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Now that you've implemented your own SecureMimeContext, you'll want to register it with MimeKit:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="n">CryptographyContext</span><span class="p">.</span><span class="n">Register</span> <span class="p">(</span><span class="k">typeof</span> <span class="p">(</span><span class="n">MySecureMimeContext</span><span class="p">));</span>
+</pre></div>
+
+<p>Now you are ready to encrypt, decrypt, sign and verify S/MIME messages!</p>
+
+<h3>
+<a name="preparing-to-use-mimekits-pgpmime-support" class="anchor" href="#preparing-to-use-mimekits-pgpmime-support"><span class="octicon octicon-link"></span></a>Preparing to use MimeKit's PGP/MIME support</h3>
+
+<p>Like with S/MIME support, you also need to register your own <code>OpenPgpContext</code>. Unlike S/MIME, however,
+you don't need to choose a database if you subclass <code>GnuPGContext</code> because it uses GnuPG's PGP keyrings
+to load and store public and private keys. If you choose to subclass <code>GnuPGContext</code>, the only thing you
+you need to do is implement a password callback method:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="k">using</span> <span class="nn">MimeKit.Cryptography</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">MyAppNamespace</span> <span class="p">{</span>
+    <span class="k">class</span> <span class="nc">MyGnuPGContext</span> <span class="p">:</span> <span class="n">GnuPGContext</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">MyGnuPgContext</span> <span class="p">()</span> <span class="p">:</span> <span class="k">base</span> <span class="p">()</span>
+        <span class="p">{</span>
+        <span class="p">}</span>
+
+        <span class="k">protected</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">GetPasswordForKey</span> <span class="p">(</span><span class="n">PgpSecretKey</span> <span class="n">key</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// prompt the user (or a secure password cache) for the password for the specified secret key.</span>
+            <span class="k">return</span> <span class="s">"password"</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Once again, to register your OpenPgpContext, you can use the following code snippet:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="n">CryptographyContext</span><span class="p">.</span><span class="n">Register</span> <span class="p">(</span><span class="k">typeof</span> <span class="p">(</span><span class="n">MyGnuPGContext</span><span class="p">));</span>
+</pre></div>
+
+<p>Now you are ready to encrypt, decrypt, sign and verify PGP/MIME messages!</p>
+
+<h3>
+<a name="encrypting-messages-with-smime" class="anchor" href="#encrypting-messages-with-smime"><span class="octicon octicon-link"></span></a>Encrypting Messages with S/MIME</h3>
+
+<p>S/MIME uses an application/pkcs7-mime MIME part to encapsulate encrypted content (as well as other things).</p>
 
 <div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">joey</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Joey"</span><span class="p">,</span> <span class="s">"joey@friends.com"</span><span class="p">);</span>
 <span class="kt">var</span> <span class="n">alice</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"alice@wonderland.com"</span><span class="p">);</span>
@@ -504,8 +582,96 @@ from the previous sample using S/MIME.</p>
 <span class="c1">// image attachments, for example)</span>
 <span class="kt">var</span> <span class="n">body</span> <span class="p">=</span> <span class="n">CreateMessageBody</span> <span class="p">();</span>
 
-<span class="c1">// now to digitally sign our message body using the default S/MIME cryptography context</span>
-<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DefaultSecureMimeContext</span> <span class="p">())</span> <span class="p">{</span>
+<span class="c1">// now to encrypt our message body using our custom S/MIME cryptography context</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MySecureMimeContext</span> <span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// Note: this assumes that "Alice" has an S/MIME certificate with an X.509</span>
+    <span class="c1">// Subject Email identifier that matches her email address. If she doesn't,</span>
+    <span class="c1">// try using a SecureMailboxAddress which allows you to specify the</span>
+    <span class="c1">// fingerprint of her certificate to use for lookups.</span>
+    <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">ApplicationPkcs7Mime</span><span class="p">.</span><span class="n">Encrypt</span> <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Mailboxes</span><span class="p">,</span> <span class="n">body</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="decrypting-smime-messages" class="anchor" href="#decrypting-smime-messages"><span class="octicon octicon-link"></span></a>Decrypting S/MIME Messages</h3>
+
+<p>As mentioned earlier, S/MIME uses an application/pkcs7-mime part with an "smime-type" parameter with a value of
+"enveloped-data" to encapsulate the encrypted content.</p>
+
+<p>The first thing you must do is find the ApplicationPkcs7Mime part (see the section on traversing MIME parts).</p>
+
+<div class="highlight highlight-csharp"><pre><span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">ApplicationPkcs7Mime</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">pkcs7</span> <span class="p">=</span> <span class="p">(</span><span class="n">ApplicationPkcs7Mime</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">pkcs7</span><span class="p">.</span><span class="n">SecureMimeType</span> <span class="p">==</span> <span class="n">SecureMimeType</span><span class="p">.</span><span class="n">EnvelopedData</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pkcs7</span><span class="p">.</span><span class="n">Decrypt</span> <span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="encrypting-messages-with-pgpmime" class="anchor" href="#encrypting-messages-with-pgpmime"><span class="octicon octicon-link"></span></a>Encrypting Messages with PGP/MIME</h3>
+
+<p>Unlike S/MIME, PGP/MIME uses multipart/encrypted to encapsulate its encrypted data.</p>
+
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">joey</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Joey"</span><span class="p">,</span> <span class="s">"joey@friends.com"</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">alice</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"alice@wonderland.com"</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeMessage</span> <span class="p">();</span>
+<span class="n">message</span><span class="p">.</span><span class="n">From</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">joey</span><span class="p">);</span>
+<span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">alice</span><span class="p">);</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Subject</span> <span class="p">=</span> <span class="s">"How you doin?"</span><span class="p">;</span>
+
+<span class="c1">// create our message body (perhaps a multipart/mixed with the message text and some</span>
+<span class="c1">// image attachments, for example)</span>
+<span class="kt">var</span> <span class="n">body</span> <span class="p">=</span> <span class="n">CreateMessageBody</span> <span class="p">();</span>
+
+<span class="c1">// now to encrypt our message body using our custom PGP/MIME cryptography context</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyGnuPGContext</span> <span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// Note: this assumes that "Alice" has a public PGP key that matches her email</span>
+    <span class="c1">// address. If she doesn't, try using a SecureMailboxAddress which allows you</span>
+    <span class="c1">// to specify the fingerprint of her public PGP key to use for lookups.</span>
+    <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">MultipartEncrypted</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Mailboxes</span><span class="p">,</span> <span class="n">body</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="decrypting-pgpmime-messages" class="anchor" href="#decrypting-pgpmime-messages"><span class="octicon octicon-link"></span></a>Decrypting PGP/MIME Messages</h3>
+
+<p>As mentioned earlier, PGP/MIME uses a multipart/encrypted part to encapsulate the encrypted content.</p>
+
+<p>A multipart/encrtpted contains exactly 2 parts: the first MimeEntity is the version information while the second
+MimeEntity is the actual encrypted content and will typically be an application/octet-stream.</p>
+
+<p>The first thing you must do is find the MultipartEncrypted part (see the section on traversing MIME parts).</p>
+
+<div class="highlight highlight-csharp"><pre><span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">MultipartEncrypted</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">encrypted</span> <span class="p">=</span> <span class="p">(</span><span class="n">MultipartEncrypted</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">encrypted</span><span class="p">.</span><span class="n">Decrypt</span> <span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="digitally-signing-messages-with-smime-or-pgpmime" class="anchor" href="#digitally-signing-messages-with-smime-or-pgpmime"><span class="octicon octicon-link"></span></a>Digitally Signing Messages with S/MIME or PGP/MIME</h3>
+
+<p>Both S/MIME and PGP/MIME use a multipart/signed to contain the signed content and the detached signature data.</p>
+
+<p>Here's how you might digitally sign a message using S/MIME:</p>
+
+<div class="highlight highlight-csharp"><pre><span class="kt">var</span> <span class="n">joey</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Joey"</span><span class="p">,</span> <span class="s">"joey@friends.com"</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">alice</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"alice@wonderland.com"</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeMessage</span> <span class="p">();</span>
+<span class="n">message</span><span class="p">.</span><span class="n">From</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">joey</span><span class="p">);</span>
+<span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="n">alice</span><span class="p">);</span>
+<span class="n">message</span><span class="p">.</span><span class="n">Subject</span> <span class="p">=</span> <span class="s">"How you doin?"</span><span class="p">;</span>
+
+<span class="c1">// create our message body (perhaps a multipart/mixed with the message text and some</span>
+<span class="c1">// image attachments, for example)</span>
+<span class="kt">var</span> <span class="n">body</span> <span class="p">=</span> <span class="n">CreateMessageBody</span> <span class="p">();</span>
+
+<span class="c1">// now to digitally sign our message body using our custom S/MIME cryptography context</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MySecureMimeContext</span> <span class="p">())</span> <span class="p">{</span>
     <span class="c1">// Note: this assumes that "Joey" has an S/MIME signing certificate and private key</span>
     <span class="c1">// with an X.509 Subject Email identifier that matches Joey's email address.</span>
     <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="n">MultipartSigned</span><span class="p">.</span><span class="n">Create</span> <span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">joey</span><span class="p">,</span> <span class="n">DigestAlgorithm</span><span class="p">.</span><span class="n">Sha1</span><span class="p">,</span> <span class="n">body</span><span class="p">);</span>
@@ -515,8 +681,8 @@ from the previous sample using S/MIME.</p>
 <p>For S/MIME, if you have a way for the user to configure which S/MIME certificate to use
 as their signing certificate, you could also do something more like this:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="c1">// now to digitally sign our message body using the default S/MIME cryptography context</span>
-<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DefaultSecureMimeContext</span> <span class="p">())</span> <span class="p">{</span>
+<div class="highlight highlight-csharp"><pre><span class="c1">// now to digitally sign our message body using our custom S/MIME cryptography context</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">ctx</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MySecureMimeContext</span> <span class="p">())</span> <span class="p">{</span>
     <span class="kt">var</span> <span class="n">certificate</span> <span class="p">=</span> <span class="n">GetJoeysX509Certificate</span> <span class="p">();</span>
     <span class="kt">var</span> <span class="n">signer</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CmsSigner</span> <span class="p">(</span><span class="n">certificate</span><span class="p">);</span>
     <span class="n">signer</span><span class="p">.</span><span class="n">DigestAlgorithm</span> <span class="p">=</span> <span class="n">DigestAlgorithm</span><span class="p">.</span><span class="n">Sha1</span><span class="p">;</span>
@@ -585,8 +751,8 @@ MultipartSigned.Verify() method:</p>
 </pre></div>
 
 <p>It should be noted, however, that while most S/MIME clients will use the preferred multipart/signed
-approach, it is possible that you may encounter an "application/pkcs7-mime" part with an
-"smime-type" parameter set to "signed-data". Luckily, MimeKit can handle this format as well:</p>
+approach, it is possible that you may encounter an application/pkcs7-mime part with an "smime-type"
+parameter set to "signed-data". Luckily, MimeKit can handle this format as well:</p>
 
 <div class="highlight highlight-csharp"><pre><span class="k">if</span> <span class="p">(</span><span class="n">entity</span> <span class="k">is</span> <span class="n">ApplicationPkcs7Mime</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">var</span> <span class="n">pkcs7</span> <span class="p">=</span> <span class="p">(</span><span class="n">ApplicationPkcs7Mime</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
@@ -595,8 +761,8 @@ approach, it is possible that you may encounter an "application/pkcs7-mime" part
         <span class="c1">// extract the original content and get a list of signatures</span>
         <span class="n">MimeEntity</span> <span class="n">extracted</span><span class="p">;</span>
 
-        <span class="c1">// Note: if you are rendering the message, you'll want to render</span>
-        <span class="c1">// the extracted mime part rather than the application/pkcs7-mime part.</span>
+        <span class="c1">// Note: if you are rendering the message, you'll want to render the</span>
+        <span class="c1">// extracted mime part rather than the application/pkcs7-mime part.</span>
         <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">signature</span> <span class="k">in</span> <span class="n">pkcs7</span><span class="p">.</span><span class="n">Verify</span> <span class="p">(</span><span class="k">out</span> <span class="n">extracted</span><span class="p">))</span> <span class="p">{</span>
             <span class="k">try</span> <span class="p">{</span>
                 <span class="kt">bool</span> <span class="n">valid</span> <span class="p">=</span> <span class="n">signature</span><span class="p">.</span><span class="n">Verify</span> <span class="p">();</span>
