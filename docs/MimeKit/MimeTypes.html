@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.MimeFormat</title>
+    <title>MimeKit.MimeTypes</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -205,58 +205,96 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.MimeFormat">MimeFormat  Enum</h1>
-        <p class="Summary" id="T:MimeKit.MimeFormat:Summary">
-            The format of the MIME stream.
-            </p>
+        <h1 class="PageTitle" id="T:MimeKit.MimeTypes">MimeTypes  Class</h1>
+        <p class="Summary" id="T:MimeKit.MimeTypes:Summary">
+          <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+        </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.MimeFormat:Signature">public enum <b>MimeFormat</b></div>
+          <div class="Signature" id="T:MimeKit.MimeTypes:Signature">public static class  <b>MimeTypes</b></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.MimeFormat:Docs">
+        <div class="Remarks" id="T:MimeKit.MimeTypes:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Remarks">
-            The format of the MIME stream.
-            </div>
-          <h2 class="Section">Members</h2>
-          <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Members">
-            <table class="Enumeration">
-              <tr>
-                <th>Member Name</th>
-                <th>Description</th>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.MimeFormat.Default">
-                  <b>Default</b>
-                </td>
-                <td>
-            The default stream format.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.MimeFormat.Entity">
-                  <b>Entity</b>
-                </td>
-                <td>
-            The stream contains a single MIME entity or message.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.MimeFormat.Mbox">
-                  <b>Mbox</b>
-                </td>
-                <td>
-            The stream is in the Unix mbox format and may contain
-            more than a single message.
-            </td>
-              </tr>
-            </table>
+          <div class="SectionBox" id="T:MimeKit.MimeTypes:Docs:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.MimeFormat:Docs:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
+          <div class="SectionBox" id="T:MimeKit.MimeTypes:Docs:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.90.0.0</div>
+          <h2 class="Section" id="Members">Members</h2>
+          <div class="SectionBox" id="_Members">
+            <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+            <h2 class="Section">Public Methods</h2>
+            <div class="SectionBox" id="Public Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.MimeTypes.GetMimeType(System.String)">GetMimeType</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Gets the MIME-type of the file.
+            </blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="Members" id="T:MimeKit.MimeFormat:Members">
+        <div class="Members" id="T:MimeKit.MimeTypes:Members">
+          <h2 class="Section" id="MemberDetails">Member Details</h2>
+          <div class="SectionBox" id="_MemberDetails">
+            <h3 id="M:MimeKit.MimeTypes.GetMimeType(System.String)">GetMimeType Method</h3>
+            <blockquote id="M:MimeKit.MimeTypes.GetMimeType(System.String):member">
+              <p class="Summary">
+            Gets the MIME-type of the file.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetMimeType</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> fileName)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeTypes.GetMimeType(System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>fileName</i>
+                  </dt>
+                  <dd>The file name.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeTypes.GetMimeType(System.String):Returns">The MIME-type.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.MimeTypes.GetMimeType(System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>fileName</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeTypes.GetMimeType(System.String):Remarks">
+            Gets the MIME-type of the file based on the file extension.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.MimeTypes.GetMimeType(System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.90.0.0</div>
+              <hr size="1" />
+            </blockquote>
+          </div>
         </div>
       </section>
     </div>

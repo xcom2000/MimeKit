@@ -221,7 +221,7 @@
             </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.FormatOptions:Docs:Version Information">
-            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.43.0.0</div>
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
@@ -289,6 +289,23 @@
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;HeaderId&gt;</a>
                       </i>. 
             Gets the message headers that should be hidden.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.FormatOptions.International">International</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets or sets whether the new "Internationalized Email" formatting standards should be used.
             </td>
                   </tr>
                   <tr valign="top">
@@ -364,7 +381,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.FormatOptions():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.43.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MimeKit.FormatOptions.Clone()">Clone Method</h3>
@@ -382,7 +399,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.FormatOptions.Clone():Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.43.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="F:MimeKit.FormatOptions.Default">Default Field</h3>
@@ -400,7 +417,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="F:MimeKit.FormatOptions.Default:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.43.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.FormatOptions.HiddenHeaders">HiddenHeaders Property</h3>
@@ -422,7 +439,46 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.FormatOptions.HiddenHeaders:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.43.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.FormatOptions.International">International Property</h3>
+            <blockquote id="P:MimeKit.FormatOptions.International:member">
+              <p class="Summary">
+            Gets or sets whether the new "Internationalized Email" formatting standards should be used.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>International</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.FormatOptions.International:Value">
+                <tt>true</tt> if the new internationalized formatting should be used; otherwise, <tt>false</tt>.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.FormatOptions.International:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <a href="../MimeKit/FormatOptions.html#F:MimeKit.FormatOptions.Default">FormatOptions.Default</a> cannot be changed.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.FormatOptions.International:Remarks">
+                <p>The new "Internationalized Email" format is defined by rfc6530 and rfc6532.</p>
+                <p>This feature should only be used when formatting messages meant to be sent via
+            SMTP using the SMTPUTF8 extension (rfc6531) or when appending messages to an IMAP folder
+            via UTF8 APPEND (rfc6855).</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.FormatOptions.International:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.90.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.FormatOptions.MaxLineLength">MaxLineLength Property</h3>
@@ -441,7 +497,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.FormatOptions.MaxLineLength:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.43.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MimeKit.FormatOptions.NewLineFormat">NewLineFormat Property</h3>
@@ -453,6 +509,23 @@
               <div class="Signature">public <a href="../MimeKit/NewLineFormat.html">NewLineFormat</a> <b>NewLineFormat</b>  { get; set; }</div>
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MimeKit.FormatOptions.NewLineFormat:Value">The new-line format.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.FormatOptions.NewLineFormat:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <a href="../MimeKit/FormatOptions.html#F:MimeKit.FormatOptions.Default">FormatOptions.Default</a> cannot be changed.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MimeKit.FormatOptions.NewLineFormat:Remarks">
             Specifies the new-line encoding to use when writing the message
@@ -460,7 +533,7 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.FormatOptions.NewLineFormat:Version Information">
-                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.43.0.0</div>
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
               <hr size="1" />
             </blockquote>
           </div>
