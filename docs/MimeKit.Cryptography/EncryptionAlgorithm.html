@@ -207,7 +207,7 @@
           <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
         <h1 class="PageTitle" id="T:MimeKit.Cryptography.EncryptionAlgorithm">EncryptionAlgorithm  Enum</h1>
         <p class="Summary" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Summary">
-            Encryption algorithms supported by S/MIME.
+            Encryption algorithms supported by S/MIME and OpenPGP.
             </p>
         <div>
           <h2>Syntax</h2>
@@ -216,7 +216,7 @@
         <div class="Remarks" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Docs">
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Docs:Remarks">
-            <p>Represents the list of available encryption algorithms for use with S/MIME.</p>
+            <p>Represents the available encryption algorithms for use with S/MIME and OpenPGP.</p>
             <p>RC-2/40 was required by all S/MIME v2 implementations. However, since the
             mid-to-late 1990's, RC-2/40 has been considered to be extremely weak and starting with
             S/MIME v3.0 (published in 1999), all S/MIME implementations are required to implement
@@ -256,6 +256,14 @@
                 </td>
                 <td>
             The AES 256-bit encryption algorithm.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Blowfish">
+                  <b>Blowfish</b>
+                </td>
+                <td>
+            The blowfish encryption algorithm (OpenPGP only).
             </td>
               </tr>
               <tr valign="top">
@@ -311,7 +319,7 @@
                   <b>RC2128</b>
                 </td>
                 <td>
-            The RC2 128-bit encryption algorithm.
+            The RC2 128-bit encryption algorithm (S/MIME only).
             </td>
               </tr>
               <tr valign="top">
@@ -319,7 +327,7 @@
                   <b>RC240</b>
                 </td>
                 <td>
-            The RC2 40-bit encryption algorithm.
+            The RC2 40-bit encryption algorithm (S/MIME only).
             </td>
               </tr>
               <tr valign="top">
@@ -327,7 +335,7 @@
                   <b>RC264</b>
                 </td>
                 <td>
-            The RC2 64-bit encryption algorithm.
+            The RC2 64-bit encryption algorithm (S/MIME only).
             </td>
               </tr>
               <tr valign="top">
@@ -338,11 +346,19 @@
             The Triple-DES encryption algorithm.
             </td>
               </tr>
+              <tr valign="top">
+                <td id="F:MimeKit.Cryptography.EncryptionAlgorithm.Twofish">
+                  <b>Twofish</b>
+                </td>
+                <td>
+            The twofish encryption algorithm (OpenPGP only).
+            </td>
+              </tr>
             </table>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Docs:Version Information">
-            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.42.0.0, 0.90.0.0</div>
+            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.92.0.0</div>
         </div>
         <div class="Members" id="T:MimeKit.Cryptography.EncryptionAlgorithm:Members">
         </div>
