@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MimeKit.Cryptography.X509CrlRecordFields</title>
+    <title>MimeKit.HeaderIdExtensions</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
@@ -204,84 +204,80 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
-          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit.Cryptography Namespace</a></div>
-        <h1 class="PageTitle" id="T:MimeKit.Cryptography.X509CrlRecordFields">X509CrlRecordFields  Enum</h1>
-        <p class="Summary" id="T:MimeKit.Cryptography.X509CrlRecordFields:Summary">
-            X.509 certificate revocation list record fields.
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.HeaderIdExtensions">HeaderIdExtensions  Class</h1>
+        <p class="Summary" id="T:MimeKit.HeaderIdExtensions:Summary">
+          <a href="../MimeKit/HeaderId.html">MimeKit.HeaderId</a> extension methods.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MimeKit.Cryptography.X509CrlRecordFields:Signature">[System.Flags]<br />public enum <b>X509CrlRecordFields</b></div>
+          <div class="Signature" id="T:MimeKit.HeaderIdExtensions:Signature">public static class  <b>HeaderIdExtensions</b></div>
         </div>
-        <div class="Remarks" id="T:MimeKit.Cryptography.X509CrlRecordFields:Docs">
+        <div class="Remarks" id="T:MimeKit.HeaderIdExtensions:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.X509CrlRecordFields:Docs:Remarks">
-            The record fields are used when querying the <a href="../MimeKit.Cryptography/IX509CertificateDatabase.html">MimeKit.Cryptography.IX509CertificateDatabase</a>
-            for certificate revocation lists.
+          <div class="SectionBox" id="T:MimeKit.HeaderIdExtensions:Docs:Remarks">
+            <a href="../MimeKit/HeaderId.html">MimeKit.HeaderId</a> extension methods.
             </div>
-          <h2 class="Section">Members</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.X509CrlRecordFields:Docs:Members">
-            <table class="Enumeration">
-              <tr>
-                <th>Member Name</th>
-                <th>Description</th>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.X509CrlRecordFields.Crl">
-                  <b>Crl</b>
-                </td>
-                <td>
-            The "crl" field stores the raw binary data of the certificate revocation list.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.X509CrlRecordFields.Id">
-                  <b>Id</b>
-                </td>
-                <td>
-            The "id" field is typically just the ROWID in the database.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.X509CrlRecordFields.IsDelta">
-                  <b>IsDelta</b>
-                </td>
-                <td>
-            The "delta" field is a boolean value indicating whether the certificate
-            revocation list is a delta.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.X509CrlRecordFields.IssuerName">
-                  <b>IssuerName</b>
-                </td>
-                <td>
-            The "issuer name" field stores the issuer name of the certificate revocation list.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.X509CrlRecordFields.NextUpdate">
-                  <b>NextUpdate</b>
-                </td>
-                <td>
-            The "next update" field stores the date and time of the next scheduled update.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MimeKit.Cryptography.X509CrlRecordFields.ThisUpdate">
-                  <b>ThisUpdate</b>
-                </td>
-                <td>
-            The "this update" field stores the date and time of the most recent update.
-            </td>
-              </tr>
-            </table>
-          </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MimeKit.Cryptography.X509CrlRecordFields:Docs:Version Information">
-            <b>Namespace: </b>MimeKit.Cryptography<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.94.0.0</div>
+          <div class="SectionBox" id="T:MimeKit.HeaderIdExtensions:Docs:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.94.0.0</div>
+          <h2 class="Section" id="Members">Members</h2>
+          <div class="SectionBox" id="_Members">
+            <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+            <h2 class="Section">Public Methods</h2>
+            <div class="SectionBox" id="Public Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.HeaderIdExtensions.ToHeaderName(System.Enum)">ToHeaderName</a>
+                      </b>(<i>this</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Enum">Enum</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Converts the enum value into the equivalent header field name.
+            </blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="Members" id="T:MimeKit.Cryptography.X509CrlRecordFields:Members">
+        <div class="Members" id="T:MimeKit.HeaderIdExtensions:Members">
+          <h2 class="Section" id="MemberDetails">Member Details</h2>
+          <div class="SectionBox" id="_MemberDetails">
+            <h3 id="M:MimeKit.HeaderIdExtensions.ToHeaderName(System.Enum)">ToHeaderName Method</h3>
+            <blockquote id="M:MimeKit.HeaderIdExtensions.ToHeaderName(System.Enum):member">
+              <p class="Summary">
+            Converts the enum value into the equivalent header field name.
+            </p>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToHeaderName</b> (<i>this</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Enum">Enum</a> value)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderIdExtensions.ToHeaderName(System.Enum):Parameters">
+                <dl>
+                  <dt>
+                    <i>value</i>
+                  </dt>
+                  <dd>The enum value.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderIdExtensions.ToHeaderName(System.Enum):Returns">The header name.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderIdExtensions.ToHeaderName(System.Enum):Remarks">
+            Converts the enum value into the equivalent header field name.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderIdExtensions.ToHeaderName(System.Enum):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>0.94.0.0</div>
+              <hr size="1" />
+            </blockquote>
+          </div>
         </div>
       </section>
     </div>
