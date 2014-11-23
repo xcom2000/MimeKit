@@ -390,6 +390,20 @@
             </td>
                   </tr>
                   <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.HtmlBody">HtmlBody</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the html body of the message if it exists.
+            </td>
+                  </tr>
+                  <tr valign="top">
                     <td>
                       <div>
                       </div>
@@ -621,6 +635,20 @@
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
             Gets or sets the subject of the message.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MimeMessage.TextBody">TextBody</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets the text body of the message if it exists.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1223,6 +1251,22 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Headers:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.HtmlBody">HtmlBody Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.HtmlBody:member">
+              <div class="msummary">
+            Gets the html body of the message if it exists.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>HtmlBody</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.HtmlBody:Value">The html body if it exists; otherwise, <tt>null</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.HtmlBody:Remarks">Gets the HTML-formatted body of the message if it exists.</div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.HtmlBody:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2578,6 +2622,23 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.MimeMessage.Subject:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MimeMessage.TextBody">TextBody Property</h3>
+            <blockquote id="P:MimeKit.MimeMessage.TextBody:member">
+              <div class="msummary">
+            Gets the text body of the message if it exists.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>TextBody</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MimeMessage.TextBody:Value">The text body if it exists; otherwise, <tt>null</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.TextBody:Remarks">Gets the text content of the first text/plain body part that is found (in depth-first
+            search order) which is not an attachment.</div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MimeMessage.TextBody:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
