@@ -585,10 +585,35 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MimeKit.TextPart.GetText(System.Text.Encoding)">GetText</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+                        <a href="#M:MimeKit.TextPart.GetText(System.String)">GetText</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
             Gets the decoded text content using the provided charset to override
             the charset specified in the Content-Type parameters.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.TextPart.GetText(System.Text.Encoding)">GetText</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Gets the decoded text content using the provided charset encoding to
+            override the charset specified in the Content-Type parameters.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.TextPart.SetText(System.String,System.String)">SetText</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Sets the text content and the charset parameter in the Content-Type header.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -920,11 +945,66 @@
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MimeKit.TextPart.GetText(System.Text.Encoding)">GetText Method</h3>
-            <blockquote id="M:MimeKit.TextPart.GetText(System.Text.Encoding):member">
+            <h3 id="M:MimeKit.TextPart.GetText(System.String)">GetText Method</h3>
+            <blockquote id="M:MimeKit.TextPart.GetText(System.String):member">
               <div class="msummary">
             Gets the decoded text content using the provided charset to override
             the charset specified in the Content-Type parameters.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetText</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> charset)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.TextPart.GetText(System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>charset</i>
+                  </dt>
+                  <dd>The charset encoding to use.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.TextPart.GetText(System.String):Returns">The decoded text.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.TextPart.GetText(System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>charset</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The <i>charset</i> is not supported.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.TextPart.GetText(System.String):Remarks">
+            Uses the provided charset encoding to convert the raw text content
+            into a unicode string, overriding any charset specified in the
+            Content-Type header.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.TextPart.GetText(System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.TextPart.GetText(System.Text.Encoding)">GetText Method</h3>
+            <blockquote id="M:MimeKit.TextPart.GetText(System.Text.Encoding):member">
+              <div class="msummary">
+            Gets the decoded text content using the provided charset encoding to
+            override the charset specified in the Content-Type parameters.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetText</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> charset)</div>
@@ -932,7 +1012,7 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.TextPart.GetText(System.Text.Encoding):Parameters">
                 <dl>
                   <dt>
-                    <i>charset</i>
+                    <i>encoding</i>
                   </dt>
                   <dd>The charset encoding to use.</dd>
                 </dl>
@@ -951,7 +1031,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
                     </td>
                     <td>
-                      <i>charset</i> is <tt>null</tt>.
+                      <i>encoding</i> is <tt>null</tt>.
             </td>
                   </tr>
                 </table>
@@ -1005,6 +1085,66 @@
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="M:MimeKit.TextPart.SetText(System.String,System.String)">SetText Method</h3>
+            <blockquote id="M:MimeKit.TextPart.SetText(System.String,System.String):member">
+              <div class="msummary">
+            Sets the text content and the charset parameter in the Content-Type header.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetText</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> charset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.TextPart.SetText(System.String,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>charset</i>
+                  </dt>
+                  <dd>The charset encoding.</dd>
+                  <dt>
+                    <i>text</i>
+                  </dt>
+                  <dd>The text content.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.TextPart.SetText(System.String,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>charset</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>text</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The <i>charset</i> is not supported.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.TextPart.SetText(System.String,System.String):Remarks">
+            This method is similar to setting the <a href="../MimeKit/TextPart.html#P:MimeKit.TextPart.Text">TextPart.Text</a> property, but allows
+            specifying a charset encoding to use. Also updates the
+            <a href="../MimeKit/ContentType.html#P:MimeKit.ContentType.Charset">ContentType.Charset</a> property.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.TextPart.SetText(System.String,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="M:MimeKit.TextPart.SetText(System.Text.Encoding,System.String)">SetText Method</h3>
             <blockquote id="M:MimeKit.TextPart.SetText(System.Text.Encoding,System.String):member">
               <div class="msummary">
@@ -1016,7 +1156,7 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.TextPart.SetText(System.Text.Encoding,System.String):Parameters">
                 <dl>
                   <dt>
-                    <i>charset</i>
+                    <i>encoding</i>
                   </dt>
                   <dd>The charset encoding.</dd>
                   <dt>
@@ -1038,7 +1178,7 @@
                     </td>
                     <td>
                       <p>
-                        <i>charset</i> is <tt>null</tt>.</p>
+                        <i>encoding</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
                         <i>text</i> is <tt>null</tt>.</p>
@@ -1072,7 +1212,8 @@
             is set, it will be used in order to convert the raw content into unicode.
             If that fails or if the charset parameter is not set, iso-8859-1 will be
             used instead.</p>
-                <p>For more control, use the <a href="../MimeKit/TextPart.html#M:MimeKit.TextPart.GetText(System.Text.Encoding)">TextPart.GetText(System.Text.Encoding)</a> method.</p>
+                <p>For more control, use <a href="../MimeKit/TextPart.html#M:MimeKit.TextPart.GetText(System.Text.Encoding)">TextPart.GetText(System.Text.Encoding)</a>
+            or <a href="../MimeKit/TextPart.html#M:MimeKit.TextPart.GetText(System.String)">TextPart.GetText(string)</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MimeKit.TextPart.Text:Version Information">
