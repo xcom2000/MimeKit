@@ -278,6 +278,23 @@
               <div class="SubsectionBox">
                 <table class="TypeMembers">
                   <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.FormatOptions.AllowMixedHeaderCharsets">AllowMixedHeaderCharsets</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets or sets whether the formatter should allow mixed charsets in the headers.
+            </td>
+                  </tr>
+                  <tr valign="top">
                     <td>[read-only]<div></div></td>
                     <td>
                       <b>
@@ -381,6 +398,32 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.FormatOptions():Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.FormatOptions.AllowMixedHeaderCharsets">AllowMixedHeaderCharsets Property</h3>
+            <blockquote id="P:MimeKit.FormatOptions.AllowMixedHeaderCharsets:member">
+              <div class="msummary">
+            Gets or sets whether the formatter should allow mixed charsets in the headers.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>AllowMixedHeaderCharsets</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.FormatOptions.AllowMixedHeaderCharsets:Value">
+                <tt>true</tt> if the formatter should be allowed to use ISO-8859-1 when encoding headers; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.FormatOptions.AllowMixedHeaderCharsets:Remarks">
+                <p>When this option is enabled, the MIME formatter will try to use ISO-8859-1
+            to encode headers when appropriate rather than being forced to use the specified
+            charset for all encoded-word tokens in order to maximize readability.</p>
+                <p>Unfortunately, mail clients like Outlook and Thunderbird do not treat
+            encoded-word tokens individually and assume that all tokens are encoded using the
+            charset declared in the first encoded-word token despite the specification
+            explicitly stating that each encoded-word token should be treated independently.</p>
+                <p>The Thunderbird bug can be tracked at https://bugzilla.mozilla.org/show_bug.cgi?id=317263</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.FormatOptions.AllowMixedHeaderCharsets:Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

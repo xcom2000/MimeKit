@@ -687,6 +687,54 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.String,System.String)">Replace</a>
+                      </b>(<a href="../MimeKit/HeaderId.html">HeaderId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Replaces all headers with identical field names with the single specified header.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.Text.Encoding,System.String)">Replace</a>
+                      </b>(<a href="../MimeKit/HeaderId.html">HeaderId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Replaces all headers with identical field names with the single specified header.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.HeaderList.Replace(System.String,System.String,System.String)">Replace</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Replaces all headers with identical field names with the single specified header.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.HeaderList.Replace(System.String,System.Text.Encoding,System.String)">Replace</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Replaces all headers with identical field names with the single specified header.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.HeaderList.WriteTo(System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
             Writes the <a href="../MimeKit/HeaderList.html">MimeKit.HeaderList</a> to the specified output stream.
@@ -2431,6 +2479,272 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.String,System.String)">Replace Method</h3>
+            <blockquote id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.String,System.String):member">
+              <div class="msummary">
+            Replaces all headers with identical field names with the single specified header.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Replace</b> (<a href="../MimeKit/HeaderId.html">HeaderId</a> id, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> charset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.String,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>id</i>
+                  </dt>
+                  <dd>The header identifier.</dd>
+                  <dt>
+                    <i>charset</i>
+                  </dt>
+                  <dd>The charset to use for the value.</dd>
+                  <dt>
+                    <i>value</i>
+                  </dt>
+                  <dd>The header value.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.String,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>charset</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>value</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>id</i> is not a valid <a href="../MimeKit/HeaderId.html">MimeKit.HeaderId</a>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>charset</i> is not supported.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.String,System.String):Remarks">
+                <p>Replaces all headers with identical field names with the single specified header.</p>
+                <p>If no headers with the specified field name exist, it is simply added.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.String,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.Text.Encoding,System.String)">Replace Method</h3>
+            <blockquote id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.Text.Encoding,System.String):member">
+              <div class="msummary">
+            Replaces all headers with identical field names with the single specified header.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Replace</b> (<a href="../MimeKit/HeaderId.html">HeaderId</a> id, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> encoding, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.Text.Encoding,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>id</i>
+                  </dt>
+                  <dd>The header identifier.</dd>
+                  <dt>
+                    <i>encoding</i>
+                  </dt>
+                  <dd>The character encoding to use for the value.</dd>
+                  <dt>
+                    <i>value</i>
+                  </dt>
+                  <dd>The header value.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.Text.Encoding,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>encoding</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>value</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>id</i> is not a valid <a href="../MimeKit/HeaderId.html">MimeKit.HeaderId</a>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.Text.Encoding,System.String):Remarks">
+                <p>Replaces all headers with identical field names with the single specified header.</p>
+                <p>If no headers with the specified field name exist, it is simply added.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(MimeKit.HeaderId,System.Text.Encoding,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.HeaderList.Replace(System.String,System.String,System.String)">Replace Method</h3>
+            <blockquote id="M:MimeKit.HeaderList.Replace(System.String,System.String,System.String):member">
+              <div class="msummary">
+            Replaces all headers with identical field names with the single specified header.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Replace</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> field, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> charset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.String,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>field</i>
+                  </dt>
+                  <dd>The name of the header field.</dd>
+                  <dt>
+                    <i>charset</i>
+                  </dt>
+                  <dd>The charset to use for the value.</dd>
+                  <dt>
+                    <i>value</i>
+                  </dt>
+                  <dd>The header value.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.String,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>field</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>charset</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>value</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            The <i>field</i> contains illegal characters.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>charset</i> is not supported.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.String,System.String):Remarks">
+                <p>Replaces all headers with identical field names with the single specified header.</p>
+                <p>If no headers with the specified field name exist, it is simply added.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.String,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.HeaderList.Replace(System.String,System.Text.Encoding,System.String)">Replace Method</h3>
+            <blockquote id="M:MimeKit.HeaderList.Replace(System.String,System.Text.Encoding,System.String):member">
+              <div class="msummary">
+            Replaces all headers with identical field names with the single specified header.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Replace</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> field, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> encoding, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.Text.Encoding,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>field</i>
+                  </dt>
+                  <dd>The name of the header field.</dd>
+                  <dt>
+                    <i>encoding</i>
+                  </dt>
+                  <dd>The character encoding to use for the value.</dd>
+                  <dt>
+                    <i>value</i>
+                  </dt>
+                  <dd>The header value.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.Text.Encoding,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>field</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>encoding</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>value</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.Text.Encoding,System.String):Remarks">
+                <p>Replaces all headers with identical field names with the single specified header.</p>
+                <p>If no headers with the specified field name exist, it is simply added.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.HeaderList.Replace(System.String,System.Text.Encoding,System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

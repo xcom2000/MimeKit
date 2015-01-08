@@ -269,6 +269,36 @@
                     <td>
                       <div>
                         <b>
+                          <a href="#C:MimeKit.Header(System.String,MimeKit.HeaderId,System.String)">Header</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MimeKit/HeaderId.html">HeaderId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit/Header.html">MimeKit.Header</a> class.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.Header(System.String,System.String,System.String)">Header</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit/Header.html">MimeKit.Header</a> class.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
                           <a href="#C:MimeKit.Header(System.Text.Encoding,MimeKit.HeaderId,System.String)">Header</a>
                         </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>, <a href="../MimeKit/HeaderId.html">HeaderId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
@@ -384,9 +414,33 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.Header.GetValue(System.String)">GetValue</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Gets the header value using the specified charset.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.Header.GetValue(System.Text.Encoding)">GetValue</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
-            Gets the header value using the specified charset.
+            Gets the header value using the specified character encoding.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Header.SetValue(System.String,System.String)">SetValue</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Sets the header value using the specified charset.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -398,7 +452,7 @@
                       <b>
                         <a href="#M:MimeKit.Header.SetValue(System.Text.Encoding,System.String)">SetValue</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
-            Sets the header value using the specified charset.
+            Sets the header value using the specified character encoding.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -567,7 +621,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Header(MimeKit.HeaderId,System.String):Remarks">
             Creates a new message or entity header for the specified field and
-            value pair.
+            value pair with the UTF-8 encoding.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Header(MimeKit.HeaderId,System.String):Version Information">
@@ -626,10 +680,170 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MimeKit.Header(System.String,System.String):Remarks">
             Creates a new message or entity header for the specified field and
-            value pair.
+            value pair with the UTF-8 encoding.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MimeKit.Header(System.String,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MimeKit.Header(System.String,MimeKit.HeaderId,System.String)">Header Constructor</h3>
+            <blockquote id="C:MimeKit.Header(System.String,MimeKit.HeaderId,System.String):member">
+              <div class="msummary">
+            Initializes a new instance of the <a href="../MimeKit/Header.html">MimeKit.Header</a> class.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>Header</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> charset, <a href="../MimeKit/HeaderId.html">HeaderId</a> id, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Header(System.String,MimeKit.HeaderId,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>charset</i>
+                  </dt>
+                  <dd>The charset that should be used to encode the
+            header value.</dd>
+                  <dt>
+                    <i>id</i>
+                  </dt>
+                  <dd>The header identifier.</dd>
+                  <dt>
+                    <i>value</i>
+                  </dt>
+                  <dd>The value of the header.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Header(System.String,MimeKit.HeaderId,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>charset</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>value</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>id</i> is not a valid <a href="../MimeKit/HeaderId.html">MimeKit.HeaderId</a>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <i>charset</i> cannot be empty.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>charset</i> is not supported.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Header(System.String,MimeKit.HeaderId,System.String):Remarks">
+            Creates a new message or entity header for the specified field and
+            value pair. The encoding is used to determine which charset to use
+            when encoding the value according to the rules of rfc2047.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Header(System.String,MimeKit.HeaderId,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MimeKit.Header(System.String,System.String,System.String)">Header Constructor</h3>
+            <blockquote id="C:MimeKit.Header(System.String,System.String,System.String):member">
+              <div class="msummary">
+            Initializes a new instance of the <a href="../MimeKit/Header.html">MimeKit.Header</a> class.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>Header</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> charset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> field, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Header(System.String,System.String,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>charset</i>
+                  </dt>
+                  <dd>The charset that should be used to encode the
+            header value.</dd>
+                  <dt>
+                    <i>field</i>
+                  </dt>
+                  <dd>The name of the header field.</dd>
+                  <dt>
+                    <i>value</i>
+                  </dt>
+                  <dd>The value of the header.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.Header(System.String,System.String,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>charset</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>field</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>value</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>charset</i> cannot be empty.</p>
+                      <p>-or-</p>
+                      <p>The <i>field</i> contains illegal characters.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>charset</i> is not supported.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.Header(System.String,System.String,System.String):Remarks">
+            Creates a new message or entity header for the specified field and
+            value pair. The encoding is used to determine which charset to use
+            when encoding the value according to the rules of rfc2047.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.Header(System.String,System.String,System.String):Version Information">
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -644,10 +858,10 @@
               <blockquote class="SubsectionBox" id="C:MimeKit.Header(System.Text.Encoding,MimeKit.HeaderId,System.String):Parameters">
                 <dl>
                   <dt>
-                    <i>charset</i>
+                    <i>encoding</i>
                   </dt>
-                  <dd>The charset that should be used to encode the
-            header value.</dd>
+                  <dd>The character encoding that should be used to
+            encode the header value.</dd>
                   <dt>
                     <i>id</i>
                   </dt>
@@ -671,7 +885,7 @@
                     </td>
                     <td>
                       <p>
-                        <i>charset</i> is <tt>null</tt>.</p>
+                        <i>encoding</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
                         <i>value</i> is <tt>null</tt>.</p>
@@ -709,10 +923,10 @@
               <blockquote class="SubsectionBox" id="C:MimeKit.Header(System.Text.Encoding,System.String,System.String):Parameters">
                 <dl>
                   <dt>
-                    <i>charset</i>
+                    <i>encoding</i>
                   </dt>
-                  <dd>The charset that should be used to encode the
-            header value.</dd>
+                  <dd>The character encoding that should be used
+            to encode the header value.</dd>
                   <dt>
                     <i>field</i>
                   </dt>
@@ -736,7 +950,7 @@
                     </td>
                     <td>
                       <p>
-                        <i>charset</i> is <tt>null</tt>.</p>
+                        <i>encoding</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
                         <i>field</i> is <tt>null</tt>.</p>
@@ -784,10 +998,42 @@
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="M:MimeKit.Header.GetValue(System.String)">GetValue Method</h3>
+            <blockquote id="M:MimeKit.Header.GetValue(System.String):member">
+              <div class="msummary">
+            Gets the header value using the specified charset.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetValue</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> charset)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Header.GetValue(System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>charset</i>
+                  </dt>
+                  <dd>The charset to use as a fallback.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Header.GetValue(System.String):Returns">The value.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Header.GetValue(System.String):Remarks">
+                <p>If the raw header value does not properly encode non-ASCII text, the decoder
+            will fall back to a default charset encoding. Sometimes, however, this
+            default charset fallback is wrong and the mail client may wish to override
+            that default charset on a per-header basis.</p>
+                <p>By using this method, the client is able to override the fallback charset
+            on a per-header basis.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Header.GetValue(System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="M:MimeKit.Header.GetValue(System.Text.Encoding)">GetValue Method</h3>
             <blockquote id="M:MimeKit.Header.GetValue(System.Text.Encoding):member">
               <div class="msummary">
-            Gets the header value using the specified charset.
+            Gets the header value using the specified character encoding.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>GetValue</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> charset)</div>
@@ -795,9 +1041,9 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Header.GetValue(System.Text.Encoding):Parameters">
                 <dl>
                   <dt>
-                    <i>charset</i>
+                    <i>encoding</i>
                   </dt>
-                  <dd>The fallback charset.</dd>
+                  <dd>The character encoding to use as a fallback.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Returns</h4>
@@ -871,10 +1117,70 @@
                 <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="M:MimeKit.Header.SetValue(System.String,System.String)">SetValue Method</h3>
+            <blockquote id="M:MimeKit.Header.SetValue(System.String,System.String):member">
+              <div class="msummary">
+            Sets the header value using the specified charset.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetValue</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> charset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Header.SetValue(System.String,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>charset</i>
+                  </dt>
+                  <dd>A charset encoding.</dd>
+                  <dt>
+                    <i>value</i>
+                  </dt>
+                  <dd>The header value.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Header.SetValue(System.String,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>charset</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>value</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>charset</i> is not supported.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Header.SetValue(System.String,System.String):Remarks">
+            When a particular charset is desired for encoding the header value
+            according to the rules of rfc2047, this method should be used
+            instead of the <a href="../MimeKit/Header.html#P:MimeKit.Header.Value">Header.Value</a> setter.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Header.SetValue(System.String,System.String):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="M:MimeKit.Header.SetValue(System.Text.Encoding,System.String)">SetValue Method</h3>
             <blockquote id="M:MimeKit.Header.SetValue(System.Text.Encoding,System.String):member">
               <div class="msummary">
-            Sets the header value using the specified charset.
+            Sets the header value using the specified character encoding.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetValue</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Text.Encoding">System.Text.Encoding</a> charset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> value)</div>
@@ -882,9 +1188,9 @@
               <blockquote class="SubsectionBox" id="M:MimeKit.Header.SetValue(System.Text.Encoding,System.String):Parameters">
                 <dl>
                   <dt>
-                    <i>charset</i>
+                    <i>encoding</i>
                   </dt>
-                  <dd>A charset encoding.</dd>
+                  <dd>A character encoding.</dd>
                   <dt>
                     <i>value</i>
                   </dt>
@@ -904,7 +1210,7 @@
                     </td>
                     <td>
                       <p>
-                        <i>charset</i> is <tt>null</tt>.</p>
+                        <i>encoding</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
                         <i>value</i> is <tt>null</tt>.</p>
