@@ -294,6 +294,39 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MimeKit.Utils.MimeUtils.TryParse(System.String,MimeKit.ContentEncoding@)">TryParse</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse the value of a Content-Transfer-Encoding header.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Utils.MimeUtils.TryParse(System.String,System.Version@)">TryParse</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse a version from a header such as Mime-Version.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MimeKit.Utils.MimeUtils.TryParse(System.Byte[],System.Int32,System.Int32,System.Version@)">TryParse</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to parse a version from a header such as Mime-Version.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MimeKit.Utils.MimeUtils.TryParseVersion(System.String,System.Version@)">TryParseVersion</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
             Tries to parse a version from a header such as Mime-Version.
@@ -546,13 +579,178 @@
                 <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,MimeKit.ContentEncoding@)">TryParse Method</h3>
+            <blockquote id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,MimeKit.ContentEncoding@):member">
+              <div class="msummary">
+            Tries to parse the value of a Content-Transfer-Encoding header.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text, <i>out</i> <a href="../MimeKit/ContentEncoding.html">MimeKit.ContentEncoding</a> encoding)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,MimeKit.ContentEncoding@):Parameters">
+                <dl>
+                  <dt>
+                    <i>text</i>
+                  </dt>
+                  <dd>The text to parse.</dd>
+                  <dt>
+                    <i>encoding</i>
+                  </dt>
+                  <dd>The parsed encoding.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,MimeKit.ContentEncoding@):Returns">
+                <tt>true</tt>, if the encoding was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,MimeKit.ContentEncoding@):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>text</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,MimeKit.ContentEncoding@):Remarks">
+            Parses a Content-Transfer-Encoding header value.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,MimeKit.ContentEncoding@):Version Information">
+                <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,System.Version@)">TryParse Method</h3>
+            <blockquote id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,System.Version@):member">
+              <div class="msummary">
+            Tries to parse a version from a header such as Mime-Version.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a> version)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,System.Version@):Parameters">
+                <dl>
+                  <dt>
+                    <i>text</i>
+                  </dt>
+                  <dd>The text to parse.</dd>
+                  <dt>
+                    <i>version</i>
+                  </dt>
+                  <dd>The parsed version.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,System.Version@):Returns">
+                <tt>true</tt>, if the version was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,System.Version@):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>text</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,System.Version@):Remarks">
+            Parses a MIME version string from the specified text.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.String,System.Version@):Version Information">
+                <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MimeKit.Utils.MimeUtils.TryParse(System.Byte[],System.Int32,System.Int32,System.Version@)">TryParse Method</h3>
+            <blockquote id="M:MimeKit.Utils.MimeUtils.TryParse(System.Byte[],System.Int32,System.Int32,System.Version@):member">
+              <div class="msummary">
+            Tries to parse a version from a header such as Mime-Version.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParse</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a> version)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.Byte[],System.Int32,System.Int32,System.Version@):Parameters">
+                <dl>
+                  <dt>
+                    <i>buffer</i>
+                  </dt>
+                  <dd>The raw byte buffer to parse.</dd>
+                  <dt>
+                    <i>startIndex</i>
+                  </dt>
+                  <dd>The index into the buffer to start parsing.</dd>
+                  <dt>
+                    <i>length</i>
+                  </dt>
+                  <dd>The length of the buffer to parse.</dd>
+                  <dt>
+                    <i>version</i>
+                  </dt>
+                  <dd>The parsed version.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.Byte[],System.Int32,System.Int32,System.Version@):Returns">
+                <tt>true</tt>, if the version was successfully parsed, <tt>false</tt> otherwise.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.Byte[],System.Int32,System.Int32,System.Version@):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>buffer</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>startIndex</i> and <i>length</i> do not specify
+            a valid range in the byte array.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.Byte[],System.Int32,System.Int32,System.Version@):Remarks">
+            Parses a MIME version string from the supplied buffer starting at the given index
+            and spanning across the specified number of bytes.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MimeKit.Utils.MimeUtils.TryParse(System.Byte[],System.Int32,System.Int32,System.Version@):Version Information">
+                <b>Namespace: </b>MimeKit.Utils<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="M:MimeKit.Utils.MimeUtils.TryParseVersion(System.String,System.Version@)">TryParseVersion Method</h3>
             <blockquote id="M:MimeKit.Utils.MimeUtils.TryParseVersion(System.String,System.Version@):member">
               <div class="msummary">
             Tries to parse a version from a header such as Mime-Version.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParseVersion</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a> version)</div>
+              <div class="Signature">[System.Obsolete("Use TryParse (string text, out Version version) instead.")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParseVersion</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a> version)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParseVersion(System.String,System.Version@):Parameters">
                 <dl>
@@ -601,7 +799,7 @@
             Tries to parse a version from a header such as Mime-Version.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParseVersion</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a> version)</div>
+              <div class="Signature">[System.Obsolete("Use TryParse (byte[] buffer, int startIndex, int length, out Version version) instead.")]<br />public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>TryParseVersion</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[] buffer, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> length, <i>out</i> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Version">Version</a> version)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MimeKit.Utils.MimeUtils.TryParseVersion(System.Byte[],System.Int32,System.Int32,System.Version@):Parameters">
                 <dl>
