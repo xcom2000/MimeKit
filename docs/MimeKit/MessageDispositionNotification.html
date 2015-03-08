@@ -1,0 +1,751 @@
+<html>
+  <head>
+    <title>MimeKit.MessageDispositionNotification</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="MimeKit : A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools." />
+    <link rel="stylesheet" type="text/css" media="screen" href="/MimeKit/stylesheets/stylesheet.css" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+        color: black
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+        color: black
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        <a id="forkme_banner" href="https://github.com/jstedfast/MimeKit">View on GitHub</a>
+        <h1 id="project_title">MimeKit</h1>
+        <h2 id="project_tagline">A C# MIME creation and parser library with support for S/MIME, PGP and Unix mbox spools.</h2>
+        <section id="downloads">
+          <a class="zip_download_link" href="https://github.com/jstedfast/MimeKit/zipball/master">Download this project as a .zip file</a>
+          <a class="tar_download_link" href="https://github.com/jstedfast/MimeKit/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+      </header>
+    </div>
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <div class="CollectionTitle">
+          <a href="../index.html">MimeKit</a> : <a href="index.html">MimeKit Namespace</a></div>
+        <h1 class="PageTitle" id="T:MimeKit.MessageDispositionNotification">MessageDispositionNotification  Class</h1>
+        <p class="Summary" id="T:MimeKit.MessageDispositionNotification:Summary">
+            A message disposition notification MIME part.
+            </p>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MimeKit.MessageDispositionNotification:Signature">public class  <b>MessageDispositionNotification</b> : <a href="../MimeKit/MimePart.html">MimePart</a></div>
+        </div>
+        <div class="Remarks" id="T:MimeKit.MessageDispositionNotification:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MimeKit.MessageDispositionNotification:Docs:Remarks">
+            A message disposition notification MIME part is a machine readable notification denoting the
+            delivery status of a previously sent message.
+            </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MimeKit.MessageDispositionNotification:Docs:Version Information">
+            <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <h2 class="Section" id="Members">Members</h2>
+          <div class="SectionBox" id="_Members">
+            <p>
+								See Also: Inherited members from
+								<a href="../MimeKit/MimePart.html">MimePart</a>.
+							</p>
+            <h2 class="Section">Public Constructors</h2>
+            <div class="SectionBox" id="Public Constructors">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.MessageDispositionNotification()">MessageDispositionNotification</a>
+                        </b>()</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit/MessageDispositionNotification.html">MimeKit.MessageDispositionNotification</a> class.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MimeKit.MessageDispositionNotification(MimeKit.MimeEntityConstructorInfo)">MessageDispositionNotification</a>
+                        </b>(<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeEntityConstructorInfo</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MimeKit/MessageDispositionNotification.html">MimeKit.MessageDispositionNotification</a> class.
+            </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Properties</h2>
+            <div class="SectionBox" id="Public Properties">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentBase">ContentBase</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>
+                      </i>. 
+            Gets or sets the base content URI.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentDisposition">ContentDisposition</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/ContentDisposition.html">ContentDisposition</a>
+                      </i>. 
+            Gets or sets the content disposition.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentDuration">ContentDuration</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;int&gt;</a>
+                      </i>. 
+            Gets or sets the duration of the content if available.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentId">ContentId</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets or sets the content identifier.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentLocation">ContentLocation</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>
+                      </i>. 
+            Gets or sets the content location.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentMd5">ContentMd5</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets or sets the md5sum of the content.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentObject">ContentObject</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/IContentObject.html">IContentObject</a>
+                      </i>. 
+            Gets or sets the MIME content.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.ContentTransferEncoding">ContentTransferEncoding</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/ContentEncoding.html">ContentEncoding</a>
+                      </i>. 
+            Gets or sets the content transfer encoding.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.ContentType">ContentType</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/ContentType.html">ContentType</a>
+                      </i>. 
+            Gets the type of the content.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MimeKit.MessageDispositionNotification.Fields">Fields</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/HeaderList.html">HeaderList</a>
+                      </i>. 
+            Get the disposition notification fields.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.FileName">FileName</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Gets or sets the name of the file.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#P:MimeKit.MimeEntity.Headers">Headers</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MimeKit/HeaderList.html">HeaderList</a>
+                      </i>. 
+            Gets the list of headers.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MimeKit/MimePart.html#P:MimeKit.MimePart.IsAttachment">IsAttachment</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets a value indicating whether this <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> is an attachment.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Public Methods</h2>
+            <div class="SectionBox" id="Public Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.ComputeContentMd5()">ComputeContentMd5</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Computes the MD5 checksum of the content.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.GetBestEncoding(MimeKit.EncodingConstraint,System.Threading.CancellationToken)">GetBestEncoding</a>
+                      </b>(<a href="../MimeKit/EncodingConstraint.html">EncodingConstraint</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MimeKit/ContentEncoding.html">ContentEncoding</a></nobr><blockquote>
+            Calculates the most efficient content encoding given the specified constraint.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.ToString()">ToString</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Returns a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> that represents the current <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a>.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.VerifyContentMd5()">VerifyContentMd5</a>
+                      </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Verifies the Content-Md5 value against an independently computed md5sum.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> to the specified output stream.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(System.String,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> to the specified file.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimePart.html">MimeKit.MimePart</a> to the specified output stream.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.IO.Stream,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> to the specified output stream.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.WriteTo(MimeKit.FormatOptions,System.String,System.Threading.CancellationToken)">WriteTo</a>
+                      </b>(<a href="../MimeKit/FormatOptions.html">FormatOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Writes the <a href="../MimeKit/MimeEntity.html">MimeKit.MimeEntity</a> to the specified file.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 class="Section">Protected Methods</h2>
+            <div class="SectionBox" id="Protected Methods">
+              <div class="SubsectionBox">
+                <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimePart.html#M:MimeKit.MimePart.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged</a>
+                      </b>(<a href="../MimeKit/HeaderListChangedAction.html">HeaderListChangedAction</a>, <a href="../MimeKit/Header.html">Header</a>)<blockquote>
+            Called when the headers change in some way.
+             (<i>Inherited from <a href="../MimeKit/MimePart.html">MimePart</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.OnHeadersChanged(MimeKit.HeaderListChangedAction,MimeKit.Header)">OnHeadersChanged</a>
+                      </b>(<a href="../MimeKit/HeaderListChangedAction.html">HeaderListChangedAction</a>, <a href="../MimeKit/Header.html">Header</a>)<blockquote>
+            Called when the headers change in some way.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.RemoveHeader(System.String)">RemoveHeader</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Removes the header.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.SetHeader(System.String,System.Byte[])">SetHeader</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Byte">byte</a>[])<blockquote>
+            Sets the header using the raw value.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.SetHeader(System.String,System.String)">SetHeader</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>
+            Sets the header.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MimeKit/MimeEntity.html#M:MimeKit.MimeEntity.TryInit(System.Object)">TryInit</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Tries to use the given object to initialize the appropriate property.
+             (<i>Inherited from <a href="../MimeKit/MimeEntity.html">MimeEntity</a>.</i>)</blockquote></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Members" id="T:MimeKit.MessageDispositionNotification:Members">
+          <h2 class="Section" id="MemberDetails">Member Details</h2>
+          <div class="SectionBox" id="_MemberDetails">
+            <h3 id="C:MimeKit.MessageDispositionNotification()">MessageDispositionNotification Constructor</h3>
+            <blockquote id="C:MimeKit.MessageDispositionNotification():member">
+              <div class="msummary">
+            Initializes a new instance of the <a href="../MimeKit/MessageDispositionNotification.html">MimeKit.MessageDispositionNotification</a> class.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>MessageDispositionNotification</b> ()</div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.MessageDispositionNotification():Remarks">
+            Creates a new <a href="../MimeKit/MessageDispositionNotification.html">MimeKit.MessageDispositionNotification</a>.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.MessageDispositionNotification():Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MimeKit.MessageDispositionNotification(MimeKit.MimeEntityConstructorInfo)">MessageDispositionNotification Constructor</h3>
+            <blockquote id="C:MimeKit.MessageDispositionNotification(MimeKit.MimeEntityConstructorInfo):member">
+              <div class="msummary">
+            Initializes a new instance of the <a href="../MimeKit/MessageDispositionNotification.html">MimeKit.MessageDispositionNotification</a> class.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>MessageDispositionNotification</b> (<a href="../MimeKit/MimeEntityConstructorInfo.html">MimeEntityConstructorInfo</a> entity)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MimeKit.MessageDispositionNotification(MimeKit.MimeEntityConstructorInfo):Parameters">
+                <dl>
+                  <dt>
+                    <i>entity</i>
+                  </dt>
+                  <dd>Information used by the constructor.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MimeKit.MessageDispositionNotification(MimeKit.MimeEntityConstructorInfo):Remarks">This constructor is used by <a href="../MimeKit/MimeParser.html">MimeKit.MimeParser</a>.</div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MimeKit.MessageDispositionNotification(MimeKit.MimeEntityConstructorInfo):Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MimeKit.MessageDispositionNotification.Fields">Fields Property</h3>
+            <blockquote id="P:MimeKit.MessageDispositionNotification.Fields:member">
+              <div class="msummary">
+            Get the disposition notification fields.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MimeKit/HeaderList.html">HeaderList</a> <b>Fields</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MimeKit.MessageDispositionNotification.Fields:Value">The fields.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MimeKit.MessageDispositionNotification.Fields:Remarks">
+            Gets the disposition notification fields.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MimeKit.MessageDispositionNotification.Fields:Version Information">
+                <b>Namespace: </b>MimeKit<br /><b>Assembly: </b>MimeKit (in MimeKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MimeKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
